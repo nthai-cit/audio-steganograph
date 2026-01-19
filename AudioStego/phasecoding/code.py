@@ -165,7 +165,6 @@ def decode(stego_path):
         for i in range(seg_num):
             segment_start = i * seg_len
             segment_end = (i + 1) * seg_len
-            
             if segment_end > len(stego_audio):
                 segment = np.pad(stego_audio[segment_start:], (0, segment_end - len(stego_audio)), mode='constant')
             else:
@@ -174,26 +173,114 @@ def decode(stego_path):
             fft_segment = np.fft.fft(segment)
             extracted_phase = np.angle(fft_segment)
             phase_data = extracted_phase[start_idx : start_idx + bits_per_seg]
-            
             extracted_bits = (phase_data < 0).astype(np.uint8)
             extracted_bits_list.extend(extracted_bits)
             
         all_bits = np.array(extracted_bits_list, dtype=np.uint8)
         all_bytes = _bits_to_bytes(all_bits)
         
-        delimiter_index = all_bytes.find(b"||DATA_END||")
+        delimiter = b"||DATA_END||"
+        delimiter_index = all_bytes.find(delimiter)
         
         if delimiter_index != -1:
-            content_bytes = all_bytes[:delimiter_index]
+            content = all_bytes[:delimiter_index]
+            
+            # --- NHAN DIEN FILE ---
+            if content.startswith(b'\xff\xd8\xff'): return {'type': 'image', 'data': content, 'ext': '.jpg'}
+            if content.startswith(b'\x89\x50\x4e\x47'): return {'type': 'image', 'data': content, 'ext': '.png'}
+            if content.startswith(b'PK\x03\x04'): return {'type': 'archive', 'data': content, 'ext': '.zip'}
+            
             try:
-                return f"[Van ban]: {content_bytes.decode('utf-8')}"
+                text = content.decode('utf-8')
+                return {'type': 'text', 'data': content, 'ext': '.txt'}
             except:
-                out_file = stego_path + ".extracted_phase.bin"
-                with open(out_file, "wb") as f:
-                    f.write(content_bytes)
-                return f"[FILE] Da luu tai: {out_file}"
+                return {'type': 'binary', 'data': content, 'ext': '.bin'}
         else:
-            return "[THAT BAI] Khong tim thay chuoi ket thuc."
+            return {'type': 'error', 'message': "Khong tim thay dau hieu ket thuc (Phase)."}
 
     except Exception as e:
-        raise RuntimeError(f"Loi Decode Phase: {e}")
+        return {'type': 'error', 'message': str(e)}
+
+def process_batch(input_dir, secret_input, **kwargs):
+    """
+    Chay Phase Coding hang loat (Khong luu file).
+    """
+    results = []
+    files = [f for f in os.listdir(input_dir) if f.lower().endswith('.wav')]
+    total_files = len(files)
+    
+    if total_files == 0: return []
+    print(f"[Phase Batch] Tim thay {total_files} file. Bat dau...")
+
+    # Chuan bi du lieu
+    data_bytes = _get_data_bytes(secret_input)
+    msg_bits = _bytes_to_bits(data_bytes)
+    msg_len = len(msg_bits)
+
+    for idx, filename in enumerate(files):
+        filepath = os.path.join(input_dir, filename)
+        try:
+            # 1. Doc Audio (Float)
+            rate, audio = _read_audio_float(filepath)
+            original_audio_copy = audio.copy()
+            
+            # 2. Tinh tham so
+            seg_len, seg_num, bits_per_seg = _calculate_segment_params(len(audio), rate)
+            capacity = bits_per_seg * seg_num
+            
+            if msg_len > capacity:
+                print(f"  [Bo qua] {filename}: Khong du dung luong (Can {msg_len}, co {capacity}).")
+                continue
+
+            # 3. Xu ly Phase (Trong RAM)
+            target_len = seg_num * seg_len
+            if len(audio) < target_len:
+                audio = np.pad(audio, (0, target_len - len(audio)), mode='constant')
+            
+            segs = audio.reshape((seg_num, seg_len))
+            fft_segs = np.fft.fft(segs)
+            M = np.abs(fft_segs)
+            P = np.angle(fft_segs)
+            M += 1e-12 
+            
+            PHASE_0 = np.pi / 4
+            PHASE_1 = -np.pi / 4
+            phase_values = np.where(msg_bits == 0, PHASE_0, PHASE_1)
+            
+            seg_mid = seg_len // 2
+            start_idx = int(seg_mid * 0.1)
+            current_msg_idx = 0
+            
+            for i in range(seg_num):
+                bits_to_embed = min(bits_per_seg, msg_len - current_msg_idx)
+                if bits_to_embed <= 0: break
+                
+                segment_phases = phase_values[current_msg_idx : current_msg_idx + bits_to_embed]
+                embed_start = start_idx
+                embed_end = start_idx + bits_to_embed
+                
+                P[i, embed_start:embed_end] = segment_phases
+                P[i, seg_len - embed_end + 1 : seg_len - embed_start + 1] = -segment_phases[::-1]
+                current_msg_idx += bits_to_embed
+
+            # 4. Tai tao Audio (IFFT)
+            modified_fft_segs = M * np.exp(1j * P)
+            stego_audio = np.fft.ifft(modified_fft_segs).real.ravel()
+            
+            # 5. Danh gia ngay lap tuc
+            mse, rmse, psnr, snr = calculate_metrics_float(original_audio_copy, stego_audio)
+            
+            results.append({
+                "Filename": filename,
+                "MSE": mse,
+                "PSNR": psnr,
+                "SNR": snr,
+                "Status": "Success"
+            })
+            print(f"  [{idx+1}/{total_files}] {filename} -> PSNR: {psnr:.2f} dB")
+
+        except Exception as e:
+            print(f"  [Loi] {filename}: {e}")
+            results.append({"Filename": filename, "Status": "Error"})
+            
+    return results
