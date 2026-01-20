@@ -28,8 +28,7 @@ This project provides a robust toolset for performing steganography on `.wav` au
 
 ## 2. Directory Structure
 
-Ensure the project directory follows this structure:
-
+```text
 D:.
 │   main.py                 # [RUN] Main entry point
 │   README.md               # Documentation
