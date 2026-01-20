@@ -34,13 +34,11 @@ def calculate_metrics(original, stego):
     snr = 10 * np.log10(signal_power / mse)
     return mse, rmse, psnr, snr
 
-# --- ENCODE (GIAU TIN - TOI UU TOC DO) ---
 def encode(cover_path, secret_input, output_path):
     try:
         sample_rate, audio_data = wavfile.read(cover_path)
         original_shape = audio_data.shape
         
-        # 1. Chuan hoa Audio ve int16
         if audio_data.dtype != np.int16:
             if np.issubdtype(audio_data.dtype, np.floating):
                 audio_data = (audio_data * 32767).astype(np.int16)
@@ -50,30 +48,22 @@ def encode(cover_path, secret_input, output_path):
         audio_data_flat = audio_data.flatten()
         stego_data_flat = audio_data_flat.copy()
         
-        # 2. Chuan bi du lieu
         data_bytes = _get_data_bytes(secret_input)
         bitstream = _bytes_to_bitstream(data_bytes)
         data_length = len(bitstream)
         
-        # 3. Kiem tra dung luong
         if data_length > len(stego_data_flat):
             raise ValueError(f"File qua nho! Can {data_length} bits, co {len(stego_data_flat)} bits.")
             
         print(f"   [LSB Process] Dang nhung {len(data_bytes)} bytes...")
         
-        # 4. NHUNG TIN (Dung Numpy Vectorization sieu nhanh)
-        # Chuyen chuoi '010101' thanh mang so [0, 1, 0, 1...]
         bits_array = np.array([int(b) for b in bitstream], dtype=np.int16)
-        
-        # Thay the bit truc tiep tren mang (nhanh gap 100 lan vong lap for)
-        stego_data_flat[:data_length] &= ~1       # Xoa bit cuoi
-        stego_data_flat[:data_length] |= bits_array # Ghi bit moi
+        stego_data_flat[:data_length] &= ~1 
+        stego_data_flat[:data_length] |= bits_array
             
-        # 5. Ghi file
         stego_data = stego_data_flat.reshape(original_shape)
         wavfile.write(output_path, sample_rate, stego_data)
         
-        # 6. Danh gia
         print(f"   [DANH GIA] Dang tinh toan chi so...")
         mse, rmse, psnr, snr = calculate_metrics(audio_data, stego_data)
         
@@ -83,13 +73,19 @@ def encode(cover_path, secret_input, output_path):
         print(f"   [+] SNR  : {snr:.2f} dB")
         print(f"   [+] PSNR : {psnr:.2f} dB")
         print("-" * 40)
-        
-        return output_path
+
+        return {
+            "status": "success",
+            "output_path": output_path,
+            "mse": mse,
+            "psnr": psnr,
+            "snr": snr,
+            "capacity": len(stego_data_flat)
+        }
 
     except Exception as e:
         raise RuntimeError(f"Loi Encode LSB: {e}")
-
-# --- DECODE (TRICH XUAT - TRA VE DICTIONARY) ---
+    
 def decode(stego_path):
     try:
         _, stego_data = wavfile.read(stego_path)

@@ -76,80 +76,63 @@ def calculate_metrics_float(original, stego):
             
     return mse, rmse, psnr, snr
 
-# --- CAC HAM CHINH ---
 
 def encode(cover_path, secret_input, output_path):
-    try:
-        # 1. Doc du lieu
-        rate, audio = _read_audio_float(cover_path)
-        original_audio_copy = audio.copy() # Luu ban sao de so sanh
+    rate, audio = _read_audio_float(cover_path)
+    original_copy = audio.copy()
+    
+    data_bytes = _get_data_bytes(secret_input)
+    msg_bits = _bytes_to_bits(data_bytes)
+    msg_len = len(msg_bits)
+    
+    seg_len, seg_num, bits_per_seg = _calculate_segment_params(len(audio), rate)
+    capacity = bits_per_seg * seg_num
+    
+    if msg_len > capacity:
+        raise ValueError(f"Phase Capacity Error: Can {msg_len}, co {capacity}.")
+    
+    print(f"   [Phase] Dang nhung {msg_len} bits...")
+    
+    # Xu ly Phase (Embed)
+    target_len = seg_num * seg_len
+    if len(audio) < target_len: audio = np.pad(audio, (0, target_len - len(audio)), mode='constant')
+    segs = audio.reshape((seg_num, seg_len))
+    fft_segs = np.fft.fft(segs)
+    M = np.abs(fft_segs)
+    P = np.angle(fft_segs)
+    M += 1e-12 
+    
+    PHASE_0, PHASE_1 = np.pi/4, -np.pi/4
+    phase_values = np.where(msg_bits == 0, PHASE_0, PHASE_1)
+    seg_mid = seg_len // 2
+    start_idx = int(seg_mid * 0.1)
+    curr = 0
+    
+    for i in range(seg_num):
+        bits_here = min(bits_per_seg, msg_len - curr)
+        if bits_here <= 0: break
+        seg_phases = phase_values[curr : curr + bits_here]
+        embed_start = start_idx
+        P[i, embed_start:embed_start+bits_here] = seg_phases
+        P[i, seg_len - (embed_start+bits_here) + 1 : seg_len - embed_start + 1] = -seg_phases[::-1]
+        curr += bits_here
         
-        data_bytes = _get_data_bytes(secret_input)
-        msg_bits = _bytes_to_bits(data_bytes)
-        msg_len = len(msg_bits)
-        
-        seg_len, seg_num, bits_per_seg = _calculate_segment_params(len(audio), rate)
-        
-        capacity = bits_per_seg * seg_num
-        if msg_len > capacity:
-            raise ValueError(f"Khong du dung luong. Can {msg_len} bits, co {capacity} bits.")
-        
-        print(f"   [Phase Process] Dang nhung {msg_len} bits vao {seg_num} phan doan...")
-
-        # Padding
-        target_len = seg_num * seg_len
-        if len(audio) < target_len:
-            audio = np.pad(audio, (0, target_len - len(audio)), mode='constant')
-        
-        segs = audio.reshape((seg_num, seg_len))
-        fft_segs = np.fft.fft(segs)
-        M = np.abs(fft_segs)
-        P = np.angle(fft_segs)
-        M += 1e-12 
-        
-        PHASE_0 = np.pi / 4
-        PHASE_1 = -np.pi / 4
-        phase_values = np.where(msg_bits == 0, PHASE_0, PHASE_1)
-        
-        seg_mid = seg_len // 2
-        start_idx = int(seg_mid * 0.1)
-        current_msg_idx = 0
-        
-        for i in range(seg_num):
-            bits_to_embed = min(bits_per_seg, msg_len - current_msg_idx)
-            if bits_to_embed <= 0: break
-            
-            segment_phases = phase_values[current_msg_idx : current_msg_idx + bits_to_embed]
-            embed_start = start_idx
-            embed_end = start_idx + bits_to_embed
-            
-            P[i, embed_start:embed_end] = segment_phases
-            P[i, seg_len - embed_end + 1 : seg_len - embed_start + 1] = -segment_phases[::-1]
-            
-            current_msg_idx += bits_to_embed
-
-        modified_fft_segs = M * np.exp(1j * P)
-        stego_audio = np.fft.ifft(modified_fft_segs).real.ravel()
-        
-        # Ghi file
-        _write_audio_float(output_path, rate, stego_audio)
-        
-        # 2. Danh gia chat luong
-        print(f"   [DANH GIA] Dang tinh toan chi so (Mien thoi gian)...")
-        mse, rmse, psnr, snr = calculate_metrics_float(original_audio_copy, stego_audio)
-        
-        print("-" * 40)
-        print(f"   BANG KET QUA (PHASE CODING):")
-        print(f"   [-] MSE  : {mse:.6f}")
-        print(f"   [-] RMSE : {rmse:.6f}")
-        print(f"   [+] SNR  : {snr:.2f} dB")
-        print(f"   [+] PSNR : {psnr:.2f} dB")
-        print("-" * 40)
-        
-        return output_path
-
-    except Exception as e:
-        raise RuntimeError(f"Loi Encode Phase: {e}")
+    mod_fft = M * np.exp(1j * P)
+    stego_audio = np.fft.ifft(mod_fft).real.ravel()
+    
+    _write_audio_float(output_path, rate, stego_audio)
+    
+    mse, rmse, psnr, snr = calculate_metrics_float(original_copy, stego_audio)
+    
+    # TRA VE DICT CHO MAIN.PY
+    return {
+        "status": "success",
+        "output_path": output_path,
+        "mse": mse,
+        "psnr": psnr,
+        "snr": snr,
+        "capacity": capacity
+    }
 
 def decode(stego_path):
     try:
