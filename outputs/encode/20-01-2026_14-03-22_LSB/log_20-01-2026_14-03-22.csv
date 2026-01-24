@@ -1,2 +1,0 @@
-Timestamp,Action,Method,Input_File,Secret_File,Output_File,K_Bit,Password,MSE,PSNR,SNR,Execution_Time
-2026-01-20 14:03:22,Encode,lsb,song.wav,Hello world,song.wav,N/A,No,0.000426,124.01,173.67,0.0050s

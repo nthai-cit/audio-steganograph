@@ -1,0 +1,2 @@
+Timestamp,Action,Method,Input_Stego,Status,Output_File,K_Bit,Password,Execution_Time
+2026-01-23 20:57:41,Decode,lsb,song.wav,Success,song_extracted.bin,2,N/A,0.1737s

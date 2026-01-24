@@ -28,7 +28,7 @@ This project provides a robust toolset for performing steganography on `.wav` au
 
 ## 2. Directory Structure
 
-```text
+```
 D:.
 │   main.py                 # [RUN] Main entry point
 │   README.md               # Documentation
@@ -166,3 +166,5 @@ The project includes an intelligent Test Suite that automatically locates paths 
 | --visualize | -v | Plot charts | False | Used for batch/encode |
 
 ---
+
+

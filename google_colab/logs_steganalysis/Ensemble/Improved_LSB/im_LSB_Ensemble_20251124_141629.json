@@ -1,0 +1,174 @@
+{
+    "start_time": "2025-11-24T14:16:29.844039",
+    "config": {
+        "output_dir": "/content/mdrive/MyDrive/HK1-20252026/ClassifyStego/PSR-LSB/Ensemble_Stacking_20251124_141629",
+        "steganography_type": "PSR-LSB"
+    },
+    "data_loading": {
+        "features_1d": {
+            "status": "Success",
+            "shape": [
+                1500,
+                320
+            ]
+        },
+        "spectrograms_2d": {
+            "status": "Success",
+            "shape": [
+                1500,
+                128,
+                216,
+                1
+            ]
+        },
+        "label_check": "Match",
+        "scaler": {
+            "status": "Success",
+            "path": "/content/mdrive/MyDrive/HK1-20252026/ClassifyStego/PSR-LSB/scaler.pkl"
+        }
+    },
+    "data_preprocessing": {
+        "features_1d": {
+            "train_shape": [
+                1200,
+                320
+            ],
+            "test_shape": [
+                300,
+                320
+            ]
+        },
+        "spectrograms_2d": {
+            "train_shape": [
+                1200,
+                128,
+                216,
+                1
+            ],
+            "test_shape": [
+                300,
+                128,
+                216,
+                1
+            ]
+        }
+    },
+    "meta_feature_train": {
+        "start_time": "2025-11-24T14:16:32.962958",
+        "SVM": "Success",
+        "RF": "Success",
+        "LR": "Success",
+        "CNN": "Success",
+        "duration_seconds": 186.77,
+        "memory_increase_mb": 396.33,
+        "final_shape": [
+            1200,
+            4
+        ]
+    },
+    "meta_feature_test": {
+        "start_time": "2025-11-24T14:19:39.744270",
+        "duration_seconds": 2.34,
+        "memory_increase_mb": -102.97,
+        "final_shape": [
+            300,
+            4
+        ]
+    },
+    "meta_model_training": {
+        "start_time": "2025-11-24T14:19:42.089598",
+        "model_class": "LogisticRegression",
+        "duration_seconds": 0.01,
+        "memory_increase_mb": 0.04,
+        "params": {
+            "C": 1.0,
+            "class_weight": null,
+            "dual": false,
+            "fit_intercept": true,
+            "intercept_scaling": 1,
+            "l1_ratio": null,
+            "max_iter": 100,
+            "multi_class": "deprecated",
+            "n_jobs": null,
+            "penalty": "l2",
+            "random_state": 42,
+            "solver": "lbfgs",
+            "tol": 0.0001,
+            "verbose": 0,
+            "warm_start": false
+        }
+    },
+    "final_evaluation": {
+        "start_time": "2025-11-24T14:19:42.129492",
+        "confusion_matrix_path": "/content/mdrive/MyDrive/HK1-20252026/ClassifyStego/PSR-LSB/Ensemble_Stacking_20251124_141629/confusion_matrix_test.png",
+        "results": {
+            "train_set": {
+                "accuracy": 0.5458333333333333,
+                "classification_report": {
+                    "0": {
+                        "precision": 0.5560081466395111,
+                        "recall": 0.455,
+                        "f1-score": 0.5004582951420715,
+                        "support": 600.0
+                    },
+                    "1": {
+                        "precision": 0.538787023977433,
+                        "recall": 0.6366666666666667,
+                        "f1-score": 0.5836516424751719,
+                        "support": 600.0
+                    },
+                    "accuracy": 0.5458333333333333,
+                    "macro avg": {
+                        "precision": 0.547397585308472,
+                        "recall": 0.5458333333333334,
+                        "f1-score": 0.5420549688086217,
+                        "support": 1200.0
+                    },
+                    "weighted avg": {
+                        "precision": 0.5473975853084722,
+                        "recall": 0.5458333333333333,
+                        "f1-score": 0.5420549688086217,
+                        "support": 1200.0
+                    }
+                }
+            },
+            "test_set": {
+                "accuracy": 0.5433333333333333,
+                "classification_report": {
+                    "0": {
+                        "precision": 0.5575221238938053,
+                        "recall": 0.42,
+                        "f1-score": 0.4790874524714829,
+                        "support": 150.0
+                    },
+                    "1": {
+                        "precision": 0.5347593582887701,
+                        "recall": 0.6666666666666666,
+                        "f1-score": 0.5934718100890207,
+                        "support": 150.0
+                    },
+                    "accuracy": 0.5433333333333333,
+                    "macro avg": {
+                        "precision": 0.5461407410912877,
+                        "recall": 0.5433333333333333,
+                        "f1-score": 0.5362796312802518,
+                        "support": 300.0
+                    },
+                    "weighted avg": {
+                        "precision": 0.5461407410912877,
+                        "recall": 0.5433333333333333,
+                        "f1-score": 0.5362796312802518,
+                        "support": 300.0
+                    }
+                }
+            },
+            "prediction_duration_seconds": 0.0007
+        }
+    },
+    "overall_performance": {
+        "total_duration_seconds": 192.55,
+        "final_memory_mb": 4429.51,
+        "peak_memory_increase_mb": 299.56
+    },
+    "end_time": "2025-11-24T14:19:42.412140"
+}

@@ -1,0 +1,85 @@
+{
+    "training_info": {
+        "status": "Trained with Keras Tuner",
+        "model_class": "Sequential_CNN",
+        "tuner_trials": 10,
+        "tuner_executions_per_trial": 1,
+        "best_hyperparameters": {
+            "filters_1": 32,
+            "filters_2": 64,
+            "dense_units": 128,
+            "dropout": 0.4,
+            "learning_rate": 0.0001
+        },
+        "training_duration_seconds": 46.4,
+        "training_memory_increase_mb": 1370.8
+    },
+    "evaluation_results": {
+        "train_set": {
+            "accuracy": 0.7225,
+            "classification_report": {
+                "0": {
+                    "precision": 0.672258064516129,
+                    "recall": 0.8683333333333333,
+                    "f1-score": 0.7578181818181818,
+                    "support": 600.0
+                },
+                "1": {
+                    "precision": 0.8141176470588235,
+                    "recall": 0.5766666666666667,
+                    "f1-score": 0.6751219512195122,
+                    "support": 600.0
+                },
+                "accuracy": 0.7225,
+                "macro avg": {
+                    "precision": 0.7431878557874763,
+                    "recall": 0.7224999999999999,
+                    "f1-score": 0.716470066518847,
+                    "support": 1200.0
+                },
+                "weighted avg": {
+                    "precision": 0.7431878557874763,
+                    "recall": 0.7225,
+                    "f1-score": 0.716470066518847,
+                    "support": 1200.0
+                }
+            },
+            "prediction_duration_seconds": 1.3979
+        },
+        "test_set": {
+            "accuracy": 0.65,
+            "classification_report": {
+                "0": {
+                    "precision": 0.6216216216216216,
+                    "recall": 0.7666666666666667,
+                    "f1-score": 0.6865671641791045,
+                    "support": 150.0
+                },
+                "1": {
+                    "precision": 0.6956521739130435,
+                    "recall": 0.5333333333333333,
+                    "f1-score": 0.6037735849056604,
+                    "support": 150.0
+                },
+                "accuracy": 0.65,
+                "macro avg": {
+                    "precision": 0.6586368977673325,
+                    "recall": 0.65,
+                    "f1-score": 0.6451703745423825,
+                    "support": 300.0
+                },
+                "weighted avg": {
+                    "precision": 0.6586368977673325,
+                    "recall": 0.65,
+                    "f1-score": 0.6451703745423824,
+                    "support": 300.0
+                }
+            },
+            "prediction_duration_seconds": 0.4425
+        }
+    },
+    "run_info": {
+        "timestamp": "2025-10-28T16:00:24.462465",
+        "total_duration_seconds": 634.33
+    }
+}
