@@ -53,7 +53,7 @@ D:.
 └───test                    # [EXPERIMENTS]
     ├───timit_voc.py        # Script: Large-scale embedding experiments
     └───outputs             # Experiment specific results
-
+```
 ### 4. Data Preparation (Đã thay đổi thứ tự ưu tiên)
 
 ```markdown
