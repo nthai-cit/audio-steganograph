@@ -73,7 +73,7 @@ To replicate the large-scale experiments, download the datasets and extract them
 3.  **[TIMIT Acoustic-Phonetic Continuous Speech Corpus](https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech)**
     * *Usage:* Used as the primary speech carrier in the reported experiments.
 
-4.  **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012) or 500 sample at (https://drive.google.com/file/d/1DrLhIIbopS82gwrZlYcY7L3oTIXRDB58/view?usp=drive_link)**
+4.  **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012) or 500 sample at [drive](https://drive.google.com/file/d/1DrLhIIbopS82gwrZlYcY7L3oTIXRDB58/view?usp=drive_link)**
     * *Usage:* Used as the standard image payload for capacity testing.
 
 ## 5. Installation
