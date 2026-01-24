@@ -54,29 +54,26 @@ D:.
     ├───timit_voc.py        # Script: Large-scale embedding experiments
     └───outputs             # Experiment specific results
 ```
-### 4. Data Preparation (Đã thay đổi thứ tự ưu tiên)
-
-```markdown
 ## 4. Data Preparation
 
 To replicate the large-scale experiments, download the datasets and extract them into the `inputs/` directory.
 
 **Recommended Datasets:**
 
-1.  **[MUSDB18-HQ](https://sigsep.github.io/datasets/musdb.html)**
+1.  **[MUSDB18-HQ](https://zenodo.org/records/3338373)**
     * *Type:* High-fidelity music stems.
     * *Usage:* Ideal for testing high-capacity steganography on music files.
 
-2.  **COCO & Audio Cats/Dogs**
+2.  **[COCO](https://www.kaggle.com/datasets/abhinav1609/random-images-image-steganography) & [Audio Cats/Dogs](https://www.kaggle.com/datasets/mmoreaux/audio-cats-and-dogs)**
     * *Type:* Large-scale image and environmental audio datasets.
     * *Usage:* Used for extended generalization tests.
 
 **Reference Datasets (For Paper Replication):**
 
-3.  **[TIMIT Acoustic-Phonetic Continuous Speech Corpus]**
+3.  **[TIMIT Acoustic-Phonetic Continuous Speech Corpus](https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech)**
     * *Usage:* Used as the primary speech carrier in the reported experiments.
 
-4.  **[Pascal VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)**
+4.  **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012) or 500 sample at (https://drive.google.com/file/d/1DrLhIIbopS82gwrZlYcY7L3oTIXRDB58/view?usp=drive_link)**
     * *Usage:* Used as the standard image payload for capacity testing.
 
 ## 5. Installation
@@ -97,6 +94,7 @@ To replicate the large-scale experiments, download the datasets and extract them
 ### 6.1 Single File Operations
 
 **Encode (Hide Image with Password):**
+
 ```bash
 python main.py encode -m improved -k 2 -p "MyPass" -i "inputs/song.wav" -s "inputs/img.jpg"
 ```
