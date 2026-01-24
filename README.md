@@ -28,7 +28,7 @@ Features a complete workflow covering Preprocessing, Embedding, Transmission Sim
 
 > **Note:** Large datasets in `inputs/` and generated files in `outputs/` are excluded from version control.
 ```text
-D:.
+audio-steganograph
 │   main.py                 # [CLI] Main tool for single file encode/decode
 │   README.md               # Project Documentation
 │
