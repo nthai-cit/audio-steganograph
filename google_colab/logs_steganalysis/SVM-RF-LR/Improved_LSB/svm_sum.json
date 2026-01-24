@@ -1,0 +1,26 @@
+{
+    "Accuracy (Test Set)": {
+        "mean": 0.62,
+        "std": 0.0
+    },
+    "Precision (Lớp 1 'stego')": {
+        "mean": 0.5754189944134078,
+        "std": 0.0
+    },
+    "Recall (Lớp 1 'stego')": {
+        "mean": 0.6155555555555556,
+        "std": 0.0
+    },
+    "F1-Score (Lớp 1 'stego')": {
+        "mean": 0.7066895368782161,
+        "std": 0.0
+    },
+    "Thời gian Training (s)": {
+        "mean": 50.77333333333333,
+        "std": 3.142656342791699
+    },
+    "Bộ nhớ Training (mb)": {
+        "mean": 0.8966666666666666,
+        "std": 0.9250705678787731
+    }
+}
