@@ -13,13 +13,17 @@ This project implements a complete pipeline for Audio Steganography and Steganal
 | Algorithm | Type | Description | Best For |
 | :--- | :--- | :--- | :--- |
 | **LSB-Based** | Spatial Domain | Replaces Least Significant Bits sequentially. | High capacity, educational use. |
-| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum (FFT). | Robustness against manipulation. |
-| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling (PSR)** seeded by Password + Content Hash. | **High Security** & Data protection. |
+| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum.. | Robustness against manipulation. |
+| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling ** seeded by Password + Content Hash. | **High Security** & Data protection. |
 
 ### Highlights
-* **Improved LSB :** Uses Pseudo-Random scattering seeded by a password + audio content hash.
-* **Adaptive Compression:** Images are automatically compressed (JPEG 4:2:0) to fit into audio carriers.
-* **Batch Experimentation:** Automated scripts to embed thousands of images into audio files, calculating **PSNR, SNR, MSE** automatically.
+Enhances standard LSB with a Key-Salt driven Pseudo-Random Number Generator, ensuring robust protection against sequential extraction attacks.
+
+Conducts quantitative analysis involving signal fidelity metrics (SNR, PSNR) and detection resistance against ML classifiers.
+
+Empirically identifies performance degradation (reduced SNR) of Phase Coding techniques in sparse, low-amplitude audio regions.
+
+Features a complete workflow covering Preprocessing, Embedding, Transmission Simulation, and final Data Restoration.
 
 ## 3. Directory Structure
 
