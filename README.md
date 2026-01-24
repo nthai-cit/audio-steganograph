@@ -28,24 +28,23 @@ This project implements a complete pipeline for Audio Steganography and Steganal
 D:.
 │   main.py                 # [CLI] Main tool for single file encode/decode
 │   README.md               # Project Documentation
-│   .gitignore              # Git configuration
 │
 ├───AudioStego              # [CORE ALGORITHMS]
 │   ├───improved_lsb        # PSR LSB (Secure & Robust)
 │   ├───lsb                 # Standard LSB
 │   ├───phasecoding         # Phase Coding
-│   └───utils               # Visualization & Helpers
+│   └───utils               # Visualization 
 │
 ├───google_colab            # [LOGS] Experimental logs for Steganography & Steganalysis
 │
-├───inputs                  # [DATASETS - LOCAL ONLY]
+├───inputs                  # [DATASETS]
 │   ├───musdb-18            # Music Source (High Fidelity)
 │   ├───random-image-coco   # COCO Image Dataset
 │   ├───audio-cat-and-dogs  # Environmental Sounds
 │   ├───timit               # Speech Corpus (Reference)
 │   └───pascal-voc-2012     # Image Source (Reference)
 │
-├───outputs                 # [RESULTS - LOCAL ONLY]
+├───outputs                 # [RESULTS]
 │   ├───batch               # Bulk processing results
 │   ├───encode              # Single encryption outputs
 │   └───decode              # Extracted payloads

@@ -6,7 +6,6 @@ import shutil
 import csv
 from datetime import datetime
 
-# --- IMPORT HAM HO TRO TU FILE HELPERS.PY ---
 try:
     from helpers import (
         pick_file_gui, 
@@ -19,7 +18,6 @@ except ImportError as e:
     print(f"[LOI] Khong tim thay file helpers.py: {e}")
     sys.exit(1)
 
-# --- IMPORT MODULES XU LY ---
 try:
     from AudioStego.lsb import code as lsb_algo
     from AudioStego.phasecoding import code as phase_algo
@@ -42,7 +40,7 @@ def main():
     
     args = parser.parse_args()
 
-    # 1. GUI Chon File (Neu thieu input)
+
     if not args.input:
         if args.action == 'batch':
              print("[LOI] Che do Batch can duong dan thu muc (-i).")
@@ -53,7 +51,7 @@ def main():
         gui_secret = pick_file_gui(title="Chon File Bi Mat Can Giau")
         args.secret = gui_secret if gui_secret else "Du lieu bi mat mac dinh."
 
-    # Chon module
+
     processors = {'lsb': lsb_algo, 'phase': phase_algo, 'improved': improved_algo}
     processor = processors[args.method]
 
@@ -65,7 +63,7 @@ def main():
     log_name = f"log_{args.method}_{current_time_str}.csv"
 
     try:
-        # === A. ENCODE ===
+        # === ENCODE ===
         if args.action == 'encode':
             input_type = detect_type(args.secret)
             session_dir = create_session_folder(args.action, args.method, extra_tag=input_type)
@@ -74,7 +72,7 @@ def main():
             original_filename = os.path.basename(args.input)
             out_path = os.path.join(session_dir, original_filename) 
             
-            # Goi ham encode (tuong thich tham so)
+        
             kwargs = {}
             if args.method == 'improved': kwargs = {'k': args.k, 'password': args.password}
             
@@ -97,7 +95,7 @@ def main():
                 "Status": metrics.get('status', 'error')
             })
 
-        # === B. DECODE ===
+        # ===  DECODE ===
         elif args.action == 'decode':
             target_input = args.input
             if os.path.isdir(target_input):
@@ -139,7 +137,7 @@ def main():
                 "Output_File": out_filename
             })
 
-        # === C. BATCH ===
+        # === BATCH ===
         elif args.action == 'batch':
              if not os.path.isdir(args.input):
                 print(f"[LOI] Input phai la thu muc.")

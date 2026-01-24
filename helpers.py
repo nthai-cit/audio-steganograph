@@ -7,7 +7,7 @@ from datetime import datetime
 import platform
 import subprocess
 
-# --- 1. TU DONG MO FILE ---
+
 def open_file_os(filepath):
     """Tu dong mo file bang trinh mac dinh cua he dieu hanh"""
     try:
@@ -20,7 +20,6 @@ def open_file_os(filepath):
     except Exception:
         pass
 
-# --- 2. NHAN DIEN LOAI FILE ---
 def detect_type(input_data):
     """Tra ve suffix: img, audio, text, archive, file"""
     if os.path.isfile(input_data):
@@ -32,7 +31,7 @@ def detect_type(input_data):
         return "file"
     return "text"
 
-# --- 3. GUI CHON FILE ---
+
 def pick_file_gui(title="Chon file", file_types=None):
     try:
         root = tk.Tk()
@@ -47,7 +46,6 @@ def pick_file_gui(title="Chon file", file_types=None):
     except Exception:
         return None
 
-# --- 4. QUAN LY THU MUC (FIX LOI EXTRA_TAG TAI DAY) ---
 def create_session_folder(action, method, extra_tag=""):
     """
     Tao thu muc session: YYYY-MM-DD_HH-MM-SS_METHOD_TAG
@@ -63,7 +61,6 @@ def create_session_folder(action, method, extra_tag=""):
     os.makedirs(session_path, exist_ok=True)
     return session_path
 
-# --- 5. GHI LOG CSV ---
 def write_log_csv(folder_path, log_filename, data_dict):
     csv_path = os.path.join(folder_path, log_filename)
     file_exists = os.path.isfile(csv_path)
