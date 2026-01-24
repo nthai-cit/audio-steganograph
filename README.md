@@ -1,170 +1,133 @@
 # Audio Steganography
 
-This project provides a robust toolset for performing steganography on `.wav` audio files using Python. The system supports hiding text, images, and binary files with high security and automatic signal quality assessment.
 
----
+## 1. Overview
 
-## 1. Key Features
+This project implements a complete pipeline for **Audio Steganography** (hiding data) and **Steganalysis** (detecting hidden data). It features state-of-the-art algorithms like **Improved LSB ** with content-based anchoring and includes tools for large-scale batch experimentation.
 
-1.  **Algorithms:**
-    * **LSB:** Fast processing, high capacity.
-    * **Phase Coding:** Embeds data into the phase of the signal, offering higher robustness.
-    * **Improved LSB (Advanced):**
-        * Automatic image compression to fit audio capacity.
-        * Random Scattering (Shuffling) of data bits.
-        * Password-protected encryption.
-2.  **Session Management:**
-    * Creates a unique directory for each run based on the current timestamp.
-    * Automatically saves the output file and a detailed CSV Log file.
-3.  **Batch Processing:**
-    * Embeds data into all `.wav` files in a directory with a single command.
-    * Automatically plots quality comparison charts (PSNR, SNR).
-    * Sorts visualization by file size (ascending).
-4.  **Quality Assessment:**
-    * Automatically calculates metrics: MSE (Mean Squared Error), PSNR (Peak Signal-to-Noise Ratio), and SNR (Signal-to-Noise Ratio).
-
----
+![System Architecture](workflow.png)
 
 
-## 2. Directory Structure
+## 2. Key Features
 
-```
+| Algorithm | Type | Description | Best For |
+| :--- | :--- | :--- | :--- |
+| **LSB-Based** | Spatial Domain | Replaces Least Significant Bits sequentially. | High capacity, educational use. |
+| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum (FFT). | Robustness against manipulation. |
+| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling (PSR)** seeded by Password + Content Hash. | **High Security** & Data protection. |
+
+### Highlights
+* **Improved LSB :** Uses Pseudo-Random scattering seeded by a password + audio content hash.
+* **Adaptive Compression:** Images are automatically compressed (JPEG 4:2:0) to fit into audio carriers.
+* **Batch Experimentation:** Automated scripts to embed thousands of images into audio files, calculating **PSNR, SNR, MSE** automatically.
+
+## 3. Directory Structure
+
+> **Note:** Large datasets in `inputs/` and generated files in `outputs/` are excluded from version control.
+
 D:.
-│   main.py                 # [RUN] Main entry point
-│   README.md               # Documentation
-│   requirements.txt        # List of dependencies
+│   main.py                 # [CLI] Main tool for single file encode/decode
+│   README.md               # Project Documentation
+│   .gitignore              # Git configuration
 │
-├───AudioStego              # [CORE] Source code
-│   ├───improved_lsb        # Improved LSB Module
-│   │       code.py
-│   ├───lsb                 # Standard LSB Module
-│   │       code.py
-│   ├───phasecoding         # Phase Coding Module
-│   │       code.py
-│   └───utils               # Utilities (Visualization)
-│           visualize.py
+├───AudioStego              # [CORE ALGORITHMS]
+│   ├───improved_lsb        # PSR LSB (Secure & Robust)
+│   ├───lsb                 # Standard LSB
+│   ├───phasecoding         # Phase Coding
+│   └───utils               # Visualization & Helpers
 │
-├───inputs                  # [DATA] Input files (See Section 3)
-│   │   song.wav
-│   ├───audio-cat-and-dogs  # Large Dataset 1 (Audio)
-│   ├───musdb-18            # Large Dataset 2 (Audio)
-│   └───random-image-coco   # Large Dataset 3 (Images)
+├───google_colab            # [LOGS] Experimental logs for Steganography & Steganalysis
 │
-├───outputs                 # [RESULT] Auto-generated results
-│   ├───batch
-│   ├───decode
-│   └───encode
+├───inputs                  # [DATASETS - LOCAL ONLY]
+│   ├───musdb-18            # Music Source (High Fidelity)
+│   ├───random-image-coco   # COCO Image Dataset
+│   ├───audio-cat-and-dogs  # Environmental Sounds
+│   ├───timit               # Speech Corpus (Reference)
+│   └───pascal-voc-2012     # Image Source (Reference)
 │
-└───test                    # [TEST] Automated test scripts
-        prepare_data.py
-        test.py
+├───outputs                 # [RESULTS - LOCAL ONLY]
+│   ├───batch               # Bulk processing results
+│   ├───encode              # Single encryption outputs
+│   └───decode              # Extracted payloads
+│
+└───test                    # [EXPERIMENTS]
+    ├───timit_voc.py        # Script: Large-scale embedding experiments
+    └───outputs             # Experiment specific results
 
----
+### 4. Data Preparation (Đã thay đổi thứ tự ưu tiên)
 
-## 3. Data Preparation (Important)
+```markdown
+## 4. Data Preparation
 
-The `inputs/` folder contains sample files. However, large datasets required for Batch Processing are **not hosted in this repository** due to size limits.
+To replicate the large-scale experiments, download the datasets and extract them into the `inputs/` directory.
 
-### How to download datasets:
-1.  **Download** the dataset package from the following link:
-    **[INSERT_YOUR_GOOGLE_DRIVE_LINK_HERE]**
-2.  **Extract** the contents.
-3.  **Copy** the following folders into the `inputs/` directory of this project:
-    * `audio-cat-and-dogs`
-    * `musdb-18`
-    * `random-image-coco`
+**Recommended Datasets:**
 
-Structure should look like this after extraction:
-inputs/
-├── song.wav
-├── audio-cat-and-dogs/ ...
-├── musdb-18/ ...
-└── random-image-coco/ ...
+1.  **[MUSDB18-HQ](https://sigsep.github.io/datasets/musdb.html)**
+    * *Type:* High-fidelity music stems.
+    * *Usage:* Ideal for testing high-capacity steganography on music files.
 
----
+2.  **COCO & Audio Cats/Dogs**
+    * *Type:* Large-scale image and environmental audio datasets.
+    * *Usage:* Used for extended generalization tests.
 
-##  4. Installation
+**Reference Datasets (For Paper Replication):**
 
-### Step 1: Clone the Repository
-Open your terminal or command prompt and run the following commands to download the source code:
+3.  **[TIMIT Acoustic-Phonetic Continuous Speech Corpus]**
+    * *Usage:* Used as the primary speech carrier in the reported experiments.
 
-git clone https://github.com/nthai-cit/audio-steganograph.git
-cd audio-steganography
+4.  **[Pascal VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/)**
+    * *Usage:* Used as the standard image payload for capacity testing.
 
-### Step 2: Install Dependencies
-Ensure you have Python 3.12 or higher installed. Install the required libraries using pip:
+## 5. Installation
 
-pip install -r requirements.txt
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/nthai-cit/audio-steganograph.git](https://github.com/nthai-cit/audio-steganograph.git)
+    cd audio-steganography
+    ```
 
----
+2.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## 5. Usage Guide
+## 6. Usage Guide
 
-General Syntax:
-python main.py [action] -m [method] [options]
+### 6.1 Single File Operations
 
-### Encode (Hiding Data)
+**Encode (Hide Image with Password):**
+```bash
+python main.py encode -m improved -k 2 -p "MyPass" -i "inputs/song.wav" -s "inputs/img.jpg"
+```
+**Decode:**
+```bash
+python main.py decode -m improved -k 2 -p "MyPass" -i "outputs/encode/SESSION/stego.wav"
+```
+### 6.2. Large-Scale Experimentation
 
-* **Standard LSB (Text Hiding):**
-    python main.py encode -m lsb -i inputs/song.wav -s inputs/secret.txt
+To embed random images Pascal VOC into audio carriers TIMIT and generate a consolidated CSV report:
 
-* **Improved LSB (Image Hiding + Password + K=4 bits):**
-    python main.py encode -m improved -k 4 -p "MySecurePass" -i inputs/song.wav -s inputs/random-image-coco/image_01.jpg
+**Standard Run (k=8 bits):**
+```bash
+python test/timit_voc.py -k 8
+```
 
-    (The system will create a folder: outputs/encode/DD-MM-YYYY_.../ containing the result and log)
+**Run and Save Audio Files: (Use this flag to preserve output wav files; otherwise, they are deleted to conserve disk space.)**
+````bash
+python test/timit_voc.py -k 2 --save-audio
+````
 
-### Decode (Extracting Data)
-
-* **Decoding (Must target the encoded file):**
-    python main.py decode -m improved -k 4 -p "MySecurePass" -i outputs/encode/SESSION_NAME/song.wav
-
-### Batch Processing
-
-This mode scans all `.wav` files in the input directory, embeds the data, and visualizes quality metrics.
-
-python main.py batch -m improved -k 2 -i "inputs/musdb-18" -s inputs/secret.txt -v
-
-* -i: Path to the music directory (e.g., inputs/musdb-18).
-* -v: Enable visualization (charts) after processing.
-
----
-
-## 6. Logging & Reporting
-
-For every operation, the system generates a `.csv` file in the corresponding Session directory.
-
-Example Log Content:
-
-| Timestamp | Action | Method | Input_File | Secret | Output | MSE | PSNR | SNR |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 2026-01-20 14:00 | Encode | improved | song.wav | image.jpg | song.wav | 0.038 | 104.5 | 88.5 |
-
----
-
-## 7. Automated Testing
-
-The project includes an intelligent Test Suite that automatically locates paths and verifies 5 scenarios (LSB, Improved, Phase, Wrong Password, Batch).
-
-1.  **Step 1: Generate Sample Data** (Run once):
-    python test/prepare_data.py
-
-2.  **Step 2: Run Full System Check:**
-    python test/test.py
-
----
-
-## 8. Command Line Arguments
+## 7. Command Line Arguments
 
 | Argument | Short | Description | Default | Note |
 | :--- | :--- | :--- | :--- | :--- |
-| encode/decode/batch | N/A | Operation Mode | N/A | Required |
-| --method | -m | Algorithm (lsb, phase, improved) | N/A | Required |
-| --input | -i | Input Audio or Directory (batch) | GUI | Opens GUI if missing |
-| --secret | -s | Secret File (Text/Image) | GUI | Required for Encode |
-| --password | -p | Security Password | None | Used for improved only |
-| --k_bit | -k | Number of bits to replace (1-8) | 2 | Used for improved only |
-| --visualize | -v | Plot charts | False | Used for batch/encode |
+| `encode`/`decode`/`batch` | N/A | Operation Mode | N/A | **Required** |
+| `--method` | `-m` | Algorithm (`lsb`, `phase`, `improved`) | N/A | **Required** |
+| `--input` | `-i` | Input Audio or Directory (batch) | GUI | Opens GUI if missing |
+| `--secret` | `-s` | Secret File (Text/Image) | GUI | Required for Encode |
+| `--password` | `-p` | Security Password | None | Used for `improved` only |
+| `--k_bit` | `-k` | Number of bits to replace (1-8) | 2 | Used for `improved` only |
+| `--visualize` | `-v` | Plot charts | False | Used for `batch`/`encode` |
 
 ---
-
-
