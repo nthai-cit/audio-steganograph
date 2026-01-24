@@ -10,12 +10,11 @@ This project implements a complete pipeline for Audio Steganography and Steganal
 
 ## 2. Key Features
 
-| Algorithm | Type | Description | Best For |
+| Algorithm | Type | Description | 
 | :--- | :--- | :--- | :--- |
-| **LSB-Based** | Spatial Domain | Replaces Least Significant Bits sequentially. | High capacity, educational use. |
-| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum (FFT). | Robustness against manipulation. |
-| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling (PSR)** seeded by Password + Content Hash. | **High Security** & Data protection. |
-
+| **LSB-Based** | Spatial Domain | Replaces Least Significant Bits sequentially. | 
+| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum (FFT). | 
+| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling (PSR)** seeded by Password + Content Hash. |
 ### Highlights
 * **Improved LSB :** Uses Pseudo-Random scattering seeded by a password + audio content hash.
 * **Adaptive Compression:** Images are automatically compressed (JPEG 4:2:0) to fit into audio carriers.
