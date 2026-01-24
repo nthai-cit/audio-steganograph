@@ -78,6 +78,8 @@ To replicate the large-scale experiments, download the datasets and extract them
 
 ## 5. Installation
 
+**Prerequisites:** Python 3.11 or higher is required.
+
 1.  **Clone the repository:**
     ```bash
     git clone [https://github.com/nthai-cit/audio-steganograph.git](https://github.com/nthai-cit/audio-steganograph.git)
@@ -91,8 +93,6 @@ To replicate the large-scale experiments, download the datasets and extract them
 
 ## 6. Usage Guide
 
-### 6.1 Single File Operations
-
 **Encode (Hide Image with Password):**
 
 ```bash
@@ -102,20 +102,30 @@ python main.py encode -m improved -k 2 -p "MyPass" -i "inputs/song.wav" -s "inpu
 ```bash
 python main.py decode -m improved -k 2 -p "MyPass" -i "outputs/encode/SESSION/stego.wav"
 ```
-### 6.2. Large-Scale Experimentation
 
-To embed random images Pascal VOC into audio carriers TIMIT and generate a consolidated CSV report:
+### 6.2. General Batch Processing
 
+This mode allows users to automatically embed data into every audio file within a specific directory. It is ideal for testing datasets like MUSDB18.
+
+**Preparation:**
+1.  Download the **MUSDB18-HQ** dataset.
+2.  Extract the audio files into the directory: `inputs/musdb-18`.
+
+**Execution:**
+Run the following command to embed a secret text file into all songs in the directory using the Improved LSB method:
+
+```bash
+python main.py batch -m improved -k 2 -p "MyPass" -i "inputs/musdb-18" -s "inputs/secret.txt" --visualize
+```
+### 6.3. Large-Scale Experimentation
 **Standard Run (k=8 bits):**
 ```bash
 python test/timit_voc.py -k 8
 ```
-
-**Run and Save Audio Files: (Use this flag to preserve output wav files; otherwise, they are deleted to conserve disk space.)**
-````bash
+**Run and Save Audio Files: (Use this flag to preserve output wav files; otherwise, they are deleted automatically to conserve disk space.)**
+```bash
 python test/timit_voc.py -k 2 --save-audio
-````
-
+```
 ## 7. Command Line Arguments
 
 | Argument | Short | Description | Default | Note |
