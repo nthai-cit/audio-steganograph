@@ -3,7 +3,7 @@
 
 ## 1. Overview
 
-This project implements a complete pipeline for **Audio Steganography** (hiding data) and **Steganalysis** (detecting hidden data). It features state-of-the-art algorithms like **Improved LSB ** with content-based anchoring and includes tools for large-scale batch experimentation.
+This project implements a complete pipeline for Audio Steganography and Steganalysis. It features state-of-the-art algorithms like **Improved LSB ** with content-based anchoring and includes tools for large-scale batch experimentation.
 
 ![System Architecture](workflow.png)
 
@@ -24,7 +24,7 @@ This project implements a complete pipeline for **Audio Steganography** (hiding 
 ## 3. Directory Structure
 
 > **Note:** Large datasets in `inputs/` and generated files in `outputs/` are excluded from version control.
-
+```text
 D:.
 │   main.py                 # [CLI] Main tool for single file encode/decode
 │   README.md               # Project Documentation
