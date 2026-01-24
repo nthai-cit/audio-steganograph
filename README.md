@@ -84,7 +84,7 @@ To replicate the large-scale experiments, download the datasets and extract them
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/nthai-cit/audio-steganograph.git](https://github.com/nthai-cit/audio-steganograph.git)
+    git clone https://github.com/nthai-cit/audio-steganograph.git
     cd audio-steganography
     ```
 
