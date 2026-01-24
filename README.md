@@ -3,7 +3,7 @@
 
 ## 1. Overview
 
-This project implements a complete pipeline for Audio Steganography and Steganalysis. It features state-of-the-art algorithms like **Improved LSB ** with content-based anchoring and includes tools for large-scale batch experimentation.
+This project implements a complete pipeline for Audio Steganography and Steganalysis. It features state-of-the-art algorithms like **Improved LSB** with content-based anchoring and includes tools for large-scale batch experimentation.
 
 ![System Architecture](workflow.png)
 
