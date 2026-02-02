@@ -1,11 +1,11 @@
-# Audio SteganographyFramework (CSSE)
+# Audio Steganography
 
 ## 1. Overview
 This project implements a comprehensive pipeline for **Audio Steganography**. The core focus is the **Improved LSB** algorithm—an adaptive LSB method utilizing Pseudo-Random Shuffling based on passwords and Content Hashes to achieve resistance against deep learning-based attacks.
 
 The system supports large-scale evaluation of signal fidelity (**SNR**, **PSNR**) and statistical security (**AUC**, **Accuracy**) against various machine learning classifiers.
 
-![System Architecture](workflow.pdf)
+![System Architecture](workflow.svg)
 
 ## 2. Key Features
 | Algorithm | Type | Description |
