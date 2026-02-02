@@ -17,7 +17,7 @@
                 "use_ema": false,
                 "ema_momentum": 0.99,
                 "ema_overwrite_frequency": null,
-                "loss_scale_factor": null,
+                "loss_scale_factor": null,y
                 "gradient_accumulation_steps": null,
                 "beta_1": 0.9,
                 "beta_2": 0.999,
