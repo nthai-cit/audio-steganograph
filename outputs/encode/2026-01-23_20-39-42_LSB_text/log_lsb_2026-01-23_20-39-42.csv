@@ -1,2 +1,0 @@
-Timestamp,Action,Method,Input_File,Secret,Output_File,K_Bit,Password,MSE,PSNR,SNR,Execution_Time,Status
-2026-01-23 20:39:42,Encode,lsb,song.wav,Text,outputs\encode\2026-01-23_20-39-42_LSB\song.wav,2,N/A,0.000007,142.06,198.14,0.3390s,success

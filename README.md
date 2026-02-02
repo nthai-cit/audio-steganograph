@@ -1,143 +1,136 @@
-# Audio Steganography
-
+# Audio SteganographyFramework (CSSE)
 
 ## 1. Overview
+This project implements a comprehensive pipeline for **Audio Steganography**. The core focus is the **Improved LSB** algorithm—an adaptive LSB method utilizing Pseudo-Random Shuffling based on passwords and Content Hashes to achieve resistance against deep learning-based attacks.
 
-This project implements a complete pipeline for Audio Steganography and Steganalysis. It features state-of-the-art algorithms like **Improved LSB** with content-based anchoring and includes tools for large-scale batch experimentation.
+The system supports large-scale evaluation of signal fidelity (**SNR**, **PSNR**) and statistical security (**AUC**, **Accuracy**) against various machine learning classifiers.
 
-![System Architecture](workflow.png)
-
+![System Architecture](workflow.pdf)
 
 ## 2. Key Features
-
-| Algorithm | Type | Description | 
+| Algorithm | Type | Description |
 | :--- | :--- | :--- |
-| **LSB-Based** | Spatial Domain | Replaces Least Significant Bits sequentially. | 
-| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum (FFT). | 
-| **Improved LSB** | Adaptive | Uses **Pseudo-Random Shuffling (PSR)** seeded by Password + Content Hash. |
+| **Standard LSB** | Spatial Domain | Replaces Least Significant Bits sequentially. |
+| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum for increased robustness. |
+| **Improved LSB** | Adaptive | Utilizes Pseudo-Random Shuffling PSR seeded by Password + Content Salt. |
+
 ### Highlights
-Enhances standard LSB with a Key-Salt driven Pseudo-Random Number Generator, ensuring robust protection against sequential extraction attacks.
-
-Conducts quantitative analysis involving signal fidelity metrics (SNR, PSNR) and detection resistance against ML classifiers.
-
-Empirically identifies performance degradation (reduced SNR) of Phase Coding techniques in sparse, low-amplitude audio regions.
-
-Features a complete workflow covering Preprocessing, Embedding, Transmission Simulation, and final Data Restoration.
+* **Security:** Key-Salt mechanism protects against sequential extraction attacks and CNN-based statistical analysis.
+* **Integrity:** Supports original data recovery (Lossless) without compression.
+* **Analysis:** Automated evaluation of SNR/PSNR and steganalysis resistance.
 
 ## 3. Directory Structure
-
-> **Note:** Large datasets in `inputs/` and generated files in `outputs/` are excluded from version control.
 ```text
 audio-steganograph
-│   main.py                 # [CLI] Main tool for single file encode/decode
-│   README.md               # Project Documentation
-│
+├───main.py                 # [CLI] Main tool for single-file encode/decode
+├───train.py                # [CLI] Script for CNN model training & evaluation
 ├───AudioStego              # [CORE ALGORITHMS]
 │   ├───improved_lsb        # PSR LSB (Secure & Robust)
-│   ├───lsb                 # Standard LSB
-│   ├───phasecoding         # Phase Coding
-│   └───utils               # Visualization 
-│
-├───google_colab            # [LOGS] Experimental logs for Steganography & Steganalysis
-│
+│   ├───lsb                 # Standard LSB implementation
+│   ├───phasecoding         # Phase Coding (FFT)
+│   ├───utils               # Processing and Visualization utilities
+│   └───exp                 # Experimental logs (5 Cases Benchmark)
+├───Steganalysis            # [DETECTION & CNN MODELS]
+│   ├───Data                # Feature sets (CNN Spectrograms for 256/512 payloads)
+│   └───logs                # Tuning logs (Layer depth, Filter, LR)
 ├───inputs                  # [DATASETS]
-│   ├───musdb-18            # Music Source (High Fidelity)
-│   ├───random-image-coco   # COCO Image Dataset
-│   ├───audio-cat-and-dogs  # Environmental Sounds
-│   ├───timit               # Speech Corpus (Reference)
-│   └───pascal-voc-2012     # Image Source (Reference)
-│
+│   ├───timit               # Speech Corpus (Used in paper)
+│   ├───musdb-18            # High-Fidelity Music (Used in paper)
+│   └───pascal-voc-2012     # Image Source (Used as payload)
 ├───outputs                 # [RESULTS]
-│   ├───batch               # Bulk processing results
-│   ├───encode              # Single encryption outputs
-│   └───decode              # Extracted payloads
-│
-└───test                    # [EXPERIMENTS]
-    ├───timit_voc.py        # Script: Large-scale embedding experiments
-    └───outputs             # Experiment specific results
+    ├───encode / decode     # Single operation results
+    └───batch               # Batch processing results
 ```
 ## 4. Data Preparation
+To replicate the large-scale experiments, please download the following datasets and extract them into the `inputs/` directory:
 
-To replicate the large-scale experiments, download the datasets and extract them into the `inputs/` directory.
-
-**Recommended Datasets:**
-
-1.  **[MUSDB18-HQ](https://zenodo.org/records/3338373)**
-    * *Type:* High-fidelity music stems.
-    * *Usage:* Ideal for testing high-capacity steganography on music files.
-
-2.  **[COCO](https://www.kaggle.com/datasets/abhinav1609/random-images-image-steganography) & [Audio Cats/Dogs](https://www.kaggle.com/datasets/mmoreaux/audio-cats-and-dogs)**
-    * *Type:* Large-scale image and environmental audio datasets.
-    * *Usage:* Used for extended generalization tests.
-
-**Reference Datasets (For Paper Replication):**
-
-3.  **[TIMIT Acoustic-Phonetic Continuous Speech Corpus](https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech)**
-    * *Usage:* Used as the primary speech carrier in the reported experiments.
-
-4.  **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012) or 500 sample at [drive](https://drive.google.com/file/d/1DrLhIIbopS82gwrZlYcY7L3oTIXRDB58/view?usp=drive_link)**
-    * *Usage:* Used as the standard image payload for capacity testing.
+**Datasets:**
+1. **[MUSDB18-HQ](https://zenodo.org/records/3338373)**: High-fidelity music data, ideal for testing high-capacity steganography.
+2. **[Audio Cats/Dogs](https://www.kaggle.com/datasets/mmoreaux/audio-cats-and-dogs)**: Used for extended generalization tests.
+3. **[TIMIT Corpus](https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech)**: The primary speech carrier used in the reported experiments.
+4. **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012)**: Standard image source for secret payloads.
 
 ## 5. Installation
+**Requirements:** Python 3.11 or higher and CUDA (recommended for CNN training).
 
-**Prerequisites:** Python 3.11 or higher is required.
-
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/nthai-cit/audio-steganograph.git
-    cd audio-steganography
-    ```
-
-2.  **Install dependencies:**
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/nthai-cit/audio-steganograph.git](https://github.com/nthai-cit/audio-steganograph.git)
+   cd audio-steganography
+   ```
+2. **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
+## 6. Usage Guide: Steganography
+The `main.py` script supports three primary actions: `encode`, `decode`, and `batch`.
 
-## 6. Usage Guide
-
-**Encode (Hide Image with Password):**
-
-```bash
-python main.py encode -m improved -k 2 -p "MyPass" -i "inputs/song.wav" -s "inputs/img.jpg"
-```
-**Decode:**
-```bash
-python main.py decode -m improved -k 2 -p "MyPass" -i "outputs/encode/SESSION/stego.wav"
-```
-
-### 6.2. General Batch Processing
-
-This mode allows users to automatically embed data into every audio file within a specific directory. It is ideal for testing datasets like MUSDB18.
-
-**Preparation:**
-1.  Download the **MUSDB18-HQ** dataset.
-2.  Extract the audio files into the directory: `inputs/musdb-18`.
-
-**Execution:**
-Run the following command to embed a secret text file into all songs in the directory using the Improved LSB method:
-
-```bash
-python main.py batch -m improved -k 2 -p "MyPass" -i "inputs/musdb-18" -s "inputs/secret.txt" --visualize
-```
-### 6.3. Large-Scale Experimentation
-**Standard Run (k=8 bits):**
-```bash
-python test/timit_voc.py -k 8
-```
-**Run and Save Audio Files: (Use this flag to preserve output wav files; otherwise, they are deleted automatically to conserve disk space.)**
-```bash
-python test/timit_voc.py -k 2 --save-audio
-```
-## 7. Command Line Arguments
-
-| Argument | Short | Description | Default | Note |
+| Argument | Short | Action | Description | Default / Options |
 | :--- | :--- | :--- | :--- | :--- |
-| `encode`/`decode`/`batch` | N/A | Operation Mode | N/A | **Required** |
-| `--method` | `-m` | Algorithm (`lsb`, `phase`, `improved`) | N/A | **Required** |
-| `--input` | `-i` | Input Audio or Directory (batch) | GUI | Opens GUI if missing |
-| `--secret` | `-s` | Secret File (Text/Image) | GUI | Required for Encode |
-| `--password` | `-p` | Security Password | None | Used for `improved` only |
-| `--k_bit` | `-k` | Number of bits to replace (1-8) | 2 | Used for `improved` only |
-| `--visualize` | `-v` | Plot charts | False | Used for `batch`/`encode` |
+| `action` | N/A | All | Selects the operation mode | `encode`, `decode`, `batch` |
+| `--method` | `-m` | All | Steganography algorithm to use | `lsb`, `phase`, `improved` |
+| `--input` | `-i` | All | Input audio file or directory | `.wav` file or Folder |
+| `--secret` | `-s` | Enc/Batch | Secret data file to hide | Text, Image, or Audio |
+| `-k` | N/A | Enc/Batch | Number of LSB bits (LSB/Improved only) | `2` |
+| `--password` | `-p` | All | Security password for encryption | `default` |
+| `--visualize`| `-v` | Batch | Display performance charts (SNR/PSNR) | `Flag` (False) |
+| `--save-files`| N/A | Batch | Save generated stego files to disk | `Flag` (False) |
 
----
+**Usage Examples:**
+
+* **Encoding:**
+    ```bash
+    python main.py encode -m improved -i "cover.wav" -s "secret.png" -p "MyPass123"
+    ```
+* **Decoding:**
+    ```bash
+    python main.py decode -m improved -i "stego.wav" -p "MyPass123"
+    ```
+* **Batch Processing with Visualization:**
+    ```bash
+    python main.py batch -m improved -i "./dataset" -s "Secret Mess" -v --save-files
+    ```
+
+## 8. Steganalysis Training Parameters (train.py)
+The `train.py` script manages the coordination of the Steganalysis training pipeline, supporting both Deep Learning and classical Machine Learning models.
+
+#### A. Dataset Configuration
+| Argument | Description | Default |
+| :--- | :--- | :--- |
+| `--cover` | Path to the directory containing Clean/Cover audio files | **Required** |
+| `--stego` | Path to the directory containing Embedded/Stego audio files | **Required** |
+| `--cache_dir` | Storage location for extracted feature files (`.npz`) | `Steganalysis/cache` |
+| `--log_dir` | Directory to save training logs and model checkpoints | `Steganalysis/logs` |
+
+#### B. Model Architecture
+| Argument | Description | Options / Default |
+| :--- | :--- | :--- |
+| `--algo` | Selection of detection algorithm | `cnn`, `bilstm`, `svm`, `rf`, `lr` |
+| `--depth` | Network depth (Number of Convolutional layers) | `5` |
+| `--filters` | Number of initial filters for the model | `64` |
+| `--use_bilstm` | Enable BiLSTM layer to form a C-RNN architecture | `Flag` (False) |
+
+#### C. Training Hyperparameters
+| Argument | Description | Default Value |
+| :--- | :--- | :--- |
+| `--epochs` | Total number of training iterations | `30` (Optimal: `50`) |
+| `--batch_size` | Number of samples per training batch | `32` (Optimal: `64`) |
+| `--lr` | Learning rate for gradient descent | `0.0001` ($10^{-4}$) |
+
+
+
+**Usage Examples:**
+
+* **Training the Baseline CNN (5 layers):**
+    ```bash
+    python train.py --cover "data/cover" --stego "data/stego" --algo cnn --depth 5 --filters 64
+    ```
+* **Training a C-RNN (CNN + BiLSTM):**
+    ```bash
+    python train.py --cover "data/cover" --stego "data/stego" --algo bilstm --use_bilstm --lr 0.0001
+    ```
+* **Using Classical Machine Learning (Random Forest):**
+    ```bash
+    python train.py --cover "data/cover" --stego "data/stego" --algo rf
+    ```
+

@@ -28,29 +28,45 @@ except ImportError as e:
     sys.exit(1)
 
 def main():
-    parser = argparse.ArgumentParser(description="He thong Giau tin Audio Steganography")
-    parser.add_argument('action', choices=['encode', 'decode', 'batch'], help="Hanh dong")
-    parser.add_argument('-m', '--method', required=True, choices=['lsb', 'phase', 'improved'], help="Thuat toan")
-    parser.add_argument('-i', '--input', help="Input file/folder") 
-    parser.add_argument('-s', '--secret', help="Secret file/text")
-    parser.add_argument('-k', type=int, default=2, help="So bit LSB")
-    parser.add_argument('-p', '--password', type=str, default="default", help="Mat khau (Improved)")
-    parser.add_argument('-v', '--visualize', action='store_true', help="Hien thi bieu do")
-    parser.add_argument('--save-files', action='store_true', default=False, help="Luu file batch")
-    
+    parser = argparse.ArgumentParser(description="He thong Giau tin Audio")
+    subparsers = parser.add_subparsers(dest='action', help='Chon che do hoat dong')
+
+    p_enc = subparsers.add_parser('encode', help='Giau tin vao am thanh')
+    p_enc.add_argument('-m', '--method', required=True, choices=['lsb', 'phase', 'improved'])
+    p_enc.add_argument('-i', '--input', help="File Audio Cover (.wav)")
+    p_enc.add_argument('-s', '--secret', help="File du lieu can giau")
+    p_enc.add_argument('-k', type=int, default=2, help="So bit LSB (Chi dung cho LSB/Improved)")
+    p_enc.add_argument('-p', '--password', default="default", help="Mat khau (Improved)")
+
+    p_dec = subparsers.add_parser('decode', help='Trich xuat tin tu am thanh')
+    p_dec.add_argument('-m', '--method', required=True, choices=['lsb', 'phase', 'improved'])
+    p_dec.add_argument('-i', '--input', help="File Audio Stego (.wav)")
+    p_dec.add_argument('-p', '--password', default="default", help="Mat khau")
+
+    p_batch = subparsers.add_parser('batch', help='Xu ly hang loat')
+    p_batch.add_argument('-m', '--method', required=True, choices=['lsb', 'phase', 'improved'])
+    p_batch.add_argument('-i', '--input', help="Thu muc Input")
+    p_batch.add_argument('-s', '--secret', help="File du lieu can giau")
+    p_batch.add_argument('-k', type=int, default=2, help="So bit LSB")
+    p_batch.add_argument('-p', '--password', default="default", help="Mat khau")
+    p_batch.add_argument('-v', '--visualize', action='store_true', help="Hien thi bieu do")
+    p_batch.add_argument('--save-files', action='store_true', default=False, help="Luu file ket qua")
+
     args = parser.parse_args()
 
+    if not args.action:
+        parser.print_help()
+        sys.exit(1)
 
-    if not args.input:
+    if not args.input and args.action in ['encode', 'decode', 'batch']:
         if args.action == 'batch':
              print("[LOI] Che do Batch can duong dan thu muc (-i).")
              sys.exit(1)
-        args.input = pick_file_gui(title="Chon File Audio Cover (.wav)", file_types=[("WAV Files", "*.wav")])
+        args.input = pick_file_gui(title="Chon File Audio (.wav)", file_types=[("WAV Files", "*.wav")])
 
     if args.action in ['encode', 'batch'] and not args.secret:
         gui_secret = pick_file_gui(title="Chon File Bi Mat Can Giau")
         args.secret = gui_secret if gui_secret else "Du lieu bi mat mac dinh."
-
 
     processors = {'lsb': lsb_algo, 'phase': phase_algo, 'improved': improved_algo}
     processor = processors[args.method]
@@ -63,7 +79,6 @@ def main():
     log_name = f"log_{args.method}_{current_time_str}.csv"
 
     try:
-        # === ENCODE ===
         if args.action == 'encode':
             input_type = detect_type(args.secret)
             session_dir = create_session_folder(args.action, args.method, extra_tag=input_type)
@@ -72,7 +87,6 @@ def main():
             original_filename = os.path.basename(args.input)
             out_path = os.path.join(session_dir, original_filename) 
             
-        
             kwargs = {}
             if args.method == 'improved': kwargs = {'k': args.k, 'password': args.password}
             
@@ -95,7 +109,6 @@ def main():
                 "Status": metrics.get('status', 'error')
             })
 
-        # ===  DECODE ===
         elif args.action == 'decode':
             target_input = args.input
             if os.path.isdir(target_input):
@@ -107,7 +120,9 @@ def main():
             session_dir = create_session_folder(args.action, args.method)
             
             kwargs = {}
-            if args.method == 'improved': kwargs = {'k': args.k, 'password': args.password}
+            if args.method == 'improved': 
+                kwargs = {'password': args.password}
+            
             result = processor.decode(target_input, **kwargs)
             
             status = "Success" if result.get('status') == 'success' else "Failed"
@@ -137,7 +152,6 @@ def main():
                 "Output_File": out_filename
             })
 
-        # === BATCH ===
         elif args.action == 'batch':
              if not os.path.isdir(args.input):
                 print(f"[LOI] Input phai la thu muc.")

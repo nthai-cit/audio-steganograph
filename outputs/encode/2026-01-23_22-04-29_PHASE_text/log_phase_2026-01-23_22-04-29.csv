@@ -1,2 +1,0 @@
-Timestamp,Action,Method,Input_Type,Secret,Output_File,MSE,PSNR,Status
-2026-01-23 22:04:30,Encode,phase,text,Text,outputs\encode\2026-01-23_22-04-29_PHASE_text\song.wav,0.000006,52.00,success
