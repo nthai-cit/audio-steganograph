@@ -1,2 +1,0 @@
-Timestamp,Action,Method,Input_Type,Secret,Output_File,MSE,PSNR,Status
-2026-01-23 23:06:26,Encode,improved,img,img.jpg,outputs\encode\2026-01-23_23-06-25_IMPROVED_img\song.wav,0.062888,102.32,success

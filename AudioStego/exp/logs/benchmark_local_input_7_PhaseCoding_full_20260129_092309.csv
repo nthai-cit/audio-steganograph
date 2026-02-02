@@ -1,0 +1,751 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Info
+09:23:18,A Classic Education - NightOwl_bass.wav,Success,7.9838,0.000003,55.45,37.79,Phase_Coding_FFT
+09:23:20,A Classic Education - NightOwl_drums.wav,Success,2.1378,0.000032,44.89,11.62,Phase_Coding_FFT
+09:23:23,A Classic Education - NightOwl_mixture.wav,Success,2.1518,0.005509,22.59,6.64,Phase_Coding_FFT
+09:23:25,A Classic Education - NightOwl_other.wav,Success,2.2551,0.000556,32.55,9.95,Phase_Coding_FFT
+09:23:28,A Classic Education - NightOwl_vocals.wav,Success,2.2991,0.000213,36.72,10.45,Phase_Coding_FFT
+09:23:32,AM Contra - Heart Peripheral_bass.wav,Success,3.3416,0.000000,94.78,68.33,Phase_Coding_FFT
+09:23:35,AM Contra - Heart Peripheral_drums.wav,Success,2.5882,0.003500,24.56,2.50,Phase_Coding_FFT
+09:23:37,AM Contra - Heart Peripheral_mixture.wav,Success,2.5796,0.009111,20.40,2.20,Phase_Coding_FFT
+09:23:40,AM Contra - Heart Peripheral_other.wav,Success,2.5493,0.000024,46.20,21.50,Phase_Coding_FFT
+09:23:44,AM Contra - Heart Peripheral_vocals.wav,Success,3.0505,0.001052,29.78,4.86,Phase_Coding_FFT
+09:23:48,ANiMAL - Clinic A_bass.wav,Success,3.6318,0.000016,47.88,27.30,Phase_Coding_FFT
+09:23:51,ANiMAL - Clinic A_drums.wav,Success,3.0345,0.000008,51.22,24.05,Phase_Coding_FFT
+09:23:55,ANiMAL - Clinic A_mixture.wav,Success,2.8725,0.011612,19.35,2.09,Phase_Coding_FFT
+09:23:59,ANiMAL - Clinic A_other.wav,Success,3.3782,0.002144,26.69,4.18,Phase_Coding_FFT
+09:24:02,ANiMAL - Clinic A_vocals.wav,Success,2.9011,0.001371,28.63,2.64,Phase_Coding_FFT
+09:24:05,ANiMAL - Easy Tiger_bass.wav,Success,2.3818,0.000000,71.88,48.19,Phase_Coding_FFT
+09:24:08,ANiMAL - Easy Tiger_drums.wav,Success,2.8941,0.002471,26.07,2.59,Phase_Coding_FFT
+09:24:11,ANiMAL - Easy Tiger_mixture.wav,Success,2.8685,0.009858,20.06,1.78,Phase_Coding_FFT
+09:24:15,ANiMAL - Easy Tiger_other.wav,Success,2.9511,0.001290,28.90,3.68,Phase_Coding_FFT
+09:24:17,ANiMAL - Easy Tiger_vocals.wav,Success,2.5508,0.000538,32.69,7.69,Phase_Coding_FFT
+09:24:20,ANiMAL - Rockshow_bass.wav,Success,2.0813,0.000239,36.21,14.07,Phase_Coding_FFT
+09:24:22,ANiMAL - Rockshow_drums.wav,Success,2.1497,0.001495,28.25,4.26,Phase_Coding_FFT
+09:24:25,ANiMAL - Rockshow_mixture.wav,Success,2.4056,0.009124,20.40,1.86,Phase_Coding_FFT
+09:24:28,ANiMAL - Rockshow_other.wav,Success,2.4970,0.000874,30.58,3.09,Phase_Coding_FFT
+09:24:30,ANiMAL - Rockshow_vocals.wav,Success,2.1129,0.001380,28.60,1.94,Phase_Coding_FFT
+09:24:33,Actions - Devil's Words_bass.wav,Success,2.3225,0.000000,63.20,39.91,Phase_Coding_FFT
+09:24:36,Actions - Devil's Words_drums.wav,Success,2.5180,0.003162,25.00,2.35,Phase_Coding_FFT
+09:24:39,Actions - Devil's Words_mixture.wav,Success,2.7191,0.017575,17.55,1.50,Phase_Coding_FFT
+09:24:42,Actions - Devil's Words_other.wav,Success,2.7386,0.002288,26.41,4.39,Phase_Coding_FFT
+09:24:45,Actions - Devil's Words_vocals.wav,Success,2.3741,0.005840,22.34,1.58,Phase_Coding_FFT
+09:24:47,Actions - One Minute Smile_bass.wav,Success,2.0311,0.000000,72.04,43.49,Phase_Coding_FFT
+09:24:50,Actions - One Minute Smile_drums.wav,Success,2.1959,0.003800,24.20,2.12,Phase_Coding_FFT
+09:24:52,Actions - One Minute Smile_mixture.wav,Success,2.3423,0.017228,17.64,1.29,Phase_Coding_FFT
+09:24:55,Actions - One Minute Smile_other.wav,Success,2.6883,0.001421,28.47,6.67,Phase_Coding_FFT
+09:24:58,Actions - One Minute Smile_vocals.wav,Success,2.0851,0.005603,22.52,2.04,Phase_Coding_FFT
+09:25:00,Actions - South Of The Water_bass.wav,Success,2.2965,0.000000,68.35,48.13,Phase_Coding_FFT
+09:25:03,Actions - South Of The Water_drums.wav,Success,2.2860,0.002312,26.36,2.32,Phase_Coding_FFT
+09:25:06,Actions - South Of The Water_mixture.wav,Success,2.3951,0.017651,17.53,1.43,Phase_Coding_FFT
+09:25:09,Actions - South Of The Water_other.wav,Success,2.8157,0.000467,33.31,9.81,Phase_Coding_FFT
+09:25:11,Actions - South Of The Water_vocals.wav,Success,2.1946,0.004503,23.46,1.70,Phase_Coding_FFT
+09:25:14,Aimee Norwich - Child_bass.wav,Success,2.2552,0.000002,56.33,37.76,Phase_Coding_FFT
+09:25:17,Aimee Norwich - Child_drums.wav,Success,2.3667,0.001033,29.86,6.18,Phase_Coding_FFT
+09:25:20,Aimee Norwich - Child_mixture.wav,Success,2.5350,0.008306,20.81,4.41,Phase_Coding_FFT
+09:25:23,Aimee Norwich - Child_other.wav,Success,2.8206,0.000024,46.25,21.72,Phase_Coding_FFT
+09:25:25,Aimee Norwich - Child_vocals.wav,Success,2.2905,0.000273,35.64,6.46,Phase_Coding_FFT
+09:25:28,Al James - Schoolboy Facination_bass.wav,Success,2.3774,0.000000,73.04,47.35,Phase_Coding_FFT
+09:25:31,Al James - Schoolboy Facination_drums.wav,Success,2.4270,0.001139,29.43,1.85,Phase_Coding_FFT
+09:25:34,Al James - Schoolboy Facination_mixture.wav,Success,2.5963,0.008173,20.88,1.52,Phase_Coding_FFT
+09:25:38,Al James - Schoolboy Facination_other.wav,Success,2.9882,0.000899,30.46,3.41,Phase_Coding_FFT
+09:25:40,Al James - Schoolboy Facination_vocals.wav,Success,2.6318,0.002947,25.31,2.41,Phase_Coding_FFT
+09:25:46,Alexander Ross - Goodbye Bolero_bass.wav,Success,4.9410,0.000000,84.20,53.83,Phase_Coding_FFT
+09:25:52,Alexander Ross - Goodbye Bolero_drums.wav,Success,5.4727,0.000189,37.24,8.30,Phase_Coding_FFT
+09:25:58,Alexander Ross - Goodbye Bolero_mixture.wav,Success,4.7378,0.004845,23.15,2.90,Phase_Coding_FFT
+09:26:04,Alexander Ross - Goodbye Bolero_other.wav,Success,4.9495,0.001934,27.13,4.59,Phase_Coding_FFT
+09:26:09,Alexander Ross - Goodbye Bolero_vocals.wav,Success,4.3331,0.000811,30.91,3.29,Phase_Coding_FFT
+09:26:15,Alexander Ross - Velvet Curtain_bass.wav,Success,5.5101,0.000000,121.55,90.32,Phase_Coding_FFT
+09:26:22,Alexander Ross - Velvet Curtain_drums.wav,Success,5.9092,0.000000,119.11,90.32,Phase_Coding_FFT
+09:26:29,Alexander Ross - Velvet Curtain_mixture.wav,Success,5.8806,0.000006,52.40,29.24,Phase_Coding_FFT
+09:26:36,Alexander Ross - Velvet Curtain_other.wav,Success,6.0792,0.000000,63.87,36.00,Phase_Coding_FFT
+09:26:53,Alexander Ross - Velvet Curtain_vocals.wav,Success,15.1131,0.000005,52.72,23.29,Phase_Coding_FFT
+09:26:56,Angela Thomas Wade - Milk Cow Blues_bass.wav,Success,2.7207,0.000000,75.98,47.34,Phase_Coding_FFT
+09:26:59,Angela Thomas Wade - Milk Cow Blues_drums.wav,Success,2.6437,0.001163,29.34,4.17,Phase_Coding_FFT
+09:27:02,Angela Thomas Wade - Milk Cow Blues_mixture.wav,Success,2.6243,0.007282,21.38,2.14,Phase_Coding_FFT
+09:27:06,Angela Thomas Wade - Milk Cow Blues_other.wav,Success,3.3472,0.000333,34.78,11.72,Phase_Coding_FFT
+09:27:09,Angela Thomas Wade - Milk Cow Blues_vocals.wav,Success,2.5820,0.001292,28.89,2.99,Phase_Coding_FFT
+09:27:11,Angels In Amplifiers - I'm Alright_bass.wav,Success,2.4157,0.000000,73.57,46.90,Phase_Coding_FFT
+09:27:14,Angels In Amplifiers - I'm Alright_drums.wav,Success,2.6980,0.001263,28.99,3.35,Phase_Coding_FFT
+09:27:17,Angels In Amplifiers - I'm Alright_mixture.wav,Success,2.5544,0.007557,21.22,2.55,Phase_Coding_FFT
+09:27:21,Angels In Amplifiers - I'm Alright_other.wav,Success,2.9312,0.001588,27.99,4.24,Phase_Coding_FFT
+09:27:23,Angels In Amplifiers - I'm Alright_vocals.wav,Success,2.3720,0.001575,28.03,4.58,Phase_Coding_FFT
+09:27:27,Arise - Run Run Run_bass.wav,Success,2.8278,0.000000,69.16,48.03,Phase_Coding_FFT
+09:27:30,Arise - Run Run Run_drums.wav,Success,2.7859,0.000567,32.47,6.87,Phase_Coding_FFT
+09:27:33,Arise - Run Run Run_mixture.wav,Success,3.2038,0.005839,22.34,5.70,Phase_Coding_FFT
+09:27:37,Arise - Run Run Run_other.wav,Success,3.0375,0.000021,46.85,26.12,Phase_Coding_FFT
+09:27:40,Arise - Run Run Run_vocals.wav,Success,2.5491,0.000006,52.53,27.22,Phase_Coding_FFT
+09:27:43,Atlantis Bound - It Was My Fault For Waiting_bass.wav,Success,2.9520,0.000000,71.76,44.11,Phase_Coding_FFT
+09:27:47,Atlantis Bound - It Was My Fault For Waiting_drums.wav,Success,3.5564,0.001029,29.88,6.71,Phase_Coding_FFT
+09:27:52,Atlantis Bound - It Was My Fault For Waiting_mixture.wav,Success,3.4014,0.003681,24.34,5.09,Phase_Coding_FFT
+09:27:55,Atlantis Bound - It Was My Fault For Waiting_other.wav,Success,3.0877,0.000069,41.64,15.03,Phase_Coding_FFT
+09:27:59,Atlantis Bound - It Was My Fault For Waiting_vocals.wav,Success,3.3484,0.000428,33.68,8.71,Phase_Coding_FFT
+09:28:03,Auctioneer - Our Future Faces_bass.wav,Success,3.1773,0.000000,69.05,48.27,Phase_Coding_FFT
+09:28:06,Auctioneer - Our Future Faces_drums.wav,Success,2.5798,0.000301,35.21,8.15,Phase_Coding_FFT
+09:28:08,Auctioneer - Our Future Faces_mixture.wav,Success,2.4632,0.011059,19.56,2.56,Phase_Coding_FFT
+09:28:11,Auctioneer - Our Future Faces_other.wav,Success,2.4724,0.000161,37.93,15.52,Phase_Coding_FFT
+09:28:15,Auctioneer - Our Future Faces_vocals.wav,Success,2.7754,0.001833,27.37,3.33,Phase_Coding_FFT
+09:28:19,AvaLuna - Waterduct_bass.wav,Success,3.6955,0.000001,61.90,35.72,Phase_Coding_FFT
+09:28:22,AvaLuna - Waterduct_drums.wav,Success,3.0116,0.000388,34.11,7.01,Phase_Coding_FFT
+09:28:26,AvaLuna - Waterduct_mixture.wav,Success,3.0653,0.002580,25.88,4.39,Phase_Coding_FFT
+09:28:30,AvaLuna - Waterduct_other.wav,Success,3.7260,0.000288,35.41,6.10,Phase_Coding_FFT
+09:28:34,AvaLuna - Waterduct_vocals.wav,Success,2.9866,0.000000,86.47,58.38,Phase_Coding_FFT
+09:28:38,BKS - Bulldozer_bass.wav,Success,3.8105,0.000000,69.29,44.35,Phase_Coding_FFT
+09:28:43,BKS - Bulldozer_drums.wav,Success,4.1828,0.000992,30.03,7.88,Phase_Coding_FFT
+09:28:48,BKS - Bulldozer_mixture.wav,Success,4.2178,0.007845,21.05,2.43,Phase_Coding_FFT
+09:28:52,BKS - Bulldozer_other.wav,Success,3.6549,0.000036,44.39,18.15,Phase_Coding_FFT
+09:28:57,BKS - Bulldozer_vocals.wav,Success,3.9659,0.001091,29.62,2.79,Phase_Coding_FFT
+09:29:00,BKS - Too Much_bass.wav,Success,2.8454,0.000000,71.05,45.87,Phase_Coding_FFT
+09:29:03,BKS - Too Much_drums.wav,Success,2.6622,0.001737,27.60,2.54,Phase_Coding_FFT
+09:29:06,BKS - Too Much_mixture.wav,Success,2.6900,0.006151,22.11,2.39,Phase_Coding_FFT
+09:29:09,BKS - Too Much_other.wav,Success,2.7634,0.000031,45.08,17.33,Phase_Coding_FFT
+09:29:13,BKS - Too Much_vocals.wav,Success,3.1156,0.000918,30.37,4.88,Phase_Coding_FFT
+09:29:16,Ben Carrigan - We'll Talk About It All Tonight_bass.wav,Success,2.6852,0.000000,75.78,48.39,Phase_Coding_FFT
+09:29:19,Ben Carrigan - We'll Talk About It All Tonight_drums.wav,Success,2.8408,0.001038,29.84,3.06,Phase_Coding_FFT
+09:29:23,Ben Carrigan - We'll Talk About It All Tonight_mixture.wav,Success,3.2355,0.004268,23.70,2.64,Phase_Coding_FFT
+09:29:27,Ben Carrigan - We'll Talk About It All Tonight_other.wav,Success,3.5951,0.000225,36.48,10.70,Phase_Coding_FFT
+09:29:31,Ben Carrigan - We'll Talk About It All Tonight_vocals.wav,Success,2.8193,0.000268,35.72,6.75,Phase_Coding_FFT
+09:29:33,BigTroubles - Phantom_bass.wav,Success,1.8433,0.000001,62.61,45.50,Phase_Coding_FFT
+09:29:35,BigTroubles - Phantom_drums.wav,Success,1.9221,0.000452,33.45,8.88,Phase_Coding_FFT
+09:29:37,BigTroubles - Phantom_mixture.wav,Success,2.2228,0.020051,16.98,2.41,Phase_Coding_FFT
+09:29:40,BigTroubles - Phantom_other.wav,Success,2.4022,0.003236,24.90,4.39,Phase_Coding_FFT
+09:29:42,BigTroubles - Phantom_vocals.wav,Success,1.9507,0.001390,28.57,3.49,Phase_Coding_FFT
+09:29:45,Bill Chudziak - Children Of No-one_bass.wav,Success,2.7112,0.000000,118.20,90.32,Phase_Coding_FFT
+09:29:49,Bill Chudziak - Children Of No-one_drums.wav,Success,2.7613,0.000000,104.62,81.10,Phase_Coding_FFT
+09:29:52,Bill Chudziak - Children Of No-one_mixture.wav,Success,3.0137,0.000006,52.22,33.48,Phase_Coding_FFT
+09:29:56,Bill Chudziak - Children Of No-one_other.wav,Success,3.1079,0.000006,52.22,28.17,Phase_Coding_FFT
+09:29:59,Bill Chudziak - Children Of No-one_vocals.wav,Success,2.6131,0.000000,112.20,87.44,Phase_Coding_FFT
+09:30:04,Black Bloc - If You Want Success_bass.wav,Success,4.7358,0.000000,85.78,58.49,Phase_Coding_FFT
+09:30:10,Black Bloc - If You Want Success_drums.wav,Success,5.2192,0.003770,24.24,2.89,Phase_Coding_FFT
+09:30:15,Black Bloc - If You Want Success_mixture.wav,Success,4.5117,0.008588,20.66,1.95,Phase_Coding_FFT
+09:30:21,Black Bloc - If You Want Success_other.wav,Success,4.8189,0.000007,51.53,25.94,Phase_Coding_FFT
+09:30:26,Black Bloc - If You Want Success_vocals.wav,Success,4.2136,0.000603,32.20,3.80,Phase_Coding_FFT
+09:30:29,Bobby Nobody - Stitch Up_bass.wav,Success,2.4552,0.000000,74.03,48.00,Phase_Coding_FFT
+09:30:32,Bobby Nobody - Stitch Up_drums.wav,Success,2.6604,0.000409,33.88,5.30,Phase_Coding_FFT
+09:30:36,Bobby Nobody - Stitch Up_mixture.wav,Success,3.2883,0.004960,23.05,2.28,Phase_Coding_FFT
+09:30:39,Bobby Nobody - Stitch Up_other.wav,Success,2.7304,0.000154,38.12,12.18,Phase_Coding_FFT
+09:30:42,Bobby Nobody - Stitch Up_vocals.wav,Success,2.5550,0.001095,29.61,2.51,Phase_Coding_FFT
+09:30:46,Buitraker - Revo X_bass.wav,Success,3.2541,0.000000,65.71,41.25,Phase_Coding_FFT
+09:30:50,Buitraker - Revo X_drums.wav,Success,3.9968,0.000051,42.91,22.03,Phase_Coding_FFT
+09:30:54,Buitraker - Revo X_mixture.wav,Success,3.1859,0.001968,27.06,9.53,Phase_Coding_FFT
+09:30:57,Buitraker - Revo X_other.wav,Success,3.1697,0.000225,36.48,12.90,Phase_Coding_FFT
+09:31:01,Buitraker - Revo X_vocals.wav,Success,3.2687,0.000000,118.23,90.32,Phase_Coding_FFT
+09:31:05,Carlos Gonzalez - A Place For Us_bass.wav,Success,3.4256,0.000000,84.98,52.33,Phase_Coding_FFT
+09:31:09,Carlos Gonzalez - A Place For Us_drums.wav,Success,2.9595,0.000553,32.57,6.38,Phase_Coding_FFT
+09:31:12,Carlos Gonzalez - A Place For Us_mixture.wav,Success,3.0103,0.004775,23.21,4.01,Phase_Coding_FFT
+09:31:16,Carlos Gonzalez - A Place For Us_other.wav,Success,3.0924,0.000013,48.82,25.42,Phase_Coding_FFT
+09:31:20,Carlos Gonzalez - A Place For Us_vocals.wav,Success,3.5420,0.000691,31.60,8.10,Phase_Coding_FFT
+09:31:23,Celestial Shore - Die For Us_bass.wav,Success,3.3079,0.000000,72.27,49.84,Phase_Coding_FFT
+09:31:27,Celestial Shore - Die For Us_drums.wav,Success,3.3491,0.000001,61.38,24.68,Phase_Coding_FFT
+09:31:32,Celestial Shore - Die For Us_mixture.wav,Success,3.9141,0.011671,19.33,2.42,Phase_Coding_FFT
+09:31:36,Celestial Shore - Die For Us_other.wav,Success,3.2732,0.000020,46.96,27.27,Phase_Coding_FFT
+09:31:39,Celestial Shore - Die For Us_vocals.wav,Success,3.2740,0.002083,26.81,2.49,Phase_Coding_FFT
+09:31:44,Chris Durban - Celebrate_bass.wav,Success,3.5105,0.000000,76.73,53.90,Phase_Coding_FFT
+09:31:48,Chris Durban - Celebrate_drums.wav,Success,3.8304,0.000082,40.87,15.42,Phase_Coding_FFT
+09:31:52,Chris Durban - Celebrate_mixture.wav,Success,3.4797,0.000917,30.38,12.63,Phase_Coding_FFT
+09:31:56,Chris Durban - Celebrate_other.wav,Success,3.4647,0.000006,52.42,29.95,Phase_Coding_FFT
+09:32:01,Chris Durban - Celebrate_vocals.wav,Success,4.0067,0.000000,115.68,90.32,Phase_Coding_FFT
+09:32:03,Clara Berry And Wooldog - Air Traffic_bass.wav,Success,2.1128,0.000000,90.58,65.64,Phase_Coding_FFT
+09:32:05,Clara Berry And Wooldog - Air Traffic_drums.wav,Success,2.1851,0.000000,89.44,61.91,Phase_Coding_FFT
+09:32:08,Clara Berry And Wooldog - Air Traffic_mixture.wav,Success,2.1963,0.000011,49.62,28.77,Phase_Coding_FFT
+09:32:10,Clara Berry And Wooldog - Air Traffic_other.wav,Success,2.1832,0.000001,60.81,32.62,Phase_Coding_FFT
+09:32:14,Clara Berry And Wooldog - Air Traffic_vocals.wav,Success,2.8047,0.000010,49.98,22.43,Phase_Coding_FFT
+09:32:16,Clara Berry And Wooldog - Stella_bass.wav,Success,2.4123,0.000000,73.68,51.86,Phase_Coding_FFT
+09:32:19,Clara Berry And Wooldog - Stella_drums.wav,Success,2.4485,0.000000,67.53,36.83,Phase_Coding_FFT
+09:32:22,Clara Berry And Wooldog - Stella_mixture.wav,Success,2.3175,0.000012,49.23,29.77,Phase_Coding_FFT
+09:32:25,Clara Berry And Wooldog - Stella_other.wav,Success,2.4173,0.000000,68.74,40.29,Phase_Coding_FFT
+09:32:28,Clara Berry And Wooldog - Stella_vocals.wav,Success,3.1088,0.000010,49.86,23.52,Phase_Coding_FFT
+09:32:31,Clara Berry And Wooldog - Waltz For My Victims_bass.wav,Success,2.1404,0.000000,79.60,50.86,Phase_Coding_FFT
+09:32:33,Clara Berry And Wooldog - Waltz For My Victims_drums.wav,Success,2.1978,0.000003,55.31,22.22,Phase_Coding_FFT
+09:32:36,Clara Berry And Wooldog - Waltz For My Victims_mixture.wav,Success,2.2464,0.001006,29.97,9.55,Phase_Coding_FFT
+09:32:38,Clara Berry And Wooldog - Waltz For My Victims_other.wav,Success,2.2532,0.000004,53.51,31.49,Phase_Coding_FFT
+09:32:42,Clara Berry And Wooldog - Waltz For My Victims_vocals.wav,Success,2.7715,0.000091,40.43,10.22,Phase_Coding_FFT
+09:32:46,Cnoc An Tursa - Bannockburn_bass.wav,Success,3.5197,0.000022,46.52,21.08,Phase_Coding_FFT
+09:32:50,Cnoc An Tursa - Bannockburn_drums.wav,Success,3.5349,0.003453,24.62,5.02,Phase_Coding_FFT
+09:32:54,Cnoc An Tursa - Bannockburn_mixture.wav,Success,3.6096,0.014926,18.26,1.91,Phase_Coding_FFT
+09:32:58,Cnoc An Tursa - Bannockburn_other.wav,Success,3.9355,0.003316,24.79,3.38,Phase_Coding_FFT
+09:33:02,Cnoc An Tursa - Bannockburn_vocals.wav,Success,3.1925,0.000926,30.34,3.39,Phase_Coding_FFT
+09:33:06,Creepoid - OldTree_bass.wav,Success,3.3022,0.000000,74.17,52.10,Phase_Coding_FFT
+09:33:11,Creepoid - OldTree_drums.wav,Success,4.3492,0.000352,34.54,8.75,Phase_Coding_FFT
+09:33:16,Creepoid - OldTree_mixture.wav,Success,4.2264,0.006784,21.69,2.94,Phase_Coding_FFT
+09:33:20,Creepoid - OldTree_other.wav,Success,3.5495,0.000034,44.64,18.20,Phase_Coding_FFT
+09:33:24,Creepoid - OldTree_vocals.wav,Success,4.3171,0.000999,30.01,3.45,Phase_Coding_FFT
+09:33:28,Cristina Vane - So Easy_bass.wav,Success,2.8430,0.000001,62.32,34.61,Phase_Coding_FFT
+09:33:31,Cristina Vane - So Easy_drums.wav,Success,2.9568,0.001740,27.60,4.89,Phase_Coding_FFT
+09:33:35,Cristina Vane - So Easy_mixture.wav,Success,3.2070,0.005485,22.61,3.71,Phase_Coding_FFT
+09:33:39,Cristina Vane - So Easy_other.wav,Success,3.5744,0.000007,51.77,25.56,Phase_Coding_FFT
+09:33:42,Cristina Vane - So Easy_vocals.wav,Success,2.8317,0.001349,28.70,4.17,Phase_Coding_FFT
+09:33:45,Dark Ride - Burning Bridges_bass.wav,Success,2.6231,0.000014,48.59,26.81,Phase_Coding_FFT
+09:33:49,Dark Ride - Burning Bridges_drums.wav,Success,2.8520,0.007036,21.53,2.63,Phase_Coding_FFT
+09:33:53,Dark Ride - Burning Bridges_mixture.wav,Success,3.5585,0.017254,17.63,1.88,Phase_Coding_FFT
+09:33:56,Dark Ride - Burning Bridges_other.wav,Success,2.6690,0.000966,30.15,5.99,Phase_Coding_FFT
+09:33:59,Dark Ride - Burning Bridges_vocals.wav,Success,2.7438,0.001883,27.25,2.44,Phase_Coding_FFT
+09:34:01,Detsky Sad - Walkie Talkie_bass.wav,Success,2.1693,0.000000,68.76,38.12,Phase_Coding_FFT
+09:34:05,Detsky Sad - Walkie Talkie_drums.wav,Success,3.0061,0.005795,22.37,2.12,Phase_Coding_FFT
+09:34:08,Detsky Sad - Walkie Talkie_mixture.wav,Success,2.4979,0.010734,19.69,1.62,Phase_Coding_FFT
+09:34:10,Detsky Sad - Walkie Talkie_other.wav,Success,2.3540,0.001549,28.10,3.47,Phase_Coding_FFT
+09:34:13,Detsky Sad - Walkie Talkie_vocals.wav,Success,2.3526,0.000652,31.86,4.68,Phase_Coding_FFT
+09:34:18,Dreamers Of The Ghetto - Heavy Love_bass.wav,Success,4.0427,0.000000,93.80,65.59,Phase_Coding_FFT
+09:34:22,Dreamers Of The Ghetto - Heavy Love_drums.wav,Success,3.8036,0.000235,36.28,10.29,Phase_Coding_FFT
+09:34:26,Dreamers Of The Ghetto - Heavy Love_mixture.wav,Success,3.4819,0.004391,23.57,5.90,Phase_Coding_FFT
+09:34:30,Dreamers Of The Ghetto - Heavy Love_other.wav,Success,3.4632,0.000010,49.88,29.12,Phase_Coding_FFT
+09:34:35,Dreamers Of The Ghetto - Heavy Love_vocals.wav,Success,4.1995,0.000259,35.87,12.54,Phase_Coding_FFT
+09:34:39,Drumtracks - Ghost Bitch_bass.wav,Success,3.8903,0.000000,66.34,40.00,Phase_Coding_FFT
+09:34:44,Drumtracks - Ghost Bitch_drums.wav,Success,4.1735,0.000393,34.05,4.38,Phase_Coding_FFT
+09:34:50,Drumtracks - Ghost Bitch_mixture.wav,Success,5.2811,0.003995,23.98,4.30,Phase_Coding_FFT
+09:34:55,Drumtracks - Ghost Bitch_other.wav,Success,4.0595,0.000006,52.04,26.29,Phase_Coding_FFT
+09:35:00,Drumtracks - Ghost Bitch_vocals.wav,Success,4.0548,0.000001,59.59,36.26,Phase_Coding_FFT
+09:35:03,Enda Reilly - Cur An Long Ag Seol_bass.wav,Success,2.6585,0.000000,73.42,48.81,Phase_Coding_FFT
+09:35:05,Enda Reilly - Cur An Long Ag Seol_drums.wav,Success,2.2609,0.000000,64.15,40.27,Phase_Coding_FFT
+09:35:08,Enda Reilly - Cur An Long Ag Seol_mixture.wav,Success,2.2560,0.005891,22.30,4.28,Phase_Coding_FFT
+09:35:11,Enda Reilly - Cur An Long Ag Seol_other.wav,Success,2.3451,0.001104,29.57,5.71,Phase_Coding_FFT
+09:35:14,Enda Reilly - Cur An Long Ag Seol_vocals.wav,Success,2.5795,0.000573,32.42,8.45,Phase_Coding_FFT
+09:35:21,Faces On Film - Waiting For Ga_bass.wav,Success,7.3087,0.000000,92.51,60.00,Phase_Coding_FFT
+09:35:25,Faces On Film - Waiting For Ga_drums.wav,Success,3.0271,0.000000,69.06,38.05,Phase_Coding_FFT
+09:35:29,Faces On Film - Waiting For Ga_mixture.wav,Success,3.3467,0.005872,22.31,4.54,Phase_Coding_FFT
+09:35:33,Faces On Film - Waiting For Ga_other.wav,Success,3.5684,0.001233,29.09,9.62,Phase_Coding_FFT
+09:35:36,Faces On Film - Waiting For Ga_vocals.wav,Success,2.9742,0.001341,28.72,4.77,Phase_Coding_FFT
+09:35:38,Fergessen - Back From The Start_bass.wav,Success,1.9700,0.000000,78.87,53.20,Phase_Coding_FFT
+09:35:41,Fergessen - Back From The Start_drums.wav,Success,2.0679,0.000015,48.30,24.55,Phase_Coding_FFT
+09:35:44,Fergessen - Back From The Start_mixture.wav,Success,2.6132,0.005384,22.69,3.10,Phase_Coding_FFT
+09:35:46,Fergessen - Back From The Start_other.wav,Success,2.3869,0.000014,48.66,18.13,Phase_Coding_FFT
+09:35:49,Fergessen - Back From The Start_vocals.wav,Success,2.0910,0.001545,28.11,3.05,Phase_Coding_FFT
+09:35:52,Fergessen - Nos Palpitants_bass.wav,Success,2.4584,0.000000,122.37,90.32,Phase_Coding_FFT
+09:35:54,Fergessen - Nos Palpitants_drums.wav,Success,2.3817,0.000000,117.59,90.32,Phase_Coding_FFT
+09:35:58,Fergessen - Nos Palpitants_mixture.wav,Success,2.9287,0.002547,25.94,5.84,Phase_Coding_FFT
+09:36:01,Fergessen - Nos Palpitants_other.wav,Success,2.7045,0.000004,53.99,27.96,Phase_Coding_FFT
+09:36:03,Fergessen - Nos Palpitants_vocals.wav,Success,2.3456,0.001200,29.21,6.00,Phase_Coding_FFT
+09:36:06,Fergessen - The Wind_bass.wav,Success,2.2466,0.000000,71.71,44.21,Phase_Coding_FFT
+09:36:09,Fergessen - The Wind_drums.wav,Success,2.3332,0.000252,35.99,9.21,Phase_Coding_FFT
+09:36:12,Fergessen - The Wind_mixture.wav,Success,2.8707,0.007840,21.06,2.80,Phase_Coding_FFT
+09:36:15,Fergessen - The Wind_other.wav,Success,2.6155,0.001163,29.34,6.29,Phase_Coding_FFT
+09:36:18,Fergessen - The Wind_vocals.wav,Success,2.3228,0.002308,26.37,4.25,Phase_Coding_FFT
+09:36:22,Flags - 54_bass.wav,Success,3.5152,0.000000,110.30,79.07,Phase_Coding_FFT
+09:36:27,Flags - 54_drums.wav,Success,4.3339,0.000001,59.24,37.71,Phase_Coding_FFT
+09:36:31,Flags - 54_mixture.wav,Success,3.7633,0.000001,59.16,38.96,Phase_Coding_FFT
+09:36:35,Flags - 54_other.wav,Success,3.5536,0.000000,77.04,42.73,Phase_Coding_FFT
+09:36:40,Flags - 54_vocals.wav,Success,3.6448,0.000000,118.89,90.32,Phase_Coding_FFT
+09:36:43,Forkupines - Semantics_bass.wav,Success,3.2862,0.000001,59.25,32.66,Phase_Coding_FFT
+09:36:47,Forkupines - Semantics_drums.wav,Success,3.3438,0.005564,22.55,2.74,Phase_Coding_FFT
+09:36:54,Forkupines - Semantics_mixture.wav,Success,3.2249,0.012857,18.91,1.69,Phase_Coding_FFT
+09:37:06,Forkupines - Semantics_other.wav,Success,12.2179,0.002107,26.76,2.78,Phase_Coding_FFT
+09:37:10,Forkupines - Semantics_vocals.wav,Success,3.2194,0.001043,29.82,3.49,Phase_Coding_FFT
+09:37:16,Georgia Wonder - Siren_bass.wav,Success,5.4646,0.000000,79.21,55.24,Phase_Coding_FFT
+09:37:23,Georgia Wonder - Siren_drums.wav,Success,5.6261,0.003642,24.39,1.11,Phase_Coding_FFT
+09:37:28,Georgia Wonder - Siren_mixture.wav,Success,5.0018,0.011902,19.24,1.06,Phase_Coding_FFT
+09:37:35,Georgia Wonder - Siren_other.wav,Success,5.7863,0.000910,30.41,6.35,Phase_Coding_FFT
+09:37:40,Georgia Wonder - Siren_vocals.wav,Success,4.6282,0.001021,29.91,4.10,Phase_Coding_FFT
+09:37:44,Girls Under Glass - We Feel Alright_bass.wav,Success,3.4488,0.000011,49.55,26.13,Phase_Coding_FFT
+09:37:50,Girls Under Glass - We Feel Alright_drums.wav,Success,4.5851,0.001449,28.39,6.18,Phase_Coding_FFT
+09:37:54,Girls Under Glass - We Feel Alright_mixture.wav,Success,3.7791,0.010184,19.92,2.10,Phase_Coding_FFT
+09:37:58,Girls Under Glass - We Feel Alright_other.wav,Success,3.7530,0.002798,25.53,2.42,Phase_Coding_FFT
+09:38:03,Girls Under Glass - We Feel Alright_vocals.wav,Success,3.9705,0.000000,119.49,90.32,Phase_Coding_FFT
+09:38:05,Giselle - Moss_bass.wav,Success,2.0944,0.000000,117.50,90.32,Phase_Coding_FFT
+09:38:08,Giselle - Moss_drums.wav,Success,2.3350,0.000235,36.30,9.85,Phase_Coding_FFT
+09:38:11,Giselle - Moss_mixture.wav,Success,2.5974,0.004581,23.39,4.11,Phase_Coding_FFT
+09:38:14,Giselle - Moss_other.wav,Success,2.6723,0.001232,29.09,5.20,Phase_Coding_FFT
+09:38:17,Giselle - Moss_vocals.wav,Success,2.8250,0.000002,56.73,32.09,Phase_Coding_FFT
+09:38:20,Grants - PunchDrunk_bass.wav,Success,2.4944,0.000000,66.80,46.04,Phase_Coding_FFT
+09:38:23,Grants - PunchDrunk_drums.wav,Success,2.6326,0.000772,31.12,4.57,Phase_Coding_FFT
+09:38:26,Grants - PunchDrunk_mixture.wav,Success,2.5351,0.008662,20.62,2.66,Phase_Coding_FFT
+09:38:30,Grants - PunchDrunk_other.wav,Success,3.3908,0.000007,51.49,25.60,Phase_Coding_FFT
+09:38:33,Grants - PunchDrunk_vocals.wav,Success,2.8247,0.001608,27.94,2.62,Phase_Coding_FFT
+09:38:36,Helado Negro - Mitad Del Mundo_bass.wav,Success,2.2753,0.000000,63.39,39.04,Phase_Coding_FFT
+09:38:39,Helado Negro - Mitad Del Mundo_drums.wav,Success,2.3160,0.000061,42.12,12.40,Phase_Coding_FFT
+09:38:41,Helado Negro - Mitad Del Mundo_mixture.wav,Success,2.5153,0.008973,20.47,2.21,Phase_Coding_FFT
+09:38:45,Helado Negro - Mitad Del Mundo_other.wav,Success,2.9031,0.000002,56.05,24.94,Phase_Coding_FFT
+09:38:47,Helado Negro - Mitad Del Mundo_vocals.wav,Success,2.2805,0.005500,22.60,2.34,Phase_Coding_FFT
+09:38:51,Hezekiah Jones - Borrowed Heart_bass.wav,Success,3.1192,0.000000,79.10,50.40,Phase_Coding_FFT
+09:38:54,Hezekiah Jones - Borrowed Heart_drums.wav,Success,2.8530,0.000013,48.92,20.85,Phase_Coding_FFT
+09:38:58,Hezekiah Jones - Borrowed Heart_mixture.wav,Success,3.5438,0.001379,28.60,9.63,Phase_Coding_FFT
+09:39:02,Hezekiah Jones - Borrowed Heart_other.wav,Success,2.9462,0.000025,46.04,24.57,Phase_Coding_FFT
+09:39:05,Hezekiah Jones - Borrowed Heart_vocals.wav,Success,2.9949,0.000044,43.56,17.64,Phase_Coding_FFT
+09:39:07,Hollow Ground - Ill Fate_bass.wav,Success,1.7767,0.000018,47.41,23.20,Phase_Coding_FFT
+09:39:09,Hollow Ground - Ill Fate_drums.wav,Success,1.9780,0.000805,30.94,6.39,Phase_Coding_FFT
+09:39:12,Hollow Ground - Ill Fate_mixture.wav,Success,2.3856,0.009555,20.20,3.11,Phase_Coding_FFT
+09:39:14,Hollow Ground - Ill Fate_other.wav,Success,1.9096,0.002257,26.47,6.83,Phase_Coding_FFT
+09:39:16,Hollow Ground - Ill Fate_vocals.wav,Success,1.7816,0.000216,36.66,8.21,Phase_Coding_FFT
+09:39:19,Hollow Ground - Left Blind_bass.wav,Success,2.1640,0.000030,45.17,23.81,Phase_Coding_FFT
+09:39:21,Hollow Ground - Left Blind_drums.wav,Success,2.0693,0.003499,24.56,3.17,Phase_Coding_FFT
+09:39:24,Hollow Ground - Left Blind_mixture.wav,Success,2.3253,0.016840,17.74,1.55,Phase_Coding_FFT
+09:39:27,Hollow Ground - Left Blind_other.wav,Success,2.5582,0.004013,23.97,2.42,Phase_Coding_FFT
+09:39:29,Hollow Ground - Left Blind_vocals.wav,Success,2.0507,0.000620,32.08,6.13,Phase_Coding_FFT
+09:39:33,Hop Along - Sister Cities_bass.wav,Success,3.4523,0.000000,68.91,47.92,Phase_Coding_FFT
+09:39:37,Hop Along - Sister Cities_drums.wav,Success,3.4358,0.000459,33.38,5.77,Phase_Coding_FFT
+09:39:42,Hop Along - Sister Cities_mixture.wav,Success,3.9540,0.013728,18.62,2.41,Phase_Coding_FFT
+09:39:45,Hop Along - Sister Cities_other.wav,Success,3.2806,0.003739,24.27,4.36,Phase_Coding_FFT
+09:39:49,Hop Along - Sister Cities_vocals.wav,Success,3.3401,0.001628,27.88,3.75,Phase_Coding_FFT
+09:39:53,Invisible Familiars - Disturbing Wildlife_bass.wav,Success,3.1072,0.000000,70.42,49.48,Phase_Coding_FFT
+09:39:56,Invisible Familiars - Disturbing Wildlife_drums.wav,Success,2.9388,0.000010,49.94,22.21,Phase_Coding_FFT
+09:39:59,Invisible Familiars - Disturbing Wildlife_mixture.wav,Success,2.6368,0.002302,26.38,7.64,Phase_Coding_FFT
+09:40:02,Invisible Familiars - Disturbing Wildlife_other.wav,Success,2.7438,0.000013,48.86,21.07,Phase_Coding_FFT
+09:40:06,Invisible Familiars - Disturbing Wildlife_vocals.wav,Success,3.2379,0.000291,35.37,8.40,Phase_Coding_FFT
+09:40:09,James Elder & Mark M Thompson - The English Actor_bass.wav,Success,2.6955,0.000000,118.90,90.32,Phase_Coding_FFT
+09:40:12,James Elder & Mark M Thompson - The English Actor_drums.wav,Success,2.4703,0.000017,47.68,20.90,Phase_Coding_FFT
+09:40:15,James Elder & Mark M Thompson - The English Actor_mixture.wav,Success,2.6885,0.005011,23.00,3.64,Phase_Coding_FFT
+09:40:18,James Elder & Mark M Thompson - The English Actor_other.wav,Success,2.4448,0.000005,53.34,29.57,Phase_Coding_FFT
+09:40:21,James Elder & Mark M Thompson - The English Actor_vocals.wav,Success,3.2747,0.001610,27.93,3.89,Phase_Coding_FFT
+09:40:24,James May - All Souls Moon_bass.wav,Success,2.6741,0.000000,80.45,50.52,Phase_Coding_FFT
+09:40:28,James May - All Souls Moon_drums.wav,Success,2.6513,0.000000,75.47,46.23,Phase_Coding_FFT
+09:40:31,James May - All Souls Moon_mixture.wav,Success,2.6334,0.000099,40.03,16.64,Phase_Coding_FFT
+09:40:34,James May - All Souls Moon_other.wav,Success,3.0102,0.000005,52.99,22.96,Phase_Coding_FFT
+09:40:37,James May - All Souls Moon_vocals.wav,Success,3.0184,0.000034,44.68,16.09,Phase_Coding_FFT
+09:40:41,James May - Dont Let Go_bass.wav,Success,2.8532,0.000000,75.63,50.84,Phase_Coding_FFT
+09:40:44,James May - Dont Let Go_drums.wav,Success,2.9161,0.000108,39.68,8.18,Phase_Coding_FFT
+09:40:48,James May - Dont Let Go_mixture.wav,Success,3.2345,0.003436,24.64,4.29,Phase_Coding_FFT
+09:40:52,James May - Dont Let Go_other.wav,Success,3.3729,0.000006,52.11,27.34,Phase_Coding_FFT
+09:40:55,James May - Dont Let Go_vocals.wav,Success,2.8485,0.000293,35.33,7.97,Phase_Coding_FFT
+09:40:58,James May - If You Say_bass.wav,Success,2.9189,0.000000,77.47,45.13,Phase_Coding_FFT
+09:41:02,James May - If You Say_drums.wav,Success,3.2370,0.000002,57.03,23.69,Phase_Coding_FFT
+09:41:06,James May - If You Say_mixture.wav,Success,3.2234,0.000022,46.49,22.74,Phase_Coding_FFT
+09:41:09,James May - If You Say_other.wav,Success,2.9328,0.000005,52.70,25.70,Phase_Coding_FFT
+09:41:12,James May - If You Say_vocals.wav,Success,2.7664,0.000008,50.81,21.44,Phase_Coding_FFT
+09:41:16,James May - On The Line_bass.wav,Success,3.3528,0.000000,79.13,55.08,Phase_Coding_FFT
+09:41:20,James May - On The Line_drums.wav,Success,3.2094,0.000001,60.02,37.94,Phase_Coding_FFT
+09:41:24,James May - On The Line_mixture.wav,Success,3.0159,0.003295,24.82,6.99,Phase_Coding_FFT
+09:41:27,James May - On The Line_other.wav,Success,3.0691,0.000003,55.12,31.16,Phase_Coding_FFT
+09:41:31,James May - On The Line_vocals.wav,Success,3.4492,0.000435,33.61,7.38,Phase_Coding_FFT
+09:41:34,Jay Menon - Through My Eyes_bass.wav,Success,2.8662,0.000000,119.49,90.32,Phase_Coding_FFT
+09:41:38,Jay Menon - Through My Eyes_drums.wav,Success,2.9172,0.000000,69.50,40.30,Phase_Coding_FFT
+09:41:41,Jay Menon - Through My Eyes_mixture.wav,Success,2.9935,0.000239,36.21,14.08,Phase_Coding_FFT
+09:41:45,Jay Menon - Through My Eyes_other.wav,Success,3.5330,0.000001,62.89,33.99,Phase_Coding_FFT
+09:41:49,Jay Menon - Through My Eyes_vocals.wav,Success,2.9064,0.000108,39.66,13.51,Phase_Coding_FFT
+09:41:52,Johnny Lokke - Promises & Lies_bass.wav,Success,3.2803,0.000000,75.75,48.89,Phase_Coding_FFT
+09:41:57,Johnny Lokke - Promises & Lies_drums.wav,Success,3.6489,0.003137,25.04,4.25,Phase_Coding_FFT
+09:42:01,Johnny Lokke - Promises & Lies_mixture.wav,Success,3.8912,0.016348,17.87,1.50,Phase_Coding_FFT
+09:42:05,Johnny Lokke - Promises & Lies_other.wav,Success,3.2567,0.004113,23.86,3.04,Phase_Coding_FFT
+09:42:09,Johnny Lokke - Promises & Lies_vocals.wav,Success,3.1611,0.002472,26.07,2.57,Phase_Coding_FFT
+09:42:13,Johnny Lokke - Whisper To A Scream_bass.wav,Success,3.4970,0.000000,72.01,48.40,Phase_Coding_FFT
+09:42:16,Johnny Lokke - Whisper To A Scream_drums.wav,Success,3.1717,0.001835,27.36,4.78,Phase_Coding_FFT
+09:42:20,Johnny Lokke - Whisper To A Scream_mixture.wav,Success,3.0850,0.011386,19.44,2.57,Phase_Coding_FFT
+09:42:23,Johnny Lokke - Whisper To A Scream_other.wav,Success,2.9748,0.001425,28.46,7.19,Phase_Coding_FFT
+09:42:27,Johnny Lokke - Whisper To A Scream_vocals.wav,Success,3.6584,0.001303,28.85,3.96,Phase_Coding_FFT
+09:42:30,"Jokers, Jacks & Kings - Sea Of Leaves_bass.wav",Success,2.2429,0.000004,54.30,28.49,Phase_Coding_FFT
+09:42:33,"Jokers, Jacks & Kings - Sea Of Leaves_drums.wav",Success,2.4438,0.001978,27.04,3.52,Phase_Coding_FFT
+09:42:36,"Jokers, Jacks & Kings - Sea Of Leaves_mixture.wav",Success,2.3226,0.008395,20.76,2.82,Phase_Coding_FFT
+09:42:39,"Jokers, Jacks & Kings - Sea Of Leaves_other.wav",Success,2.4411,0.000423,33.73,10.36,Phase_Coding_FFT
+09:42:42,"Jokers, Jacks & Kings - Sea Of Leaves_vocals.wav",Success,2.7862,0.001028,29.88,6.35,Phase_Coding_FFT
+09:42:45,Juliet's Rescue - Heartbeats_bass.wav,Success,3.1038,0.000000,81.28,52.21,Phase_Coding_FFT
+09:42:49,Juliet's Rescue - Heartbeats_drums.wav,Success,3.1048,0.002440,26.13,4.64,Phase_Coding_FFT
+09:42:53,Juliet's Rescue - Heartbeats_mixture.wav,Success,3.4803,0.008432,20.74,2.60,Phase_Coding_FFT
+09:42:57,Juliet's Rescue - Heartbeats_other.wav,Success,3.6655,0.000004,54.56,31.18,Phase_Coding_FFT
+09:43:01,Juliet's Rescue - Heartbeats_vocals.wav,Success,2.9402,0.000941,30.27,4.02,Phase_Coding_FFT
+09:43:04,Leaf - Come Around_bass.wav,Success,2.8971,0.000001,58.89,41.17,Phase_Coding_FFT
+09:43:08,Leaf - Come Around_drums.wav,Success,3.7687,0.000015,48.20,14.84,Phase_Coding_FFT
+09:43:12,Leaf - Come Around_mixture.wav,Success,3.2734,0.004673,23.30,7.44,Phase_Coding_FFT
+09:43:15,Leaf - Come Around_other.wav,Success,2.9966,0.000040,44.02,20.15,Phase_Coding_FFT
+09:43:19,Leaf - Come Around_vocals.wav,Success,3.1416,0.000004,54.28,30.89,Phase_Coding_FFT
+09:43:23,Leaf - Summerghost_bass.wav,Success,3.3181,0.000000,74.38,50.78,Phase_Coding_FFT
+09:43:26,Leaf - Summerghost_drums.wav,Success,2.8686,0.001130,29.47,4.06,Phase_Coding_FFT
+09:43:29,Leaf - Summerghost_mixture.wav,Success,2.8517,0.004464,23.50,4.03,Phase_Coding_FFT
+09:43:33,Leaf - Summerghost_other.wav,Success,2.7349,0.000000,65.52,36.74,Phase_Coding_FFT
+09:43:36,Leaf - Summerghost_vocals.wav,Success,3.2938,0.000542,32.66,6.99,Phase_Coding_FFT
+09:43:39,Leaf - Wicked_bass.wav,Success,2.4569,0.000000,71.89,45.91,Phase_Coding_FFT
+09:43:42,Leaf - Wicked_drums.wav,Success,2.3460,0.000146,38.35,14.36,Phase_Coding_FFT
+09:43:45,Leaf - Wicked_mixture.wav,Success,2.4473,0.003846,24.15,3.93,Phase_Coding_FFT
+09:43:47,Leaf - Wicked_other.wav,Success,2.2851,0.000052,42.85,13.90,Phase_Coding_FFT
+09:43:51,Leaf - Wicked_vocals.wav,Success,2.8615,0.000580,32.37,4.93,Phase_Coding_FFT
+09:43:54,Little Chicago's Finest - My Own_bass.wav,Success,3.4257,0.000000,82.21,48.49,Phase_Coding_FFT
+09:43:58,Little Chicago's Finest - My Own_drums.wav,Success,3.2215,0.001156,29.37,7.42,Phase_Coding_FFT
+09:44:02,Little Chicago's Finest - My Own_mixture.wav,Success,3.3957,0.004897,23.10,2.67,Phase_Coding_FFT
+09:44:06,Little Chicago's Finest - My Own_other.wav,Success,3.8289,0.000006,52.32,17.97,Phase_Coding_FFT
+09:44:10,Little Chicago's Finest - My Own_vocals.wav,Success,3.2489,0.000841,30.75,3.48,Phase_Coding_FFT
+09:44:14,Louis Cressy Band - Good Time_bass.wav,Success,3.2602,0.000000,78.16,49.81,Phase_Coding_FFT
+09:44:18,Louis Cressy Band - Good Time_drums.wav,Success,3.8332,0.001087,29.64,4.46,Phase_Coding_FFT
+09:44:23,Louis Cressy Band - Good Time_mixture.wav,Success,3.5936,0.005490,22.60,2.60,Phase_Coding_FFT
+09:44:26,Louis Cressy Band - Good Time_other.wav,Success,3.3160,0.000066,41.78,17.78,Phase_Coding_FFT
+09:44:31,Louis Cressy Band - Good Time_vocals.wav,Success,3.6176,0.000785,31.05,2.83,Phase_Coding_FFT
+09:44:40,Lushlife - Toynbee Suite_bass.wav,Success,7.9256,0.000000,89.06,70.46,Phase_Coding_FFT
+09:44:48,Lushlife - Toynbee Suite_drums.wav,Success,7.6160,0.000000,90.69,60.13,Phase_Coding_FFT
+09:44:57,Lushlife - Toynbee Suite_mixture.wav,Success,6.9589,0.000011,49.44,31.60,Phase_Coding_FFT
+09:45:05,Lushlife - Toynbee Suite_other.wav,Success,7.7565,0.000011,49.44,20.81,Phase_Coding_FFT
+09:45:14,Lushlife - Toynbee Suite_vocals.wav,Success,7.0858,0.000000,90.22,57.35,Phase_Coding_FFT
+09:45:17,Lyndsey Ollard - Catching Up_bass.wav,Success,2.9331,0.000000,91.61,58.79,Phase_Coding_FFT
+09:45:20,Lyndsey Ollard - Catching Up_drums.wav,Success,2.6073,0.000000,74.63,44.40,Phase_Coding_FFT
+09:45:25,Lyndsey Ollard - Catching Up_mixture.wav,Success,4.7798,0.001022,29.90,6.90,Phase_Coding_FFT
+09:45:29,Lyndsey Ollard - Catching Up_other.wav,Success,3.4520,0.000007,51.40,21.14,Phase_Coding_FFT
+09:45:33,Lyndsey Ollard - Catching Up_vocals.wav,Success,2.7927,0.000478,33.21,7.33,Phase_Coding_FFT
+09:45:36,M.E.R.C. Music - Knockout_bass.wav,Success,2.9840,0.000000,80.35,50.17,Phase_Coding_FFT
+09:45:40,M.E.R.C. Music - Knockout_drums.wav,Success,3.1794,0.001731,27.62,1.88,Phase_Coding_FFT
+09:45:44,M.E.R.C. Music - Knockout_mixture.wav,Success,3.8652,0.006687,21.75,1.64,Phase_Coding_FFT
+09:45:48,M.E.R.C. Music - Knockout_other.wav,Success,3.1524,0.000418,33.79,6.61,Phase_Coding_FFT
+09:45:52,M.E.R.C. Music - Knockout_vocals.wav,Success,3.2328,0.001138,29.44,5.69,Phase_Coding_FFT
+09:45:53,Matthew Entwistle - Dont You Ever_bass.wav,Success,1.6574,0.000000,86.28,60.71,Phase_Coding_FFT
+09:45:56,Matthew Entwistle - Dont You Ever_drums.wav,Success,1.9185,0.000000,86.32,44.75,Phase_Coding_FFT
+09:45:58,Matthew Entwistle - Dont You Ever_mixture.wav,Success,1.9308,0.002226,26.53,6.60,Phase_Coding_FFT
+09:46:00,Matthew Entwistle - Dont You Ever_other.wav,Success,1.6416,0.000008,51.00,26.05,Phase_Coding_FFT
+09:46:01,Matthew Entwistle - Dont You Ever_vocals.wav,Success,1.6097,0.000710,31.49,7.61,Phase_Coding_FFT
+09:46:05,Meaxic - Take A Step_bass.wav,Success,3.3636,0.000001,59.86,38.46,Phase_Coding_FFT
+09:46:09,Meaxic - Take A Step_drums.wav,Success,3.6037,0.003000,25.23,2.94,Phase_Coding_FFT
+09:46:14,Meaxic - Take A Step_mixture.wav,Success,3.7352,0.011642,19.34,2.17,Phase_Coding_FFT
+09:46:17,Meaxic - Take A Step_other.wav,Success,3.3190,0.000254,35.95,9.86,Phase_Coding_FFT
+09:46:21,Meaxic - Take A Step_vocals.wav,Success,3.3472,0.001512,28.20,3.64,Phase_Coding_FFT
+09:46:28,Meaxic - You Listen_bass.wav,Success,5.6558,0.000000,76.98,49.89,Phase_Coding_FFT
+09:46:33,Meaxic - You Listen_drums.wav,Success,4.7797,0.000000,99.79,73.51,Phase_Coding_FFT
+09:46:40,Meaxic - You Listen_mixture.wav,Success,5.3633,0.000047,43.29,23.67,Phase_Coding_FFT
+09:46:45,Meaxic - You Listen_other.wav,Success,4.7407,0.000031,45.10,21.37,Phase_Coding_FFT
+09:46:50,Meaxic - You Listen_vocals.wav,Success,4.3395,0.000001,59.28,33.00,Phase_Coding_FFT
+09:46:54,Moosmusic - Big Dummy Shake_bass.wav,Success,2.9511,0.000000,71.20,46.55,Phase_Coding_FFT
+09:46:56,Moosmusic - Big Dummy Shake_drums.wav,Success,2.4302,0.004323,23.64,2.58,Phase_Coding_FFT
+09:46:59,Moosmusic - Big Dummy Shake_mixture.wav,Success,2.3927,0.014035,18.53,1.76,Phase_Coding_FFT
+09:47:02,Moosmusic - Big Dummy Shake_other.wav,Success,2.5590,0.002296,26.39,3.28,Phase_Coding_FFT
+09:47:17,Moosmusic - Big Dummy Shake_vocals.wav,Success,14.7038,0.002112,26.75,3.65,Phase_Coding_FFT
+09:47:21,Motor Tapes - Shore_bass.wav,Success,3.1459,0.000000,75.40,48.57,Phase_Coding_FFT
+09:47:24,Motor Tapes - Shore_drums.wav,Success,3.0981,0.000005,53.07,22.45,Phase_Coding_FFT
+09:47:28,Motor Tapes - Shore_mixture.wav,Success,3.1715,0.003904,24.08,5.81,Phase_Coding_FFT
+09:47:32,Motor Tapes - Shore_other.wav,Success,3.8915,0.000340,34.69,13.50,Phase_Coding_FFT
+09:47:36,Motor Tapes - Shore_vocals.wav,Success,2.9023,0.000123,39.08,15.36,Phase_Coding_FFT
+09:47:39,Mu - Too Bright_bass.wav,Success,2.9380,0.000000,79.67,47.39,Phase_Coding_FFT
+09:47:43,Mu - Too Bright_drums.wav,Success,3.3288,0.001987,27.02,4.35,Phase_Coding_FFT
+09:47:47,Mu - Too Bright_mixture.wav,Success,3.9632,0.005784,22.38,2.98,Phase_Coding_FFT
+09:47:51,Mu - Too Bright_other.wav,Success,3.2476,0.000000,66.44,40.54,Phase_Coding_FFT
+09:47:55,Mu - Too Bright_vocals.wav,Success,3.4908,0.001194,29.23,3.90,Phase_Coding_FFT
+09:47:56,Music Delta - 80s Rock_bass.wav,Success,0.5234,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:56,Music Delta - 80s Rock_drums.wav,Success,0.5504,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:57,Music Delta - 80s Rock_mixture.wav,Success,0.6565,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:57,Music Delta - 80s Rock_other.wav,Success,0.6175,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:58,Music Delta - 80s Rock_vocals.wav,Success,0.6240,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:59,Music Delta - Beatles_bass.wav,Success,0.6545,0.000000,0.00,0.00,Phase_Coding_FFT
+09:47:59,Music Delta - Beatles_drums.wav,Success,0.6666,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:00,Music Delta - Beatles_mixture.wav,Success,0.6766,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:01,Music Delta - Beatles_other.wav,Success,0.4924,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:01,Music Delta - Beatles_vocals.wav,Success,0.5121,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:02,Music Delta - Britpop_bass.wav,Success,0.5120,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:02,Music Delta - Britpop_drums.wav,Success,0.5542,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:03,Music Delta - Britpop_mixture.wav,Success,0.5596,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:03,Music Delta - Britpop_other.wav,Success,0.6222,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:04,Music Delta - Britpop_vocals.wav,Success,0.5375,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:04,Music Delta - Country1_bass.wav,Success,0.5372,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:05,Music Delta - Country1_drums.wav,Success,0.5369,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:05,Music Delta - Country1_mixture.wav,Success,0.4804,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:06,Music Delta - Country1_other.wav,Success,0.4993,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:06,Music Delta - Country1_vocals.wav,Success,0.4744,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:07,Music Delta - Country2_bass.wav,Success,0.4900,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:07,Music Delta - Country2_drums.wav,Success,0.4523,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:08,Music Delta - Country2_mixture.wav,Success,0.4748,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:08,Music Delta - Country2_other.wav,Success,0.4692,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:09,Music Delta - Country2_vocals.wav,Success,0.4623,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:11,Music Delta - Disco_bass.wav,Success,1.8433,0.000002,56.13,30.58,Phase_Coding_FFT
+09:48:13,Music Delta - Disco_drums.wav,Success,2.1715,0.004024,23.95,1.89,Phase_Coding_FFT
+09:48:16,Music Delta - Disco_mixture.wav,Success,1.9310,0.008979,20.47,1.87,Phase_Coding_FFT
+09:48:18,Music Delta - Disco_other.wav,Success,1.7964,0.000018,47.40,13.67,Phase_Coding_FFT
+09:48:20,Music Delta - Disco_vocals.wav,Success,1.7344,0.000981,30.08,6.57,Phase_Coding_FFT
+09:48:21,Music Delta - Gospel_bass.wav,Success,1.3218,0.000000,69.28,45.29,Phase_Coding_FFT
+09:48:22,Music Delta - Gospel_drums.wav,Success,1.2420,0.004563,23.41,1.94,Phase_Coding_FFT
+09:48:24,Music Delta - Gospel_mixture.wav,Success,1.2851,0.020983,16.78,1.16,Phase_Coding_FFT
+09:48:25,Music Delta - Gospel_other.wav,Success,1.4760,0.000185,37.32,9.95,Phase_Coding_FFT
+09:48:27,Music Delta - Gospel_vocals.wav,Success,1.7458,0.009112,20.40,2.01,Phase_Coding_FFT
+09:48:28,Music Delta - Grunge_bass.wav,Success,0.6803,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:29,Music Delta - Grunge_drums.wav,Success,0.6121,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:29,Music Delta - Grunge_mixture.wav,Success,0.4792,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:30,Music Delta - Grunge_other.wav,Success,0.5054,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:30,Music Delta - Grunge_vocals.wav,Success,0.4676,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:31,Music Delta - Hendrix_bass.wav,Success,0.4679,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:31,Music Delta - Hendrix_drums.wav,Success,0.4678,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:32,Music Delta - Hendrix_mixture.wav,Success,0.5770,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:32,Music Delta - Hendrix_other.wav,Success,0.4656,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:33,Music Delta - Hendrix_vocals.wav,Success,0.4761,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:33,Music Delta - Punk_bass.wav,Success,0.4799,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:34,Music Delta - Punk_drums.wav,Success,0.4971,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:34,Music Delta - Punk_mixture.wav,Success,0.4927,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:35,Music Delta - Punk_other.wav,Success,0.4968,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:35,Music Delta - Punk_vocals.wav,Success,0.6218,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:36,Music Delta - Reggae_bass.wav,Success,0.4828,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:36,Music Delta - Reggae_drums.wav,Success,0.4620,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:37,Music Delta - Reggae_mixture.wav,Success,0.4640,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:37,Music Delta - Reggae_other.wav,Success,0.4741,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:37,Music Delta - Reggae_vocals.wav,Success,0.4526,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:38,Music Delta - Rock_bass.wav,Success,0.4736,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:38,Music Delta - Rock_drums.wav,Success,0.4838,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:39,Music Delta - Rock_mixture.wav,Success,0.6461,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:40,Music Delta - Rock_other.wav,Success,0.5951,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:40,Music Delta - Rock_vocals.wav,Success,0.6216,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:41,Music Delta - Rockabilly_bass.wav,Success,0.6458,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:42,Music Delta - Rockabilly_drums.wav,Success,0.6381,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:42,Music Delta - Rockabilly_mixture.wav,Success,0.6444,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:43,Music Delta - Rockabilly_other.wav,Success,0.5296,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:43,Music Delta - Rockabilly_vocals.wav,Success,0.4812,0.000000,0.00,0.00,Phase_Coding_FFT
+09:48:48,Nerve 9 - Pray For The Rain_bass.wav,Success,4.5051,0.000000,75.04,47.26,Phase_Coding_FFT
+09:48:53,Nerve 9 - Pray For The Rain_drums.wav,Success,3.9274,0.000003,54.56,26.34,Phase_Coding_FFT
+09:48:59,Nerve 9 - Pray For The Rain_mixture.wav,Success,5.0199,0.003267,24.86,5.34,Phase_Coding_FFT
+09:49:04,Nerve 9 - Pray For The Rain_other.wav,Success,4.0779,0.000019,47.32,24.09,Phase_Coding_FFT
+09:49:08,Nerve 9 - Pray For The Rain_vocals.wav,Success,4.0058,0.000893,30.49,5.51,Phase_Coding_FFT
+09:49:12,Night Panther - Fire_bass.wav,Success,2.9429,0.000000,79.75,50.47,Phase_Coding_FFT
+09:49:15,Night Panther - Fire_drums.wav,Success,2.5583,0.000736,31.33,5.23,Phase_Coding_FFT
+09:49:18,Night Panther - Fire_mixture.wav,Success,2.6873,0.008177,20.87,2.28,Phase_Coding_FFT
+09:49:21,Night Panther - Fire_other.wav,Success,2.6714,0.000000,68.68,44.93,Phase_Coding_FFT
+09:49:25,Night Panther - Fire_vocals.wav,Success,3.5728,0.002935,25.32,3.12,Phase_Coding_FFT
+09:49:33,North To Alaska - All The Same_bass.wav,Success,6.7865,0.000001,61.93,31.94,Phase_Coding_FFT
+09:49:38,North To Alaska - All The Same_drums.wav,Success,4.8250,0.000337,34.72,6.35,Phase_Coding_FFT
+09:49:42,North To Alaska - All The Same_mixture.wav,Success,3.0713,0.003938,24.05,3.33,Phase_Coding_FFT
+09:49:45,North To Alaska - All The Same_other.wav,Success,3.0066,0.000731,31.36,7.11,Phase_Coding_FFT
+09:49:49,North To Alaska - All The Same_vocals.wav,Success,2.9367,0.000569,32.45,6.01,Phase_Coding_FFT
+09:49:52,PR - Happy Daze_bass.wav,Success,2.9302,0.000000,74.42,48.49,Phase_Coding_FFT
+09:49:55,PR - Happy Daze_drums.wav,Success,2.3753,0.017884,17.48,1.76,Phase_Coding_FFT
+09:49:57,PR - Happy Daze_mixture.wav,Success,2.1978,0.020475,16.89,1.76,Phase_Coding_FFT
+09:50:00,PR - Happy Daze_other.wav,Success,2.1354,0.000001,59.90,29.95,Phase_Coding_FFT
+09:50:02,PR - Happy Daze_vocals.wav,Success,2.2353,0.000000,82.99,42.51,Phase_Coding_FFT
+09:50:04,PR - Oh No_bass.wav,Success,1.3074,0.000001,60.46,37.77,Phase_Coding_FFT
+09:50:05,PR - Oh No_drums.wav,Success,1.5736,0.009182,20.37,1.91,Phase_Coding_FFT
+09:50:07,PR - Oh No_mixture.wav,Success,1.6646,0.002265,26.45,4.41,Phase_Coding_FFT
+09:50:08,PR - Oh No_other.wav,Success,1.2645,0.000005,52.96,26.27,Phase_Coding_FFT
+09:50:10,PR - Oh No_vocals.wav,Success,1.2511,0.000010,50.01,15.09,Phase_Coding_FFT
+09:50:14,Patrick Talbot - A Reason To Leave_bass.wav,Success,3.5158,0.000000,69.42,41.72,Phase_Coding_FFT
+09:50:18,Patrick Talbot - A Reason To Leave_drums.wav,Success,3.1389,0.000003,55.07,28.56,Phase_Coding_FFT
+09:50:22,Patrick Talbot - A Reason To Leave_mixture.wav,Success,3.8871,0.001119,29.51,8.55,Phase_Coding_FFT
+09:50:25,Patrick Talbot - A Reason To Leave_other.wav,Success,3.0439,0.000002,58.10,30.56,Phase_Coding_FFT
+09:50:29,Patrick Talbot - A Reason To Leave_vocals.wav,Success,2.8690,0.000335,34.75,8.49,Phase_Coding_FFT
+09:50:33,Patrick Talbot - Set Me Free_bass.wav,Success,3.6549,0.000000,73.83,42.95,Phase_Coding_FFT
+09:50:38,Patrick Talbot - Set Me Free_drums.wav,Success,3.9115,0.000003,55.82,29.04,Phase_Coding_FFT
+09:50:41,Patrick Talbot - Set Me Free_mixture.wav,Success,3.4289,0.000007,51.32,30.57,Phase_Coding_FFT
+09:50:45,Patrick Talbot - Set Me Free_other.wav,Success,3.3729,0.000003,54.87,29.98,Phase_Coding_FFT
+09:50:50,Patrick Talbot - Set Me Free_vocals.wav,Success,3.9632,0.000001,58.36,31.89,Phase_Coding_FFT
+09:50:53,Phre The Eon - Everybody's Falling Apart_bass.wav,Success,2.7296,0.000016,47.88,20.93,Phase_Coding_FFT
+09:50:56,Phre The Eon - Everybody's Falling Apart_drums.wav,Success,2.8352,0.002552,25.93,5.41,Phase_Coding_FFT
+09:51:00,Phre The Eon - Everybody's Falling Apart_mixture.wav,Success,2.7424,0.008462,20.73,3.04,Phase_Coding_FFT
+09:51:04,Phre The Eon - Everybody's Falling Apart_other.wav,Success,3.5612,0.001033,29.86,6.57,Phase_Coding_FFT
+09:51:06,Phre The Eon - Everybody's Falling Apart_vocals.wav,Success,2.5405,0.000322,34.92,6.73,Phase_Coding_FFT
+09:51:11,Port St Willow - Stay Even_bass.wav,Success,3.9430,0.000000,97.14,61.30,Phase_Coding_FFT
+09:51:16,Port St Willow - Stay Even_drums.wav,Success,4.0200,0.000075,41.23,12.71,Phase_Coding_FFT
+09:51:20,Port St Willow - Stay Even_mixture.wav,Success,4.1569,0.003334,24.77,3.78,Phase_Coding_FFT
+09:51:25,Port St Willow - Stay Even_other.wav,Success,3.6954,0.000067,41.74,18.37,Phase_Coding_FFT
+09:51:29,Port St Willow - Stay Even_vocals.wav,Success,4.0561,0.000534,32.72,5.07,Phase_Coding_FFT
+09:51:33,Punkdisco - Oral Hygiene_bass.wav,Success,3.0685,0.000010,50.11,28.13,Phase_Coding_FFT
+09:51:36,Punkdisco - Oral Hygiene_drums.wav,Success,2.8357,0.003086,25.11,2.60,Phase_Coding_FFT
+09:51:40,Punkdisco - Oral Hygiene_mixture.wav,Success,3.2614,0.008100,20.92,2.19,Phase_Coding_FFT
+09:51:43,Punkdisco - Oral Hygiene_other.wav,Success,2.8551,0.000168,37.75,5.15,Phase_Coding_FFT
+09:51:46,Punkdisco - Oral Hygiene_vocals.wav,Success,2.9297,0.000240,36.20,5.47,Phase_Coding_FFT
+09:51:49,Raft Monk - Tiring_bass.wav,Success,2.6078,0.000000,64.80,42.75,Phase_Coding_FFT
+09:51:52,Raft Monk - Tiring_drums.wav,Success,2.6411,0.001087,29.64,6.49,Phase_Coding_FFT
+09:51:55,Raft Monk - Tiring_mixture.wav,Success,2.5819,0.012668,18.97,2.36,Phase_Coding_FFT
+09:51:59,Raft Monk - Tiring_other.wav,Success,3.4060,0.002695,25.69,4.10,Phase_Coding_FFT
+09:52:02,Raft Monk - Tiring_vocals.wav,Success,2.5441,0.001867,27.29,3.11,Phase_Coding_FFT
+09:52:05,Remember December - C U Next Time_bass.wav,Success,2.7505,0.000000,64.58,40.54,Phase_Coding_FFT
+09:52:08,Remember December - C U Next Time_drums.wav,Success,2.8203,0.002358,26.28,2.38,Phase_Coding_FFT
+09:52:13,Remember December - C U Next Time_mixture.wav,Success,3.5438,0.012965,18.87,1.65,Phase_Coding_FFT
+09:52:16,Remember December - C U Next Time_other.wav,Success,3.0158,0.002884,25.40,2.95,Phase_Coding_FFT
+09:52:19,Remember December - C U Next Time_vocals.wav,Success,2.7838,0.002851,25.45,2.72,Phase_Coding_FFT
+09:52:23,Sambasevam Shanmugam - Kaathaadi_bass.wav,Success,3.6555,0.000000,74.40,50.17,Phase_Coding_FFT
+09:52:28,Sambasevam Shanmugam - Kaathaadi_drums.wav,Success,4.3191,0.000195,37.11,8.67,Phase_Coding_FFT
+09:52:33,Sambasevam Shanmugam - Kaathaadi_mixture.wav,Success,3.6581,0.002352,26.29,6.93,Phase_Coding_FFT
+09:52:37,Sambasevam Shanmugam - Kaathaadi_other.wav,Success,3.6427,0.000017,47.65,21.15,Phase_Coding_FFT
+09:52:42,Sambasevam Shanmugam - Kaathaadi_vocals.wav,Success,3.9904,0.000006,52.46,28.72,Phase_Coding_FFT
+09:52:46,Secret Mountains - High Horse_bass.wav,Success,4.1415,0.000000,75.40,50.70,Phase_Coding_FFT
+09:52:51,Secret Mountains - High Horse_drums.wav,Success,4.0939,0.000299,35.25,6.40,Phase_Coding_FFT
+09:52:57,Secret Mountains - High Horse_mixture.wav,Success,5.0528,0.006753,21.70,3.93,Phase_Coding_FFT
+09:53:01,Secret Mountains - High Horse_other.wav,Success,4.2007,0.000024,46.18,25.85,Phase_Coding_FFT
+09:53:06,Secret Mountains - High Horse_vocals.wav,Success,4.1645,0.000816,30.88,5.20,Phase_Coding_FFT
+09:53:11,Secretariat - Borderline_bass.wav,Success,3.9550,0.000003,54.86,27.58,Phase_Coding_FFT
+09:53:15,Secretariat - Borderline_drums.wav,Success,3.3474,0.000565,32.48,4.03,Phase_Coding_FFT
+09:53:19,Secretariat - Borderline_mixture.wav,Success,3.3558,0.008400,20.76,1.94,Phase_Coding_FFT
+09:53:23,Secretariat - Borderline_other.wav,Success,3.7116,0.002131,26.71,4.83,Phase_Coding_FFT
+09:53:27,Secretariat - Borderline_vocals.wav,Success,3.4318,0.001734,27.61,2.92,Phase_Coding_FFT
+09:53:30,Secretariat - Over The Top_bass.wav,Success,2.8559,0.000002,57.15,36.34,Phase_Coding_FFT
+09:53:33,Secretariat - Over The Top_drums.wav,Success,2.9627,0.003367,24.73,1.44,Phase_Coding_FFT
+09:53:37,Secretariat - Over The Top_mixture.wav,Success,3.4934,0.016405,17.85,1.04,Phase_Coding_FFT
+09:53:41,Secretariat - Over The Top_other.wav,Success,3.1310,0.001728,27.63,4.89,Phase_Coding_FFT
+09:53:44,Secretariat - Over The Top_vocals.wav,Success,2.8432,0.001667,27.78,1.83,Phase_Coding_FFT
+09:53:48,Side Effects Project - Sing With Me_bass.wav,Success,2.8232,0.000000,63.30,33.54,Phase_Coding_FFT
+09:53:51,Side Effects Project - Sing With Me_drums.wav,Success,3.3713,0.001785,27.48,4.88,Phase_Coding_FFT
+09:53:55,Side Effects Project - Sing With Me_mixture.wav,Success,3.0501,0.006507,21.87,2.48,Phase_Coding_FFT
+09:53:58,Side Effects Project - Sing With Me_other.wav,Success,2.8402,0.000012,49.07,14.98,Phase_Coding_FFT
+09:54:02,Side Effects Project - Sing With Me_vocals.wav,Success,2.9017,0.002177,26.62,3.27,Phase_Coding_FFT
+09:54:05,Signe Jakobsen - What Have You Done To Me_bass.wav,Success,2.6434,0.000000,74.91,47.03,Phase_Coding_FFT
+09:54:07,Signe Jakobsen - What Have You Done To Me_drums.wav,Success,2.5801,0.000295,35.31,7.78,Phase_Coding_FFT
+09:54:10,Signe Jakobsen - What Have You Done To Me_mixture.wav,Success,2.3456,0.008071,20.93,2.45,Phase_Coding_FFT
+09:54:13,Signe Jakobsen - What Have You Done To Me_other.wav,Success,2.2775,0.000147,38.33,15.87,Phase_Coding_FFT
+09:54:15,Signe Jakobsen - What Have You Done To Me_vocals.wav,Success,2.3009,0.002461,26.09,3.22,Phase_Coding_FFT
+09:54:21,Skelpolu - Human Mistakes_bass.wav,Success,4.6167,0.000000,68.31,50.13,Phase_Coding_FFT
+09:54:25,Skelpolu - Human Mistakes_drums.wav,Success,3.7729,0.001073,29.69,6.51,Phase_Coding_FFT
+09:54:29,Skelpolu - Human Mistakes_mixture.wav,Success,3.7916,0.006120,22.13,6.38,Phase_Coding_FFT
+09:54:35,Skelpolu - Human Mistakes_other.wav,Success,4.4789,0.000002,57.70,33.80,Phase_Coding_FFT
+09:54:39,Skelpolu - Human Mistakes_vocals.wav,Success,3.5553,0.000000,116.87,90.32,Phase_Coding_FFT
+09:54:44,Skelpolu - Resurrection_bass.wav,Success,4.3451,0.000000,80.52,62.19,Phase_Coding_FFT
+09:54:50,Skelpolu - Resurrection_drums.wav,Success,5.3634,0.003113,25.07,2.63,Phase_Coding_FFT
+09:54:55,Skelpolu - Resurrection_mixture.wav,Success,4.4725,0.013959,18.55,2.47,Phase_Coding_FFT
+09:55:00,Skelpolu - Resurrection_other.wav,Success,4.5994,0.000558,32.53,7.61,Phase_Coding_FFT
+09:55:05,Skelpolu - Resurrection_vocals.wav,Success,4.2974,0.000000,120.70,89.87,Phase_Coding_FFT
+09:55:09,Skelpolu - Together Alone_bass.wav,Success,3.4141,0.000000,88.67,63.28,Phase_Coding_FFT
+09:55:14,Skelpolu - Together Alone_drums.wav,Success,3.7656,0.001197,29.22,7.41,Phase_Coding_FFT
+09:55:19,Skelpolu - Together Alone_mixture.wav,Success,4.4182,0.003369,24.73,6.66,Phase_Coding_FFT
+09:55:23,Skelpolu - Together Alone_other.wav,Success,3.7685,0.000018,47.47,22.75,Phase_Coding_FFT
+09:55:28,Skelpolu - Together Alone_vocals.wav,Success,3.7993,0.000000,94.19,68.34,Phase_Coding_FFT
+09:55:32,Snowmine - Curfews_bass.wav,Success,3.6736,0.000000,72.25,52.19,Phase_Coding_FFT
+09:55:36,Snowmine - Curfews_drums.wav,Success,3.2413,0.000023,46.42,14.72,Phase_Coding_FFT
+09:55:39,Snowmine - Curfews_mixture.wav,Success,3.2995,0.006962,21.57,4.20,Phase_Coding_FFT
+09:55:44,Snowmine - Curfews_other.wav,Success,3.7110,0.000317,34.98,12.30,Phase_Coding_FFT
+09:55:47,Snowmine - Curfews_vocals.wav,Success,3.3509,0.000356,34.49,8.27,Phase_Coding_FFT
+09:55:50,Speak Softly - Broken Man_bass.wav,Success,2.6459,0.000000,78.19,56.60,Phase_Coding_FFT
+09:55:54,Speak Softly - Broken Man_drums.wav,Success,3.0362,0.000626,32.04,6.65,Phase_Coding_FFT
+09:55:58,Speak Softly - Broken Man_mixture.wav,Success,3.6028,0.006249,22.04,4.09,Phase_Coding_FFT
+09:56:01,Speak Softly - Broken Man_other.wav,Success,2.8643,0.000003,55.37,31.92,Phase_Coding_FFT
+09:56:05,Speak Softly - Broken Man_vocals.wav,Success,2.9815,0.000268,35.71,7.86,Phase_Coding_FFT
+09:56:09,Speak Softly - Like Horses_bass.wav,Success,3.1884,0.000000,113.12,90.32,Phase_Coding_FFT
+09:56:14,Speak Softly - Like Horses_drums.wav,Success,4.4660,0.000627,32.02,4.84,Phase_Coding_FFT
+09:56:19,Speak Softly - Like Horses_mixture.wav,Success,4.2291,0.008419,20.75,3.48,Phase_Coding_FFT
+09:56:23,Speak Softly - Like Horses_other.wav,Success,3.7361,0.000003,54.57,32.05,Phase_Coding_FFT
+09:56:28,Speak Softly - Like Horses_vocals.wav,Success,4.3711,0.001295,28.88,6.62,Phase_Coding_FFT
+09:56:31,Spike Mullings - Mike's Sulking_bass.wav,Success,2.7863,0.000003,54.74,30.94,Phase_Coding_FFT
+09:56:35,Spike Mullings - Mike's Sulking_drums.wav,Success,3.0401,0.002579,25.89,2.15,Phase_Coding_FFT
+09:56:38,Spike Mullings - Mike's Sulking_mixture.wav,Success,3.3642,0.011776,19.29,2.03,Phase_Coding_FFT
+09:56:42,Spike Mullings - Mike's Sulking_other.wav,Success,3.3320,0.000069,41.59,20.51,Phase_Coding_FFT
+09:56:45,Spike Mullings - Mike's Sulking_vocals.wav,Success,2.7587,0.001564,28.06,2.62,Phase_Coding_FFT
+09:56:48,St Vitus - Word Gets Around_bass.wav,Success,2.5624,0.000000,73.39,47.26,Phase_Coding_FFT
+09:56:52,St Vitus - Word Gets Around_drums.wav,Success,2.9193,0.000015,48.37,22.66,Phase_Coding_FFT
+09:56:56,St Vitus - Word Gets Around_mixture.wav,Success,3.3809,0.002005,26.98,6.54,Phase_Coding_FFT
+09:56:59,St Vitus - Word Gets Around_other.wav,Success,2.9067,0.000005,53.02,19.58,Phase_Coding_FFT
+09:57:02,St Vitus - Word Gets Around_vocals.wav,Success,3.0146,0.000613,32.13,7.49,Phase_Coding_FFT
+09:57:07,Steven Clark - Bounty_bass.wav,Success,3.7411,0.000000,73.27,49.76,Phase_Coding_FFT
+09:57:11,Steven Clark - Bounty_drums.wav,Success,3.5932,0.000022,46.54,18.24,Phase_Coding_FFT
+09:57:15,Steven Clark - Bounty_mixture.wav,Success,3.5090,0.007572,21.21,3.00,Phase_Coding_FFT
+09:57:31,Steven Clark - Bounty_other.wav,Success,15.9898,0.000441,33.56,11.23,Phase_Coding_FFT
+09:57:36,Steven Clark - Bounty_vocals.wav,Success,3.7774,0.001388,28.58,3.81,Phase_Coding_FFT
+09:57:39,Strand Of Oaks - Spacestation_bass.wav,Success,3.0785,0.000000,90.52,52.76,Phase_Coding_FFT
+09:57:43,Strand Of Oaks - Spacestation_drums.wav,Success,3.4841,0.000788,31.04,5.77,Phase_Coding_FFT
+09:57:47,Strand Of Oaks - Spacestation_mixture.wav,Success,3.5946,0.004655,23.32,2.46,Phase_Coding_FFT
+09:57:51,Strand Of Oaks - Spacestation_other.wav,Success,2.9510,0.000001,61.59,36.28,Phase_Coding_FFT
+09:57:54,Strand Of Oaks - Spacestation_vocals.wav,Success,3.2149,0.001110,29.55,2.76,Phase_Coding_FFT
+09:58:00,Sweet Lights - You Let Me Down_bass.wav,Success,5.3849,0.000000,85.83,53.21,Phase_Coding_FFT
+09:58:05,Sweet Lights - You Let Me Down_drums.wav,Success,4.4971,0.000006,52.23,24.79,Phase_Coding_FFT
+09:58:11,Sweet Lights - You Let Me Down_mixture.wav,Success,4.8752,0.001289,28.90,9.65,Phase_Coding_FFT
+09:58:17,Sweet Lights - You Let Me Down_other.wav,Success,5.2423,0.000014,48.47,25.62,Phase_Coding_FFT
+09:58:22,Sweet Lights - You Let Me Down_vocals.wav,Success,4.6288,0.000091,40.41,16.72,Phase_Coding_FFT
+09:58:27,Swinging Steaks - Lost My Way_bass.wav,Success,4.2649,0.000000,64.78,42.12,Phase_Coding_FFT
+09:58:32,Swinging Steaks - Lost My Way_drums.wav,Success,3.6546,0.000513,32.90,3.31,Phase_Coding_FFT
+09:58:36,Swinging Steaks - Lost My Way_mixture.wav,Success,3.6519,0.010263,19.89,2.51,Phase_Coding_FFT
+09:58:41,Swinging Steaks - Lost My Way_other.wav,Success,4.0481,0.002633,25.79,5.36,Phase_Coding_FFT
+09:58:45,Swinging Steaks - Lost My Way_vocals.wav,Success,3.6419,0.000723,31.41,5.66,Phase_Coding_FFT
+09:58:48,The Districts - Vermont_bass.wav,Success,2.6636,0.000000,87.41,34.07,Phase_Coding_FFT
+09:58:51,The Districts - Vermont_drums.wav,Success,2.8758,0.000006,51.94,13.37,Phase_Coding_FFT
+09:58:55,The Districts - Vermont_mixture.wav,Success,3.3364,0.007575,21.21,2.78,Phase_Coding_FFT
+09:58:58,The Districts - Vermont_other.wav,Success,2.8988,0.003478,24.59,4.00,Phase_Coding_FFT
+09:59:01,The Districts - Vermont_vocals.wav,Success,2.7283,0.002394,26.21,3.59,Phase_Coding_FFT
+09:59:06,The Doppler Shift - Atrophy_bass.wav,Success,3.9747,0.000000,79.60,51.59,Phase_Coding_FFT
+09:59:11,The Doppler Shift - Atrophy_drums.wav,Success,4.4589,0.000285,35.44,13.97,Phase_Coding_FFT
+09:59:16,The Doppler Shift - Atrophy_mixture.wav,Success,3.9025,0.008733,20.59,2.87,Phase_Coding_FFT
+09:59:20,The Doppler Shift - Atrophy_other.wav,Success,3.8000,0.000004,53.83,30.54,Phase_Coding_FFT
+09:59:25,The Doppler Shift - Atrophy_vocals.wav,Success,4.3555,0.001579,28.02,3.36,Phase_Coding_FFT
+09:59:28,The Easton Ellises (Baumi) - SDRNR_bass.wav,Success,2.8653,0.000006,51.92,27.34,Phase_Coding_FFT
+09:59:31,The Easton Ellises (Baumi) - SDRNR_drums.wav,Success,2.7647,0.002693,25.70,3.20,Phase_Coding_FFT
+09:59:35,The Easton Ellises (Baumi) - SDRNR_mixture.wav,Success,3.0034,0.012217,19.13,1.71,Phase_Coding_FFT
+09:59:39,The Easton Ellises (Baumi) - SDRNR_other.wav,Success,3.6143,0.002398,26.20,1.87,Phase_Coding_FFT
+09:59:42,The Easton Ellises (Baumi) - SDRNR_vocals.wav,Success,2.8003,0.002417,26.17,3.45,Phase_Coding_FFT
+09:59:45,The Easton Ellises - Falcon 69_bass.wav,Success,2.7487,0.000000,74.94,51.58,Phase_Coding_FFT
+09:59:49,The Easton Ellises - Falcon 69_drums.wav,Success,3.2880,0.003501,24.56,3.18,Phase_Coding_FFT
+09:59:53,The Easton Ellises - Falcon 69_mixture.wav,Success,3.2905,0.012599,19.00,2.28,Phase_Coding_FFT
+09:59:56,The Easton Ellises - Falcon 69_other.wav,Success,2.8721,0.001073,29.69,6.90,Phase_Coding_FFT
+09:59:59,The Easton Ellises - Falcon 69_vocals.wav,Success,2.8264,0.001143,29.42,5.66,Phase_Coding_FFT
+10:00:03,The Long Wait - Back Home To Blue_bass.wav,Success,3.4540,0.000000,68.98,47.41,Phase_Coding_FFT
+10:00:07,The Long Wait - Back Home To Blue_drums.wav,Success,3.3148,0.000217,36.63,9.16,Phase_Coding_FFT
+10:00:11,The Long Wait - Back Home To Blue_mixture.wav,Success,3.0930,0.003980,24.00,5.67,Phase_Coding_FFT
+10:00:14,The Long Wait - Back Home To Blue_other.wav,Success,3.1190,0.000018,47.40,22.58,Phase_Coding_FFT
+10:00:18,The Long Wait - Back Home To Blue_vocals.wav,Success,3.5519,0.000392,34.06,8.37,Phase_Coding_FFT
+10:00:23,The Long Wait - Dark Horses_bass.wav,Success,3.5530,0.000000,70.05,43.88,Phase_Coding_FFT
+10:00:27,The Long Wait - Dark Horses_drums.wav,Success,3.5451,0.000224,36.49,7.30,Phase_Coding_FFT
+10:00:31,The Long Wait - Dark Horses_mixture.wav,Success,3.9665,0.002653,25.76,4.70,Phase_Coding_FFT
+10:00:36,The Long Wait - Dark Horses_other.wav,Success,3.7798,0.000014,48.55,22.77,Phase_Coding_FFT
+10:00:40,The Long Wait - Dark Horses_vocals.wav,Success,3.4978,0.000181,37.41,9.33,Phase_Coding_FFT
+10:00:43,The Mountaineering Club - Mallory_bass.wav,Success,2.7739,0.000000,68.62,44.72,Phase_Coding_FFT
+10:00:47,The Mountaineering Club - Mallory_drums.wav,Success,3.4237,0.000030,45.28,18.76,Phase_Coding_FFT
+10:00:50,The Mountaineering Club - Mallory_mixture.wav,Success,2.9382,0.001944,27.11,7.06,Phase_Coding_FFT
+10:00:54,The Mountaineering Club - Mallory_other.wav,Success,2.9939,0.000016,47.96,21.37,Phase_Coding_FFT
+10:00:57,The Mountaineering Club - Mallory_vocals.wav,Success,2.7917,0.000040,43.96,15.43,Phase_Coding_FFT
+10:01:02,The Scarlet Brand - Les Fleurs Du Mal_bass.wav,Success,4.2816,0.000000,76.07,50.66,Phase_Coding_FFT
+10:01:06,The Scarlet Brand - Les Fleurs Du Mal_drums.wav,Success,3.3879,0.001859,27.31,3.04,Phase_Coding_FFT
+10:01:10,The Scarlet Brand - Les Fleurs Du Mal_mixture.wav,Success,3.5652,0.006084,22.16,2.69,Phase_Coding_FFT
+10:01:15,The Scarlet Brand - Les Fleurs Du Mal_other.wav,Success,4.1406,0.000022,46.53,20.66,Phase_Coding_FFT
+10:01:18,The Scarlet Brand - Les Fleurs Du Mal_vocals.wav,Success,3.2600,0.000006,52.45,25.61,Phase_Coding_FFT
+10:01:21,The So So Glos - Emergency_bass.wav,Success,2.1213,0.000002,56.93,32.70,Phase_Coding_FFT
+10:01:23,The So So Glos - Emergency_drums.wav,Success,2.1235,0.002650,25.77,3.21,Phase_Coding_FFT
+10:01:26,The So So Glos - Emergency_mixture.wav,Success,2.3625,0.012384,19.07,1.79,Phase_Coding_FFT
+10:01:29,The So So Glos - Emergency_other.wav,Success,2.7142,0.002562,25.91,3.55,Phase_Coding_FFT
+10:01:31,The So So Glos - Emergency_vocals.wav,Success,2.1700,0.002063,26.86,2.37,Phase_Coding_FFT
+10:01:37,The Sunshine Garcia Band - For I Am The Moon_bass.wav,Success,4.1286,0.000000,72.29,48.41,Phase_Coding_FFT
+10:01:47,The Sunshine Garcia Band - For I Am The Moon_drums.wav,Success,9.9496,0.000459,33.38,9.87,Phase_Coding_FFT
+10:01:52,The Sunshine Garcia Band - For I Am The Moon_mixture.wav,Success,3.7416,0.006587,21.81,3.00,Phase_Coding_FFT
+10:01:56,The Sunshine Garcia Band - For I Am The Moon_other.wav,Success,3.6035,0.000011,49.76,17.94,Phase_Coding_FFT
+10:02:01,The Sunshine Garcia Band - For I Am The Moon_vocals.wav,Success,4.2904,0.001793,27.46,3.47,Phase_Coding_FFT
+10:02:04,The Wrong'Uns - Rothko_bass.wav,Success,2.5066,0.000000,74.58,49.04,Phase_Coding_FFT
+10:02:07,The Wrong'Uns - Rothko_drums.wav,Success,2.6053,0.000339,34.70,9.87,Phase_Coding_FFT
+10:02:10,The Wrong'Uns - Rothko_mixture.wav,Success,2.5903,0.006568,21.83,3.44,Phase_Coding_FFT
+10:02:13,The Wrong'Uns - Rothko_other.wav,Success,2.7727,0.000072,41.42,17.97,Phase_Coding_FFT
+10:02:16,The Wrong'Uns - Rothko_vocals.wav,Success,2.9179,0.001402,28.53,4.46,Phase_Coding_FFT
+10:02:20,Tim Taler - Stalker_bass.wav,Success,2.8835,0.000002,56.32,28.69,Phase_Coding_FFT
+10:02:23,Tim Taler - Stalker_drums.wav,Success,2.8953,0.000357,34.47,6.06,Phase_Coding_FFT
+10:02:26,Tim Taler - Stalker_mixture.wav,Success,2.9025,0.003406,24.68,3.61,Phase_Coding_FFT
+10:02:30,Tim Taler - Stalker_other.wav,Success,3.4581,0.000013,48.81,22.50,Phase_Coding_FFT
+10:02:33,Tim Taler - Stalker_vocals.wav,Success,2.7080,0.000746,31.28,5.05,Phase_Coding_FFT
+10:02:37,Timboz - Pony_bass.wav,Success,3.0354,0.000000,74.54,43.74,Phase_Coding_FFT
+10:02:41,Timboz - Pony_drums.wav,Success,3.2472,0.001324,28.78,2.76,Phase_Coding_FFT
+10:02:45,Timboz - Pony_mixture.wav,Success,3.6281,0.009224,20.35,1.95,Phase_Coding_FFT
+10:02:48,Timboz - Pony_other.wav,Success,2.9843,0.003701,24.32,4.22,Phase_Coding_FFT
+10:02:52,Timboz - Pony_vocals.wav,Success,3.1545,0.000224,36.49,7.70,Phase_Coding_FFT
+10:02:56,Titanium - Haunted Age_bass.wav,Success,3.2657,0.000001,62.62,36.71,Phase_Coding_FFT
+10:03:00,Titanium - Haunted Age_drums.wav,Success,3.3524,0.001825,27.39,1.50,Phase_Coding_FFT
+10:03:03,Titanium - Haunted Age_mixture.wav,Success,3.0123,0.008894,20.51,1.49,Phase_Coding_FFT
+10:03:06,Titanium - Haunted Age_other.wav,Success,3.0200,0.003065,25.14,2.96,Phase_Coding_FFT
+10:03:10,Titanium - Haunted Age_vocals.wav,Success,3.2616,0.000183,37.37,8.63,Phase_Coding_FFT
+10:03:13,Tom McKenzie - Directions_bass.wav,Success,2.3063,0.000000,117.49,90.32,Phase_Coding_FFT
+10:03:15,Tom McKenzie - Directions_drums.wav,Success,2.2516,0.000186,37.30,15.98,Phase_Coding_FFT
+10:03:18,Tom McKenzie - Directions_mixture.wav,Success,2.3880,0.004446,23.52,4.26,Phase_Coding_FFT
+10:03:21,Tom McKenzie - Directions_other.wav,Success,2.2592,0.000001,60.96,32.06,Phase_Coding_FFT
+10:03:24,Tom McKenzie - Directions_vocals.wav,Success,2.5983,0.000412,33.85,5.27,Phase_Coding_FFT
+10:03:30,Traffic Experiment - Once More (With Feeling)_bass.wav,Success,5.4860,0.000000,71.60,48.86,Phase_Coding_FFT
+10:03:36,Traffic Experiment - Once More (With Feeling)_drums.wav,Success,4.9099,0.000285,35.45,8.41,Phase_Coding_FFT
+10:03:42,Traffic Experiment - Once More (With Feeling)_mixture.wav,Success,5.8804,0.007326,21.35,3.02,Phase_Coding_FFT
+10:03:48,Traffic Experiment - Once More (With Feeling)_other.wav,Success,4.9158,0.001994,27.00,4.61,Phase_Coding_FFT
+10:03:54,Traffic Experiment - Once More (With Feeling)_vocals.wav,Success,5.5187,0.000416,33.81,5.98,Phase_Coding_FFT
+10:03:59,Traffic Experiment - Sirens_bass.wav,Success,4.4430,0.000003,54.72,25.90,Phase_Coding_FFT
+10:04:05,Traffic Experiment - Sirens_drums.wav,Success,5.0183,0.000733,31.35,4.92,Phase_Coding_FFT
+10:04:11,Traffic Experiment - Sirens_mixture.wav,Success,5.2219,0.009101,20.41,2.54,Phase_Coding_FFT
+10:04:17,Traffic Experiment - Sirens_other.wav,Success,4.8446,0.004218,23.75,3.86,Phase_Coding_FFT
+10:04:23,Traffic Experiment - Sirens_vocals.wav,Success,5.0709,0.001169,29.32,3.18,Phase_Coding_FFT
+10:04:26,Triviul - Angelsaint_bass.wav,Success,2.6580,0.000000,70.86,48.68,Phase_Coding_FFT
+10:04:29,Triviul - Angelsaint_drums.wav,Success,2.7250,0.000013,48.91,22.92,Phase_Coding_FFT
+10:04:33,Triviul - Angelsaint_mixture.wav,Success,3.2986,0.006839,21.65,4.55,Phase_Coding_FFT
+10:04:37,Triviul - Angelsaint_other.wav,Success,3.3113,0.000026,45.86,22.90,Phase_Coding_FFT
+10:04:40,Triviul - Angelsaint_vocals.wav,Success,2.7831,0.001895,27.22,4.96,Phase_Coding_FFT
+10:04:42,Triviul - Dorothy_bass.wav,Success,2.4378,0.000000,77.70,49.08,Phase_Coding_FFT
+10:04:45,Triviul - Dorothy_drums.wav,Success,2.3450,0.000741,31.30,6.53,Phase_Coding_FFT
+10:04:48,Triviul - Dorothy_mixture.wav,Success,2.9171,0.004401,23.56,3.41,Phase_Coding_FFT
+10:04:51,Triviul - Dorothy_other.wav,Success,2.4869,0.000053,42.78,13.11,Phase_Coding_FFT
+10:04:54,Triviul - Dorothy_vocals.wav,Success,2.3628,0.001213,29.16,5.16,Phase_Coding_FFT
+10:04:57,Triviul feat. The Fiend - Widow_bass.wav,Success,2.7336,0.000004,53.62,28.58,Phase_Coding_FFT
+10:05:01,Triviul feat. The Fiend - Widow_drums.wav,Success,3.1096,0.000854,30.69,2.95,Phase_Coding_FFT
+10:05:05,Triviul feat. The Fiend - Widow_mixture.wav,Success,3.3273,0.006991,21.55,2.00,Phase_Coding_FFT
+10:05:08,Triviul feat. The Fiend - Widow_other.wav,Success,2.8215,0.000119,39.24,11.32,Phase_Coding_FFT
+10:05:11,Triviul feat. The Fiend - Widow_vocals.wav,Success,2.7816,0.001995,27.00,3.64,Phase_Coding_FFT
+10:05:14,Voelund - Comfort Lives In Belief_bass.wav,Success,2.8420,0.000000,66.27,39.29,Phase_Coding_FFT
+10:05:18,Voelund - Comfort Lives In Belief_drums.wav,Success,3.0757,0.000989,30.05,3.03,Phase_Coding_FFT
+10:05:21,Voelund - Comfort Lives In Belief_mixture.wav,Success,2.5591,0.008167,20.88,2.26,Phase_Coding_FFT
+10:05:24,Voelund - Comfort Lives In Belief_other.wav,Success,2.5923,0.001829,27.38,4.71,Phase_Coding_FFT
+10:05:27,Voelund - Comfort Lives In Belief_vocals.wav,Success,2.5182,0.001830,27.37,3.79,Phase_Coding_FFT
+10:05:30,Wall Of Death - Femme_bass.wav,Success,3.4051,0.000081,40.92,14.86,Phase_Coding_FFT
+10:05:34,Wall Of Death - Femme_drums.wav,Success,2.9763,0.005080,22.94,1.73,Phase_Coding_FFT
+10:05:37,Wall Of Death - Femme_mixture.wav,Success,2.9510,0.017455,17.58,1.25,Phase_Coding_FFT
+10:05:40,Wall Of Death - Femme_other.wav,Success,2.7808,0.003480,24.58,5.19,Phase_Coding_FFT
+10:05:44,Wall Of Death - Femme_vocals.wav,Success,3.3880,0.000910,30.41,2.87,Phase_Coding_FFT
+10:05:47,We Fell From The Sky - Not You_bass.wav,Success,2.7090,0.000000,70.71,39.00,Phase_Coding_FFT
+10:05:51,We Fell From The Sky - Not You_drums.wav,Success,2.6475,0.000578,32.38,10.11,Phase_Coding_FFT
+10:05:53,We Fell From The Sky - Not You_mixture.wav,Success,2.6178,0.006803,21.67,2.57,Phase_Coding_FFT
+10:05:57,We Fell From The Sky - Not You_other.wav,Success,2.7696,0.001274,28.95,5.44,Phase_Coding_FFT
+10:06:00,We Fell From The Sky - Not You_vocals.wav,Success,3.0090,0.000533,32.73,3.39,Phase_Coding_FFT
+10:06:04,Young Griffo - Blood To Bone_bass.wav,Success,3.1285,0.000001,60.83,39.96,Phase_Coding_FFT
+10:06:07,Young Griffo - Blood To Bone_drums.wav,Success,3.1900,0.000004,53.87,29.52,Phase_Coding_FFT
+10:06:11,Young Griffo - Blood To Bone_mixture.wav,Success,3.3233,0.005080,22.94,4.87,Phase_Coding_FFT
+10:06:15,Young Griffo - Blood To Bone_other.wav,Success,3.3851,0.000026,45.93,19.11,Phase_Coding_FFT
+10:06:18,Young Griffo - Blood To Bone_vocals.wav,Success,2.7712,0.000458,33.39,5.28,Phase_Coding_FFT
+10:06:21,Young Griffo - Facade_bass.wav,Success,2.1157,0.000000,70.55,44.59,Phase_Coding_FFT
+10:06:23,Young Griffo - Facade_drums.wav,Success,2.1783,0.000988,30.05,4.87,Phase_Coding_FFT
+10:06:26,Young Griffo - Facade_mixture.wav,Success,2.6634,0.009160,20.38,2.34,Phase_Coding_FFT
+10:06:29,Young Griffo - Facade_other.wav,Success,2.4279,0.002714,25.66,3.17,Phase_Coding_FFT
+10:06:31,Young Griffo - Facade_vocals.wav,Success,2.1503,0.001655,27.81,4.33,Phase_Coding_FFT
+10:06:35,Young Griffo - Pennies_bass.wav,Success,3.4337,0.000001,60.50,39.68,Phase_Coding_FFT
+10:06:40,Young Griffo - Pennies_drums.wav,Success,3.6544,0.002184,26.61,2.86,Phase_Coding_FFT
+10:06:44,Young Griffo - Pennies_mixture.wav,Success,3.6017,0.013478,18.70,1.71,Phase_Coding_FFT
+10:06:48,Young Griffo - Pennies_other.wav,Success,3.2911,0.001316,28.81,4.17,Phase_Coding_FFT
+10:06:51,Young Griffo - Pennies_vocals.wav,Success,3.2278,0.002135,26.71,2.81,Phase_Coding_FFT
+10:06:55,Zeno - Signs_bass.wav,Success,3.6676,0.000000,76.90,48.70,Phase_Coding_FFT
+10:06:59,Zeno - Signs_drums.wav,Success,2.8751,0.000836,30.78,6.43,Phase_Coding_FFT
+10:07:02,Zeno - Signs_mixture.wav,Success,2.9249,0.010619,19.74,2.06,Phase_Coding_FFT
+10:07:05,Zeno - Signs_other.wav,Success,2.8537,0.000171,37.67,16.47,Phase_Coding_FFT
+10:07:09,Zeno - Signs_vocals.wav,Success,3.5127,0.002607,25.84,2.31,Phase_Coding_FFT
