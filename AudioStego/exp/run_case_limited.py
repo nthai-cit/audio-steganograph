@@ -8,7 +8,7 @@ import numpy as np
 import random
 import soundfile as sf
 import shutil
-import re  # Thêm Regex để bắt chuỗi output
+import re
 from datetime import datetime, timedelta, timezone
 
 CASE_CONFIGS = {
@@ -122,9 +122,9 @@ def main():
 
     log_file = os.path.join(dir_logs, f"benchmark.csv")
 
-    # [MỚI] Thêm cột Rate(kBps) vào Header
+    # [MỚI] Thêm cột Rate, CPU, RAM vào Header
     with open(log_file, "w", encoding="utf-8") as f:
-        f.write("Timestamp,CoverFile,SecretFile,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),Info\n")
+        f.write("Timestamp,CoverFile,SecretFile,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info\n")
 
     skipped_count = 0
     success_count = 0
@@ -158,12 +158,18 @@ def main():
             if result.returncode == 0:
                 mse, psnr, snr = calculate_metrics(c_file, final_stego_path)
                 
-                # [MỚI] Trích xuất Rate từ output của subprocess
+                # [MỚI] Trích xuất Rate, CPU, RAM từ output của subprocess
                 output_str = result.stdout
                 rate_val = 0.0
-                match = re.search(r"Rate=([0-9\.]+)", output_str)
+                cpu_val = 0.0
+                ram_val = 0.0
+                
+                # Regex bắt chuỗi: [METRICS_DATA] Rate=12.5 CPU=5.2 RAM=45.6
+                match = re.search(r"Rate=([0-9\.]+).*CPU=([0-9\.]+).*RAM=([0-9\.]+)", output_str)
                 if match:
                     rate_val = float(match.group(1))
+                    cpu_val = float(match.group(2))
+                    ram_val = float(match.group(3))
 
                 if psnr < 1.0: 
                     skipped_count += 1
@@ -177,11 +183,11 @@ def main():
                 s_name = os.path.basename(s_file)
                 current_time_str = get_vn_time().strftime('%H:%M:%S')
                 
-                # [MỚI] Ghi Rate vào log CSV
-                log_line = f"{current_time_str},{c_name},{s_name},Success,{duration:.4f},{mse:.6f},{psnr:.2f},{snr:.2f},{rate_val:.4f},{config['desc']}"
+                # [MỚI] Ghi log đầy đủ
+                log_line = f"{current_time_str},{c_name},{s_name},Success,{duration:.4f},{mse:.6f},{psnr:.2f},{snr:.2f},{rate_val:.4f},{cpu_val:.2f},{ram_val:.2f},{config['desc']}"
                 
-                # In ra màn hình để theo dõi
-                print(f"\r[{i+1}/{num_covers}] {c_name} -> OK ({psnr:.2f}dB | {rate_val:.2f} kBps)", end="", flush=True)
+                # In ra màn hình console
+                print(f"\r[{i+1}/{num_covers}] {c_name} -> OK (PSNR:{psnr:.1f}dB | CPU:{cpu_val}% | RAM:{ram_val:.1f}MB)", end="", flush=True)
                 
                 with open(log_file, "a", encoding="utf-8") as f:
                     f.write(log_line + "\n")
