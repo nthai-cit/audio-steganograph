@@ -31,7 +31,6 @@ inputs/*/
 
 Steganalysis/cache/
 Steganalysis/Data/
-Steganalysis/logs/
 *.npz
 *.h5
 *.keras
