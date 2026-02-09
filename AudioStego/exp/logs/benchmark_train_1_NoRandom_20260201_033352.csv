@@ -1,8 +1,0 @@
-Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Info
-03:33:55,A Classic Education - NightOwl_bass.wav,Success,1.6953,0.000000,105.99,88.36,Sequential
-03:33:59,A Classic Education - NightOwl_drums.wav,Success,3.9997,0.000000,106.00,72.70,Sequential
-03:34:01,A Classic Education - NightOwl_mixture.wav,Success,1.1695,0.000000,106.00,90.29,Sequential
-03:34:02,A Classic Education - NightOwl_other.wav,Success,1.1811,0.000000,105.99,84.56,Sequential
-03:34:05,A Classic Education - NightOwl_vocals.wav,Success,1.4603,0.000000,106.00,79.00,Sequential
-03:34:06,AM Contra - Heart Peripheral_bass.wav,Success,1.2626,0.000000,106.88,80.45,Sequential
-03:34:09,AM Contra - Heart Peripheral_drums.wav,Success,2.1248,0.000000,106.87,84.83,Sequential

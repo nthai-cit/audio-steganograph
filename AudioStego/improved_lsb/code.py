@@ -4,24 +4,36 @@ from scipy.io import wavfile
 import hashlib
 import io
 import math
-from PIL import Image
+
+try:
+    from PIL import Image
+except ImportError:
+    print("Warning: PIL not installed. Image processing will be disabled.")
+    Image = None
 
 class ImageProcessor:
     @staticmethod
     def compress_image_to_bytes(image_path, target_bytes):
+        if Image is None:
+            with open(image_path, 'rb') as f: return f.read()
+            
         try:
             img = Image.open(image_path)
             if img.mode != 'RGB': img = img.convert('RGB')
+            
             img.thumbnail((1024, 1024)) 
+            
             quality = 95
             output = io.BytesIO()
             img.save(output, format='JPEG', quality=quality, subsampling=2)
             data = output.getvalue()
+            
             while len(data) > target_bytes and quality > 10:
                 quality -= 5
                 output = io.BytesIO()
                 img.save(output, format='JPEG', quality=quality, subsampling=2)
                 data = output.getvalue()
+            
             while len(data) > target_bytes:
                 w, h = img.size
                 if w < 10 or h < 10: break
@@ -29,6 +41,7 @@ class ImageProcessor:
                 output = io.BytesIO()
                 img.save(output, format='JPEG', quality=quality, subsampling=2)
                 data = output.getvalue()
+                
             return data
         except Exception:
             with open(image_path, 'rb') as f: return f.read()
@@ -56,13 +69,17 @@ def calculate_metrics(original, stego):
     mod = stego.astype(np.float64)
     diff = orig - mod
     mse = np.mean(diff ** 2)
+    
     if mse == 0: return 0.0, float('inf'), float('inf')
+    
     rmse = np.sqrt(mse)
     max_val = 32767.0 
     psnr = 20 * np.log10(max_val / rmse)
+    
     signal_power = np.sum(orig ** 2)
     noise_power = np.sum(diff ** 2)
     snr = 10 * np.log10(signal_power / noise_power) if noise_power != 0 else float('inf')
+    
     return mse, snr, psnr
 
 def encode(cover_path, secret_input, output_path, k=None, password=None):
@@ -82,16 +99,21 @@ def encode(cover_path, secret_input, output_path, k=None, password=None):
             max_bytes_allowed = (num_slots * k) // 8
             raw_secret_bytes = _get_data_bytes(secret_input, max_bytes=max_bytes_allowed)
             payload_bits_needed = (len(raw_secret_bytes) + 7) * 8
+            
             if payload_bits_needed > num_slots * k:
                 return {"status": "error", "message": f"Oversize! K={k} is too small."}
         else:
             raw_secret_bytes = _get_data_bytes(secret_input, max_bytes=None)
             payload_bits_needed = (len(raw_secret_bytes) + 7) * 8
+            
             k_calculated = math.ceil(payload_bits_needed / num_slots)
-            k = max(1, k_calculated)
-            if k > 8:
-                 return {"status": "error", "message": f"File too large! Auto-calculated k={k} (>8)."}
-            print(f"   [Mode] Adaptive Auto-K: Calculated k = {k}")
+            
+            k = max(1, min(k_calculated, 6))
+            
+            print(f"   Calculated k={k_calculated} -> Clamped k={k}")
+
+            if payload_bits_needed > num_slots * k:
+                 return {"status": "error", "message": f"File too large! Even at max k=6."}
 
         full_payload = raw_secret_bytes + b"||END||"
         bits = np.unpackbits(np.frombuffer(full_payload, dtype=np.uint8))
@@ -152,7 +174,7 @@ def decode(stego_path, k=None, password=None):
         SENTINEL = b"||END||"
         
         candidates = [k] if k else []
-        candidates += [x for x in range(1, 9) if x not in candidates]
+        candidates += [x for x in range(1, 7) if x not in candidates]
         
         final_content = None
         detected_k = -1
@@ -202,7 +224,7 @@ def decode(stego_path, k=None, password=None):
     except Exception as e:
         return {'status': 'error', 'message': str(e)}
 
-def process_batch(input_dir, secret_input, output_dir=None, k=2, password=None):
+def process_batch(input_dir, secret_input, output_dir=None, k=None, password=None):
     results = []
     
     if not os.path.exists(input_dir):
@@ -254,7 +276,7 @@ def process_batch(input_dir, secret_input, output_dir=None, k=2, password=None):
                 "Status": "Success"
             })
         else:
-            if "Oversize" in res['message']:
+            if "Oversize" in res['message'] or "too large" in res['message']:
                 skip_count += 1
                 results.append({"Filename": unique_filename, "Status": "Skipped (Oversize)"})
             else:

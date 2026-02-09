@@ -129,8 +129,4 @@ The `train.py` script manages the coordination of the Steganalysis training pipe
     ```bash
     python train.py --cover "data/cover" --stego "data/stego" --algo bilstm --use_bilstm --lr 0.0001
     ```
-* **Using Classical Machine Learning (Random Forest):**
-    ```bash
-    python train.py --cover "data/cover" --stego "data/stego" --algo rf
-    ```
 

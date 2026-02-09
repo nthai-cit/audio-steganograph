@@ -35,7 +35,7 @@ def main():
     p_enc.add_argument('-m', '--method', required=True, choices=['lsb', 'phase', 'improved'])
     p_enc.add_argument('-i', '--input', help="File Audio Cover (.wav)")
     p_enc.add_argument('-s', '--secret', help="File du lieu can giau")
-    p_enc.add_argument('-k', type=int, default=2, help="So bit LSB (Chi dung cho LSB/Improved)")
+    p_enc.add_argument('-k', type=int, default=None, help="So bit LSB (Chi dung cho LSB/Improved)")
     p_enc.add_argument('-p', '--password', default="default", help="Mat khau (Improved)")
 
     p_dec = subparsers.add_parser('decode', help='Trich xuat tin tu am thanh')
