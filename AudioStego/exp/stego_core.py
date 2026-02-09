@@ -130,10 +130,15 @@ class StegoImproved:
             if len(secret_values) > num_slots:
                 return {"status": "error", "message": f"Oversize (K={k}, Need {len(secret_values)} slots, Have {num_slots})"}
 
+            # --- SỬA ĐỔI QUAN TRỌNG CHO KHỚP VỚI CODE DEMO ---
             if salt_source == 'content':
-                salt = hashlib.md5(payload_bytes).hexdigest()
+                # Lấy 1024 byte đầu tiên của Audio để làm Salt (Content-based Audio)
+                # Thay vì dùng payload như trước
+                anchor_bytes = audio_flat[:ANCHOR_SIZE].tobytes()
+                salt = hashlib.sha256(anchor_bytes).hexdigest()
             else:
                 salt = "STATIC_DEFAULT_SALT"
+            # -------------------------------------------------
 
             seed = StegoUtils.generate_seed(password, salt)
             rng = np.random.default_rng(seed)

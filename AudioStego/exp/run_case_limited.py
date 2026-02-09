@@ -90,7 +90,7 @@ def main():
     print(f"[*] Scanning Cover: {args.input_dir}...")
     all_covers = get_files_recursive(args.input_dir, ["wav", "WAV"])
     print(f"[*] Scanning Secret: {args.secret_dir}...")
-    all_secrets = get_files_recursive(args.secret_dir, ["jpg", "png", "txt", "wav", "mp3", "pdf"])
+    all_secrets = get_files_recursive(args.secret_dir, ["jpg", "png", "txt", "wav", "mp3", "pdf", "zip", "rar"])
     
     if not all_covers or not all_secrets:
         print("Error: Files not found.")
