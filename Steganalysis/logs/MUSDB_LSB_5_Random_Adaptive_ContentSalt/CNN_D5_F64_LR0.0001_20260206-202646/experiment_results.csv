@@ -1,0 +1,2 @@
+Timestamp,Algo,Depth,Filters,BiLSTM,Val_Acc,Val_AUC,Precision,Recall,F1,Total_Time(s),Max_RAM(MB),Model_Path
+2026-02-06 20:31:16,cnn,5,64,False,0.6500,0.6906,0.5889,0.9933,0.7395,255.47,2420.42,Steganalysis/logs/CNN_D5_F64_LR0.0001_20260206-202646/best_model.keras
