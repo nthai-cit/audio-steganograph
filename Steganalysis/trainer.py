@@ -20,7 +20,6 @@ from .models import build_deep_model
 
 VN_TZ = pytz.timezone('Asia/Ho_Chi_Minh')
 
-# --- CLASS MỚI: TÍCH HỢP VÀO LOG CHUNG ---
 class ResourceMonitor(Callback):
     def __init__(self, log_file):
         super(ResourceMonitor, self).__init__()
@@ -151,7 +150,7 @@ class StegoTrainer:
             self._plot_history(history, self.algo)
             self._plot_confusion_matrix(y_val, y_pred, self.algo)
 
-        # --- MACHINE LEARNING (Giữ nguyên) ---
+
         else: 
             print(f"[ML] Training {self.algo.upper()}...")
             X_train_flat = X_train.reshape(X_train.shape[0], -1)
