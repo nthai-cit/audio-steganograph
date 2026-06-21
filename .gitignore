@@ -1,4 +1,4 @@
-
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -21,50 +21,51 @@ wheels/
 .installed.cfg
 *.egg
 
-
-inputs/timit/
-inputs/musdb-18/
-inputs/pascal-voc-2012/
-inputs/audio-cats-and-dogs/
+# Datasets (large files)
 inputs/*/
 
-
+# ML artifacts
 Steganalysis/cache/
 Steganalysis/Data/
+Steganalysis/logs/
 *.npz
 *.h5
 *.keras
 *.pth
 *.checkpoint
 
-
-outputs/encode/
-outputs/decode/
-outputs/batch/
+# Outputs
 outputs/*/
 exp/logs/
 
-*.wav
-*.mp3
-*.flac
-*.png
-*.jpg
-*.jpeg
-*.bmp
-*.gif
+# Audio / Image data files (scoped to data dirs only)
+inputs/**/*.wav
+inputs/**/*.mp3
+inputs/**/*.flac
+inputs/**/*.png
+inputs/**/*.jpg
+inputs/**/*.jpeg
+inputs/**/*.bmp
+inputs/**/*.gif
+outputs/**/*.wav
+outputs/**/*.png
+outputs/**/*.jpg
 
-
+# Environments
 .venv
 venv/
 ENV/
 .env
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 
+# OS
 .DS_Store
 Thumbs.db
 
-
+# Misc
 *.docx
