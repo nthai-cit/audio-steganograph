@@ -1,0 +1,11 @@
+Pair,Mean_A,Mean_B,MW_stat,p_value,Significant,Cohens_d,Effect_size
+M1 vs M2,0.7927,0.7343,97.0,0.0004,True,3.0126,large
+M1 vs M3,0.7927,0.7008,100.0,0.0002,True,2.3449,large
+M1 vs M4,0.7927,0.7251,100.0,0.0002,True,2.7004,large
+M1 vs M5,0.7927,0.6878,100.0,0.0002,True,2.6999,large
+M2 vs M3,0.7343,0.7008,68.0,0.1855,False,0.8231,large
+M2 vs M4,0.7343,0.7251,52.0,0.9097,False,0.3341,small
+M2 vs M5,0.7343,0.6878,80.0,0.0257,True,1.1515,large
+M3 vs M4,0.7008,0.7251,36.0,0.3075,False,-0.5585,medium
+M3 vs M5,0.7008,0.6878,60.0,0.4727,False,0.2456,small
+M4 vs M5,0.7251,0.6878,76.0,0.0539,False,0.8619,large

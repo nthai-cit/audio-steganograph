@@ -1,0 +1,49 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info
+11:00:49,A Classic Education - NightOwl_bass.wav,Success,3.2154,0.000000,105.99,88.36,0.5814,71.10,56.10,Alarood2022_RandLSB
+11:00:54,A Classic Education - NightOwl_drums.wav,Success,4.7929,0.000000,105.99,72.70,0.5814,53.30,56.11,Alarood2022_RandLSB
+11:00:57,A Classic Education - NightOwl_mixture.wav,Success,2.2565,0.000000,106.01,90.29,0.5814,85.10,56.38,Alarood2022_RandLSB
+11:01:00,A Classic Education - NightOwl_other.wav,Success,2.2279,0.000000,106.00,84.57,0.5814,79.00,56.19,Alarood2022_RandLSB
+11:01:03,A Classic Education - NightOwl_vocals.wav,Success,2.5450,0.000000,105.99,78.99,0.5814,75.70,56.53,Alarood2022_RandLSB
+11:01:07,AM Contra - Heart Peripheral_bass.wav,Success,3.3867,0.000000,106.88,80.45,0.4744,84.50,56.32,Alarood2022_RandLSB
+11:01:10,AM Contra - Heart Peripheral_drums.wav,Success,2.4655,0.000000,106.88,84.83,0.4744,86.60,56.36,Alarood2022_RandLSB
+11:01:13,AM Contra - Heart Peripheral_mixture.wav,Success,2.4190,0.000000,106.89,88.75,0.4744,82.10,56.39,Alarood2022_RandLSB
+11:01:16,AM Contra - Heart Peripheral_other.wav,Success,2.5148,0.000000,106.87,82.19,0.4744,82.60,56.38,Alarood2022_RandLSB
+11:01:20,AM Contra - Heart Peripheral_vocals.wav,Success,2.7978,0.000000,106.88,82.26,0.4744,85.80,56.39,Alarood2022_RandLSB
+11:01:24,ANiMAL - Clinic A_bass.wav,Success,3.2128,0.000000,107.43,87.41,0.4187,84.30,56.41,Alarood2022_RandLSB
+11:01:27,ANiMAL - Clinic A_drums.wav,Success,2.5774,0.000000,107.41,80.18,0.4187,86.40,56.36,Alarood2022_RandLSB
+11:01:30,ANiMAL - Clinic A_mixture.wav,Success,2.5934,0.000000,107.41,90.44,0.4187,85.10,56.34,Alarood2022_RandLSB
+11:01:34,ANiMAL - Clinic A_other.wav,Success,3.0994,0.000000,107.42,84.98,0.4187,85.00,56.42,Alarood2022_RandLSB
+11:01:38,ANiMAL - Clinic A_vocals.wav,Success,3.0763,0.000000,107.42,81.40,0.4187,87.00,56.24,Alarood2022_RandLSB
+11:01:41,ANiMAL - Easy Tiger_bass.wav,Success,2.2868,0.000000,106.78,83.09,0.4846,83.90,56.33,Alarood2022_RandLSB
+11:01:44,ANiMAL - Easy Tiger_drums.wav,Success,2.3293,0.000000,106.78,83.52,0.4846,86.70,56.16,Alarood2022_RandLSB
+11:01:47,ANiMAL - Easy Tiger_mixture.wav,Success,2.3941,0.000000,106.79,88.55,0.4846,86.40,56.39,Alarood2022_RandLSB
+11:01:51,ANiMAL - Easy Tiger_other.wav,Success,3.2039,0.000000,106.78,81.52,0.4846,83.70,56.40,Alarood2022_RandLSB
+11:01:53,ANiMAL - Easy Tiger_vocals.wav,Success,2.2640,0.000000,106.79,81.77,0.4846,86.10,56.33,Alarood2022_RandLSB
+11:01:56,ANiMAL - Rockshow_bass.wav,Success,1.9050,0.000000,105.85,83.30,0.6015,86.90,56.49,Alarood2022_RandLSB
+11:01:58,ANiMAL - Rockshow_drums.wav,Success,1.9308,0.000000,105.84,81.83,0.6015,85.20,56.20,Alarood2022_RandLSB
+11:02:01,ANiMAL - Rockshow_mixture.wav,Success,1.9798,0.000000,105.84,87.10,0.6015,87.00,56.44,Alarood2022_RandLSB
+11:02:04,ANiMAL - Rockshow_other.wav,Success,2.7137,0.000000,105.85,78.01,0.6015,87.10,56.25,Alarood2022_RandLSB
+11:02:07,ANiMAL - Rockshow_vocals.wav,Success,2.0956,0.000000,105.84,79.25,0.6015,85.00,56.20,Alarood2022_RandLSB
+11:02:09,Actions - Devil's Words_bass.wav,Success,2.2308,0.000000,106.59,83.30,0.5064,84.30,56.20,Alarood2022_RandLSB
+11:02:12,Actions - Devil's Words_drums.wav,Success,2.1891,0.000000,106.59,83.79,0.5064,86.10,56.41,Alarood2022_RandLSB
+11:02:15,Actions - Devil's Words_mixture.wav,Success,2.2718,0.000000,106.59,90.57,0.5064,85.40,56.34,Alarood2022_RandLSB
+11:02:19,Actions - Devil's Words_other.wav,Success,3.4791,0.000000,106.60,84.45,0.5064,79.60,56.24,Alarood2022_RandLSB
+11:02:22,Actions - Devil's Words_vocals.wav,Success,2.1741,0.000000,106.60,86.11,0.5064,85.70,56.33,Alarood2022_RandLSB
+11:02:24,Actions - One Minute Smile_bass.wav,Success,1.9878,0.000000,105.80,77.25,0.6093,87.70,56.32,Alarood2022_RandLSB
+11:02:27,Actions - One Minute Smile_drums.wav,Success,1.9011,0.000000,105.79,83.37,0.6093,83.90,56.36,Alarood2022_RandLSB
+11:02:29,Actions - One Minute Smile_mixture.wav,Success,1.9052,0.000000,105.79,89.52,0.6093,87.60,56.12,Alarood2022_RandLSB
+11:02:32,Actions - One Minute Smile_other.wav,Success,2.7168,0.000000,105.79,84.54,0.6093,86.70,56.25,Alarood2022_RandLSB
+11:02:35,Actions - One Minute Smile_vocals.wav,Success,2.3153,0.000000,105.79,85.34,0.6093,85.10,56.40,Alarood2022_RandLSB
+11:02:37,Actions - South Of The Water_bass.wav,Success,2.0489,0.000000,106.13,85.91,0.5637,85.20,56.30,Alarood2022_RandLSB
+11:02:40,Actions - South Of The Water_drums.wav,Success,2.1061,0.000000,106.13,81.80,0.5637,84.80,56.46,Alarood2022_RandLSB
+11:02:43,Actions - South Of The Water_mixture.wav,Success,2.1710,0.000000,106.14,90.03,0.5637,86.10,56.21,Alarood2022_RandLSB
+11:02:46,Actions - South Of The Water_other.wav,Success,2.8408,0.000000,106.13,83.06,0.5637,86.30,56.46,Alarood2022_RandLSB
+11:02:49,Actions - South Of The Water_vocals.wav,Success,2.4494,0.000000,106.13,84.18,0.5637,86.70,56.38,Alarood2022_RandLSB
+11:02:52,Aimee Norwich - Child_bass.wav,Success,2.1869,0.000000,106.42,87.85,0.5266,85.80,56.31,Alarood2022_RandLSB
+11:02:54,Aimee Norwich - Child_drums.wav,Success,2.1354,0.000000,106.43,83.24,0.5266,86.10,56.09,Alarood2022_RandLSB
+11:02:57,Aimee Norwich - Child_mixture.wav,Success,2.1114,0.000000,106.42,90.07,0.5266,87.30,56.33,Alarood2022_RandLSB
+11:03:00,Aimee Norwich - Child_other.wav,Success,2.8595,0.000000,106.43,81.58,0.5266,84.70,56.50,Alarood2022_RandLSB
+11:03:03,Aimee Norwich - Child_vocals.wav,Success,2.5036,0.000000,106.43,77.31,0.5266,86.50,56.16,Alarood2022_RandLSB
+11:03:06,Al James - Schoolboy Facination_bass.wav,Success,2.2394,0.000000,106.67,81.12,0.4970,85.80,56.25,Alarood2022_RandLSB
+11:03:09,Al James - Schoolboy Facination_drums.wav,Success,2.2514,0.000000,106.67,79.47,0.4970,84.50,56.38,Alarood2022_RandLSB
+11:03:12,Al James - Schoolboy Facination_mixture.wav,Success,2.3445,0.000000,106.69,87.61,0.4970,85.70,56.21,Alarood2022_RandLSB

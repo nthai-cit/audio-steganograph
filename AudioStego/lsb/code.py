@@ -4,7 +4,7 @@ from scipy.io import wavfile
 import platform
 import subprocess
 
-# --- CAC HAM HO TRO ---
+
 def _get_data_bytes(secret_input):
     if os.path.isfile(secret_input):
         print(f"   [LSB Info] Nhan dien du lieu la FILE: '{os.path.basename(secret_input)}'")
@@ -47,7 +47,7 @@ def calculate_metrics(original, stego):
     snr = 10 * np.log10(signal_power / mse)
     return mse, rmse, psnr, snr
 
-# --- ENCODE (LSB 1 BIT) ---
+
 def encode(cover_path, secret_input, output_path, k=1):
     try:
         sample_rate, audio_data = wavfile.read(cover_path)
@@ -101,7 +101,7 @@ def encode(cover_path, secret_input, output_path, k=1):
     except Exception as e:
         raise RuntimeError(f"Loi Encode LSB: {e}")
 
-# --- DECODE (LSB 1 BIT + HEADER DETECTION) ---
+
 def decode(stego_path, output_folder="outputs", k=1):
     try:
         stego_path = os.path.abspath(stego_path)
@@ -186,7 +186,7 @@ def decode(stego_path, output_folder="outputs", k=1):
         print(f"   [LOI]: {str(e)}")
         return {'status': 'error', 'message': str(e)}
 
-# --- BATCH PROCESSING ---
+
 def process_batch(input_dir, secret_input, output_dir, k=1, password=None):
     results = []
     files = [f for f in os.listdir(input_dir) if f.lower().endswith('.wav')]

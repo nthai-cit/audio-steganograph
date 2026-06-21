@@ -1,0 +1,751 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info
+10:20:45,A Classic Education - NightOwl_bass.wav,Success,4.8368,0.000000,101.78,84.15,0.5814,66.60,55.19,Rnd_Fixed_Content
+10:20:48,A Classic Education - NightOwl_drums.wav,Success,2.6108,0.000000,101.81,68.52,0.5814,58.10,55.34,Rnd_Fixed_Content
+10:20:52,A Classic Education - NightOwl_mixture.wav,Success,3.2022,0.000000,101.83,86.12,0.5814,46.50,55.53,Rnd_Fixed_Content
+10:20:55,A Classic Education - NightOwl_other.wav,Success,3.1868,0.000000,101.83,80.40,0.5814,46.00,55.59,Rnd_Fixed_Content
+10:20:58,A Classic Education - NightOwl_vocals.wav,Success,2.7215,0.000000,101.57,74.56,0.5814,58.80,55.68,Rnd_Fixed_Content
+10:21:03,AM Contra - Heart Peripheral_bass.wav,Success,4.2385,0.000000,102.05,75.62,0.4744,44.50,55.30,Rnd_Fixed_Content
+10:21:06,AM Contra - Heart Peripheral_drums.wav,Success,3.0828,0.000000,102.51,80.46,0.4744,55.50,55.37,Rnd_Fixed_Content
+10:21:10,AM Contra - Heart Peripheral_mixture.wav,Success,3.4180,0.000000,102.70,84.56,0.4744,61.40,55.42,Rnd_Fixed_Content
+10:21:15,AM Contra - Heart Peripheral_other.wav,Success,4.3500,0.000000,102.64,77.96,0.4744,58.40,55.59,Rnd_Fixed_Content
+10:21:18,AM Contra - Heart Peripheral_vocals.wav,Success,3.1737,0.000000,102.67,78.05,0.4744,62.80,55.37,Rnd_Fixed_Content
+10:21:23,ANiMAL - Clinic A_bass.wav,Success,4.4342,0.000000,102.93,82.91,0.4187,76.50,55.67,Rnd_Fixed_Content
+10:21:27,ANiMAL - Clinic A_drums.wav,Success,3.6844,0.000000,103.16,75.93,0.4187,57.30,55.57,Rnd_Fixed_Content
+10:21:32,ANiMAL - Clinic A_mixture.wav,Success,4.4828,0.000000,103.24,86.27,0.4187,59.10,55.60,Rnd_Fixed_Content
+10:21:37,ANiMAL - Clinic A_other.wav,Success,4.5395,0.000000,103.25,80.81,0.4187,59.90,55.53,Rnd_Fixed_Content
+10:21:42,ANiMAL - Clinic A_vocals.wav,Success,4.0532,0.000000,102.84,76.81,0.4187,57.40,55.57,Rnd_Fixed_Content
+10:21:47,ANiMAL - Easy Tiger_bass.wav,Success,4.5216,0.000000,102.59,78.90,0.4846,50.60,55.48,Rnd_Fixed_Content
+10:21:51,ANiMAL - Easy Tiger_drums.wav,Success,3.7521,0.000000,102.61,79.34,0.4846,72.80,55.60,Rnd_Fixed_Content
+10:21:54,ANiMAL - Easy Tiger_mixture.wav,Success,2.7530,0.000000,102.61,84.37,0.4846,63.40,55.46,Rnd_Fixed_Content
+10:21:59,ANiMAL - Easy Tiger_other.wav,Success,4.7485,0.000000,102.58,77.31,0.4846,30.00,55.31,Rnd_Fixed_Content
+10:22:02,ANiMAL - Easy Tiger_vocals.wav,Success,2.6462,0.000000,102.60,77.58,0.4846,66.20,55.29,Rnd_Fixed_Content
+10:22:04,ANiMAL - Rockshow_bass.wav,Success,1.8981,0.000000,101.59,79.04,0.6015,60.20,55.67,Rnd_Fixed_Content
+10:22:07,ANiMAL - Rockshow_drums.wav,Success,2.9951,0.000000,101.58,77.57,0.6015,47.90,55.62,Rnd_Fixed_Content
+10:22:11,ANiMAL - Rockshow_mixture.wav,Success,2.8363,0.000000,101.65,82.90,0.6015,54.50,55.41,Rnd_Fixed_Content
+10:22:15,ANiMAL - Rockshow_other.wav,Success,3.0153,0.000000,101.55,73.71,0.6015,58.40,55.38,Rnd_Fixed_Content
+10:22:18,ANiMAL - Rockshow_vocals.wav,Success,2.8678,0.000000,101.49,74.90,0.6015,62.50,55.66,Rnd_Fixed_Content
+10:22:22,Actions - Devil's Words_bass.wav,Success,3.7901,0.000000,102.31,79.01,0.5064,54.10,55.64,Rnd_Fixed_Content
+10:22:27,Actions - Devil's Words_drums.wav,Success,3.9224,0.000000,102.40,79.60,0.5064,62.40,55.49,Rnd_Fixed_Content
+10:22:30,Actions - Devil's Words_mixture.wav,Success,2.8021,0.000000,102.41,86.38,0.5064,58.20,55.75,Rnd_Fixed_Content
+10:22:33,Actions - Devil's Words_other.wav,Success,3.2356,0.000000,102.37,80.22,0.5064,72.40,55.53,Rnd_Fixed_Content
+10:22:38,Actions - Devil's Words_vocals.wav,Success,3.4305,0.000000,102.24,81.75,0.5064,63.60,55.57,Rnd_Fixed_Content
+10:22:41,Actions - One Minute Smile_bass.wav,Success,2.3141,0.000000,101.54,72.99,0.6093,64.50,55.70,Rnd_Fixed_Content
+10:22:43,Actions - One Minute Smile_drums.wav,Success,2.1878,0.000000,101.58,79.15,0.6093,54.00,55.69,Rnd_Fixed_Content
+10:22:47,Actions - One Minute Smile_mixture.wav,Success,2.9830,0.000000,101.61,85.35,0.6093,61.90,55.68,Rnd_Fixed_Content
+10:22:50,Actions - One Minute Smile_other.wav,Success,3.3774,0.000000,101.53,80.28,0.6093,52.80,55.43,Rnd_Fixed_Content
+10:22:53,Actions - One Minute Smile_vocals.wav,Success,2.3298,0.000000,101.61,81.15,0.6093,54.30,55.45,Rnd_Fixed_Content
+10:22:57,Actions - South Of The Water_bass.wav,Success,2.0983,0.000000,101.77,81.55,0.5637,56.80,55.53,Rnd_Fixed_Content
+10:23:00,Actions - South Of The Water_drums.wav,Success,2.9995,0.000000,101.76,77.44,0.5637,63.10,55.77,Rnd_Fixed_Content
+10:23:04,Actions - South Of The Water_mixture.wav,Success,2.9043,0.000000,101.93,85.82,0.5637,58.70,55.56,Rnd_Fixed_Content
+10:23:07,Actions - South Of The Water_other.wav,Success,2.7339,0.000000,101.91,78.84,0.5637,52.10,55.50,Rnd_Fixed_Content
+10:23:09,Actions - South Of The Water_vocals.wav,Success,2.3360,0.000000,101.82,79.88,0.5637,54.30,55.61,Rnd_Fixed_Content
+10:23:14,Aimee Norwich - Child_bass.wav,Success,3.4370,0.000000,102.04,83.46,0.5266,74.60,55.66,Rnd_Fixed_Content
+10:23:17,Aimee Norwich - Child_drums.wav,Success,2.8290,0.000000,102.08,78.89,0.5266,52.50,55.68,Rnd_Fixed_Content
+10:23:21,Aimee Norwich - Child_mixture.wav,Success,3.1743,0.000000,102.14,85.79,0.5266,60.50,55.34,Rnd_Fixed_Content
+10:23:25,Aimee Norwich - Child_other.wav,Success,2.9503,0.000000,102.05,77.20,0.5266,66.60,55.96,Rnd_Fixed_Content
+10:23:28,Aimee Norwich - Child_vocals.wav,Success,3.4641,0.000000,101.67,72.55,0.5266,63.80,55.55,Rnd_Fixed_Content
+10:23:32,Al James - Schoolboy Facination_bass.wav,Success,3.0538,0.000000,102.28,76.73,0.4970,68.50,55.60,Rnd_Fixed_Content
+10:23:35,Al James - Schoolboy Facination_drums.wav,Success,2.8897,0.000000,102.47,75.27,0.4970,67.10,55.75,Rnd_Fixed_Content
+10:23:37,Al James - Schoolboy Facination_mixture.wav,Success,1.8070,0.000000,92.03,71.47,5.3655,13.70,55.70,Rnd_Fixed_Content
+10:23:42,Al James - Schoolboy Facination_other.wav,Success,4.6256,0.000000,102.46,76.15,0.4970,52.60,55.62,Rnd_Fixed_Content
+10:23:46,Al James - Schoolboy Facination_vocals.wav,Success,3.0508,0.000000,102.40,79.63,0.4970,66.10,55.79,Rnd_Fixed_Content
+10:23:54,Alexander Ross - Goodbye Bolero_bass.wav,Success,7.8750,0.000000,105.66,75.29,0.2380,55.50,55.38,Rnd_Fixed_Content
+10:24:01,Alexander Ross - Goodbye Bolero_drums.wav,Success,5.2622,0.000000,105.69,76.75,0.2380,73.60,55.81,Rnd_Fixed_Content
+10:24:09,Alexander Ross - Goodbye Bolero_mixture.wav,Success,5.9976,0.000000,105.69,85.34,0.2380,74.60,55.46,Rnd_Fixed_Content
+10:24:15,Alexander Ross - Goodbye Bolero_other.wav,Success,4.5936,0.000000,105.67,82.94,0.2380,63.00,55.75,Rnd_Fixed_Content
+10:24:23,Alexander Ross - Goodbye Bolero_vocals.wav,Success,6.1488,0.000000,104.87,77.25,0.2380,72.20,55.73,Rnd_Fixed_Content
+10:24:31,Alexander Ross - Velvet Curtain_bass.wav,Success,6.6965,0.000000,106.14,74.91,0.1937,74.80,55.59,Rnd_Fixed_Content
+10:24:40,Alexander Ross - Velvet Curtain_drums.wav,Success,6.3271,0.000000,106.18,77.61,0.1937,63.20,55.48,Rnd_Fixed_Content
+10:24:48,Alexander Ross - Velvet Curtain_mixture.wav,Success,6.8395,0.000000,106.59,83.61,0.1937,53.90,55.45,Rnd_Fixed_Content
+10:24:55,Alexander Ross - Velvet Curtain_other.wav,Success,6.6244,0.000000,106.59,78.95,0.1937,74.00,55.59,Rnd_Fixed_Content
+10:25:05,Alexander Ross - Velvet Curtain_vocals.wav,Success,8.4634,0.000000,106.20,76.93,0.1937,55.50,55.52,Rnd_Fixed_Content
+10:25:09,Angela Thomas Wade - Milk Cow Blues_bass.wav,Success,3.0150,0.000000,102.61,73.97,0.4722,62.90,55.69,Rnd_Fixed_Content
+10:25:12,Angela Thomas Wade - Milk Cow Blues_drums.wav,Success,2.5404,0.000000,102.69,77.30,0.4722,57.90,55.35,Rnd_Fixed_Content
+10:25:18,Angela Thomas Wade - Milk Cow Blues_mixture.wav,Success,5.9775,0.000000,102.70,83.26,0.4722,50.10,55.51,Rnd_Fixed_Content
+10:25:22,Angela Thomas Wade - Milk Cow Blues_other.wav,Success,2.4582,0.000000,102.69,79.27,0.4722,62.80,55.61,Rnd_Fixed_Content
+10:25:25,Angela Thomas Wade - Milk Cow Blues_vocals.wav,Success,3.0973,0.000000,102.00,76.09,0.4722,60.80,55.67,Rnd_Fixed_Content
+10:25:29,Angels In Amplifiers - I'm Alright_bass.wav,Success,3.2018,0.000000,102.01,75.18,0.5550,57.70,55.63,Rnd_Fixed_Content
+10:25:33,Angels In Amplifiers - I'm Alright_drums.wav,Success,3.4559,0.000000,102.01,76.33,0.5550,62.40,55.73,Rnd_Fixed_Content
+10:25:37,Angels In Amplifiers - I'm Alright_mixture.wav,Success,3.7972,0.000000,102.02,83.91,0.5550,70.00,55.33,Rnd_Fixed_Content
+10:25:40,Angels In Amplifiers - I'm Alright_other.wav,Success,3.0405,0.000000,102.00,79.46,0.5550,64.40,55.59,Rnd_Fixed_Content
+10:25:44,Angels In Amplifiers - I'm Alright_vocals.wav,Success,2.7328,0.000000,101.82,78.92,0.5550,70.90,55.72,Rnd_Fixed_Content
+10:25:49,Arise - Run Run Run_bass.wav,Success,4.2356,0.000000,102.84,82.22,0.4543,66.10,55.55,Rnd_Fixed_Content
+10:25:53,Arise - Run Run Run_drums.wav,Success,2.7503,0.000000,102.86,77.32,0.4543,60.60,55.37,Rnd_Fixed_Content
+10:25:58,Arise - Run Run Run_mixture.wav,Success,4.4730,0.000000,102.87,86.65,0.4543,63.00,55.61,Rnd_Fixed_Content
+10:26:02,Arise - Run Run Run_other.wav,Success,3.6587,0.000000,102.87,82.78,0.4543,57.70,55.51,Rnd_Fixed_Content
+10:26:05,Arise - Run Run Run_vocals.wav,Success,3.0247,0.000000,102.69,77.35,0.4543,63.10,55.81,Rnd_Fixed_Content
+10:26:11,Atlantis Bound - It Was My Fault For Waiting_bass.wav,Success,4.5881,0.000000,103.56,76.46,0.3716,71.10,55.51,Rnd_Fixed_Content
+10:26:15,Atlantis Bound - It Was My Fault For Waiting_drums.wav,Success,3.5225,0.000000,103.44,80.37,0.3716,72.50,55.49,Rnd_Fixed_Content
+10:26:19,Atlantis Bound - It Was My Fault For Waiting_mixture.wav,Success,3.0670,0.000000,103.61,84.34,0.3716,61.60,55.33,Rnd_Fixed_Content
+10:26:25,Atlantis Bound - It Was My Fault For Waiting_other.wav,Success,5.1547,0.000000,103.60,76.83,0.3716,38.50,55.66,Rnd_Fixed_Content
+10:26:29,Atlantis Bound - It Was My Fault For Waiting_vocals.wav,Success,3.1296,0.000000,103.42,78.03,0.3716,71.90,55.41,Rnd_Fixed_Content
+10:26:33,Auctioneer - Our Future Faces_bass.wav,Success,3.3566,0.000000,102.70,81.67,0.4794,74.60,55.64,Rnd_Fixed_Content
+10:26:38,Auctioneer - Our Future Faces_drums.wav,Success,3.5555,0.000000,102.66,75.34,0.4794,73.30,55.69,Rnd_Fixed_Content
+10:26:42,Auctioneer - Our Future Faces_mixture.wav,Success,3.5902,0.000000,102.66,85.56,0.4794,70.40,55.32,Rnd_Fixed_Content
+10:26:46,Auctioneer - Our Future Faces_other.wav,Success,3.6113,0.000000,102.66,79.99,0.4794,53.70,55.39,Rnd_Fixed_Content
+10:26:50,Auctioneer - Our Future Faces_vocals.wav,Success,3.0856,0.000000,102.72,79.17,0.4794,68.90,55.54,Rnd_Fixed_Content
+10:26:56,AvaLuna - Waterduct_bass.wav,Success,4.7241,0.000000,103.60,77.27,0.3844,60.10,55.92,Rnd_Fixed_Content
+10:27:01,AvaLuna - Waterduct_drums.wav,Success,4.6759,0.000000,103.64,76.68,0.3844,70.20,55.49,Rnd_Fixed_Content
+10:27:05,AvaLuna - Waterduct_mixture.wav,Success,3.9393,0.000000,103.63,82.21,0.3844,47.00,55.70,Rnd_Fixed_Content
+10:27:12,AvaLuna - Waterduct_other.wav,Success,6.3516,0.000000,103.62,74.71,0.3844,66.40,55.51,Rnd_Fixed_Content
+10:27:16,AvaLuna - Waterduct_vocals.wav,Success,3.0819,0.000000,103.64,75.57,0.3844,50.50,55.69,Rnd_Fixed_Content
+10:27:23,BKS - Bulldozer_bass.wav,Success,5.2376,0.000000,104.99,79.91,0.2957,62.10,55.35,Rnd_Fixed_Content
+10:27:28,BKS - Bulldozer_drums.wav,Success,3.9453,0.000000,104.79,82.58,0.2957,71.60,55.66,Rnd_Fixed_Content
+10:27:36,BKS - Bulldozer_mixture.wav,Success,4.8458,0.000000,104.74,86.21,0.2957,66.90,55.51,Rnd_Fixed_Content
+10:27:42,BKS - Bulldozer_other.wav,Success,5.1113,0.000000,104.83,79.57,0.2957,58.80,55.55,Rnd_Fixed_Content
+10:27:47,BKS - Bulldozer_vocals.wav,Success,4.1923,0.000000,105.27,78.15,0.2957,68.20,55.62,Rnd_Fixed_Content
+10:27:59,BKS - Too Much_bass.wav,Success,4.4594,0.000000,102.81,78.68,0.4528,56.10,55.43,Rnd_Fixed_Content
+10:28:05,BKS - Too Much_drums.wav,Success,4.8592,0.000000,102.85,78.17,0.4528,69.80,55.35,Rnd_Fixed_Content
+10:28:09,BKS - Too Much_mixture.wav,Success,3.5913,0.000000,102.90,83.67,0.4528,66.70,55.33,Rnd_Fixed_Content
+10:28:13,BKS - Too Much_other.wav,Success,3.5816,0.000000,102.90,75.48,0.4528,63.60,55.45,Rnd_Fixed_Content
+10:28:17,BKS - Too Much_vocals.wav,Success,4.2249,0.000000,102.37,76.90,0.4528,51.30,55.67,Rnd_Fixed_Content
+10:28:22,Ben Carrigan - We'll Talk About It All Tonight_bass.wav,Success,4.0870,0.000000,102.88,75.49,0.3910,54.10,55.39,Rnd_Fixed_Content
+10:28:27,Ben Carrigan - We'll Talk About It All Tonight_drums.wav,Success,4.0957,0.000000,102.88,76.35,0.3910,70.80,55.53,Rnd_Fixed_Content
+10:28:32,Ben Carrigan - We'll Talk About It All Tonight_mixture.wav,Success,4.9730,0.000000,103.40,82.03,0.3910,51.40,55.34,Rnd_Fixed_Content
+10:28:36,Ben Carrigan - We'll Talk About It All Tonight_other.wav,Success,3.8100,0.000000,103.41,76.50,0.3910,70.60,55.56,Rnd_Fixed_Content
+10:28:42,Ben Carrigan - We'll Talk About It All Tonight_vocals.wav,Success,3.5360,0.000000,102.94,73.70,0.3910,69.50,55.57,Rnd_Fixed_Content
+10:28:46,BigTroubles - Phantom_bass.wav,Success,2.8806,0.000000,101.15,83.89,0.6783,35.50,55.27,Rnd_Fixed_Content
+10:28:49,BigTroubles - Phantom_drums.wav,Success,2.1655,0.000000,101.16,76.52,0.6783,51.80,55.66,Rnd_Fixed_Content
+10:28:51,BigTroubles - Phantom_mixture.wav,Success,2.3112,0.000000,101.15,86.38,0.6783,50.30,55.59,Rnd_Fixed_Content
+10:28:54,BigTroubles - Phantom_other.wav,Success,3.0720,0.000000,101.16,80.23,0.6783,64.50,55.59,Rnd_Fixed_Content
+10:28:57,BigTroubles - Phantom_vocals.wav,Success,2.3146,0.000000,101.20,76.05,0.6783,60.90,55.29,Rnd_Fixed_Content
+10:29:01,Bill Chudziak - Children Of No-one_bass.wav,Success,3.6010,0.000000,102.54,74.71,0.4316,67.00,55.33,Rnd_Fixed_Content
+10:29:05,Bill Chudziak - Children Of No-one_drums.wav,Success,3.3118,0.000000,102.64,78.44,0.4316,64.40,55.57,Rnd_Fixed_Content
+10:29:09,Bill Chudziak - Children Of No-one_mixture.wav,Success,3.1027,0.000000,103.08,84.44,0.4316,63.20,55.39,Rnd_Fixed_Content
+10:29:13,Bill Chudziak - Children Of No-one_other.wav,Success,4.0911,0.000000,103.04,80.00,0.4316,47.60,55.52,Rnd_Fixed_Content
+10:29:17,Bill Chudziak - Children Of No-one_vocals.wav,Success,3.2334,0.000000,102.51,77.67,0.4316,63.00,55.51,Rnd_Fixed_Content
+10:29:25,Black Bloc - If You Want Success_bass.wav,Success,7.0909,0.000000,104.90,77.92,0.2500,74.40,55.39,Rnd_Fixed_Content
+10:29:34,Black Bloc - If You Want Success_drums.wav,Success,7.3586,0.000000,105.44,83.80,0.2500,62.10,55.61,Rnd_Fixed_Content
+10:29:40,Black Bloc - If You Want Success_mixture.wav,Success,4.8960,0.000000,105.49,86.64,0.2500,71.10,55.48,Rnd_Fixed_Content
+10:29:48,Black Bloc - If You Want Success_other.wav,Success,7.3128,0.000000,105.18,79.55,0.2500,73.90,55.37,Rnd_Fixed_Content
+10:29:54,Black Bloc - If You Want Success_vocals.wav,Success,4.7795,0.000000,104.75,76.21,0.2500,70.70,55.29,Rnd_Fixed_Content
+10:29:59,Bobby Nobody - Stitch Up_bass.wav,Success,4.3929,0.000000,102.88,77.04,0.4505,60.20,55.36,Rnd_Fixed_Content
+10:30:03,Bobby Nobody - Stitch Up_drums.wav,Success,3.9988,0.000000,102.83,74.89,0.4505,52.50,55.50,Rnd_Fixed_Content
+10:30:07,Bobby Nobody - Stitch Up_mixture.wav,Success,3.5327,0.000000,102.91,82.48,0.4505,71.20,55.36,Rnd_Fixed_Content
+10:30:11,Bobby Nobody - Stitch Up_other.wav,Success,3.2341,0.000000,102.87,77.52,0.4505,71.10,55.70,Rnd_Fixed_Content
+10:30:15,Bobby Nobody - Stitch Up_vocals.wav,Success,3.5873,0.000000,102.49,75.36,0.4505,63.40,55.45,Rnd_Fixed_Content
+10:30:19,Buitraker - Revo X_bass.wav,Success,3.6194,0.000000,103.74,79.28,0.3613,63.90,55.41,Rnd_Fixed_Content
+10:30:25,Buitraker - Revo X_drums.wav,Success,5.3096,0.000000,103.86,82.79,0.3613,67.50,55.65,Rnd_Fixed_Content
+10:30:30,Buitraker - Revo X_mixture.wav,Success,3.7746,0.000000,103.87,86.24,0.3613,67.30,55.49,Rnd_Fixed_Content
+10:30:35,Buitraker - Revo X_other.wav,Success,4.2726,0.000000,103.87,80.17,0.3613,58.60,55.65,Rnd_Fixed_Content
+10:30:41,Buitraker - Revo X_vocals.wav,Success,3.8021,0.000000,103.41,75.72,0.3613,69.60,55.31,Rnd_Fixed_Content
+10:30:45,Carlos Gonzalez - A Place For Us_bass.wav,Success,3.6397,0.000000,102.91,70.27,0.3983,75.40,55.41,Rnd_Fixed_Content
+10:30:51,Carlos Gonzalez - A Place For Us_drums.wav,Success,5.0375,0.000000,103.49,77.28,0.3983,62.50,55.58,Rnd_Fixed_Content
+10:30:55,Carlos Gonzalez - A Place For Us_mixture.wav,Success,4.1714,0.000000,103.47,84.13,0.3983,65.10,55.34,Rnd_Fixed_Content
+10:31:00,Carlos Gonzalez - A Place For Us_other.wav,Success,3.8968,0.000000,103.47,79.65,0.3983,61.60,55.58,Rnd_Fixed_Content
+10:31:04,Carlos Gonzalez - A Place For Us_vocals.wav,Success,4.0287,0.000000,103.45,80.01,0.3983,73.70,55.51,Rnd_Fixed_Content
+10:31:10,Celestial Shore - Die For Us_bass.wav,Success,4.7932,0.000000,103.96,81.83,0.3577,60.10,55.43,Rnd_Fixed_Content
+10:31:15,Celestial Shore - Die For Us_drums.wav,Success,4.8176,0.000000,103.96,67.63,0.3577,67.00,55.68,Rnd_Fixed_Content
+10:31:21,Celestial Shore - Die For Us_mixture.wav,Success,3.8972,0.000000,103.94,87.05,0.3577,71.70,55.57,Rnd_Fixed_Content
+10:31:26,Celestial Shore - Die For Us_other.wav,Success,4.1345,0.000000,103.93,84.07,0.3577,68.80,55.56,Rnd_Fixed_Content
+10:31:30,Celestial Shore - Die For Us_vocals.wav,Success,3.8583,0.000000,103.61,79.36,0.3577,66.00,55.44,Rnd_Fixed_Content
+10:31:36,Chris Durban - Celebrate_bass.wav,Success,5.2864,0.000000,104.08,81.71,0.3303,71.60,55.62,Rnd_Fixed_Content
+10:31:42,Chris Durban - Celebrate_drums.wav,Success,4.6452,0.000000,103.98,78.78,0.3303,67.10,55.55,Rnd_Fixed_Content
+10:31:47,Chris Durban - Celebrate_mixture.wav,Success,3.6401,0.000000,104.21,86.42,0.3303,69.30,55.47,Rnd_Fixed_Content
+10:31:53,Chris Durban - Celebrate_other.wav,Success,4.9836,0.000000,104.19,81.57,0.3303,74.50,55.50,Rnd_Fixed_Content
+10:31:58,Chris Durban - Celebrate_vocals.wav,Success,3.5555,0.000000,103.87,77.70,0.3303,64.00,55.37,Rnd_Fixed_Content
+10:32:01,Clara Berry And Wooldog - Air Traffic_bass.wav,Success,2.1816,0.000000,102.09,77.15,0.5746,60.80,55.36,Rnd_Fixed_Content
+10:32:05,Clara Berry And Wooldog - Air Traffic_drums.wav,Success,4.0174,0.000000,102.19,74.42,0.5746,59.10,55.59,Rnd_Fixed_Content
+10:32:08,Clara Berry And Wooldog - Air Traffic_mixture.wav,Success,2.5424,0.000000,101.89,80.96,0.5746,46.90,55.48,Rnd_Fixed_Content
+10:32:10,Clara Berry And Wooldog - Air Traffic_other.wav,Success,2.0506,0.000000,101.91,73.66,0.5746,56.10,55.39,Rnd_Fixed_Content
+10:32:13,Clara Berry And Wooldog - Air Traffic_vocals.wav,Success,2.6963,0.000000,101.97,74.39,0.5746,61.00,55.33,Rnd_Fixed_Content
+10:32:18,Clara Berry And Wooldog - Stella_bass.wav,Success,4.4648,0.000000,102.42,80.60,0.5092,64.80,55.43,Rnd_Fixed_Content
+10:32:22,Clara Berry And Wooldog - Stella_drums.wav,Success,3.5292,0.000000,102.48,71.86,0.5092,65.10,55.25,Rnd_Fixed_Content
+10:32:25,Clara Berry And Wooldog - Stella_mixture.wav,Success,2.2966,0.000000,102.41,82.88,0.5092,55.20,55.50,Rnd_Fixed_Content
+10:32:29,Clara Berry And Wooldog - Stella_other.wav,Success,4.0410,0.000000,102.41,73.24,0.5092,35.40,55.43,Rnd_Fixed_Content
+10:32:32,Clara Berry And Wooldog - Stella_vocals.wav,Success,2.8177,0.000000,102.45,76.15,0.5092,69.70,55.58,Rnd_Fixed_Content
+10:32:35,Clara Berry And Wooldog - Waltz For My Victims_bass.wav,Success,2.5551,0.000000,101.93,72.94,0.5681,64.70,55.59,Rnd_Fixed_Content
+10:32:38,Clara Berry And Wooldog - Waltz For My Victims_drums.wav,Success,2.6198,0.000000,101.93,68.64,0.5681,43.60,55.59,Rnd_Fixed_Content
+10:32:43,Clara Berry And Wooldog - Waltz For My Victims_mixture.wav,Success,4.0959,0.000000,101.92,81.27,0.5681,55.50,55.54,Rnd_Fixed_Content
+10:32:46,Clara Berry And Wooldog - Waltz For My Victims_other.wav,Success,2.7332,0.000000,101.90,79.59,0.5681,65.00,55.43,Rnd_Fixed_Content
+10:32:49,Clara Berry And Wooldog - Waltz For My Victims_vocals.wav,Success,2.3890,0.000000,101.92,71.79,0.5681,57.10,55.28,Rnd_Fixed_Content
+10:32:54,Cnoc An Tursa - Bannockburn_bass.wav,Success,4.4099,0.000000,103.91,78.24,0.3382,69.00,55.40,Rnd_Fixed_Content
+10:33:00,Cnoc An Tursa - Bannockburn_drums.wav,Success,5.0734,0.000000,104.12,83.94,0.3382,57.20,55.58,Rnd_Fixed_Content
+10:33:04,Cnoc An Tursa - Bannockburn_mixture.wav,Success,3.5180,0.000000,104.17,87.34,0.3382,61.80,55.62,Rnd_Fixed_Content
+10:33:10,Cnoc An Tursa - Bannockburn_other.wav,Success,4.8285,0.000000,104.14,82.14,0.3382,66.70,55.43,Rnd_Fixed_Content
+10:33:14,Cnoc An Tursa - Bannockburn_vocals.wav,Success,3.9336,0.000000,103.41,76.65,0.3382,73.00,55.36,Rnd_Fixed_Content
+10:33:21,Creepoid - OldTree_bass.wav,Success,5.5053,0.000000,104.27,82.20,0.3298,50.30,55.34,Rnd_Fixed_Content
+10:33:26,Creepoid - OldTree_drums.wav,Success,3.8500,0.000000,104.28,78.68,0.3298,64.70,55.42,Rnd_Fixed_Content
+10:33:32,Creepoid - OldTree_mixture.wav,Success,5.8729,0.000000,104.29,85.89,0.3298,68.90,55.62,Rnd_Fixed_Content
+10:33:37,Creepoid - OldTree_other.wav,Success,3.6006,0.000000,104.29,79.58,0.3298,64.30,55.45,Rnd_Fixed_Content
+10:33:41,Creepoid - OldTree_vocals.wav,Success,3.6562,0.000000,104.38,77.57,0.3298,67.90,55.50,Rnd_Fixed_Content
+10:33:47,Cristina Vane - So Easy_bass.wav,Success,5.5416,0.000000,103.42,75.69,0.3922,57.40,55.52,Rnd_Fixed_Content
+10:33:52,Cristina Vane - So Easy_drums.wav,Success,3.6610,0.000000,103.53,80.82,0.3922,70.10,55.54,Rnd_Fixed_Content
+10:33:57,Cristina Vane - So Easy_mixture.wav,Success,4.1923,0.000000,103.53,84.71,0.3922,72.30,55.62,Rnd_Fixed_Content
+10:34:02,Cristina Vane - So Easy_other.wav,Success,4.7834,0.000000,103.51,77.49,0.3922,73.30,55.44,Rnd_Fixed_Content
+10:34:06,Cristina Vane - So Easy_vocals.wav,Success,3.1159,0.000000,103.18,78.82,0.3922,63.50,55.60,Rnd_Fixed_Content
+10:34:10,Dark Ride - Burning Bridges_bass.wav,Success,4.1571,0.000000,103.04,81.26,0.4280,62.90,55.45,Rnd_Fixed_Content
+10:34:14,Dark Ride - Burning Bridges_drums.wav,Success,3.6390,0.000000,103.10,84.00,0.4280,72.60,55.75,Rnd_Fixed_Content
+10:34:18,Dark Ride - Burning Bridges_mixture.wav,Success,2.7198,0.000000,103.10,87.31,0.4280,59.20,55.42,Rnd_Fixed_Content
+10:34:24,Dark Ride - Burning Bridges_other.wav,Success,5.1941,0.000000,102.94,79.00,0.4280,48.00,55.59,Rnd_Fixed_Content
+10:34:27,Dark Ride - Burning Bridges_vocals.wav,Success,2.6510,0.000000,102.77,77.99,0.4280,65.90,55.57,Rnd_Fixed_Content
+10:34:30,Detsky Sad - Walkie Talkie_bass.wav,Success,2.5455,0.000000,102.05,71.41,0.5232,61.70,55.55,Rnd_Fixed_Content
+10:34:35,Detsky Sad - Walkie Talkie_drums.wav,Success,4.7312,0.000000,102.21,82.06,0.5232,25.60,55.36,Rnd_Fixed_Content
+10:34:39,Detsky Sad - Walkie Talkie_mixture.wav,Success,3.1572,0.000000,102.27,84.27,0.5232,70.10,55.27,Rnd_Fixed_Content
+10:34:42,Detsky Sad - Walkie Talkie_other.wav,Success,2.5509,0.000000,101.93,77.24,0.5232,62.90,55.36,Rnd_Fixed_Content
+10:34:46,Detsky Sad - Walkie Talkie_vocals.wav,Success,2.6377,0.000000,101.17,74.30,0.5232,68.50,55.53,Rnd_Fixed_Content
+10:34:52,Dreamers Of The Ghetto - Heavy Love_bass.wav,Success,5.1796,0.000000,104.35,75.78,0.3379,71.00,55.36,Rnd_Fixed_Content
+10:34:56,Dreamers Of The Ghetto - Heavy Love_drums.wav,Success,3.2868,0.000000,104.20,77.69,0.3379,60.50,55.45,Rnd_Fixed_Content
+10:35:04,Dreamers Of The Ghetto - Heavy Love_mixture.wav,Success,5.2946,0.000000,104.17,85.55,0.3379,74.00,55.51,Rnd_Fixed_Content
+10:35:09,Dreamers Of The Ghetto - Heavy Love_other.wav,Success,5.0884,0.000000,104.18,81.83,0.3379,72.90,55.55,Rnd_Fixed_Content
+10:35:15,Dreamers Of The Ghetto - Heavy Love_vocals.wav,Success,5.3671,0.000000,104.21,80.49,0.3379,76.90,55.28,Rnd_Fixed_Content
+10:35:20,Drumtracks - Ghost Bitch_bass.wav,Success,4.1519,0.000000,104.58,78.24,0.2791,66.60,55.50,Rnd_Fixed_Content
+10:35:29,Drumtracks - Ghost Bitch_drums.wav,Success,7.3682,0.000000,104.64,75.01,0.2791,65.10,55.49,Rnd_Fixed_Content
+10:35:34,Drumtracks - Ghost Bitch_mixture.wav,Success,4.7929,0.000000,104.97,85.23,0.2791,63.90,55.45,Rnd_Fixed_Content
+10:35:41,Drumtracks - Ghost Bitch_other.wav,Success,6.1133,0.000000,104.96,79.18,0.2791,79.90,55.41,Rnd_Fixed_Content
+10:35:46,Drumtracks - Ghost Bitch_vocals.wav,Success,4.1816,0.000000,104.79,81.36,0.2791,65.50,55.30,Rnd_Fixed_Content
+10:35:50,Enda Reilly - Cur An Long Ag Seol_bass.wav,Success,3.6110,0.000000,102.18,77.56,0.5330,57.00,55.33,Rnd_Fixed_Content
+10:35:53,Enda Reilly - Cur An Long Ag Seol_drums.wav,Success,2.9479,0.000000,101.83,77.96,0.5330,69.30,55.25,Rnd_Fixed_Content
+10:35:56,Enda Reilly - Cur An Long Ag Seol_mixture.wav,Success,2.3171,0.000000,102.17,84.08,0.5330,66.40,55.35,Rnd_Fixed_Content
+10:35:59,Enda Reilly - Cur An Long Ag Seol_other.wav,Success,2.8767,0.000000,102.17,77.52,0.5330,44.00,55.27,Rnd_Fixed_Content
+10:36:04,Enda Reilly - Cur An Long Ag Seol_vocals.wav,Success,4.1873,0.000000,101.96,78.38,0.5330,63.70,55.51,Rnd_Fixed_Content
+10:36:07,Faces On Film - Waiting For Ga_bass.wav,Success,3.2485,0.000000,103.74,71.86,0.3869,65.90,55.50,Rnd_Fixed_Content
+10:36:11,Faces On Film - Waiting For Ga_drums.wav,Success,3.0750,0.000000,103.05,72.68,0.3869,66.90,55.35,Rnd_Fixed_Content
+10:36:17,Faces On Film - Waiting For Ga_mixture.wav,Success,5.2424,0.000000,103.59,86.35,0.3869,60.70,55.23,Rnd_Fixed_Content
+10:36:22,Faces On Film - Waiting For Ga_other.wav,Success,4.0262,0.000000,103.59,84.75,0.3869,64.00,55.56,Rnd_Fixed_Content
+10:36:27,Faces On Film - Waiting For Ga_vocals.wav,Success,3.2799,0.000000,103.49,79.74,0.3869,58.50,55.60,Rnd_Fixed_Content
+10:36:31,Fergessen - Back From The Start_bass.wav,Success,2.1908,0.000000,101.50,75.82,0.5906,56.90,55.52,Rnd_Fixed_Content
+10:36:34,Fergessen - Back From The Start_drums.wav,Success,3.0103,0.000000,101.64,77.77,0.5906,33.30,55.35,Rnd_Fixed_Content
+10:36:36,Fergessen - Back From The Start_mixture.wav,Success,1.9081,0.000000,101.67,82.03,0.5906,57.60,55.61,Rnd_Fixed_Content
+10:36:40,Fergessen - Back From The Start_other.wav,Success,2.8757,0.000000,101.65,71.00,0.5906,71.50,55.46,Rnd_Fixed_Content
+10:36:44,Fergessen - Back From The Start_vocals.wav,Success,2.6834,0.000000,101.59,76.57,0.5906,51.40,55.57,Rnd_Fixed_Content
+10:36:47,Fergessen - Nos Palpitants_bass.wav,Success,2.7024,0.000000,101.87,69.82,0.5023,72.60,55.31,Rnd_Fixed_Content
+10:36:50,Fergessen - Nos Palpitants_drums.wav,Success,2.6451,0.000000,101.95,74.77,0.5023,65.30,55.28,Rnd_Fixed_Content
+10:36:55,Fergessen - Nos Palpitants_mixture.wav,Success,4.0737,0.000000,102.43,82.34,0.5023,63.40,55.45,Rnd_Fixed_Content
+10:36:58,Fergessen - Nos Palpitants_other.wav,Success,3.0169,0.000000,102.43,76.34,0.5023,67.90,55.46,Rnd_Fixed_Content
+10:37:01,Fergessen - Nos Palpitants_vocals.wav,Success,2.3248,0.000000,102.03,78.83,0.5023,69.30,55.32,Rnd_Fixed_Content
+10:37:04,Fergessen - The Wind_bass.wav,Success,3.0218,0.000000,102.20,74.70,0.5191,57.50,55.52,Rnd_Fixed_Content
+10:37:08,Fergessen - The Wind_drums.wav,Success,3.8634,0.000000,102.21,76.35,0.5191,54.60,55.56,Rnd_Fixed_Content
+10:37:12,Fergessen - The Wind_mixture.wav,Success,3.0184,0.000000,102.24,84.44,0.5191,69.20,55.33,Rnd_Fixed_Content
+10:37:15,Fergessen - The Wind_other.wav,Success,2.8562,0.000000,102.24,80.14,0.5191,43.50,55.55,Rnd_Fixed_Content
+10:37:19,Fergessen - The Wind_vocals.wav,Success,3.8031,0.000000,102.16,80.02,0.5191,66.60,55.48,Rnd_Fixed_Content
+10:37:24,Flags - 54_bass.wav,Success,3.8485,0.000000,103.78,73.92,0.3161,72.00,55.45,Rnd_Fixed_Content
+10:37:29,Flags - 54_drums.wav,Success,4.2209,0.000000,104.40,84.37,0.3161,58.50,55.40,Rnd_Fixed_Content
+10:37:36,Flags - 54_mixture.wav,Success,5.8330,0.000000,104.39,85.46,0.3161,63.40,55.43,Rnd_Fixed_Content
+10:37:40,Flags - 54_other.wav,Success,3.9538,0.000000,104.18,71.16,0.3161,71.60,55.53,Rnd_Fixed_Content
+10:37:47,Flags - 54_vocals.wav,Success,5.4119,0.000000,103.61,74.86,0.3161,63.50,55.47,Rnd_Fixed_Content
+10:37:51,Forkupines - Semantics_bass.wav,Success,3.5387,0.000000,103.62,76.54,0.3643,69.30,55.44,Rnd_Fixed_Content
+10:37:56,Forkupines - Semantics_drums.wav,Success,3.7918,0.000000,103.78,83.94,0.3643,67.20,55.33,Rnd_Fixed_Content
+10:38:10,Forkupines - Semantics_mixture.wav,Success,8.6179,0.000000,103.82,86.59,0.3643,61.60,55.29,Rnd_Fixed_Content
+10:38:16,Forkupines - Semantics_other.wav,Success,4.6220,0.000000,103.66,79.93,0.3643,63.50,55.33,Rnd_Fixed_Content
+10:38:19,Forkupines - Semantics_vocals.wav,Success,3.1344,0.000000,103.04,76.70,0.3643,61.20,55.33,Rnd_Fixed_Content
+10:38:28,Georgia Wonder - Siren_bass.wav,Success,6.4837,0.000000,105.48,81.83,0.2316,57.40,55.20,Rnd_Fixed_Content
+10:38:34,Georgia Wonder - Siren_drums.wav,Success,4.5607,0.000000,105.77,82.09,0.2316,63.70,55.39,Rnd_Fixed_Content
+10:38:42,Georgia Wonder - Siren_mixture.wav,Success,6.4546,0.000000,105.81,87.63,0.2316,66.50,55.26,Rnd_Fixed_Content
+10:38:47,Georgia Wonder - Siren_other.wav,Success,4.6040,0.000000,105.80,82.09,0.2316,69.40,55.39,Rnd_Fixed_Content
+10:38:57,Georgia Wonder - Siren_vocals.wav,Success,8.7024,0.000000,105.22,79.44,0.2316,74.70,55.43,Rnd_Fixed_Content
+10:39:01,Girls Under Glass - We Feel Alright_bass.wav,Success,3.6599,0.000000,104.37,80.94,0.3141,71.90,55.35,Rnd_Fixed_Content
+10:39:09,Girls Under Glass - We Feel Alright_drums.wav,Success,6.1278,0.000000,104.40,82.31,0.3141,65.70,55.38,Rnd_Fixed_Content
+10:39:13,Girls Under Glass - We Feel Alright_mixture.wav,Success,3.3372,0.000000,104.48,86.54,0.3141,63.40,55.29,Rnd_Fixed_Content
+10:39:20,Girls Under Glass - We Feel Alright_other.wav,Success,5.7350,0.000000,104.43,80.79,0.3141,62.80,55.37,Rnd_Fixed_Content
+10:39:24,Girls Under Glass - We Feel Alright_vocals.wav,Success,3.8572,0.000000,103.57,74.32,0.3141,69.50,55.32,Rnd_Fixed_Content
+10:39:27,Giselle - Moss_bass.wav,Success,2.4675,0.000000,101.45,74.27,0.4937,66.20,55.18,Rnd_Fixed_Content
+10:39:31,Giselle - Moss_drums.wav,Success,3.8006,0.000000,102.08,77.12,0.4937,56.10,55.40,Rnd_Fixed_Content
+10:39:35,Giselle - Moss_mixture.wav,Success,3.6605,0.000000,102.48,83.62,0.4937,67.00,55.30,Rnd_Fixed_Content
+10:39:39,Giselle - Moss_other.wav,Success,3.0108,0.000000,102.47,78.71,0.4937,55.60,55.30,Rnd_Fixed_Content
+10:39:43,Giselle - Moss_vocals.wav,Success,4.0601,0.000000,102.22,77.67,0.4937,62.00,55.20,Rnd_Fixed_Content
+10:39:47,Grants - PunchDrunk_bass.wav,Success,3.3729,0.000000,102.59,81.74,0.4871,49.10,55.45,Rnd_Fixed_Content
+10:39:50,Grants - PunchDrunk_drums.wav,Success,2.9532,0.000000,102.59,76.44,0.4871,67.30,55.22,Rnd_Fixed_Content
+10:39:55,Grants - PunchDrunk_mixture.wav,Success,4.4347,0.000000,102.59,84.68,0.4871,29.10,55.33,Rnd_Fixed_Content
+10:39:59,Grants - PunchDrunk_other.wav,Success,3.5405,0.000000,102.57,76.76,0.4871,72.30,55.46,Rnd_Fixed_Content
+10:40:03,Grants - PunchDrunk_vocals.wav,Success,2.8225,0.000000,102.59,77.41,0.4871,61.90,55.36,Rnd_Fixed_Content
+10:40:08,Helado Negro - Mitad Del Mundo_bass.wav,Success,3.7488,0.000000,102.12,77.32,0.5481,59.00,55.41,Rnd_Fixed_Content
+10:40:11,Helado Negro - Mitad Del Mundo_drums.wav,Success,2.6705,0.000000,102.15,72.09,0.5481,61.40,55.48,Rnd_Fixed_Content
+10:40:15,Helado Negro - Mitad Del Mundo_mixture.wav,Success,2.8982,0.000000,102.07,83.47,0.5481,65.30,55.40,Rnd_Fixed_Content
+10:40:18,Helado Negro - Mitad Del Mundo_other.wav,Success,2.4510,0.000000,102.09,70.71,0.5481,60.90,55.39,Rnd_Fixed_Content
+10:40:22,Helado Negro - Mitad Del Mundo_vocals.wav,Success,3.2417,0.000000,102.10,81.53,0.5481,50.50,55.53,Rnd_Fixed_Content
+10:40:26,Hezekiah Jones - Borrowed Heart_bass.wav,Success,3.7807,0.000000,103.32,75.03,0.4126,69.70,55.36,Rnd_Fixed_Content
+10:40:30,Hezekiah Jones - Borrowed Heart_drums.wav,Success,3.5215,0.000000,103.32,75.76,0.4126,69.10,55.34,Rnd_Fixed_Content
+10:40:35,Hezekiah Jones - Borrowed Heart_mixture.wav,Success,3.9129,0.000000,103.31,84.19,0.4126,56.30,55.28,Rnd_Fixed_Content
+10:40:39,Hezekiah Jones - Borrowed Heart_other.wav,Success,3.9028,0.000000,103.33,81.27,0.4126,71.80,55.21,Rnd_Fixed_Content
+10:40:44,Hezekiah Jones - Borrowed Heart_vocals.wav,Success,4.5983,0.000000,103.34,77.69,0.4126,70.30,55.29,Rnd_Fixed_Content
+10:40:48,Hollow Ground - Ill Fate_bass.wav,Success,2.9326,0.000000,100.99,76.92,0.7035,46.10,55.30,Rnd_Fixed_Content
+10:40:51,Hollow Ground - Ill Fate_drums.wav,Success,2.0447,0.000000,100.83,75.34,0.7035,59.70,55.20,Rnd_Fixed_Content
+10:40:53,Hollow Ground - Ill Fate_mixture.wav,Success,2.4560,0.000000,100.99,84.07,0.7035,49.70,55.51,Rnd_Fixed_Content
+10:40:56,Hollow Ground - Ill Fate_other.wav,Success,2.4015,0.000000,100.98,81.85,0.7035,70.20,55.47,Rnd_Fixed_Content
+10:40:58,Hollow Ground - Ill Fate_vocals.wav,Success,2.1099,0.000000,100.33,71.89,0.7035,44.30,55.31,Rnd_Fixed_Content
+10:41:01,Hollow Ground - Left Blind_bass.wav,Success,2.5024,0.000000,101.41,80.15,0.6257,55.50,55.43,Rnd_Fixed_Content
+10:41:04,Hollow Ground - Left Blind_drums.wav,Success,2.3650,0.000000,101.50,78.93,0.6257,58.00,55.40,Rnd_Fixed_Content
+10:41:08,Hollow Ground - Left Blind_mixture.wav,Success,3.2433,0.000000,101.49,84.82,0.6257,56.20,55.26,Rnd_Fixed_Content
+10:41:11,Hollow Ground - Left Blind_other.wav,Success,2.8000,0.000000,101.49,79.26,0.6257,66.50,55.28,Rnd_Fixed_Content
+10:41:14,Hollow Ground - Left Blind_vocals.wav,Success,2.4745,0.000000,101.25,75.30,0.6257,49.70,55.26,Rnd_Fixed_Content
+10:41:19,Hop Along - Sister Cities_bass.wav,Success,4.2085,0.000000,104.00,83.00,0.3517,63.60,55.46,Rnd_Fixed_Content
+10:41:25,Hop Along - Sister Cities_drums.wav,Success,5.4526,0.000000,104.03,76.43,0.3517,42.60,55.17,Rnd_Fixed_Content
+10:41:29,Hop Along - Sister Cities_mixture.wav,Success,3.3294,0.000000,104.00,87.68,0.3517,56.40,55.59,Rnd_Fixed_Content
+10:41:35,Hop Along - Sister Cities_other.wav,Success,5.6813,0.000000,104.01,83.91,0.3517,59.70,55.37,Rnd_Fixed_Content
+10:41:41,Hop Along - Sister Cities_vocals.wav,Success,5.3780,0.000000,104.17,80.00,0.3517,67.60,55.48,Rnd_Fixed_Content
+10:41:45,Invisible Familiars - Disturbing Wildlife_bass.wav,Success,3.0098,0.000000,102.88,82.26,0.4557,59.10,55.24,Rnd_Fixed_Content
+10:41:50,Invisible Familiars - Disturbing Wildlife_drums.wav,Success,4.1057,0.000000,102.88,75.58,0.4557,64.30,55.38,Rnd_Fixed_Content
+10:41:54,Invisible Familiars - Disturbing Wildlife_mixture.wav,Success,3.6697,0.000000,102.88,84.38,0.4557,73.60,55.15,Rnd_Fixed_Content
+10:41:58,Invisible Familiars - Disturbing Wildlife_other.wav,Success,3.9345,0.000000,102.89,74.71,0.4557,71.40,55.62,Rnd_Fixed_Content
+10:42:01,Invisible Familiars - Disturbing Wildlife_vocals.wav,Success,2.5242,0.000000,102.89,76.17,0.4557,57.50,55.21,Rnd_Fixed_Content
+10:42:06,James Elder & Mark M Thompson - The English Actor_bass.wav,Success,3.7942,0.000000,102.03,72.73,0.4851,44.80,55.29,Rnd_Fixed_Content
+10:42:10,James Elder & Mark M Thompson - The English Actor_drums.wav,Success,3.5682,0.000000,102.60,76.46,0.4851,73.60,55.19,Rnd_Fixed_Content
+10:42:14,James Elder & Mark M Thompson - The English Actor_mixture.wav,Success,3.5473,0.000000,102.58,83.46,0.4851,63.80,55.13,Rnd_Fixed_Content
+10:42:18,James Elder & Mark M Thompson - The English Actor_other.wav,Success,3.4656,0.000000,102.56,79.31,0.4851,45.20,55.34,Rnd_Fixed_Content
+10:42:22,James Elder & Mark M Thompson - The English Actor_vocals.wav,Success,3.4348,0.000000,102.34,78.30,0.4851,59.70,55.24,Rnd_Fixed_Content
+10:42:26,James May - All Souls Moon_bass.wav,Success,3.6158,0.000000,102.89,73.33,0.4509,67.80,55.18,Rnd_Fixed_Content
+10:42:29,James May - All Souls Moon_drums.wav,Success,2.8757,0.000000,102.57,74.31,0.4509,46.80,55.22,Rnd_Fixed_Content
+10:42:32,James May - All Souls Moon_mixture.wav,Success,2.5447,0.000000,102.92,79.96,0.4509,60.50,55.30,Rnd_Fixed_Content
+10:42:38,James May - All Souls Moon_other.wav,Success,5.1676,0.000000,102.87,73.33,0.4509,62.90,55.25,Rnd_Fixed_Content
+10:42:42,James May - All Souls Moon_vocals.wav,Success,2.9765,0.000000,102.59,73.87,0.4509,62.70,55.22,Rnd_Fixed_Content
+10:42:46,James May - Dont Let Go_bass.wav,Success,3.5706,0.000000,103.30,79.92,0.4116,73.00,55.56,Rnd_Fixed_Content
+10:42:51,James May - Dont Let Go_drums.wav,Success,4.4842,0.000000,103.30,71.83,0.4116,60.70,55.43,Rnd_Fixed_Content
+10:42:55,James May - Dont Let Go_mixture.wav,Success,3.5477,0.000000,103.31,83.52,0.4116,64.00,55.36,Rnd_Fixed_Content
+10:42:59,James May - Dont Let Go_other.wav,Success,3.9825,0.000000,103.29,78.55,0.4116,57.20,55.27,Rnd_Fixed_Content
+10:43:05,James May - Dont Let Go_vocals.wav,Success,4.5756,0.000000,102.92,75.60,0.4116,64.40,55.22,Rnd_Fixed_Content
+10:43:09,James May - If You Say_bass.wav,Success,3.2823,0.000000,103.30,70.42,0.3856,61.60,55.18,Rnd_Fixed_Content
+10:43:16,James May - If You Say_drums.wav,Success,6.1091,0.000000,103.30,70.33,0.3856,72.00,55.27,Rnd_Fixed_Content
+10:43:19,James May - If You Say_mixture.wav,Success,2.7618,0.000000,103.30,79.67,0.3856,59.00,55.46,Rnd_Fixed_Content
+10:43:24,James May - If You Say_other.wav,Success,3.0767,0.000000,103.30,76.63,0.3856,56.50,55.27,Rnd_Fixed_Content
+10:43:31,James May - If You Say_vocals.wav,Success,6.5608,0.000000,102.96,73.58,0.3856,47.10,55.30,Rnd_Fixed_Content
+10:43:35,James May - On The Line_bass.wav,Success,3.2476,0.000000,103.39,78.75,0.3889,65.90,55.34,Rnd_Fixed_Content
+10:43:40,James May - On The Line_drums.wav,Success,4.0975,0.000000,103.52,80.77,0.3889,59.60,55.45,Rnd_Fixed_Content
+10:43:45,James May - On The Line_mixture.wav,Success,4.8603,0.000000,103.56,85.25,0.3889,58.80,55.31,Rnd_Fixed_Content
+10:43:49,James May - On The Line_other.wav,Success,3.1711,0.000000,103.57,79.19,0.3889,57.90,55.32,Rnd_Fixed_Content
+10:43:55,James May - On The Line_vocals.wav,Success,5.2189,0.000000,103.12,76.93,0.3889,64.30,55.41,Rnd_Fixed_Content
+10:43:59,Jay Menon - Through My Eyes_bass.wav,Success,4.0072,0.000000,102.98,73.41,0.3934,77.90,55.35,Rnd_Fixed_Content
+10:44:05,Jay Menon - Through My Eyes_drums.wav,Success,5.0751,0.000000,103.11,73.91,0.3934,56.40,55.38,Rnd_Fixed_Content
+10:44:09,Jay Menon - Through My Eyes_mixture.wav,Success,3.7258,0.000000,103.50,81.32,0.3934,69.50,55.29,Rnd_Fixed_Content
+10:44:16,Jay Menon - Through My Eyes_other.wav,Success,4.6016,0.000000,103.51,74.96,0.3934,57.70,55.48,Rnd_Fixed_Content
+10:44:19,Jay Menon - Through My Eyes_vocals.wav,Success,3.0411,0.000000,103.16,76.82,0.3934,63.50,55.39,Rnd_Fixed_Content
+10:44:24,Johnny Lokke - Promises & Lies_bass.wav,Success,3.1706,0.000000,103.93,78.17,0.3485,62.80,55.29,Rnd_Fixed_Content
+10:44:30,Johnny Lokke - Promises & Lies_drums.wav,Success,5.6664,0.000000,103.97,83.72,0.3485,69.90,55.45,Rnd_Fixed_Content
+10:44:35,Johnny Lokke - Promises & Lies_mixture.wav,Success,3.6978,0.000000,104.03,87.98,0.3485,69.10,55.25,Rnd_Fixed_Content
+10:44:41,Johnny Lokke - Promises & Lies_other.wav,Success,5.5388,0.000000,103.99,83.24,0.3485,46.60,55.40,Rnd_Fixed_Content
+10:44:47,Johnny Lokke - Promises & Lies_vocals.wav,Success,4.1111,0.000000,103.54,80.03,0.3485,74.10,55.19,Rnd_Fixed_Content
+10:44:51,Johnny Lokke - Whisper To A Scream_bass.wav,Success,3.2021,0.000000,103.48,79.73,0.3901,66.80,55.23,Rnd_Fixed_Content
+10:44:56,Johnny Lokke - Whisper To A Scream_drums.wav,Success,4.9960,0.000000,103.54,83.23,0.3901,36.20,55.41,Rnd_Fixed_Content
+10:45:00,Johnny Lokke - Whisper To A Scream_mixture.wav,Success,3.7469,0.000000,103.55,87.30,0.3901,61.20,55.38,Rnd_Fixed_Content
+10:45:05,Johnny Lokke - Whisper To A Scream_other.wav,Success,3.5825,0.000000,103.54,81.97,0.3901,59.20,55.34,Rnd_Fixed_Content
+10:45:11,Johnny Lokke - Whisper To A Scream_vocals.wav,Success,4.5647,0.000000,103.55,78.64,0.3901,64.50,55.27,Rnd_Fixed_Content
+10:45:14,Jokers, Jacks & Kings - Sea Of Leaves_bass.wav,Success,3.5929,0.000000,102.12,76.74,0.5200,56.20,55.27,Rnd_Fixed_Content
+10:45:18,Jokers, Jacks & Kings - Sea Of Leaves_drums.wav,Success,2.7292,0.000000,102.24,79.14,0.5200,60.30,55.32,Rnd_Fixed_Content
+10:45:23,Jokers, Jacks & Kings - Sea Of Leaves_mixture.wav,Success,3.4456,0.000000,102.30,84.45,0.5200,59.70,55.58,Rnd_Fixed_Content
+10:45:27,Jokers, Jacks & Kings - Sea Of Leaves_other.wav,Success,2.7531,0.000000,102.26,78.55,0.5200,46.20,55.23,Rnd_Fixed_Content
+10:45:30,Jokers, Jacks & Kings - Sea Of Leaves_vocals.wav,Success,2.7327,0.000000,101.73,78.19,0.5200,60.10,55.45,Rnd_Fixed_Content
+10:45:35,Juliet's Rescue - Heartbeats_bass.wav,Success,4.7962,0.000000,103.58,74.56,0.3724,76.50,55.47,Rnd_Fixed_Content
+10:45:39,Juliet's Rescue - Heartbeats_drums.wav,Success,3.5853,0.000000,103.61,82.33,0.3724,69.20,55.51,Rnd_Fixed_Content
+10:45:45,Juliet's Rescue - Heartbeats_mixture.wav,Success,3.4866,0.000000,103.70,85.63,0.3724,61.20,55.17,Rnd_Fixed_Content
+10:45:51,Juliet's Rescue - Heartbeats_other.wav,Success,4.5403,0.000000,103.69,80.18,0.3724,63.80,55.47,Rnd_Fixed_Content
+10:45:56,Juliet's Rescue - Heartbeats_vocals.wav,Success,4.0297,0.000000,103.36,77.19,0.3724,70.80,55.41,Rnd_Fixed_Content
+10:46:00,Leaf - Come Around_bass.wav,Success,4.2516,0.000000,103.41,85.70,0.3767,45.90,55.27,Rnd_Fixed_Content
+10:46:06,Leaf - Come Around_drums.wav,Success,4.5053,0.000000,103.55,69.63,0.3767,75.10,55.15,Rnd_Fixed_Content
+10:46:11,Leaf - Come Around_mixture.wav,Success,5.2764,0.000000,103.60,87.70,0.3767,46.70,55.29,Rnd_Fixed_Content
+10:46:16,Leaf - Come Around_other.wav,Success,2.9861,0.000000,103.57,79.41,0.3767,61.20,55.23,Rnd_Fixed_Content
+10:46:21,Leaf - Come Around_vocals.wav,Success,4.1338,0.000000,103.37,79.86,0.3767,64.80,55.27,Rnd_Fixed_Content
+10:46:27,Leaf - Summerghost_bass.wav,Success,5.7903,0.000000,103.10,79.64,0.4296,61.40,55.13,Rnd_Fixed_Content
+10:46:30,Leaf - Summerghost_drums.wav,Success,3.1740,0.000000,103.09,77.54,0.4296,59.70,55.12,Rnd_Fixed_Content
+10:46:35,Leaf - Summerghost_mixture.wav,Success,3.9663,0.000000,103.05,83.47,0.4296,42.20,55.38,Rnd_Fixed_Content
+10:46:39,Leaf - Summerghost_other.wav,Success,3.1968,0.000000,103.10,73.69,0.4296,69.80,55.41,Rnd_Fixed_Content
+10:46:43,Leaf - Summerghost_vocals.wav,Success,3.6229,0.000000,103.07,77.16,0.4296,55.90,55.28,Rnd_Fixed_Content
+10:46:47,Leaf - Wicked_bass.wav,Success,3.3859,0.000000,102.23,76.33,0.5223,67.30,55.27,Rnd_Fixed_Content
+10:46:51,Leaf - Wicked_drums.wav,Success,3.5110,0.000000,102.25,78.12,0.5223,72.20,55.17,Rnd_Fixed_Content
+10:46:54,Leaf - Wicked_mixture.wav,Success,3.1801,0.000000,102.25,82.03,0.5223,59.80,55.29,Rnd_Fixed_Content
+10:46:58,Leaf - Wicked_other.wav,Success,2.9108,0.000000,102.25,73.20,0.5223,64.30,55.19,Rnd_Fixed_Content
+10:47:01,Leaf - Wicked_vocals.wav,Success,2.8188,0.000000,101.81,74.41,0.5223,69.80,55.24,Rnd_Fixed_Content
+10:47:06,Little Chicago's Finest - My Own_bass.wav,Success,4.7222,0.000000,103.64,69.78,0.3539,69.90,55.42,Rnd_Fixed_Content
+10:47:11,Little Chicago's Finest - My Own_drums.wav,Success,3.6173,0.000000,103.51,80.97,0.3539,65.50,55.30,Rnd_Fixed_Content
+10:47:16,Little Chicago's Finest - My Own_mixture.wav,Success,4.6555,0.000000,103.98,82.99,0.3539,61.80,55.22,Rnd_Fixed_Content
+10:47:22,Little Chicago's Finest - My Own_other.wav,Success,5.1763,0.000000,103.92,70.08,0.3539,72.40,55.35,Rnd_Fixed_Content
+10:47:27,Little Chicago's Finest - My Own_vocals.wav,Success,4.8085,0.000000,103.85,75.81,0.3539,65.70,55.38,Rnd_Fixed_Content
+10:47:33,Louis Cressy Band - Good Time_bass.wav,Success,3.8361,0.000000,103.97,75.09,0.3404,62.20,55.20,Rnd_Fixed_Content
+10:47:41,Louis Cressy Band - Good Time_drums.wav,Success,7.1575,0.000000,104.05,79.33,0.3404,63.30,55.18,Rnd_Fixed_Content
+10:47:45,Louis Cressy Band - Good Time_mixture.wav,Success,3.4962,0.000000,104.11,84.30,0.3404,69.10,55.46,Rnd_Fixed_Content
+10:47:51,Louis Cressy Band - Good Time_other.wav,Success,5.6128,0.000000,104.05,80.33,0.3404,56.20,55.11,Rnd_Fixed_Content
+10:47:55,Louis Cressy Band - Good Time_vocals.wav,Success,3.8830,0.000000,103.27,75.06,0.3404,73.70,55.37,Rnd_Fixed_Content
+10:48:07,Lushlife - Toynbee Suite_bass.wav,Success,10.6825,0.000000,107.58,88.62,0.1586,74.70,55.30,Rnd_Fixed_Content
+10:48:26,Lushlife - Toynbee Suite_drums.wav,Success,17.3102,0.000000,107.58,76.73,0.1586,45.40,54.48,Rnd_Fixed_Content
+10:48:38,Lushlife - Toynbee Suite_mixture.wav,Success,11.0607,0.000000,107.46,89.31,0.1586,54.70,54.81,Rnd_Fixed_Content
+10:48:50,Lushlife - Toynbee Suite_other.wav,Success,10.3818,0.000000,107.47,78.82,0.1586,55.70,55.21,Rnd_Fixed_Content
+10:49:01,Lushlife - Toynbee Suite_vocals.wav,Success,8.9751,0.000000,107.56,74.47,0.1586,69.40,55.00,Rnd_Fixed_Content
+10:49:04,Lyndsey Ollard - Catching Up_bass.wav,Success,2.8758,0.000000,102.77,70.25,0.4382,63.10,54.85,Rnd_Fixed_Content
+10:49:09,Lyndsey Ollard - Catching Up_drums.wav,Success,4.1976,0.000000,102.89,72.09,0.4382,32.10,54.97,Rnd_Fixed_Content
+10:49:15,Lyndsey Ollard - Catching Up_mixture.wav,Success,5.6239,0.000000,103.05,80.10,0.4382,59.40,55.26,Rnd_Fixed_Content
+10:49:18,Lyndsey Ollard - Catching Up_other.wav,Success,2.5933,0.000000,103.03,73.28,0.4382,57.90,54.84,Rnd_Fixed_Content
+10:49:21,Lyndsey Ollard - Catching Up_vocals.wav,Success,3.0386,0.000000,103.06,77.22,0.4382,68.70,54.82,Rnd_Fixed_Content
+10:49:28,M.E.R.C. Music - Knockout_bass.wav,Success,4.0190,0.000000,103.17,73.56,0.3691,46.30,54.76,Rnd_Fixed_Content
+10:49:33,M.E.R.C. Music - Knockout_drums.wav,Success,3.3708,0.000000,103.51,77.91,0.3691,68.00,55.00,Rnd_Fixed_Content
+10:49:36,M.E.R.C. Music - Knockout_mixture.wav,Success,2.8514,0.000000,103.76,83.90,0.3691,60.00,54.98,Rnd_Fixed_Content
+10:49:43,M.E.R.C. Music - Knockout_other.wav,Success,5.1687,0.000000,103.58,77.20,0.3691,71.60,55.17,Rnd_Fixed_Content
+10:49:49,M.E.R.C. Music - Knockout_vocals.wav,Success,4.7673,0.000000,103.58,79.76,0.3691,63.60,54.82,Rnd_Fixed_Content
+10:49:51,Matthew Entwistle - Dont You Ever_bass.wav,Success,1.7623,0.000000,99.90,74.43,0.8742,50.70,55.09,Rnd_Fixed_Content
+10:49:53,Matthew Entwistle - Dont You Ever_drums.wav,Success,2.1440,0.000000,99.91,58.57,0.8742,66.30,54.98,Rnd_Fixed_Content
+10:49:55,Matthew Entwistle - Dont You Ever_mixture.wav,Success,1.8491,0.000000,100.05,80.04,0.8742,59.60,55.28,Rnd_Fixed_Content
+10:49:59,Matthew Entwistle - Dont You Ever_other.wav,Success,3.4065,0.000000,100.04,74.72,0.8742,29.60,55.12,Rnd_Fixed_Content
+10:50:01,Matthew Entwistle - Dont You Ever_vocals.wav,Success,2.2680,0.000000,100.01,76.14,0.8742,63.80,55.01,Rnd_Fixed_Content
+10:50:08,Meaxic - Take A Step_bass.wav,Success,6.0092,0.000000,104.03,82.63,0.3525,76.60,55.16,Rnd_Fixed_Content
+10:50:12,Meaxic - Take A Step_drums.wav,Success,3.2875,0.000000,104.01,82.07,0.3525,61.10,55.14,Rnd_Fixed_Content
+10:50:19,Meaxic - Take A Step_mixture.wav,Success,5.6741,0.000000,104.00,86.96,0.3525,57.00,55.16,Rnd_Fixed_Content
+10:50:24,Meaxic - Take A Step_other.wav,Success,3.8561,0.000000,104.02,78.07,0.3525,70.80,55.05,Rnd_Fixed_Content
+10:50:29,Meaxic - Take A Step_vocals.wav,Success,4.9089,0.000000,104.11,79.66,0.3525,37.10,54.78,Rnd_Fixed_Content
+10:50:38,Meaxic - You Listen_bass.wav,Success,7.2531,0.000000,105.58,78.50,0.2415,60.40,54.99,Rnd_Fixed_Content
+10:50:46,Meaxic - You Listen_drums.wav,Success,7.0273,0.000000,105.47,78.73,0.2415,65.70,55.16,Rnd_Fixed_Content
+10:50:54,Meaxic - You Listen_mixture.wav,Success,5.2828,0.000000,105.63,86.05,0.2415,67.40,55.30,Rnd_Fixed_Content
+10:51:01,Meaxic - You Listen_other.wav,Success,5.6780,0.000000,105.62,82.21,0.2415,45.40,54.95,Rnd_Fixed_Content
+10:51:09,Meaxic - You Listen_vocals.wav,Success,6.9714,0.000000,104.84,78.56,0.2415,71.30,54.88,Rnd_Fixed_Content
+10:51:14,Moosmusic - Big Dummy Shake_bass.wav,Success,4.3656,0.000000,102.19,77.44,0.5012,69.50,54.98,Rnd_Fixed_Content
+10:51:17,Moosmusic - Big Dummy Shake_drums.wav,Success,2.7731,0.000000,102.33,81.97,0.5012,65.00,54.94,Rnd_Fixed_Content
+10:51:20,Moosmusic - Big Dummy Shake_mixture.wav,Success,2.5842,0.000000,102.42,85.87,0.5012,57.90,55.16,Rnd_Fixed_Content
+10:51:24,Moosmusic - Big Dummy Shake_other.wav,Success,3.4553,0.000000,102.41,79.08,0.5012,35.10,55.04,Rnd_Fixed_Content
+10:51:27,Moosmusic - Big Dummy Shake_vocals.wav,Success,2.7811,0.000000,102.23,79.12,0.5012,67.60,54.87,Rnd_Fixed_Content
+10:51:31,Motor Tapes - Shore_bass.wav,Success,4.1580,0.000000,103.09,76.07,0.4040,64.20,54.86,Rnd_Fixed_Content
+10:51:36,Motor Tapes - Shore_drums.wav,Success,3.3032,0.000000,103.21,72.47,0.4040,49.90,55.12,Rnd_Fixed_Content
+10:51:41,Motor Tapes - Shore_mixture.wav,Success,4.1367,0.000000,103.28,84.83,0.4040,68.60,54.93,Rnd_Fixed_Content
+10:51:46,Motor Tapes - Shore_other.wav,Success,4.0890,0.000000,103.28,81.93,0.4040,68.50,54.74,Rnd_Fixed_Content
+10:51:50,Motor Tapes - Shore_vocals.wav,Success,3.4394,0.000000,102.89,79.06,0.4040,70.80,55.25,Rnd_Fixed_Content
+10:51:56,Mu - Too Bright_bass.wav,Success,4.3299,0.000000,102.77,70.61,0.3662,60.90,55.15,Rnd_Fixed_Content
+10:52:00,Mu - Too Bright_drums.wav,Success,3.4971,0.000000,103.58,81.80,0.3662,54.70,54.76,Rnd_Fixed_Content
+10:52:05,Mu - Too Bright_mixture.wav,Success,4.3985,0.000000,103.80,84.78,0.3662,43.20,55.03,Rnd_Fixed_Content
+10:52:11,Mu - Too Bright_other.wav,Success,3.6553,0.000000,103.79,77.71,0.3662,60.50,55.18,Rnd_Fixed_Content
+10:52:17,Mu - Too Bright_vocals.wav,Success,5.7429,0.000000,103.68,78.18,0.3662,76.20,54.96,Rnd_Fixed_Content
+10:52:18,Music Delta - 80s Rock_bass.wav,Success,1.0879,0.000000,95.10,71.98,2.6996,32.30,54.86,Rnd_Fixed_Content
+10:52:20,Music Delta - 80s Rock_drums.wav,Success,1.2699,0.000000,95.16,73.89,2.6996,45.90,54.99,Rnd_Fixed_Content
+10:52:21,Music Delta - 80s Rock_mixture.wav,Success,0.9461,0.000000,95.15,79.16,2.6996,28.80,54.79,Rnd_Fixed_Content
+10:52:21,Music Delta - 80s Rock_other.wav,Success,0.8681,0.000000,95.15,70.89,2.6996,25.30,55.32,Rnd_Fixed_Content
+10:52:24,Music Delta - 80s Rock_vocals.wav,Success,2.0672,0.000000,95.17,74.75,2.6996,34.50,55.12,Rnd_Fixed_Content
+10:52:25,Music Delta - Beatles_bass.wav,Success,1.0879,0.000000,95.00,72.56,2.7401,42.40,54.93,Rnd_Fixed_Content
+10:52:26,Music Delta - Beatles_drums.wav,Success,0.8733,0.000000,95.07,76.02,2.7401,31.10,55.30,Rnd_Fixed_Content
+10:52:27,Music Delta - Beatles_mixture.wav,Success,0.9934,0.000000,95.07,79.89,2.7401,41.40,54.99,Rnd_Fixed_Content
+10:52:28,Music Delta - Beatles_other.wav,Success,0.8211,0.000000,95.09,72.14,2.7401,32.20,54.91,Rnd_Fixed_Content
+10:52:29,Music Delta - Beatles_vocals.wav,Success,0.8387,0.000000,95.07,73.54,2.7401,36.10,54.89,Rnd_Fixed_Content
+10:52:30,Music Delta - Britpop_bass.wav,Success,1.1115,0.000000,95.09,73.40,2.7092,41.30,55.10,Rnd_Fixed_Content
+10:52:31,Music Delta - Britpop_drums.wav,Success,1.1940,0.000000,95.15,72.86,2.7092,44.60,54.89,Rnd_Fixed_Content
+10:52:32,Music Delta - Britpop_mixture.wav,Success,1.1391,0.000000,95.13,80.22,2.7092,34.90,55.31,Rnd_Fixed_Content
+10:52:33,Music Delta - Britpop_other.wav,Success,1.0534,0.000000,95.09,74.96,2.7092,41.90,55.02,Rnd_Fixed_Content
+10:52:35,Music Delta - Britpop_vocals.wav,Success,1.2132,0.000000,95.10,75.14,2.7092,32.50,55.13,Rnd_Fixed_Content
+10:52:36,Music Delta - Country1_bass.wav,Success,0.8780,0.000000,94.90,72.06,2.8687,32.00,55.12,Rnd_Fixed_Content
+10:52:37,Music Delta - Country1_drums.wav,Success,1.1508,0.000000,94.90,71.05,2.8687,35.30,54.98,Rnd_Fixed_Content
+10:52:38,Music Delta - Country1_mixture.wav,Success,1.0543,0.000000,94.89,77.30,2.8687,25.10,55.01,Rnd_Fixed_Content
+10:52:39,Music Delta - Country1_other.wav,Success,1.0667,0.000000,94.88,68.26,2.8687,40.30,54.85,Rnd_Fixed_Content
+10:52:40,Music Delta - Country1_vocals.wav,Success,0.9197,0.000000,94.67,72.44,2.8687,28.80,55.05,Rnd_Fixed_Content
+10:52:41,Music Delta - Country2_bass.wav,Success,0.7418,0.000000,91.89,67.95,5.7100,19.50,54.80,Rnd_Fixed_Content
+10:52:42,Music Delta - Country2_drums.wav,Success,0.8174,0.000000,91.91,71.12,5.7100,27.50,55.04,Rnd_Fixed_Content
+10:52:43,Music Delta - Country2_mixture.wav,Success,1.2499,0.000000,91.90,75.43,5.7100,38.70,54.97,Rnd_Fixed_Content
+10:52:44,Music Delta - Country2_other.wav,Success,1.1637,0.000000,91.91,64.73,5.7100,38.20,54.98,Rnd_Fixed_Content
+10:52:45,Music Delta - Country2_vocals.wav,Success,1.0020,0.000000,91.88,70.93,5.7100,23.20,54.94,Rnd_Fixed_Content
+10:52:48,Music Delta - Disco_bass.wav,Success,2.1074,0.000000,100.40,74.85,0.7987,64.40,55.01,Rnd_Fixed_Content
+10:52:50,Music Delta - Disco_drums.wav,Success,1.9250,0.000000,100.45,78.37,0.7987,54.60,55.21,Rnd_Fixed_Content
+10:52:52,Music Delta - Disco_mixture.wav,Success,2.0044,0.000000,100.43,82.03,0.7987,47.60,54.93,Rnd_Fixed_Content
+10:52:55,Music Delta - Disco_other.wav,Success,2.2928,0.000000,100.43,70.77,0.7987,59.40,54.84,Rnd_Fixed_Content
+10:52:58,Music Delta - Disco_vocals.wav,Success,2.6583,0.000000,100.30,76.82,0.7987,43.80,54.99,Rnd_Fixed_Content
+10:53:00,Music Delta - Gospel_bass.wav,Success,1.7369,0.000000,97.97,73.99,1.3160,64.10,55.12,Rnd_Fixed_Content
+10:53:02,Music Delta - Gospel_drums.wav,Success,1.3787,0.000000,98.23,76.76,1.3160,39.70,54.94,Rnd_Fixed_Content
+10:53:03,Music Delta - Gospel_mixture.wav,Success,1.3192,0.000000,98.28,82.57,1.3160,44.20,54.86,Rnd_Fixed_Content
+10:53:05,Music Delta - Gospel_other.wav,Success,1.7562,0.000000,98.03,69.33,1.3160,43.20,55.13,Rnd_Fixed_Content
+10:53:07,Music Delta - Gospel_vocals.wav,Success,1.9310,0.000000,98.18,79.77,1.3160,48.90,55.08,Rnd_Fixed_Content
+10:53:09,Music Delta - Grunge_bass.wav,Success,1.3340,0.000000,95.52,66.03,2.3813,53.60,55.03,Rnd_Fixed_Content
+10:53:10,Music Delta - Grunge_drums.wav,Success,1.4198,0.000000,95.70,75.65,2.3813,38.80,55.09,Rnd_Fixed_Content
+10:53:11,Music Delta - Grunge_mixture.wav,Success,1.1216,0.000000,95.69,78.21,2.3813,30.60,54.85,Rnd_Fixed_Content
+10:53:12,Music Delta - Grunge_other.wav,Success,1.0830,0.000000,95.61,70.12,2.3813,45.50,55.18,Rnd_Fixed_Content
+10:53:14,Music Delta - Grunge_vocals.wav,Success,1.3021,0.000000,95.54,71.63,2.3813,44.20,55.02,Rnd_Fixed_Content
+10:53:15,Music Delta - Hendrix_bass.wav,Success,0.8989,0.000000,92.39,71.36,5.0226,20.90,55.01,Rnd_Fixed_Content
+10:53:16,Music Delta - Hendrix_drums.wav,Success,0.9154,0.000000,92.44,73.01,5.0226,24.00,54.87,Rnd_Fixed_Content
+10:53:17,Music Delta - Hendrix_mixture.wav,Success,0.8606,0.000000,92.45,77.20,5.0226,17.50,54.99,Rnd_Fixed_Content
+10:53:17,Music Delta - Hendrix_other.wav,Success,0.8378,0.000000,92.42,66.65,5.0226,32.20,54.91,Rnd_Fixed_Content
+10:53:18,Music Delta - Hendrix_vocals.wav,Success,0.8835,0.000000,92.40,71.54,5.0226,31.80,55.36,Rnd_Fixed_Content
+10:53:20,Music Delta - Punk_bass.wav,Success,1.1853,0.000000,94.07,73.23,3.4652,44.20,55.12,Rnd_Fixed_Content
+10:53:21,Music Delta - Punk_drums.wav,Success,1.2938,0.000000,94.06,74.77,3.4652,43.00,54.97,Rnd_Fixed_Content
+10:53:22,Music Delta - Punk_mixture.wav,Success,0.9967,0.000000,94.07,79.28,3.4652,34.80,54.86,Rnd_Fixed_Content
+10:53:23,Music Delta - Punk_other.wav,Success,0.8020,0.000000,94.08,69.87,3.4652,25.00,55.11,Rnd_Fixed_Content
+10:53:24,Music Delta - Punk_vocals.wav,Success,0.9246,0.000000,93.91,73.56,3.4652,37.70,55.14,Rnd_Fixed_Content
+10:53:25,Music Delta - Reggae_bass.wav,Success,0.7108,0.000000,91.90,69.45,5.7075,23.70,55.02,Rnd_Fixed_Content
+10:53:25,Music Delta - Reggae_drums.wav,Success,0.7224,0.000000,91.90,73.83,5.7075,23.10,55.16,Rnd_Fixed_Content
+10:53:26,Music Delta - Reggae_mixture.wav,Success,0.8229,0.000000,91.90,76.91,5.7075,18.80,55.25,Rnd_Fixed_Content
+10:53:27,Music Delta - Reggae_other.wav,Success,0.8148,0.000000,91.91,56.74,5.7075,27.80,55.26,Rnd_Fixed_Content
+10:53:28,Music Delta - Reggae_vocals.wav,Success,0.8512,0.000000,91.84,71.81,5.7075,12.60,54.98,Rnd_Fixed_Content
+10:53:29,Music Delta - Rock_bass.wav,Success,0.7667,0.000000,90.64,68.91,7.6134,25.80,54.94,Rnd_Fixed_Content
+10:53:30,Music Delta - Rock_drums.wav,Success,0.7795,0.000000,90.65,68.34,7.6134,23.70,55.02,Rnd_Fixed_Content
+10:53:30,Music Delta - Rock_mixture.wav,Success,0.8216,0.000000,90.65,75.52,7.6134,13.10,55.24,Rnd_Fixed_Content
+10:53:32,Music Delta - Rock_other.wav,Success,1.1413,0.000000,90.65,67.35,7.6134,27.60,54.76,Rnd_Fixed_Content
+10:53:33,Music Delta - Rock_vocals.wav,Success,0.9535,0.000000,90.64,71.92,7.6134,28.40,54.77,Rnd_Fixed_Content
+10:53:33,Music Delta - Rockabilly_bass.wav,Success,0.8254,0.000000,93.58,66.97,3.8409,26.00,54.95,Rnd_Fixed_Content
+10:53:34,Music Delta - Rockabilly_drums.wav,Success,0.8287,0.000000,93.63,73.23,3.8409,26.70,54.80,Rnd_Fixed_Content
+10:53:35,Music Delta - Rockabilly_mixture.wav,Success,1.0535,0.000000,93.62,77.64,3.8409,38.20,54.81,Rnd_Fixed_Content
+10:53:37,Music Delta - Rockabilly_other.wav,Success,1.2504,0.000000,93.63,70.71,3.8409,27.70,55.05,Rnd_Fixed_Content
+10:53:38,Music Delta - Rockabilly_vocals.wav,Success,0.9132,0.000000,93.59,73.10,3.8409,38.90,54.99,Rnd_Fixed_Content
+10:53:44,Nerve 9 - Pray For The Rain_bass.wav,Success,5.2526,0.000000,104.65,77.47,0.2900,76.70,54.91,Rnd_Fixed_Content
+10:53:50,Nerve 9 - Pray For The Rain_drums.wav,Success,4.7670,0.000000,104.53,77.19,0.2900,61.40,54.95,Rnd_Fixed_Content
+10:53:58,Nerve 9 - Pray For The Rain_mixture.wav,Success,5.1990,0.000000,104.86,85.45,0.2900,72.60,54.99,Rnd_Fixed_Content
+10:54:04,Nerve 9 - Pray For The Rain_other.wav,Success,5.6910,0.000000,104.82,81.25,0.2900,53.60,54.82,Rnd_Fixed_Content
+10:54:10,Nerve 9 - Pray For The Rain_vocals.wav,Success,5.1045,0.000000,104.40,79.50,0.2900,62.80,54.84,Rnd_Fixed_Content
+10:54:14,Night Panther - Fire_bass.wav,Success,3.4104,0.000000,102.60,73.56,0.4679,40.10,55.06,Rnd_Fixed_Content
+10:54:17,Night Panther - Fire_drums.wav,Success,3.3909,0.000000,102.76,76.76,0.4679,44.10,54.80,Rnd_Fixed_Content
+10:54:21,Night Panther - Fire_mixture.wav,Success,3.3961,0.000000,102.75,83.95,0.4679,60.60,55.26,Rnd_Fixed_Content
+10:54:25,Night Panther - Fire_other.wav,Success,3.3801,0.000000,102.76,78.13,0.4679,58.90,55.21,Rnd_Fixed_Content
+10:54:30,Night Panther - Fire_vocals.wav,Success,3.9805,0.000000,102.77,80.55,0.4679,31.20,54.82,Rnd_Fixed_Content
+10:54:36,North To Alaska - All The Same_bass.wav,Success,6.3701,0.000000,103.49,73.50,0.4017,80.20,54.85,Rnd_Fixed_Content
+10:54:40,North To Alaska - All The Same_drums.wav,Success,3.1024,0.000000,103.49,74.69,0.4017,62.10,55.07,Rnd_Fixed_Content
+10:54:45,North To Alaska - All The Same_mixture.wav,Success,3.9912,0.000000,103.39,82.74,0.4017,53.30,54.91,Rnd_Fixed_Content
+10:54:50,North To Alaska - All The Same_other.wav,Success,4.5570,0.000000,103.42,79.52,0.4017,69.30,54.98,Rnd_Fixed_Content
+10:54:54,North To Alaska - All The Same_vocals.wav,Success,3.6377,0.000000,103.56,77.05,0.4017,51.70,54.84,Rnd_Fixed_Content
+10:54:58,PR - Happy Daze_bass.wav,Success,3.9645,0.000000,101.61,75.79,0.6126,39.40,54.95,Rnd_Fixed_Content
+10:55:01,PR - Happy Daze_drums.wav,Success,2.6708,0.000000,101.60,86.02,0.6126,60.60,54.92,Rnd_Fixed_Content
+10:55:05,PR - Happy Daze_mixture.wav,Success,3.1548,0.000000,101.60,86.64,0.6126,36.00,54.96,Rnd_Fixed_Content
+10:55:08,PR - Happy Daze_other.wav,Success,2.3061,0.000000,101.59,72.56,0.6126,49.70,55.00,Rnd_Fixed_Content
+10:55:11,PR - Happy Daze_vocals.wav,Success,3.0939,0.000000,101.60,60.83,0.6126,72.40,55.06,Rnd_Fixed_Content
+10:55:14,PR - Oh No_bass.wav,Success,2.0487,0.000000,98.30,75.72,1.3081,43.40,55.14,Rnd_Fixed_Content
+10:55:15,PR - Oh No_drums.wav,Success,1.5904,0.000000,98.30,79.82,1.3081,38.80,54.99,Rnd_Fixed_Content
+10:55:17,PR - Oh No_mixture.wav,Success,1.4480,0.000000,98.29,80.41,1.3081,52.60,54.93,Rnd_Fixed_Content
+10:55:20,PR - Oh No_other.wav,Success,2.0348,0.000000,98.30,71.86,1.3081,52.30,54.96,Rnd_Fixed_Content
+10:55:22,PR - Oh No_vocals.wav,Success,1.6486,0.000000,98.30,63.31,1.3081,59.00,55.12,Rnd_Fixed_Content
+10:55:27,Patrick Talbot - A Reason To Leave_bass.wav,Success,3.7096,0.000000,103.56,75.80,0.3837,72.40,54.96,Rnd_Fixed_Content
+10:55:30,Patrick Talbot - A Reason To Leave_drums.wav,Success,3.2696,0.000000,103.64,76.39,0.3837,63.40,55.13,Rnd_Fixed_Content
+10:55:36,Patrick Talbot - A Reason To Leave_mixture.wav,Success,4.7845,0.000000,103.61,82.63,0.3837,59.60,54.91,Rnd_Fixed_Content
+10:55:40,Patrick Talbot - A Reason To Leave_other.wav,Success,2.9482,0.000000,103.60,77.11,0.3837,65.40,55.14,Rnd_Fixed_Content
+10:55:45,Patrick Talbot - A Reason To Leave_vocals.wav,Success,4.2979,0.000000,102.93,76.34,0.3837,75.70,54.88,Rnd_Fixed_Content
+10:55:52,Patrick Talbot - Set Me Free_bass.wav,Success,6.1475,0.000000,103.90,74.40,0.3437,48.80,54.85,Rnd_Fixed_Content
+10:55:56,Patrick Talbot - Set Me Free_drums.wav,Success,3.9026,0.000000,104.01,77.67,0.3437,73.20,55.18,Rnd_Fixed_Content
+10:56:03,Patrick Talbot - Set Me Free_mixture.wav,Success,4.8349,0.000000,104.09,83.25,0.3437,60.80,55.02,Rnd_Fixed_Content
+10:56:07,Patrick Talbot - Set Me Free_other.wav,Success,3.2594,0.000000,104.08,77.98,0.3437,60.50,54.93,Rnd_Fixed_Content
+10:56:12,Patrick Talbot - Set Me Free_vocals.wav,Success,4.4421,0.000000,103.22,76.89,0.3437,66.20,54.92,Rnd_Fixed_Content
+10:56:17,Phre The Eon - Everybody's Falling Apart_bass.wav,Success,2.7694,0.000000,102.83,75.78,0.4441,59.60,54.89,Rnd_Fixed_Content
+10:56:21,Phre The Eon - Everybody's Falling Apart_drums.wav,Success,4.2213,0.000000,102.94,82.81,0.4441,60.80,54.78,Rnd_Fixed_Content
+10:56:25,Phre The Eon - Everybody's Falling Apart_mixture.wav,Success,3.4986,0.000000,103.00,85.54,0.4441,67.80,55.09,Rnd_Fixed_Content
+10:56:29,Phre The Eon - Everybody's Falling Apart_other.wav,Success,3.6392,0.000000,102.96,79.79,0.4441,70.30,54.96,Rnd_Fixed_Content
+10:56:33,Phre The Eon - Everybody's Falling Apart_vocals.wav,Success,3.1781,0.000000,102.33,74.11,0.4441,68.60,54.91,Rnd_Fixed_Content
+10:56:39,Port St Willow - Stay Even_bass.wav,Success,5.5069,0.000000,104.40,68.63,0.3144,71.10,55.12,Rnd_Fixed_Content
+10:56:45,Port St Willow - Stay Even_drums.wav,Success,5.2614,0.000000,104.50,76.14,0.3144,67.90,55.11,Rnd_Fixed_Content
+10:56:50,Port St Willow - Stay Even_mixture.wav,Success,4.2478,0.000000,104.48,83.79,0.3144,64.00,54.93,Rnd_Fixed_Content
+10:56:55,Port St Willow - Stay Even_other.wav,Success,4.0633,0.000000,104.49,81.52,0.3144,69.50,54.97,Rnd_Fixed_Content
+10:57:00,Port St Willow - Stay Even_vocals.wav,Success,3.8805,0.000000,104.51,77.01,0.3144,69.90,55.04,Rnd_Fixed_Content
+10:57:05,Punkdisco - Oral Hygiene_bass.wav,Success,4.4258,0.000000,102.65,80.71,0.4498,57.10,54.98,Rnd_Fixed_Content
+10:57:09,Punkdisco - Oral Hygiene_drums.wav,Success,2.9830,0.000000,102.59,80.19,0.4498,72.90,54.89,Rnd_Fixed_Content
+10:57:12,Punkdisco - Oral Hygiene_mixture.wav,Success,2.4785,0.000000,102.90,84.25,0.4498,63.60,54.80,Rnd_Fixed_Content
+10:57:19,Punkdisco - Oral Hygiene_other.wav,Success,6.3979,0.000000,102.61,69.61,0.4498,59.40,54.98,Rnd_Fixed_Content
+10:57:22,Punkdisco - Oral Hygiene_vocals.wav,Success,3.2064,0.000000,102.29,71.79,0.4498,51.60,54.97,Rnd_Fixed_Content
+10:57:25,Raft Monk - Tiring_bass.wav,Success,2.7038,0.000000,102.48,80.45,0.4696,49.10,54.89,Rnd_Fixed_Content
+10:57:31,Raft Monk - Tiring_drums.wav,Success,4.9829,0.000000,102.52,79.46,0.4696,42.30,55.21,Rnd_Fixed_Content
+10:57:34,Raft Monk - Tiring_mixture.wav,Success,2.9009,0.000000,102.69,86.04,0.4696,68.10,54.86,Rnd_Fixed_Content
+10:57:39,Raft Monk - Tiring_other.wav,Success,4.0017,0.000000,102.68,80.79,0.4696,49.50,55.37,Rnd_Fixed_Content
+10:57:43,Raft Monk - Tiring_vocals.wav,Success,3.6158,0.000000,102.51,78.47,0.4696,55.20,55.29,Rnd_Fixed_Content
+10:57:46,Remember December - C U Next Time_bass.wav,Success,3.1179,0.000000,103.18,79.35,0.4106,63.90,55.11,Rnd_Fixed_Content
+10:57:50,Remember December - C U Next Time_drums.wav,Success,3.0808,0.000000,103.19,79.92,0.4106,52.90,55.07,Rnd_Fixed_Content
+10:57:56,Remember December - C U Next Time_mixture.wav,Success,5.3633,0.000000,103.21,86.18,0.4106,28.70,55.02,Rnd_Fixed_Content
+10:57:59,Remember December - C U Next Time_other.wav,Success,3.2004,0.000000,103.21,80.71,0.4106,66.70,55.14,Rnd_Fixed_Content
+10:58:04,Remember December - C U Next Time_vocals.wav,Success,4.0356,0.000000,103.06,80.41,0.4106,35.20,55.00,Rnd_Fixed_Content
+10:58:11,Sambasevam Shanmugam - Kaathaadi_bass.wav,Success,6.2949,0.000000,103.67,79.97,0.3135,61.50,54.98,Rnd_Fixed_Content
+10:58:16,Sambasevam Shanmugam - Kaathaadi_drums.wav,Success,4.5373,0.000000,103.95,75.09,0.3135,44.50,55.11,Rnd_Fixed_Content
+10:58:30,Sambasevam Shanmugam - Kaathaadi_mixture.wav,Success,13.1443,0.000000,104.49,85.60,0.3135,49.00,54.93,Rnd_Fixed_Content
+10:58:37,Sambasevam Shanmugam - Kaathaadi_other.wav,Success,6.6258,0.000000,104.49,79.43,0.3135,65.60,54.94,Rnd_Fixed_Content
+10:58:42,Sambasevam Shanmugam - Kaathaadi_vocals.wav,Success,4.0429,0.000000,103.79,80.10,0.3135,67.50,55.01,Rnd_Fixed_Content
+10:58:49,Secret Mountains - High Horse_bass.wav,Success,4.8459,0.000000,104.99,80.09,0.2804,66.50,54.94,Rnd_Fixed_Content
+10:58:56,Secret Mountains - High Horse_drums.wav,Success,6.0101,0.000000,104.98,75.84,0.2804,55.50,55.21,Rnd_Fixed_Content
+10:59:01,Secret Mountains - High Horse_mixture.wav,Success,5.0991,0.000000,104.99,87.03,0.2804,71.80,55.01,Rnd_Fixed_Content
+10:59:08,Secret Mountains - High Horse_other.wav,Success,5.3102,0.000000,104.98,84.43,0.2804,74.40,55.11,Rnd_Fixed_Content
+10:59:15,Secret Mountains - High Horse_vocals.wav,Success,5.9393,0.000000,105.08,79.40,0.2804,57.80,55.07,Rnd_Fixed_Content
+10:59:20,Secretariat - Borderline_bass.wav,Success,4.2685,0.000000,104.00,76.76,0.3475,53.30,55.11,Rnd_Fixed_Content
+10:59:25,Secretariat - Borderline_drums.wav,Success,4.2262,0.000000,103.98,75.62,0.3475,53.10,54.91,Rnd_Fixed_Content
+10:59:31,Secretariat - Borderline_mixture.wav,Success,4.6700,0.000000,103.98,85.70,0.3475,51.90,55.11,Rnd_Fixed_Content
+10:59:36,Secretariat - Borderline_other.wav,Success,4.1954,0.000000,103.99,83.17,0.3475,70.60,54.99,Rnd_Fixed_Content
+10:59:43,Secretariat - Borderline_vocals.wav,Success,4.8711,0.000000,103.49,78.72,0.3475,49.10,54.98,Rnd_Fixed_Content
+10:59:47,Secretariat - Over The Top_bass.wav,Success,3.6141,0.000000,103.23,82.58,0.3969,60.60,55.16,Rnd_Fixed_Content
+10:59:53,Secretariat - Over The Top_drums.wav,Success,4.8702,0.000000,103.34,79.92,0.3969,62.60,54.81,Rnd_Fixed_Content
+10:59:58,Secretariat - Over The Top_mixture.wav,Success,4.8632,0.000000,103.42,86.60,0.3969,50.70,55.02,Rnd_Fixed_Content
+11:00:04,Secretariat - Over The Top_other.wav,Success,4.9488,0.000000,103.36,80.49,0.3969,73.90,54.80,Rnd_Fixed_Content
+11:00:10,Secretariat - Over The Top_vocals.wav,Success,4.7699,0.000000,102.82,76.83,0.3969,47.80,54.98,Rnd_Fixed_Content
+11:00:15,Side Effects Project - Sing With Me_bass.wav,Success,5.0657,0.000000,102.86,72.95,0.4090,58.40,55.01,Rnd_Fixed_Content
+11:00:19,Side Effects Project - Sing With Me_drums.wav,Success,3.4043,0.000000,103.24,80.82,0.4090,68.80,54.92,Rnd_Fixed_Content
+11:00:23,Side Effects Project - Sing With Me_mixture.wav,Success,2.7688,0.000000,103.32,84.02,0.4090,61.20,54.86,Rnd_Fixed_Content
+11:00:29,Side Effects Project - Sing With Me_other.wav,Success,5.3028,0.000000,103.29,69.03,0.4090,74.70,55.12,Rnd_Fixed_Content
+11:00:33,Side Effects Project - Sing With Me_vocals.wav,Success,2.9316,0.000000,103.19,79.88,0.4090,58.30,54.79,Rnd_Fixed_Content
+11:00:36,Signe Jakobsen - What Have You Done To Me_bass.wav,Success,2.9646,0.000000,101.74,74.17,0.5618,72.60,54.84,Rnd_Fixed_Content
+11:00:40,Signe Jakobsen - What Have You Done To Me_drums.wav,Success,3.9081,0.000000,101.94,74.59,0.5618,47.20,55.03,Rnd_Fixed_Content
+11:00:44,Signe Jakobsen - What Have You Done To Me_mixture.wav,Success,2.9110,0.000000,102.00,83.64,0.5618,50.40,54.94,Rnd_Fixed_Content
+11:00:47,Signe Jakobsen - What Have You Done To Me_other.wav,Success,2.7447,0.000000,102.03,79.67,0.5618,60.60,55.03,Rnd_Fixed_Content
+11:00:51,Signe Jakobsen - What Have You Done To Me_vocals.wav,Success,3.5634,0.000000,102.06,79.26,0.5618,33.50,54.82,Rnd_Fixed_Content
+11:00:56,Skelpolu - Human Mistakes_bass.wav,Success,4.2035,0.000000,104.51,86.32,0.3070,67.80,55.07,Rnd_Fixed_Content
+11:01:00,Skelpolu - Human Mistakes_drums.wav,Success,3.9499,0.000000,104.46,81.99,0.3070,65.00,54.88,Rnd_Fixed_Content
+11:01:07,Skelpolu - Human Mistakes_mixture.wav,Success,6.0116,0.000000,104.53,88.98,0.3070,61.10,55.11,Rnd_Fixed_Content
+11:01:13,Skelpolu - Human Mistakes_other.wav,Success,4.6254,0.000000,104.52,81.19,0.3070,49.20,54.93,Rnd_Fixed_Content
+11:01:21,Skelpolu - Human Mistakes_vocals.wav,Success,6.0025,0.000000,104.15,77.49,0.3070,61.90,54.99,Rnd_Fixed_Content
+11:01:27,Skelpolu - Resurrection_bass.wav,Success,4.9285,0.000000,105.07,86.73,0.2519,60.30,55.08,Rnd_Fixed_Content
+11:01:35,Skelpolu - Resurrection_drums.wav,Success,7.7338,0.000000,105.38,82.76,0.2519,64.60,55.12,Rnd_Fixed_Content
+11:01:42,Skelpolu - Resurrection_mixture.wav,Success,5.7612,0.000000,105.43,89.31,0.2519,53.40,55.05,Rnd_Fixed_Content
+11:01:49,Skelpolu - Resurrection_other.wav,Success,5.6182,0.000000,105.40,80.39,0.2519,49.20,55.07,Rnd_Fixed_Content
+11:01:58,Skelpolu - Resurrection_vocals.wav,Success,7.4428,0.000000,104.24,73.45,0.2519,56.60,54.97,Rnd_Fixed_Content
+11:02:06,Skelpolu - Together Alone_bass.wav,Success,7.2877,0.000000,104.18,78.25,0.3057,45.00,55.14,Rnd_Fixed_Content
+11:02:12,Skelpolu - Together Alone_drums.wav,Success,5.3279,0.000000,104.33,82.34,0.3057,63.20,55.07,Rnd_Fixed_Content
+11:02:17,Skelpolu - Together Alone_mixture.wav,Success,4.3997,0.000000,104.61,86.48,0.3057,64.80,55.00,Rnd_Fixed_Content
+11:02:23,Skelpolu - Together Alone_other.wav,Success,4.8753,0.000000,104.59,80.03,0.3057,64.60,54.95,Rnd_Fixed_Content
+11:02:30,Skelpolu - Together Alone_vocals.wav,Success,5.9474,0.000000,104.35,78.92,0.3057,67.70,54.94,Rnd_Fixed_Content
+11:02:36,Snowmine - Curfews_bass.wav,Success,5.1422,0.000000,103.87,84.00,0.3622,74.40,55.02,Rnd_Fixed_Content
+11:02:40,Snowmine - Curfews_drums.wav,Success,3.5822,0.000000,103.86,72.21,0.3622,56.30,54.83,Rnd_Fixed_Content
+11:02:46,Snowmine - Curfews_mixture.wav,Success,5.7792,0.000000,103.87,86.80,0.3622,52.60,54.93,Rnd_Fixed_Content
+11:02:52,Snowmine - Curfews_other.wav,Success,5.4423,0.000000,103.88,81.65,0.3622,72.20,55.12,Rnd_Fixed_Content
+11:02:58,Snowmine - Curfews_vocals.wav,Success,4.6963,0.000000,103.86,77.96,0.3622,55.50,54.81,Rnd_Fixed_Content
+11:03:02,Speak Softly - Broken Man_bass.wav,Success,3.5802,0.000000,102.77,81.19,0.3937,67.30,54.95,Rnd_Fixed_Content
+11:03:06,Speak Softly - Broken Man_drums.wav,Success,3.8737,0.000000,103.41,78.10,0.3937,72.20,54.98,Rnd_Fixed_Content
+11:03:12,Speak Softly - Broken Man_mixture.wav,Success,4.9640,0.000000,103.48,85.58,0.3937,58.80,55.05,Rnd_Fixed_Content
+11:03:16,Speak Softly - Broken Man_other.wav,Success,3.7413,0.000000,103.34,80.04,0.3937,67.60,54.83,Rnd_Fixed_Content
+11:03:21,Speak Softly - Broken Man_vocals.wav,Success,4.5341,0.000000,103.47,75.62,0.3937,49.40,55.05,Rnd_Fixed_Content
+11:03:27,Speak Softly - Like Horses_bass.wav,Success,3.9668,0.000000,103.57,80.76,0.3188,70.10,55.01,Rnd_Fixed_Content
+11:03:32,Speak Softly - Like Horses_drums.wav,Success,4.0611,0.000000,104.33,76.93,0.3188,70.60,55.10,Rnd_Fixed_Content
+11:03:40,Speak Softly - Like Horses_mixture.wav,Success,7.1853,0.000000,104.36,87.03,0.3188,56.70,55.00,Rnd_Fixed_Content
+11:03:45,Speak Softly - Like Horses_other.wav,Success,4.3895,0.000000,104.34,81.78,0.3188,61.70,54.80,Rnd_Fixed_Content
+11:03:51,Speak Softly - Like Horses_vocals.wav,Success,5.1043,0.000000,104.28,81.89,0.3188,61.60,55.04,Rnd_Fixed_Content
+11:03:56,Spike Mullings - Mike's Sulking_bass.wav,Success,4.3416,0.000000,103.44,79.64,0.3880,40.00,54.85,Rnd_Fixed_Content
+11:04:04,Spike Mullings - Mike's Sulking_drums.wav,Success,7.2904,0.000000,103.46,79.68,0.3880,60.00,55.00,Rnd_Fixed_Content
+11:04:08,Spike Mullings - Mike's Sulking_mixture.wav,Success,3.3886,0.000000,103.52,86.22,0.3880,67.90,55.11,Rnd_Fixed_Content
+11:04:14,Spike Mullings - Mike's Sulking_other.wav,Success,5.7071,0.000000,103.50,82.32,0.3880,75.40,55.12,Rnd_Fixed_Content
+11:04:19,Spike Mullings - Mike's Sulking_vocals.wav,Success,3.8024,0.000000,102.84,77.41,0.3880,64.20,54.99,Rnd_Fixed_Content
+11:04:26,St Vitus - Word Gets Around_bass.wav,Success,6.1895,0.000000,102.60,76.46,0.4032,56.00,54.94,Rnd_Fixed_Content
+11:04:30,St Vitus - Word Gets Around_drums.wav,Success,3.2875,0.000000,103.10,77.48,0.4032,71.20,54.96,Rnd_Fixed_Content
+11:04:35,St Vitus - Word Gets Around_mixture.wav,Success,3.3444,0.000000,103.35,82.89,0.4032,69.30,54.79,Rnd_Fixed_Content
+11:04:42,St Vitus - Word Gets Around_other.wav,Success,6.4254,0.000000,103.27,69.16,0.4032,48.40,55.10,Rnd_Fixed_Content
+11:04:45,St Vitus - Word Gets Around_vocals.wav,Success,3.2276,0.000000,103.28,78.63,0.4032,63.20,54.96,Rnd_Fixed_Content
+11:04:52,Steven Clark - Bounty_bass.wav,Success,5.6853,0.000000,104.09,80.33,0.3443,55.90,54.89,Rnd_Fixed_Content
+11:04:58,Steven Clark - Bounty_drums.wav,Success,5.3520,0.000000,104.13,75.71,0.3443,66.30,54.81,Rnd_Fixed_Content
+11:05:05,Steven Clark - Bounty_mixture.wav,Success,6.1787,0.000000,104.09,85.77,0.3443,65.40,54.82,Rnd_Fixed_Content
+11:05:11,Steven Clark - Bounty_other.wav,Success,5.5726,0.000000,104.11,81.70,0.3443,74.00,55.10,Rnd_Fixed_Content
+11:05:16,Steven Clark - Bounty_vocals.wav,Success,4.1255,0.000000,104.09,79.32,0.3443,67.00,54.89,Rnd_Fixed_Content
+11:05:21,Strand Of Oaks - Spacestation_bass.wav,Success,4.5351,0.000000,103.28,66.32,0.4087,54.90,54.89,Rnd_Fixed_Content
+11:05:26,Strand Of Oaks - Spacestation_drums.wav,Success,4.3898,0.000000,103.35,78.94,0.4087,74.90,55.00,Rnd_Fixed_Content
+11:05:31,Strand Of Oaks - Spacestation_mixture.wav,Success,3.2864,0.000000,103.35,83.27,0.4087,55.20,54.88,Rnd_Fixed_Content
+11:05:36,Strand Of Oaks - Spacestation_other.wav,Success,4.0696,0.000000,103.33,78.73,0.4087,71.30,54.99,Rnd_Fixed_Content
+11:05:41,Strand Of Oaks - Spacestation_vocals.wav,Success,4.3891,0.000000,103.33,77.30,0.4087,76.00,55.05,Rnd_Fixed_Content
+11:05:47,Sweet Lights - You Let Me Down_bass.wav,Success,5.1274,0.000000,105.44,72.94,0.2543,70.50,55.00,Rnd_Fixed_Content
+11:05:53,Sweet Lights - You Let Me Down_drums.wav,Success,4.8304,0.000000,105.43,78.13,0.2543,73.00,55.26,Rnd_Fixed_Content
+11:06:00,Sweet Lights - You Let Me Down_mixture.wav,Success,5.6534,0.000000,105.41,86.06,0.2543,64.50,55.10,Rnd_Fixed_Content
+11:06:07,Sweet Lights - You Let Me Down_other.wav,Success,6.4533,0.000000,105.41,82.38,0.2543,52.50,54.96,Rnd_Fixed_Content
+11:06:13,Sweet Lights - You Let Me Down_vocals.wav,Success,4.3097,0.000000,105.42,81.58,0.2543,64.00,55.11,Rnd_Fixed_Content
+11:06:19,Swinging Steaks - Lost My Way_bass.wav,Success,6.2230,0.000000,104.34,81.63,0.3214,60.10,54.78,Rnd_Fixed_Content
+11:06:23,Swinging Steaks - Lost My Way_drums.wav,Success,3.3991,0.000000,104.33,75.70,0.3214,58.40,54.96,Rnd_Fixed_Content
+11:06:28,Swinging Steaks - Lost My Way_mixture.wav,Success,3.8396,0.000000,104.33,86.86,0.3214,70.20,54.84,Rnd_Fixed_Content
+11:06:36,Swinging Steaks - Lost My Way_other.wav,Success,7.3469,0.000000,104.25,83.56,0.3214,56.20,54.99,Rnd_Fixed_Content
+11:06:41,Swinging Steaks - Lost My Way_vocals.wav,Success,3.8865,0.000000,104.10,78.33,0.3214,61.00,54.84,Rnd_Fixed_Content
+11:06:46,The Districts - Vermont_bass.wav,Success,5.4027,0.000000,103.15,50.36,0.4368,55.70,55.18,Rnd_Fixed_Content
+11:06:50,The Districts - Vermont_drums.wav,Success,2.9919,0.000000,103.09,64.79,0.4368,48.10,54.79,Rnd_Fixed_Content
+11:06:54,The Districts - Vermont_mixture.wav,Success,3.6089,0.000000,103.06,85.59,0.4368,60.70,55.10,Rnd_Fixed_Content
+11:06:59,The Districts - Vermont_other.wav,Success,4.8587,0.000000,103.06,83.81,0.4368,45.40,54.84,Rnd_Fixed_Content
+11:07:03,The Districts - Vermont_vocals.wav,Success,3.6385,0.000000,103.09,80.77,0.4368,72.30,54.82,Rnd_Fixed_Content
+11:07:10,The Doppler Shift - Atrophy_bass.wav,Success,4.2805,0.000000,104.45,75.93,0.3007,69.30,55.14,Rnd_Fixed_Content
+11:07:15,The Doppler Shift - Atrophy_drums.wav,Success,4.0642,0.000000,104.67,83.08,0.3007,66.90,55.12,Rnd_Fixed_Content
+11:07:21,The Doppler Shift - Atrophy_mixture.wav,Success,5.9318,0.000000,104.68,86.90,0.3007,70.60,55.02,Rnd_Fixed_Content
+11:07:27,The Doppler Shift - Atrophy_other.wav,Success,5.2203,0.000000,104.68,81.44,0.3007,56.90,54.82,Rnd_Fixed_Content
+11:07:32,The Doppler Shift - Atrophy_vocals.wav,Success,4.2118,0.000000,104.36,79.82,0.3007,61.50,55.03,Rnd_Fixed_Content
+11:07:37,The Easton Ellises (Baumi) - SDRNR_bass.wav,Success,4.6489,0.000000,103.09,78.41,0.4247,50.20,54.98,Rnd_Fixed_Content
+11:07:42,The Easton Ellises (Baumi) - SDRNR_drums.wav,Success,3.8208,0.000000,103.12,80.97,0.4247,75.80,54.97,Rnd_Fixed_Content
+11:07:46,The Easton Ellises (Baumi) - SDRNR_mixture.wav,Success,3.7209,0.000000,103.18,85.88,0.4247,46.00,54.79,Rnd_Fixed_Content
+11:07:51,The Easton Ellises (Baumi) - SDRNR_other.wav,Success,4.0416,0.000000,103.17,79.05,0.4247,62.60,55.05,Rnd_Fixed_Content
+11:07:54,The Easton Ellises (Baumi) - SDRNR_vocals.wav,Success,3.1827,0.000000,103.08,80.32,0.4247,47.10,54.91,Rnd_Fixed_Content
+11:08:00,The Easton Ellises - Falcon 69_bass.wav,Success,3.5058,0.000000,103.21,79.89,0.4035,75.10,55.11,Rnd_Fixed_Content
+11:08:05,The Easton Ellises - Falcon 69_drums.wav,Success,5.1892,0.000000,103.26,81.90,0.4035,50.10,55.08,Rnd_Fixed_Content
+11:08:09,The Easton Ellises - Falcon 69_mixture.wav,Success,3.4535,0.000000,103.38,86.72,0.4035,55.60,55.00,Rnd_Fixed_Content
+11:08:15,The Easton Ellises - Falcon 69_other.wav,Success,4.1820,0.000000,103.39,80.46,0.4035,67.60,54.79,Rnd_Fixed_Content
+11:08:18,The Easton Ellises - Falcon 69_vocals.wav,Success,2.9735,0.000000,103.17,79.76,0.4035,56.30,55.19,Rnd_Fixed_Content
+11:08:23,The Long Wait - Back Home To Blue_bass.wav,Success,3.9137,0.000000,103.49,81.92,0.3824,65.70,54.82,Rnd_Fixed_Content
+11:08:28,The Long Wait - Back Home To Blue_drums.wav,Success,4.1976,0.000000,103.46,75.91,0.3824,55.20,55.03,Rnd_Fixed_Content
+11:08:42,The Long Wait - Back Home To Blue_mixture.wav,Success,13.2309,0.000000,103.61,85.27,0.3824,34.50,55.02,Rnd_Fixed_Content
+11:08:46,The Long Wait - Back Home To Blue_other.wav,Success,3.6842,0.000000,103.62,78.85,0.3824,55.10,55.03,Rnd_Fixed_Content
+11:08:50,The Long Wait - Back Home To Blue_vocals.wav,Success,3.8504,0.000000,103.02,77.26,0.3824,60.30,54.62,Rnd_Fixed_Content
+11:08:58,The Long Wait - Dark Horses_bass.wav,Success,7.0782,0.000000,104.16,77.80,0.3260,72.90,55.10,Rnd_Fixed_Content
+11:09:03,The Long Wait - Dark Horses_drums.wav,Success,4.2708,0.000000,104.18,75.10,0.3260,61.40,55.00,Rnd_Fixed_Content
+11:09:07,The Long Wait - Dark Horses_mixture.wav,Success,3.5529,0.000000,104.27,83.09,0.3260,59.90,54.70,Rnd_Fixed_Content
+11:09:11,The Long Wait - Dark Horses_other.wav,Success,3.6405,0.000000,104.27,78.27,0.3260,57.10,54.66,Rnd_Fixed_Content
+11:09:18,The Long Wait - Dark Horses_vocals.wav,Success,6.7875,0.000000,103.95,75.89,0.3260,65.30,54.66,Rnd_Fixed_Content
+11:09:22,The Mountaineering Club - Mallory_bass.wav,Success,3.6995,0.000000,103.00,79.47,0.4077,60.90,55.07,Rnd_Fixed_Content
+11:09:26,The Mountaineering Club - Mallory_drums.wav,Success,2.9265,0.000000,102.73,77.26,0.4077,53.80,54.80,Rnd_Fixed_Content
+11:09:31,The Mountaineering Club - Mallory_mixture.wav,Success,3.7075,0.000000,103.39,83.68,0.4077,72.40,55.11,Rnd_Fixed_Content
+11:09:37,The Mountaineering Club - Mallory_other.wav,Success,3.6050,0.000000,103.38,76.52,0.4077,45.90,54.98,Rnd_Fixed_Content
+11:09:41,The Mountaineering Club - Mallory_vocals.wav,Success,3.8147,0.000000,102.78,74.19,0.4077,46.70,54.90,Rnd_Fixed_Content
+11:09:49,The Scarlet Brand - Les Fleurs Du Mal_bass.wav,Success,7.1273,0.000000,103.97,78.51,0.3282,46.60,55.06,Rnd_Fixed_Content
+11:09:54,The Scarlet Brand - Les Fleurs Du Mal_drums.wav,Success,3.8213,0.000000,103.86,79.39,0.3282,60.50,54.93,Rnd_Fixed_Content
+11:10:00,The Scarlet Brand - Les Fleurs Du Mal_mixture.wav,Success,5.4714,0.000000,104.31,84.49,0.3282,72.30,54.80,Rnd_Fixed_Content
+11:10:04,The Scarlet Brand - Les Fleurs Du Mal_other.wav,Success,3.9355,0.000000,104.30,77.01,0.3282,62.50,54.96,Rnd_Fixed_Content
+11:10:10,The Scarlet Brand - Les Fleurs Du Mal_vocals.wav,Success,4.6390,0.000000,103.63,76.90,0.3282,67.80,55.05,Rnd_Fixed_Content
+11:10:15,The So So Glos - Emergency_bass.wav,Success,2.7938,0.000000,101.69,77.53,0.5968,57.80,54.60,Rnd_Fixed_Content
+11:10:17,The So So Glos - Emergency_drums.wav,Success,2.1620,0.000000,101.70,79.02,0.5968,60.00,54.66,Rnd_Fixed_Content
+11:10:19,The So So Glos - Emergency_mixture.wav,Success,2.1077,0.000000,101.71,84.33,0.5968,57.40,54.86,Rnd_Fixed_Content
+11:10:24,The So So Glos - Emergency_other.wav,Success,3.8863,0.000000,101.71,79.09,0.5968,54.20,54.66,Rnd_Fixed_Content
+11:10:27,The So So Glos - Emergency_vocals.wav,Success,3.1563,0.000000,101.69,77.20,0.5968,69.00,54.66,Rnd_Fixed_Content
+11:10:34,The Sunshine Garcia Band - For I Am The Moon_bass.wav,Success,5.6857,0.000000,104.35,80.62,0.3112,67.50,54.83,Rnd_Fixed_Content
+11:10:39,The Sunshine Garcia Band - For I Am The Moon_drums.wav,Success,4.8024,0.000000,104.44,81.44,0.3112,64.30,54.89,Rnd_Fixed_Content
+11:10:45,The Sunshine Garcia Band - For I Am The Moon_mixture.wav,Success,5.0486,0.000000,104.44,85.85,0.3112,46.40,54.72,Rnd_Fixed_Content
+11:10:51,The Sunshine Garcia Band - For I Am The Moon_other.wav,Success,5.3220,0.000000,104.32,72.68,0.3112,61.70,55.08,Rnd_Fixed_Content
+11:10:56,The Sunshine Garcia Band - For I Am The Moon_vocals.wav,Success,4.1073,0.000000,104.35,80.35,0.3112,70.60,54.83,Rnd_Fixed_Content
+11:11:01,The Wrong'Uns - Rothko_bass.wav,Success,4.7274,0.000000,102.43,76.79,0.4926,68.30,54.98,Rnd_Fixed_Content
+11:11:05,The Wrong'Uns - Rothko_drums.wav,Success,3.1683,0.000000,102.59,78.19,0.4926,61.10,54.85,Rnd_Fixed_Content
+11:11:09,The Wrong'Uns - Rothko_mixture.wav,Success,3.3534,0.000000,102.56,84.11,0.4926,42.60,54.80,Rnd_Fixed_Content
+11:11:13,The Wrong'Uns - Rothko_other.wav,Success,4.0443,0.000000,102.51,78.59,0.4926,51.50,54.63,Rnd_Fixed_Content
+11:11:17,The Wrong'Uns - Rothko_vocals.wav,Success,3.3240,0.000000,102.16,78.10,0.4926,61.40,54.78,Rnd_Fixed_Content
+11:11:21,Tim Taler - Stalker_bass.wav,Success,3.2271,0.000000,102.72,75.09,0.4191,53.60,54.80,Rnd_Fixed_Content
+11:11:28,Tim Taler - Stalker_drums.wav,Success,6.0504,0.000000,103.09,74.62,0.4191,57.10,55.01,Rnd_Fixed_Content
+11:11:31,Tim Taler - Stalker_mixture.wav,Success,3.2293,0.000000,103.09,81.99,0.4191,57.40,54.81,Rnd_Fixed_Content
+11:11:35,Tim Taler - Stalker_other.wav,Success,3.4703,0.000000,103.06,76.64,0.4191,67.60,54.98,Rnd_Fixed_Content
+11:11:42,Tim Taler - Stalker_vocals.wav,Success,4.7142,0.000000,102.64,76.42,0.4191,69.80,54.92,Rnd_Fixed_Content
+11:11:46,Timboz - Pony_bass.wav,Success,3.8744,0.000000,103.43,72.72,0.3939,61.60,54.79,Rnd_Fixed_Content
+11:11:51,Timboz - Pony_drums.wav,Success,4.6108,0.000000,103.48,77.61,0.3939,70.80,55.02,Rnd_Fixed_Content
+11:11:55,Timboz - Pony_mixture.wav,Success,3.7428,0.000000,103.48,84.74,0.3939,72.40,54.81,Rnd_Fixed_Content
+11:12:00,Timboz - Pony_other.wav,Success,4.0934,0.000000,103.48,82.81,0.3939,49.30,54.68,Rnd_Fixed_Content
+11:12:05,Timboz - Pony_vocals.wav,Success,4.6789,0.000000,103.50,74.70,0.3939,71.80,54.77,Rnd_Fixed_Content
+11:12:09,Titanium - Haunted Age_bass.wav,Success,3.6033,0.000000,103.23,77.37,0.4014,69.00,54.91,Rnd_Fixed_Content
+11:12:14,Titanium - Haunted Age_drums.wav,Success,3.6479,0.000000,103.32,77.01,0.4014,47.00,54.90,Rnd_Fixed_Content
+11:12:19,Titanium - Haunted Age_mixture.wav,Success,3.3604,0.000000,103.35,84.26,0.4014,59.50,54.78,Rnd_Fixed_Content
+11:12:24,Titanium - Haunted Age_other.wav,Success,4.2618,0.000000,103.34,81.16,0.4014,49.80,54.81,Rnd_Fixed_Content
+11:12:29,Titanium - Haunted Age_vocals.wav,Success,4.1116,0.000000,102.67,73.93,0.4014,71.50,54.87,Rnd_Fixed_Content
+11:12:32,Tom McKenzie - Directions_bass.wav,Success,2.7429,0.000000,101.35,75.44,0.5668,53.80,54.76,Rnd_Fixed_Content
+11:12:36,Tom McKenzie - Directions_drums.wav,Success,3.2116,0.000000,101.58,79.48,0.5668,57.40,54.92,Rnd_Fixed_Content
+11:12:39,Tom McKenzie - Directions_mixture.wav,Success,2.8054,0.000000,101.95,82.60,0.5668,63.70,54.87,Rnd_Fixed_Content
+11:12:43,Tom McKenzie - Directions_other.wav,Success,3.2343,0.000000,101.94,73.94,0.5668,63.20,54.77,Rnd_Fixed_Content
+11:12:45,Tom McKenzie - Directions_vocals.wav,Success,2.2078,0.000000,101.48,72.92,0.5668,47.80,54.90,Rnd_Fixed_Content
+11:12:54,Traffic Experiment - Once More (With Feeling)_bass.wav,Success,7.7220,0.000000,105.72,82.64,0.2290,71.80,55.07,Rnd_Fixed_Content
+11:13:01,Traffic Experiment - Once More (With Feeling)_drums.wav,Success,5.9204,0.000000,105.74,78.68,0.2290,58.80,54.96,Rnd_Fixed_Content
+11:13:10,Traffic Experiment - Once More (With Feeling)_mixture.wav,Success,7.5799,0.000000,105.79,87.38,0.2290,59.70,54.58,Rnd_Fixed_Content
+11:13:18,Traffic Experiment - Once More (With Feeling)_other.wav,Success,6.5718,0.000000,105.78,83.46,0.2290,55.60,54.94,Rnd_Fixed_Content
+11:13:25,Traffic Experiment - Once More (With Feeling)_vocals.wav,Success,6.2306,0.000000,105.38,77.75,0.2290,58.70,54.75,Rnd_Fixed_Content
+11:13:31,Traffic Experiment - Sirens_bass.wav,Success,5.0247,0.000000,105.59,76.85,0.2365,71.20,54.96,Rnd_Fixed_Content
+11:13:39,Traffic Experiment - Sirens_drums.wav,Success,7.2089,0.000000,105.67,79.07,0.2365,63.40,55.15,Rnd_Fixed_Content
+11:13:46,Traffic Experiment - Sirens_mixture.wav,Success,5.9543,0.000000,105.73,87.68,0.2365,69.30,54.48,Rnd_Fixed_Content
+11:13:56,Traffic Experiment - Sirens_other.wav,Success,8.5226,0.000000,105.72,85.57,0.2365,42.10,54.88,Rnd_Fixed_Content
+11:14:02,Traffic Experiment - Sirens_vocals.wav,Success,5.5025,0.000000,104.96,78.85,0.2365,69.50,55.02,Rnd_Fixed_Content
+11:14:07,Triviul - Angelsaint_bass.wav,Success,3.9250,0.000000,103.16,80.75,0.4207,51.90,54.88,Rnd_Fixed_Content
+11:14:11,Triviul - Angelsaint_drums.wav,Success,3.6551,0.000000,103.12,77.07,0.4207,66.80,55.03,Rnd_Fixed_Content
+11:14:14,Triviul - Angelsaint_mixture.wav,Success,3.3631,0.000000,103.16,85.86,0.4207,70.00,54.82,Rnd_Fixed_Content
+11:14:18,Triviul - Angelsaint_other.wav,Success,3.0275,0.000000,103.17,79.73,0.4207,64.90,54.98,Rnd_Fixed_Content
+11:14:25,Triviul - Angelsaint_vocals.wav,Success,6.3092,0.000000,102.96,80.70,0.4207,52.30,54.61,Rnd_Fixed_Content
+11:14:28,Triviul - Dorothy_bass.wav,Success,2.7692,0.000000,102.03,73.45,0.5314,46.70,55.06,Rnd_Fixed_Content
+11:14:31,Triviul - Dorothy_drums.wav,Success,2.3787,0.000000,102.00,77.21,0.5314,56.00,54.76,Rnd_Fixed_Content
+11:14:35,Triviul - Dorothy_mixture.wav,Success,4.2247,0.000000,102.15,82.06,0.5314,41.40,54.73,Rnd_Fixed_Content
+11:14:39,Triviul - Dorothy_other.wav,Success,2.8335,0.000000,102.06,72.28,0.5314,66.10,54.79,Rnd_Fixed_Content
+11:14:42,Triviul - Dorothy_vocals.wav,Success,2.7552,0.000000,102.08,78.24,0.5314,52.70,54.89,Rnd_Fixed_Content
+11:14:46,Triviul feat. The Fiend - Widow_bass.wav,Success,4.0120,0.000000,103.07,78.20,0.4239,57.60,54.81,Rnd_Fixed_Content
+11:14:51,Triviul feat. The Fiend - Widow_drums.wav,Success,3.7330,0.000000,103.10,75.14,0.4239,62.40,54.83,Rnd_Fixed_Content
+11:14:55,Triviul feat. The Fiend - Widow_mixture.wav,Success,3.7151,0.000000,103.10,83.38,0.4239,54.60,54.52,Rnd_Fixed_Content
+11:15:00,Triviul feat. The Fiend - Widow_other.wav,Success,4.0381,0.000000,103.02,74.13,0.4239,61.90,54.84,Rnd_Fixed_Content
+11:15:03,Triviul feat. The Fiend - Widow_vocals.wav,Success,2.8953,0.000000,102.99,79.50,0.4239,61.30,55.00,Rnd_Fixed_Content
+11:15:08,Voelund - Comfort Lives In Belief_bass.wav,Success,3.7026,0.000000,102.57,75.59,0.4744,48.20,55.04,Rnd_Fixed_Content
+11:15:13,Voelund - Comfort Lives In Belief_drums.wav,Success,3.2905,0.000000,102.56,75.30,0.4744,67.30,55.06,Rnd_Fixed_Content
+11:15:16,Voelund - Comfort Lives In Belief_mixture.wav,Success,3.0838,0.000000,102.58,84.05,0.4744,59.10,54.78,Rnd_Fixed_Content
+11:15:20,Voelund - Comfort Lives In Belief_other.wav,Success,2.9580,0.000000,102.56,80.14,0.4744,46.50,54.80,Rnd_Fixed_Content
+11:15:25,Voelund - Comfort Lives In Belief_vocals.wav,Success,4.2073,0.000000,102.14,78.57,0.4744,50.70,54.82,Rnd_Fixed_Content
+11:15:29,Wall Of Death - Femme_bass.wav,Success,3.8743,0.000000,103.16,77.20,0.4168,75.00,54.60,Rnd_Fixed_Content
+11:15:33,Wall Of Death - Femme_drums.wav,Success,3.2763,0.000000,103.18,81.94,0.4168,64.70,54.78,Rnd_Fixed_Content
+11:15:38,Wall Of Death - Femme_mixture.wav,Success,4.6416,0.000000,103.17,86.85,0.4168,52.00,54.79,Rnd_Fixed_Content
+11:15:43,Wall Of Death - Femme_other.wav,Success,3.2143,0.000000,103.16,83.80,0.4168,56.10,54.91,Rnd_Fixed_Content
+11:15:48,Wall Of Death - Femme_vocals.wav,Success,4.8853,0.000000,103.22,75.69,0.4168,72.10,54.93,Rnd_Fixed_Content
+11:15:52,We Fell From The Sky - Not You_bass.wav,Success,2.5651,0.000000,102.58,70.99,0.4794,59.10,54.88,Rnd_Fixed_Content
+11:15:56,We Fell From The Sky - Not You_drums.wav,Success,3.7606,0.000000,102.62,80.11,0.4794,75.10,54.84,Rnd_Fixed_Content
+11:16:01,We Fell From The Sky - Not You_mixture.wav,Success,4.8132,0.000000,102.64,83.73,0.4794,59.80,54.76,Rnd_Fixed_Content
+11:16:05,We Fell From The Sky - Not You_other.wav,Success,3.2846,0.000000,102.61,79.91,0.4794,63.80,55.00,Rnd_Fixed_Content
+11:16:08,We Fell From The Sky - Not You_vocals.wav,Success,2.5593,0.000000,102.00,72.58,0.4794,56.70,54.66,Rnd_Fixed_Content
+11:16:16,Young Griffo - Blood To Bone_bass.wav,Success,6.2245,0.000000,103.43,82.72,0.3915,53.70,54.64,Rnd_Fixed_Content
+11:16:20,Young Griffo - Blood To Bone_drums.wav,Success,3.6963,0.000000,103.45,79.08,0.3915,70.50,54.73,Rnd_Fixed_Content
+11:16:25,Young Griffo - Blood To Bone_mixture.wav,Success,4.8601,0.000000,103.46,85.50,0.3915,63.50,55.05,Rnd_Fixed_Content
+11:16:30,Young Griffo - Blood To Bone_other.wav,Success,4.4219,0.000000,103.33,76.73,0.3915,59.80,55.03,Rnd_Fixed_Content
+11:16:34,Young Griffo - Blood To Bone_vocals.wav,Success,2.9718,0.000000,102.80,74.68,0.3915,60.70,54.86,Rnd_Fixed_Content
+11:16:37,Young Griffo - Facade_bass.wav,Success,2.4202,0.000000,101.72,76.48,0.5931,61.50,54.74,Rnd_Fixed_Content
+11:16:42,Young Griffo - Facade_drums.wav,Success,4.6963,0.000000,101.71,75.99,0.5931,33.90,55.05,Rnd_Fixed_Content
+11:16:45,Young Griffo - Facade_mixture.wav,Success,3.0432,0.000000,101.73,83.79,0.5931,69.10,54.58,Rnd_Fixed_Content
+11:16:48,Young Griffo - Facade_other.wav,Success,2.2855,0.000000,101.74,79.49,0.5931,60.00,54.80,Rnd_Fixed_Content
+11:16:51,Young Griffo - Facade_vocals.wav,Success,3.1270,0.000000,101.43,77.86,0.5931,61.40,54.60,Rnd_Fixed_Content
+11:16:56,Young Griffo - Pennies_bass.wav,Success,4.1306,0.000000,103.76,82.85,0.3585,72.80,54.81,Rnd_Fixed_Content
+11:17:03,Young Griffo - Pennies_drums.wav,Success,3.9679,0.000000,103.83,79.88,0.3585,68.90,54.67,Rnd_Fixed_Content
+11:17:06,Young Griffo - Pennies_mixture.wav,Success,3.1362,0.000000,103.85,86.70,0.3585,61.20,54.49,Rnd_Fixed_Content
+11:17:11,Young Griffo - Pennies_other.wav,Success,4.4758,0.000000,103.75,78.68,0.3585,53.90,54.75,Rnd_Fixed_Content
+11:17:17,Young Griffo - Pennies_vocals.wav,Success,5.0329,0.000000,103.58,79.67,0.3585,67.40,54.73,Rnd_Fixed_Content
+11:17:22,Zeno - Signs_bass.wav,Success,3.9038,0.000000,103.09,74.83,0.4252,71.20,54.55,Rnd_Fixed_Content
+11:17:28,Zeno - Signs_drums.wav,Success,4.6036,0.000000,103.11,79.19,0.4252,75.00,54.84,Rnd_Fixed_Content
+11:17:33,Zeno - Signs_mixture.wav,Success,4.3164,0.000000,103.14,85.31,0.4252,69.60,54.77,Rnd_Fixed_Content
+11:17:37,Zeno - Signs_other.wav,Success,3.7955,0.000000,103.13,81.29,0.4252,65.50,55.00,Rnd_Fixed_Content
+11:17:42,Zeno - Signs_vocals.wav,Success,3.7850,0.000000,102.88,79.42,0.4252,59.70,54.90,Rnd_Fixed_Content
