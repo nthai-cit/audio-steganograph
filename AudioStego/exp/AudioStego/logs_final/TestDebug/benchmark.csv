@@ -1,3 +1,0 @@
-Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Info,CPU(%),RAM(MB)
-06:24:55,dummy_audio_long.wav,Success,0.3008,0.0000,97.17,88.14,Rnd_fixed_default_K=1,102.90,53.75
-06:25:13,dummy_audio_long.wav,Success,0.1287,0.0000,97.16,88.13,Rnd_fixed_default_K=1,92.40,53.85

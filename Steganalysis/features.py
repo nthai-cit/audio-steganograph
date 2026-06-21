@@ -21,7 +21,7 @@ def get_adaptive_spectrogram(file_path, target_shape=(128, 216)):
             y = np.tile(y, int(np.ceil(required_samples / len(y))))
         y = y[:required_samples]
 
-        # 2. ÁP DỤNG HIGH-PASS FILTER (Chìa khóa thành công)
+        # 2. ÁP DỤNG HIGH-PASS FILTER
         # Loại bỏ tần số dưới 2000Hz để làm lộ nhiễu LSB
         sos = signal.butter(10, 2000, 'hp', fs=sr, output='sos')
         y = signal.sosfilt(sos, y)

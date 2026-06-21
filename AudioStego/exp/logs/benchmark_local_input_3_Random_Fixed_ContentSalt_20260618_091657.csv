@@ -1,0 +1,23 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info
+09:17:01,A Classic Education - NightOwl_bass.wav,Success,3.1108,0.000000,92.26,74.63,0.5814,62.70,54.28,Rnd_Fixed_Content
+09:17:04,A Classic Education - NightOwl_drums.wav,Success,3.1543,0.000000,92.31,59.01,0.5814,70.30,53.96,Rnd_Fixed_Content
+09:17:06,A Classic Education - NightOwl_mixture.wav,Success,2.1482,0.000000,92.23,76.52,0.5814,56.20,54.06,Rnd_Fixed_Content
+09:17:10,A Classic Education - NightOwl_other.wav,Success,3.0745,0.000000,92.26,70.83,0.5814,67.30,54.26,Rnd_Fixed_Content
+09:17:14,A Classic Education - NightOwl_vocals.wav,Success,4.1779,0.000000,92.21,65.21,0.5814,44.80,54.18,Rnd_Fixed_Content
+09:17:18,AM Contra - Heart Peripheral_bass.wav,Success,3.0651,0.000000,91.75,65.32,0.4744,71.70,54.12,Rnd_Fixed_Content
+09:17:20,AM Contra - Heart Peripheral_drums.wav,Success,2.4184,0.000000,92.73,70.68,0.4744,58.50,54.18,Rnd_Fixed_Content
+09:17:25,AM Contra - Heart Peripheral_mixture.wav,Success,4.3669,0.000000,93.05,74.91,0.4744,43.80,54.02,Rnd_Fixed_Content
+09:17:31,AM Contra - Heart Peripheral_other.wav,Success,4.3545,0.000000,92.99,68.31,0.4744,58.40,54.27,Rnd_Fixed_Content
+09:17:34,AM Contra - Heart Peripheral_vocals.wav,Success,2.6311,0.000000,92.59,67.97,0.4744,55.90,54.05,Rnd_Fixed_Content
+09:17:38,ANiMAL - Clinic A_bass.wav,Success,3.3789,0.000000,93.05,73.03,0.4187,68.60,54.31,Rnd_Fixed_Content
+09:17:44,ANiMAL - Clinic A_drums.wav,Success,5.0644,0.000000,93.46,66.23,0.4187,72.70,54.25,Rnd_Fixed_Content
+09:17:47,ANiMAL - Clinic A_mixture.wav,Success,3.0558,0.000000,93.68,76.70,0.4187,64.90,54.28,Rnd_Fixed_Content
+09:17:53,ANiMAL - Clinic A_other.wav,Success,4.2384,0.000000,93.66,71.22,0.4187,59.80,54.11,Rnd_Fixed_Content
+09:17:59,ANiMAL - Clinic A_vocals.wav,Success,4.4514,0.000000,92.92,66.89,0.4187,46.70,54.34,Rnd_Fixed_Content
+09:18:03,ANiMAL - Easy Tiger_bass.wav,Success,2.9679,0.000000,92.88,69.20,0.4846,65.50,54.32,Rnd_Fixed_Content
+09:18:07,ANiMAL - Easy Tiger_drums.wav,Success,3.7926,0.000000,92.97,69.71,0.4846,64.00,54.12,Rnd_Fixed_Content
+09:18:11,ANiMAL - Easy Tiger_mixture.wav,Success,3.8711,0.000000,93.04,74.80,0.4846,76.80,54.18,Rnd_Fixed_Content
+09:18:16,ANiMAL - Easy Tiger_other.wav,Success,3.7399,0.000000,92.87,67.61,0.4846,71.60,54.02,Rnd_Fixed_Content
+09:18:20,ANiMAL - Easy Tiger_vocals.wav,Success,3.5752,0.000000,92.93,67.91,0.4846,75.10,54.23,Rnd_Fixed_Content
+09:18:23,ANiMAL - Rockshow_bass.wav,Success,2.9027,0.000000,91.90,69.35,0.6015,60.60,54.39,Rnd_Fixed_Content
+09:18:26,ANiMAL - Rockshow_drums.wav,Success,2.0678,0.000000,91.91,67.90,0.6015,56.40,54.09,Rnd_Fixed_Content

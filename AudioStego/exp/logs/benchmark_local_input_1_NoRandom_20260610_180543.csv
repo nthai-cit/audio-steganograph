@@ -1,0 +1,111 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info
+18:05:48,A Classic Education - NightOwl_bass.wav,Success,3.9495,0.000000,105.99,88.36,0.5814,54.50,53.07,Sequential
+18:05:50,A Classic Education - NightOwl_drums.wav,Success,1.4134,0.000000,106.00,72.70,0.5814,31.10,53.40,Sequential
+18:05:52,A Classic Education - NightOwl_mixture.wav,Success,1.4650,0.000000,106.00,90.29,0.5814,53.40,53.29,Sequential
+18:05:54,A Classic Education - NightOwl_other.wav,Success,1.7246,0.000000,105.99,84.56,0.5814,25.40,53.23,Sequential
+18:05:57,A Classic Education - NightOwl_vocals.wav,Success,1.6974,0.000000,106.00,79.00,0.5814,26.00,53.30,Sequential
+18:05:59,AM Contra - Heart Peripheral_bass.wav,Success,1.7687,0.000000,106.88,80.45,0.4744,34.60,53.52,Sequential
+18:06:01,AM Contra - Heart Peripheral_drums.wav,Success,1.9512,0.000000,106.87,84.83,0.4744,13.10,53.34,Sequential
+18:06:04,AM Contra - Heart Peripheral_mixture.wav,Success,1.6726,0.000000,106.88,88.75,0.4744,41.40,53.33,Sequential
+18:06:06,AM Contra - Heart Peripheral_other.wav,Success,1.7169,0.000000,106.87,82.20,0.4744,39.40,53.32,Sequential
+18:06:08,AM Contra - Heart Peripheral_vocals.wav,Success,1.5963,0.000000,106.88,82.27,0.4744,27.60,53.35,Sequential
+18:06:12,ANiMAL - Clinic A_bass.wav,Success,2.3195,0.000000,107.43,87.41,0.4187,30.80,53.34,Sequential
+18:06:14,ANiMAL - Clinic A_drums.wav,Success,2.0821,0.000000,107.43,80.20,0.4187,31.30,53.43,Sequential
+18:06:17,ANiMAL - Clinic A_mixture.wav,Success,2.2406,0.000000,107.42,90.44,0.4187,33.00,53.29,Sequential
+18:06:20,ANiMAL - Clinic A_other.wav,Success,1.6563,0.000000,107.42,84.98,0.4187,27.80,53.47,Sequential
+18:06:22,ANiMAL - Clinic A_vocals.wav,Success,1.7743,0.000000,107.43,81.40,0.4187,36.00,53.43,Sequential
+18:06:25,ANiMAL - Easy Tiger_bass.wav,Success,2.1162,0.000000,106.78,83.10,0.4846,35.70,53.34,Sequential
+18:06:28,ANiMAL - Easy Tiger_drums.wav,Success,1.9979,0.000000,106.79,83.53,0.4846,40.60,53.21,Sequential
+18:06:30,ANiMAL - Easy Tiger_mixture.wav,Success,1.5568,0.000000,106.80,88.55,0.4846,36.00,53.39,Sequential
+18:06:32,ANiMAL - Easy Tiger_other.wav,Success,1.6732,0.000000,106.79,81.52,0.4846,41.80,53.32,Sequential
+18:06:34,ANiMAL - Easy Tiger_vocals.wav,Success,1.7616,0.000000,106.79,81.76,0.4846,23.20,53.20,Sequential
+18:06:36,ANiMAL - Rockshow_bass.wav,Success,1.4316,0.000000,105.85,83.30,0.6015,40.70,53.26,Sequential
+18:06:38,ANiMAL - Rockshow_drums.wav,Success,1.5010,0.000000,105.85,81.83,0.6015,32.20,53.38,Sequential
+18:06:41,ANiMAL - Rockshow_mixture.wav,Success,1.8818,0.000000,105.85,87.10,0.6015,35.50,53.19,Sequential
+18:06:43,ANiMAL - Rockshow_other.wav,Success,1.8104,0.000000,105.84,78.00,0.6015,41.20,53.47,Sequential
+18:06:45,ANiMAL - Rockshow_vocals.wav,Success,1.3212,0.000000,105.85,79.27,0.6015,39.00,53.18,Sequential
+18:06:47,Actions - Devil's Words_bass.wav,Success,1.4953,0.000000,106.59,83.30,0.5064,25.50,53.33,Sequential
+18:06:49,Actions - Devil's Words_drums.wav,Success,1.3027,0.000000,106.59,83.79,0.5064,26.70,53.16,Sequential
+18:06:51,Actions - Devil's Words_mixture.wav,Success,1.2642,0.000000,106.61,90.58,0.5064,32.40,53.45,Sequential
+18:06:52,Actions - Devil's Words_other.wav,Success,1.3056,0.000000,106.59,84.44,0.5064,29.70,53.31,Sequential
+18:06:55,Actions - Devil's Words_vocals.wav,Success,1.7812,0.000000,106.60,86.10,0.5064,30.90,53.09,Sequential
+18:06:57,Actions - One Minute Smile_bass.wav,Success,1.6129,0.000000,105.79,77.24,0.6093,38.20,53.11,Sequential
+18:06:59,Actions - One Minute Smile_drums.wav,Success,1.3943,0.000000,105.79,83.37,0.6093,44.80,53.42,Sequential
+18:07:01,Actions - One Minute Smile_mixture.wav,Success,1.2609,0.000000,105.78,89.52,0.6093,30.90,53.38,Sequential
+18:07:03,Actions - One Minute Smile_other.wav,Success,1.3898,0.000000,105.79,84.54,0.6093,50.50,53.21,Sequential
+18:07:04,Actions - One Minute Smile_vocals.wav,Success,1.2763,0.000000,105.79,85.34,0.6093,33.30,53.20,Sequential
+18:07:06,Actions - South Of The Water_bass.wav,Success,1.2303,0.000000,106.13,85.91,0.5637,37.70,53.42,Sequential
+18:07:08,Actions - South Of The Water_drums.wav,Success,1.3509,0.000000,106.13,81.81,0.5637,45.40,53.35,Sequential
+18:07:11,Actions - South Of The Water_mixture.wav,Success,1.9664,0.000000,106.13,90.02,0.5637,29.40,53.41,Sequential
+18:07:13,Actions - South Of The Water_other.wav,Success,1.8009,0.000000,106.14,83.07,0.5637,35.10,53.40,Sequential
+18:07:15,Actions - South Of The Water_vocals.wav,Success,1.5166,0.000000,106.13,84.18,0.5637,43.90,53.43,Sequential
+18:07:17,Aimee Norwich - Child_bass.wav,Success,1.4224,0.000000,106.43,87.85,0.5266,35.30,53.35,Sequential
+18:07:19,Aimee Norwich - Child_drums.wav,Success,1.3048,0.000000,106.42,83.23,0.5266,33.80,53.27,Sequential
+18:07:21,Aimee Norwich - Child_mixture.wav,Success,1.4086,0.000000,106.42,90.07,0.5266,45.50,53.25,Sequential
+18:07:23,Aimee Norwich - Child_other.wav,Success,1.3528,0.000000,106.43,81.58,0.5266,37.20,53.29,Sequential
+18:07:25,Aimee Norwich - Child_vocals.wav,Success,1.5538,0.000000,106.43,77.31,0.5266,42.60,53.23,Sequential
+18:07:28,Al James - Schoolboy Facination_bass.wav,Success,1.7442,0.000000,106.67,81.13,0.4970,34.10,53.32,Sequential
+18:07:30,Al James - Schoolboy Facination_drums.wav,Success,1.4232,0.000000,106.67,79.46,0.4970,30.90,53.37,Sequential
+18:07:31,Al James - Schoolboy Facination_mixture.wav,Success,0.9717,0.000000,97.41,76.83,4.1918,3.00,53.23,Sequential
+18:07:33,Al James - Schoolboy Facination_other.wav,Success,1.4093,0.000000,106.67,80.37,0.4970,32.50,53.33,Sequential
+18:07:35,Al James - Schoolboy Facination_vocals.wav,Success,1.3441,0.000000,106.68,83.91,0.4970,29.10,53.36,Sequential
+18:07:41,Alexander Ross - Goodbye Bolero_bass.wav,Success,3.3219,0.000000,109.88,79.51,0.2380,26.20,53.17,Sequential
+18:07:45,Alexander Ross - Goodbye Bolero_drums.wav,Success,2.6595,0.000000,109.87,80.93,0.2380,26.40,53.23,Sequential
+18:07:49,Alexander Ross - Goodbye Bolero_mixture.wav,Success,2.5656,0.000000,109.88,89.53,0.2380,27.30,53.30,Sequential
+18:07:53,Alexander Ross - Goodbye Bolero_other.wav,Success,2.0879,0.000000,109.87,87.15,0.2380,30.20,53.30,Sequential
+18:07:57,Alexander Ross - Goodbye Bolero_vocals.wav,Success,2.5940,0.000000,109.88,82.26,0.2380,29.70,53.41,Sequential
+18:08:02,Alexander Ross - Velvet Curtain_bass.wav,Success,2.7787,0.000000,110.77,79.54,0.1937,30.90,53.25,Sequential
+18:08:06,Alexander Ross - Velvet Curtain_drums.wav,Success,2.6178,0.000000,110.77,82.20,0.1937,27.60,53.29,Sequential
+18:08:11,Alexander Ross - Velvet Curtain_mixture.wav,Success,2.7518,0.000000,110.78,87.79,0.1937,26.90,53.39,Sequential
+18:08:15,Alexander Ross - Velvet Curtain_other.wav,Success,2.7171,0.000000,110.78,83.14,0.1937,27.60,53.23,Sequential
+18:08:20,Alexander Ross - Velvet Curtain_vocals.wav,Success,2.5457,0.000000,110.77,81.50,0.1937,30.70,53.14,Sequential
+18:08:22,Angela Thomas Wade - Milk Cow Blues_bass.wav,Success,1.6173,0.000000,106.89,78.25,0.4722,29.20,53.32,Sequential
+18:08:24,Angela Thomas Wade - Milk Cow Blues_drums.wav,Success,1.6069,0.000000,106.90,81.51,0.4722,30.30,53.43,Sequential
+18:08:27,Angela Thomas Wade - Milk Cow Blues_mixture.wav,Success,1.7700,0.000000,106.89,87.45,0.4722,28.40,53.46,Sequential
+18:08:29,Angela Thomas Wade - Milk Cow Blues_other.wav,Success,1.4501,0.000000,106.89,83.46,0.4722,29.10,53.24,Sequential
+18:08:31,Angela Thomas Wade - Milk Cow Blues_vocals.wav,Success,1.3562,0.000000,106.90,80.99,0.4722,37.50,53.27,Sequential
+18:08:32,Angels In Amplifiers - I'm Alright_bass.wav,Success,1.2745,0.000000,106.20,79.36,0.5550,27.60,53.42,Sequential
+18:08:34,Angels In Amplifiers - I'm Alright_drums.wav,Success,1.2408,0.000000,106.19,80.51,0.5550,33.50,53.44,Sequential
+18:08:36,Angels In Amplifiers - I'm Alright_mixture.wav,Success,1.2928,0.000000,106.20,88.08,0.5550,31.90,53.27,Sequential
+18:08:38,Angels In Amplifiers - I'm Alright_other.wav,Success,1.3297,0.000000,106.20,83.65,0.5550,29.20,53.38,Sequential
+18:08:41,Angels In Amplifiers - I'm Alright_vocals.wav,Success,1.6558,0.000000,106.20,83.31,0.5550,29.00,53.25,Sequential
+18:08:43,Arise - Run Run Run_bass.wav,Success,1.8390,0.000000,107.06,86.44,0.4543,23.40,53.25,Sequential
+18:08:46,Arise - Run Run Run_drums.wav,Success,1.6068,0.000000,107.06,81.53,0.4543,27.50,53.39,Sequential
+18:08:48,Arise - Run Run Run_mixture.wav,Success,1.4826,0.000000,107.08,90.86,0.4543,28.00,53.39,Sequential
+18:08:50,Arise - Run Run Run_other.wav,Success,1.3965,0.000000,107.06,86.97,0.4543,29.80,53.35,Sequential
+18:08:53,Arise - Run Run Run_vocals.wav,Success,1.5093,0.000000,107.06,81.72,0.4543,25.90,53.26,Sequential
+18:08:56,Atlantis Bound - It Was My Fault For Waiting_bass.wav,Success,2.0900,0.000000,107.94,80.84,0.3716,28.40,53.14,Sequential
+18:08:58,Atlantis Bound - It Was My Fault For Waiting_drums.wav,Success,1.7428,0.000000,107.94,84.87,0.3716,27.60,53.22,Sequential
+18:09:01,Atlantis Bound - It Was My Fault For Waiting_mixture.wav,Success,1.6598,0.000000,107.94,88.67,0.3716,29.80,53.35,Sequential
+18:09:04,Atlantis Bound - It Was My Fault For Waiting_other.wav,Success,1.7674,0.000000,107.94,81.18,0.3716,26.00,53.32,Sequential
+18:09:06,Atlantis Bound - It Was My Fault For Waiting_vocals.wav,Success,1.5236,0.000000,107.94,82.55,0.3716,36.00,53.39,Sequential
+18:09:09,Auctioneer - Our Future Faces_bass.wav,Success,1.5975,0.000000,106.83,85.80,0.4794,26.70,53.60,Sequential
+18:09:11,Auctioneer - Our Future Faces_drums.wav,Success,1.6966,0.000000,106.83,79.50,0.4794,27.30,53.27,Sequential
+18:09:13,Auctioneer - Our Future Faces_mixture.wav,Success,1.4157,0.000000,106.83,89.73,0.4794,29.00,53.45,Sequential
+18:09:15,Auctioneer - Our Future Faces_other.wav,Success,1.4240,0.000000,106.84,84.17,0.4794,32.40,53.14,Sequential
+18:09:17,Auctioneer - Our Future Faces_vocals.wav,Success,1.3668,0.000000,106.83,83.29,0.4794,28.80,53.31,Sequential
+18:09:20,AvaLuna - Waterduct_bass.wav,Success,1.8746,0.000000,107.79,81.47,0.3844,26.60,53.30,Sequential
+18:09:23,AvaLuna - Waterduct_drums.wav,Success,1.8061,0.000000,107.79,80.83,0.3844,24.10,53.24,Sequential
+18:09:26,AvaLuna - Waterduct_mixture.wav,Success,2.0891,0.000000,107.80,86.38,0.3844,28.30,53.31,Sequential
+18:09:29,AvaLuna - Waterduct_other.wav,Success,1.5269,0.000000,107.79,78.88,0.3844,25.70,53.45,Sequential
+18:09:31,AvaLuna - Waterduct_vocals.wav,Success,1.6066,0.000000,107.79,79.73,0.3844,25.90,53.29,Sequential
+18:09:35,BKS - Bulldozer_bass.wav,Success,2.1796,0.000000,108.93,83.84,0.2957,27.80,53.29,Sequential
+18:09:38,BKS - Bulldozer_drums.wav,Success,1.9798,0.000000,108.93,86.72,0.2957,31.60,53.26,Sequential
+18:09:42,BKS - Bulldozer_mixture.wav,Success,2.4688,0.000000,108.92,90.39,0.2957,25.40,53.28,Sequential
+18:09:45,BKS - Bulldozer_other.wav,Success,2.1304,0.000000,108.93,83.67,0.2957,26.80,53.38,Sequential
+18:09:48,BKS - Bulldozer_vocals.wav,Success,1.8381,0.000000,108.93,81.81,0.2957,31.10,53.38,Sequential
+18:09:50,BKS - Too Much_bass.wav,Success,1.4292,0.000000,107.08,82.94,0.4528,30.60,53.33,Sequential
+18:09:52,BKS - Too Much_drums.wav,Success,1.5033,0.000000,107.07,82.40,0.4528,27.40,53.34,Sequential
+18:09:55,BKS - Too Much_mixture.wav,Success,2.0659,0.000000,107.08,87.85,0.4528,26.10,53.44,Sequential
+18:09:58,BKS - Too Much_other.wav,Success,1.4896,0.000000,107.08,79.66,0.4528,31.80,53.32,Sequential
+18:10:00,BKS - Too Much_vocals.wav,Success,1.3710,0.000000,107.09,81.62,0.4528,28.20,53.41,Sequential
+18:10:02,Ben Carrigan - We'll Talk About It All Tonight_bass.wav,Success,1.6038,0.000000,107.72,80.33,0.3910,30.10,53.18,Sequential
+18:10:05,Ben Carrigan - We'll Talk About It All Tonight_drums.wav,Success,1.5705,0.000000,107.72,81.20,0.3910,28.20,53.24,Sequential
+18:10:07,Ben Carrigan - We'll Talk About It All Tonight_mixture.wav,Success,1.6056,0.000000,107.71,86.35,0.3910,28.40,53.30,Sequential
+18:10:11,Ben Carrigan - We'll Talk About It All Tonight_other.wav,Success,2.0948,0.000000,107.71,80.81,0.3910,26.60,53.26,Sequential
+18:10:13,Ben Carrigan - We'll Talk About It All Tonight_vocals.wav,Success,1.5425,0.000000,107.72,78.49,0.3910,32.30,53.36,Sequential
+18:10:15,BigTroubles - Phantom_bass.wav,Success,1.1756,0.000000,105.32,88.06,0.6783,26.90,53.29,Sequential
+18:10:16,BigTroubles - Phantom_drums.wav,Success,1.1472,0.000000,105.33,80.69,0.6783,22.40,53.38,Sequential
+18:10:18,BigTroubles - Phantom_mixture.wav,Success,1.0834,0.000000,105.33,90.56,0.6783,27.00,53.43,Sequential
+18:10:19,BigTroubles - Phantom_other.wav,Success,1.1216,0.000000,105.33,84.39,0.6783,31.10,53.31,Sequential
+18:10:21,BigTroubles - Phantom_vocals.wav,Success,1.0873,0.000000,105.33,80.18,0.6783,31.30,53.13,Sequential

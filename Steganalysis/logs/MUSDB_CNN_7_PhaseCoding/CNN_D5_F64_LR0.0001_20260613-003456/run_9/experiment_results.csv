@@ -1,0 +1,2 @@
+Timestamp,Algo,Depth,Filters,BiLSTM,Val_Acc,Val_AUC,Precision,Recall,F1,Total_Time(s),Max_RAM(MB),Model_Path
+2026-06-13 01:24:42,cnn,5,64,False,0.8143,0.9419,0.9583,0.6571,0.7797,208.27,3703.41,/content/drive/MyDrive/Git-audio-stego/audio-steganograph/Steganalysis/logs/MUSDB_CNN_7_PhaseCoding/CNN_D5_F64_LR0.0001_20260613-003456/run_9/best_model.keras

@@ -38,7 +38,7 @@ class ResourceMonitor(Callback):
         duration = time.time() - self.epoch_start_time
         ram_usage = self.process.memory_info().rss / (1024 * 1024) # MB
         
-        # 2. Cập nhật vào logs (để CSVLogger tự ghi)
+        # 2. Cập nhật vào logs
         logs['duration'] = duration
         logs['ram_usage'] = ram_usage
         
@@ -77,7 +77,7 @@ class StegoTrainer:
         if self.cache_dir: os.makedirs(self.cache_dir, exist_ok=True)
         self.current_run_dir = None 
 
-    def train(self, depth=3, filters=32, epochs=30, batch_size=32, use_bilstm=False, algo=None, lr=0.0001):
+    def train(self, depth=3, filters=32, epochs=30, batch_size=32, use_bilstm=False, algo=None, lr=0.0001, runs=10):
         if algo is not None: self.algo = algo
 
         print(f"\n[Trainer] Starting experiment: Algo={self.algo.upper()} | LR={lr}")
@@ -85,9 +85,9 @@ class StegoTrainer:
         timestamp = datetime.now(VN_TZ).strftime("%Y%m%d-%H%M%S")
         folder_name = f"{self.algo.upper()}_D{depth}_F{filters}_LR{lr}_{timestamp}"
         
-        self.current_run_dir = os.path.join(self.base_log_dir, folder_name)
-        os.makedirs(self.current_run_dir, exist_ok=True)
-        print(f"[Log] Directory: {self.current_run_dir}")
+        base_run_dir = os.path.join(self.base_log_dir, folder_name)
+        os.makedirs(base_run_dir, exist_ok=True)
+        print(f"[Log] Base Directory: {base_run_dir}")
 
         dl_algos = ['cnn', 'bilstm']
         ml_algos = ['svm', 'rf', 'lr']
@@ -102,100 +102,133 @@ class StegoTrainer:
             cache_path = os.path.join(self.cache_dir, cache_file)
 
         dataset = StegoDataset(self.cover_dir, self.stego_dir, model_type, cache_path)
-        X_train, X_val, y_train, y_val = dataset.get_train_val_split()
         
-        if len(X_train) == 0:
-            print("[ERROR] No training data!")
-            return None
+        base_seeds = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909]
+        if runs > 10:
+            base_seeds.extend([1000 + i for i in range(runs - 10)])
+        seeds = base_seeds[:runs]
+        
+        all_acc, all_auc = [], []
 
-        results = {}
-        total_train_time = 0 
-        max_ram_usage = 0    
+        for i, seed in enumerate(seeds):
+            print(f"\n--- Run {i+1}/{runs} (Seed: {seed}) ---")
+     
+            self.current_run_dir = os.path.join(base_run_dir, f"run_{i+1}")
+            os.makedirs(self.current_run_dir, exist_ok=True)
+            
+            # Tiếp nhận 6 biến
+            X_train, X_val, X_test, y_train, y_val, y_test = dataset.get_train_val_split(
+                test_size=0.15, 
+                val_size=0.15, 
+                random_state=seed
+            )
+            
+            if len(X_train) == 0:
+                print("[ERROR] No training data!")
+                continue
 
-        # --- DEEP LEARNING ---
-        if self.algo in dl_algos:
-            input_shape = X_train.shape[1:]
-            model = build_deep_model(input_shape, depth, filters, use_bilstm, lr=lr)
-            
-            model_path = os.path.join(self.current_run_dir, "best_model.keras")
-            csv_log_path = os.path.join(self.current_run_dir, "training_history.csv") # File chung
-            
-            # QUAN TRỌNG: ResourceMonitor phải đứng TRƯỚC CSVLogger
-            callbacks = [
-                ResourceMonitor(csv_log_path), # <--- Tính toán duration/ram và inject vào logs
-                ModelCheckpoint(model_path, save_best_only=True, monitor='val_accuracy', verbose=0),
-                CSVLogger(csv_log_path),       # <--- Ghi logs (bao gồm cả duration/ram vừa thêm)
-                ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=3, min_lr=1e-7, verbose=1)
-            ]
-            
-            start_time = time.time()
-            history = model.fit(X_train, y_train, validation_data=(X_val, y_val),
-                                epochs=epochs, batch_size=batch_size, callbacks=callbacks, verbose=1)
-            total_train_time = time.time() - start_time
-            max_ram_usage = psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
+            results = {}
+            total_train_time = 0 
+            max_ram_usage = 0    
 
-            print("[Evaluate] Reloading Best Model to calculate metrics...")
-            model.load_weights(model_path)
+            # --- DEEP LEARNING ---
+            if self.algo in dl_algos:
+                input_shape = X_train.shape[1:]
+                model = build_deep_model(input_shape, depth, filters, use_bilstm, lr=lr)
+                # model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+                
+                model_path = os.path.join(self.current_run_dir, "best_model.keras")
+                csv_log_path = os.path.join(self.current_run_dir, "training_history.csv")
+                resource_log_path = os.path.join(self.current_run_dir, "resource_usage.csv")
+                
+                callbacks = [
+                    ResourceMonitor(resource_log_path),
+                    ModelCheckpoint(model_path, save_best_only=True, monitor='val_accuracy', verbose=0),
+                    CSVLogger(csv_log_path),
+                    ReduceLROnPlateau(monitor='val_loss', factor=0.5, patience=3, min_lr=1e-7, verbose=0)
+                ]
+                
+                start_time = time.time()
+                # Tập Validation được cấp cho quá trình fit
+                history = model.fit(X_train, y_train, validation_data=(X_val, y_val),
+                                    epochs=epochs, batch_size=batch_size, callbacks=callbacks, verbose=0)
+                total_train_time = time.time() - start_time
+                max_ram_usage = psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
+
+                model.load_weights(model_path)
+                
+                # Tập Test ĐỘC LẬP được cấp cho quá trình predict
+                y_pred_prob = model.predict(X_test, verbose=0)
+                y_pred = (y_pred_prob > 0.5).astype(int).flatten()
+                
+                results['accuracy'] = accuracy_score(y_test, y_pred)
+                results['auc'] = roc_auc_score(y_test, y_pred_prob)
+                results['precision'] = precision_score(y_test, y_pred, zero_division=0)
+                results['recall'] = recall_score(y_test, y_pred, zero_division=0)
+                results['f1'] = f1_score(y_test, y_pred, zero_division=0)
+                results['model_path'] = model_path
+                
+                self._plot_history(history, self.algo)
+                self._plot_confusion_matrix(y_test, y_pred, self.algo)
+
+            # --- TRADITIONAL MACHINE LEARNING ---
+            else: 
+                # Gộp X_train và X_val để tận dụng dữ liệu cho thuật toán ML truyền thống
+                X_train_combined = np.concatenate((X_train, X_val), axis=0)
+                y_train_combined = np.concatenate((y_train, y_val), axis=0)
+                
+                X_train_flat = X_train_combined.reshape(X_train_combined.shape[0], -1)
+                X_test_flat = X_test.reshape(X_test.shape[0], -1)
+                
+                if self.algo == 'svm':
+                    model = make_pipeline(StandardScaler(), SVC(probability=True, kernel='rbf'))
+                elif self.algo == 'rf':
+                    model = RandomForestClassifier(n_estimators=100, random_state=42)
+                elif self.algo == 'lr':
+                    model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000, random_state=42))
+                
+                start_time = time.time()
+                model.fit(X_train_flat, y_train_combined)
+                total_train_time = time.time() - start_time
+                max_ram_usage = psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
+                
+                y_pred = model.predict(X_test_flat)
+                y_prob = model.predict_proba(X_test_flat)[:, 1] if hasattr(model, "predict_proba") else y_pred
+                
+                results['accuracy'] = accuracy_score(y_test, y_pred)
+                results['auc'] = roc_auc_score(y_test, y_prob)
+                results['precision'] = precision_score(y_test, y_pred, zero_division=0)
+                results['recall'] = recall_score(y_test, y_pred, zero_division=0)
+                results['f1'] = f1_score(y_test, y_pred, zero_division=0)
+                
+                pkl_path = os.path.join(self.current_run_dir, "model.pkl")
+                joblib.dump(model, pkl_path)
+                results['model_path'] = pkl_path
+                
+                self._plot_confusion_matrix(y_test, y_pred, self.algo)
+
+            results['total_time'] = total_train_time
+            results['ram_usage'] = max_ram_usage
             
-            y_pred_prob = model.predict(X_val)
-            y_pred = (y_pred_prob > 0.5).astype(int).flatten()
+            all_acc.append(results['accuracy'])
+            all_auc.append(results['auc'])
+
+            print(f"Test Acc: {results['accuracy']:.4f} | Test AUC: {results['auc']:.4f}")
+            self._save_summary_log(self.algo, depth, filters, use_bilstm, results)
             
-            results['accuracy'] = accuracy_score(y_val, y_pred)
-            results['auc'] = roc_auc_score(y_val, y_pred_prob)
-            results['precision'] = precision_score(y_val, y_pred, zero_division=0)
-            results['recall'] = recall_score(y_val, y_pred, zero_division=0)
-            results['f1'] = f1_score(y_val, y_pred, zero_division=0)
-            results['model_path'] = model_path
-            
-            self._plot_history(history, self.algo)
-            self._plot_confusion_matrix(y_val, y_pred, self.algo)
+        print(f"Mean Accuracy: {np.mean(all_acc)*100:.2f} ± {np.std(all_acc)*100:.2f}%")
+        print(f"Mean AUC     : {np.mean(all_auc):.4f} ± {np.std(all_auc):.4f}")
+        return {'mean_acc': np.mean(all_acc), 'std_acc': np.std(all_acc), 'mean_auc': np.mean(all_auc), 'std_auc': np.std(all_auc)}
 
 
-        else: 
-            print(f"[ML] Training {self.algo.upper()}...")
-            X_train_flat = X_train.reshape(X_train.shape[0], -1)
-            X_val_flat = X_val.reshape(X_val.shape[0], -1)
-            
-            if self.algo == 'svm':
-                model = make_pipeline(StandardScaler(), SVC(probability=True, kernel='rbf'))
-            elif self.algo == 'rf':
-                model = RandomForestClassifier(n_estimators=100, random_state=42)
-            
-            start_time = time.time()
-            model.fit(X_train_flat, y_train)
-            total_train_time = time.time() - start_time
-            max_ram_usage = psutil.Process(os.getpid()).memory_info().rss / (1024 * 1024)
-            
-            y_pred = model.predict(X_val_flat)
-            y_prob = model.predict_proba(X_val_flat)[:, 1] if hasattr(model, "predict_proba") else y_pred
-            
-            results['accuracy'] = accuracy_score(y_val, y_pred)
-            results['auc'] = roc_auc_score(y_val, y_prob)
-            results['precision'] = precision_score(y_val, y_pred, zero_division=0)
-            results['recall'] = recall_score(y_val, y_pred, zero_division=0)
-            results['f1'] = f1_score(y_val, y_pred, zero_division=0)
-            
-            pkl_path = os.path.join(self.current_run_dir, "model.pkl")
-            joblib.dump(model, pkl_path)
-            results['model_path'] = pkl_path
-            
-            self._plot_confusion_matrix(y_val, y_pred, self.algo)
 
-        results['total_time'] = total_train_time
-        results['ram_usage'] = max_ram_usage
-
-        print(f"\n[Results] Acc: {results['accuracy']:.4f} | F1: {results['f1']:.4f} | Time: {total_train_time:.2f}s | RAM: {max_ram_usage:.2f}MB")
-        self._save_summary_log(self.algo, depth, filters, use_bilstm, results)
-        return results
-
-    # (Các hàm _plot_history, _plot_confusion_matrix, _save_summary_log giữ nguyên như cũ)
     def _plot_history(self, history, algo):
         def plot_single_metric(train_metric, val_metric, metric_name, filename):
             epochs = range(1, len(train_metric) + 1)
             plt.figure(figsize=(10, 8))
             plt.plot(epochs, train_metric, label=f'Training {metric_name}', linewidth=3)
             plt.plot(epochs, val_metric, label=f'Validation {metric_name}', linewidth=3)
-            plt.title(f'{metric_name} History - {algo.upper()}', fontsize=24, fontweight='bold')
+            plt.title(f'{metric_name} History - {algo.upper()}', fontsize=30, fontweight='bold')
             plt.xlabel('Epochs', fontsize=20)
             plt.ylabel(metric_name, fontsize=20)
             plt.tick_params(axis='both', labelsize=18)
@@ -221,11 +254,11 @@ class StegoTrainer:
         labels = np.asarray(labels).reshape(2, 2)
         plt.figure(figsize=(10, 8))
         sns.set(font_scale=1.4) 
-        sns.heatmap(cm/np.sum(cm), annot=labels, fmt='', cmap='Blues', annot_kws={"size": 24, "weight": "bold"}, cbar=False)
-        plt.ylabel('True', fontsize=24)
-        plt.xlabel('Predicted', fontsize=24)
-        plt.xticks([0.5, 1.5], ['Cover', 'Stego'], fontsize=24)
-        plt.yticks([0.5, 1.5], ['Cover', 'Stego'], fontsize=24, rotation=0)
+        sns.heatmap(cm/np.sum(cm), annot=labels, fmt='', cmap='Blues', annot_kws={"size": 30, "weight": "bold"}, cbar=False)
+        plt.ylabel('True', fontsize=30)
+        plt.xlabel('Predicted', fontsize=30)
+        plt.xticks([0.5, 1.5], ['Cover', 'Stego'], fontsize=30)
+        plt.yticks([0.5, 1.5], ['Cover', 'Stego'], fontsize=20, rotation=0)
         plt.tight_layout()
         plt.savefig(os.path.join(self.current_run_dir, "chart_cm.png"))
         plt.close()

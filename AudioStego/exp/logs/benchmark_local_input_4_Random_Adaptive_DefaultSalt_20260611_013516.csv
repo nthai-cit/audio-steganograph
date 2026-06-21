@@ -1,0 +1,4 @@
+Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info
+01:35:22,A Classic Education - NightOwl_bass.wav,Success,6.1011,0.000000,105.99,88.36,0.5814,77.10,57.09,Rnd_Adaptive
+01:35:25,A Classic Education - NightOwl_drums.wav,Success,1.9166,0.000000,105.99,72.70,0.5814,84.50,56.98,Rnd_Adaptive
+01:35:27,A Classic Education - NightOwl_mixture.wav,Success,1.8814,0.000000,106.01,90.29,0.5814,84.80,57.13,Rnd_Adaptive

@@ -17,7 +17,8 @@ CASE_CONFIGS = {
     4: {"name": "4_Random_Adaptive_DefaultSalt", "flags": ["--adaptive"], "desc": "Rnd_Adaptive"},
     5: {"name": "5_Random_Adaptive_ContentSalt", "flags": ["--adaptive", "--salt_content"], "desc": "Rnd_Adaptive_Content"},
     6: {"name": "6_LSBMR_Literature", "flags": [], "desc": "LSBMR_Literature"},
-    7: {"name": "7_PhaseCoding", "flags": ["--phase"], "desc": "Phase_Coding_FFT"}
+    7: {"name": "7_PhaseCoding", "flags": ["--phase"], "desc": "Phase_Coding_FFT"},
+    8: {"name": "8_Alarood2022_RandLSB", "flags": ["--alarood"], "desc": "Alarood2022_RandLSB"},
 }
 
 def calculate_metrics(cover_path, stego_path):

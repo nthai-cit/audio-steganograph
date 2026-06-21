@@ -25,9 +25,10 @@ def parse_args():
 
     group_model = parser.add_argument_group('Model Architecture')
     group_model.add_argument('--algo', 
-                             choices=['cnn', 'bilstm', 'svm', 'rf', 'lr'], 
+                             choices=['cnn', 'bilstm'], 
                              default='cnn',
-                             help="Thuat toan: cnn, bilstm (Deep Learning) hoac svm, rf, lr (Machine Learning)")
+                             help="Thuat toan: cnn, bilstm (Deep Learning)")
+    group_model.add_argument('--runs', type=int, default=10, help="So luong luot chay doc lap (mac dinh: 10)")
     group_model.add_argument('--depth', type=int, default=5, help="Do sau cua mang CNN (So lop Conv)")
     group_model.add_argument('--filters', type=int, default=64, help="So luong filter khoi tao")
     group_model.add_argument('--use_bilstm', action='store_true', help="Bat lop BiLSTM (Ket hop C-RNN)")
@@ -81,7 +82,8 @@ def main():
             epochs=args.epochs,
             batch_size=args.batch_size,
             use_bilstm=use_bilstm_flag,
-            lr=args.lr
+            lr=args.lr,
+            runs=args.runs
         )
 
         if results:

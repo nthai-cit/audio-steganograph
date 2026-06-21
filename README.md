@@ -130,3 +130,6 @@ The `train.py` script manages the coordination of the Steganalysis training pipe
     python train.py --cover "data/cover" --stego "data/stego" --algo bilstm --use_bilstm --lr 0.0001
     ```
 
+*note:
+- The password we used: NgocChien
+- The base_seeds = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909]
