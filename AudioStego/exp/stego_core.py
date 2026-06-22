@@ -100,7 +100,8 @@ class StegoImproved:
             if k_strategy == 'adaptive':
                 required_bits = (len(payload_bytes) + 10) * 8
                 calc_k = math.ceil(required_bits / num_slots)
-                k = max(1, min(calc_k, 6))
+                # k = max(1, min(calc_k, 6))
+                k = min(calc_k, 6) 
             else:
                 k = fixed_k_val
 

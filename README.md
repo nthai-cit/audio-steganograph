@@ -1,135 +1,215 @@
-# Audio Steganography
+# Audio Steganography — Lossless LSB with PSR Defense Against CNN Steganalysis
+
+**Paper:** Securing Lossless Audio Against AI-Driven Steganalysis
+**Venue:** Multimedia Tools and Applications (MTAP), Springer (under review, R1)
+
+## Table of Contents
+
+1. [Overview](#1-overview)
+2. [Key Features](#2-key-features)
+3. [Directory Structure](#3-directory-structure)
+4. [Installation](#4-installation)
+5. [Data Preparation](#5-data-preparation)
+6. [Usage: Steganography (main.py)](#6-usage-steganography-mainpy)
+7. [Usage: Batch Benchmark (run_case_limited.py)](#7-usage-batch-benchmark-run_case_limitedpy)
+8. [Usage: Steganalysis Training (train.py)](#8-usage-steganalysis-training-trainpy)
+9. [Usage: Metrics Aggregation (metrics.py)](#9-usage-metrics-aggregation-metricspy)
+10. [Reproducibility](#10-reproducibility)
+11. [Citation](#11-citation)
 
 ## 1. Overview
-This project implements a comprehensive pipeline for **Audio Steganography**. The core focus is the **Improved LSB** algorithm—an adaptive LSB method utilizing Pseudo-Random Shuffling based on passwords and Content Hashes to achieve resistance against deep learning-based attacks.
 
-The system supports large-scale evaluation of signal fidelity (**SNR**, **PSNR**) and statistical security (**AUC**, **Accuracy**) against various machine learning classifiers.
+This repository is the official implementation for the paper *Securing Lossless Audio Against AI-Driven Steganalysis*. It provides a complete pipeline for:
 
-![System Architecture](workflow.svg)
+- **Steganography** — embedding secret data (images, text, binary files) into lossless WAV audio using five LSB-based methods (M1–M5) and one frequency-domain baseline (Phase Coding).
+- **Steganalysis** — training CNN / C-RNN detectors to evaluate the statistical detectability of each method across independent runs on MUSDB18-HQ and TIMIT.
+
+The proposed method M5 combines adaptive-*k* LSB with PRNG-driven Fisher–Yates permutation and key-and-content-derived salt (SHA-256), targeting a favorable trade-off between imperceptibility and resistance to CNN-based steganalysis while maintaining fully lossless secret recovery.
 
 ## 2. Key Features
-| Algorithm | Type | Description |
-| :--- | :--- | :--- |
-| **Standard LSB** | Spatial Domain | Replaces Least Significant Bits sequentially. |
-| **Phase Coding** | Frequency Domain | Embeds data into the phase spectrum for increased robustness. |
-| **Improved LSB** | Adaptive | Utilizes Pseudo-Random Shuffling PSR seeded by Password + Content Salt. |
 
-### Highlights
-* **Security:** Key-Salt mechanism protects against sequential extraction attacks and CNN-based statistical analysis.
-* **Integrity:** Supports original data recovery (Lossless) without compression.
-* **Analysis:** Automated evaluation of SNR/PSNR and steganalysis resistance.
+| ID | Algorithm | Domain | Description |
+| :--- | :--- | :--- | :--- |
+| M1 | Standard LSB | Spatial | Sequential 1-bit LSB replacement |
+| M2 | Random LSB — Fixed *k*, Default Salt | Spatial | PRNG permutation, fixed *k*, static salt |
+| M3 | Random LSB — Fixed *k*, Content Salt | Spatial | PRNG permutation, fixed *k*, SHA-256 content salt |
+| M4 | Random LSB — Adaptive *k*, Default Salt | Spatial | PRNG permutation, adaptive *k* ∈ [1, 6], static salt |
+| M5 | Random LSB — Adaptive *k*, Content Salt | Spatial | PRNG permutation, adaptive *k*, SHA-256 content salt (proposed) |
+| PC | Phase Coding | Frequency | FFT-based phase manipulation |
+| BL | Alarood et al. (2022) | Spatial | Randomized-LSB baseline from the literature |
+
+**Highlights**
+
+- **Security** — Key- and content-derived salt prevents sequential extraction and disrupts patterns exploitable by CNN-based steganalysis.
+- **Lossless carrier** — Full byte-exact recovery of the secret payload; no lossy compression is applied to the audio carrier itself.
+- **Matched physical payload** — Image payloads are pre-processed (resize + JPEG compression at a fixed quality) so that the *physical embedding rate* can be aligned with literature baselines for a fair, apples-to-apples distortion comparison.
+- **Adaptive capacity** — *k* is computed automatically from payload size and available carrier samples (capacity-aware matching).
+- **Reproducible evaluation** — GroupShuffleSplit (70/15/15) with fixed seeds and a deterministic test partition.
 
 ## 3. Directory Structure
+
 ```text
-audio-steganograph
-├───main.py                 # [CLI] Main tool for single-file encode/decode
-├───train.py                # [CLI] Script for CNN model training & evaluation
-├───AudioStego              # [CORE ALGORITHMS]
-│   ├───improved_lsb        # PSR LSB (Secure & Robust)
-│   ├───lsb                 # Standard LSB implementation
-│   ├───phasecoding         # Phase Coding (FFT)
-│   ├───utils               # Processing and Visualization utilities
-│   └───exp                 # Experimental logs (5 Cases Benchmark)
-├───Steganalysis            # [DETECTION & CNN MODELS]
-│   ├───Data                # Feature sets (CNN Spectrograms for 256/512 payloads)
-│   └───logs                # Tuning logs (Layer depth, Filter, LR)
-├───inputs                  # [DATASETS]
-│   ├───timit               # Speech Corpus (Used in paper)
-│   ├───musdb-18            # High-Fidelity Music (Used in paper)
-│   └───pascal-voc-2012     # Image Source (Used as payload)
-├───outputs                 # [RESULTS]
-    ├───encode / decode     # Single operation results
-    └───batch               # Batch processing results
+audio-steganograph/
+├── main.py                  # CLI: single-file encode / decode
+├── train.py                 # CLI: CNN steganalysis training
+├── metrics.py                # CLI: aggregate mean/std from experiment_results.csv
+├── helpers.py                # GUI file picker, session folder, CSV logger utilities
+├── requirements.txt
+├── workflow.svg
+│
+├── AudioStego/                # Core steganography modules & algorithms
+│   ├── exp/                   # Batch experiment scripts
+│   │   ├── benchmark_stego.py     # CLI: single-file benchmark
+│   │   ├── run_case.py            # CLI: full-dataset batch benchmark
+│   │   ├── run_case_limited.py    # CLI: capacity-aware dataset generation
+│   │   ├── stego_core.py          # Core algorithms (M1–M5, Phase, Alarood)
+│   │   └── logs/                  # Benchmark output logs
+│   ├── improved_lsb/          # M2–M5 wrapper (PSR LSB)
+│   ├── lsb/                   # M1 wrapper (Standard LSB)
+│   ├── phasecoding/           # Phase Coding wrapper
+│   ├── alarood/                # Alarood et al. (2022) baseline implementation
+│   └── utils/                  # Visualization utilities
+│
+├── Steganalysis/               # Detection pipeline
+│   ├── dataset.py               # Feature extraction + GroupShuffleSplit loader
+│   ├── features.py              # Mel spectrogram (high-pass filtered) + MFCC features
+│   ├── models.py                 # build_deep_model (CNN / C-RNN)
+│   ├── trainer.py                # StegoTrainer: training loop, logging, plotting
+│   ├── Data/                     # Extracted feature caches (not version-controlled)
+│   └── logs/                     # Per-run training checkpoints and CSVs (not version-controlled)
+│
+├── inputs/                      # Datasets & sample files
+│   ├── musdb-18/                 # MUSDB18-HQ music corpus
+│   ├── random-image-coco/        # Image payloads (COCO)
+│   └── audio-cat-and-dogs/       # Generalization test corpus
+│
+└── google_colab/                # Supplementary notebooks & traditional ML logs
+    ├── logs_staganography/        # Notebooks for plotting steganography metrics
+    └── logs_steganalysis/         # SVM, Random Forest, Logistic Regression pipelines
 ```
-## 4. Data Preparation
-To replicate the large-scale experiments, please download the following datasets and extract them into the `inputs/` directory:
 
-**Datasets:**
-1. **[MUSDB18-HQ](https://zenodo.org/records/3338373)**: High-fidelity music data, ideal for testing high-capacity steganography.
-2. **[Audio Cats/Dogs](https://www.kaggle.com/datasets/mmoreaux/audio-cats-and-dogs)**: Used for extended generalization tests.
-3. **[TIMIT Corpus](https://www.kaggle.com/datasets/mfekadu/darpa-timit-acousticphonetic-continuous-speech)**: The primary speech carrier used in the reported experiments.
-4. **[Pascal VOC 2012](https://www.kaggle.com/datasets/banuprasadb/pascal-voc-2012)**: Standard image source for secret payloads.
+> **Note:** `Steganalysis/Data/` and `Steganalysis/logs/` contain large binary artifacts (`.npz` feature caches, `.keras` model checkpoints) generated locally during experimentation. These are excluded from version control via `.gitignore`; see [Section 8](#8-usage-steganalysis-training-trainpy) for how to regenerate them.
 
-## 5. Installation
-**Requirements:** Python 3.11 or higher and CUDA (recommended for CNN training).
+## 4. Installation
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/nthai-cit/audio-steganograph.git](https://github.com/nthai-cit/audio-steganograph.git)
-   cd audio-steganography
-   ```
-2. **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-## 6. Usage Guide: Steganography
-The `main.py` script supports three primary actions: `encode`, `decode`, and `batch`.
+Requirements: Python 3.11+, CUDA 11.x+ (recommended for CNN training).
 
-| Argument | Short | Action | Description | Default / Options |
+```bash
+git clone https://github.com/nthai-cit/audio-steganograph.git
+cd audio-steganograph
+pip install -r requirements.txt
+```
+
+## 5. Data Preparation
+
+Place the datasets into the `inputs/` directory according to the structure below:
+
+```text
+inputs/
+├── musdb-18/             *.wav
+├── random-image-coco/    *.jpg
+└── audio-cat-and-dogs/   *.wav
+```
+
+> TIMIT source files are distributed in NIST SPHERE format, which is not directly readable by `scipy.io.wavfile` or `soundfile`. Convert to RIFF WAV (or filter by header) before use with the scripts in `AudioStego/exp/`.
+
+## 6. Usage: Steganography (main.py)
+
+`main.py` supports three actions: `encode`, `decode`, and `batch`. If `--input` or `--secret` are omitted, a GUI file-picker dialog opens automatically.
+
+### Arguments
+
+| Argument | Short | Action | Description | Default |
 | :--- | :--- | :--- | :--- | :--- |
-| `action` | N/A | All | Selects the operation mode | `encode`, `decode`, `batch` |
-| `--method` | `-m` | All | Steganography algorithm to use | `lsb`, `phase`, `improved` |
-| `--input` | `-i` | All | Input audio file or directory | `.wav` file or Folder |
-| `--secret` | `-s` | Enc/Batch | Secret data file to hide | Text, Image, or Audio |
-| `-k` | N/A | Enc/Batch | Number of LSB bits (LSB/Improved only) | `2` |
-| `--password` | `-p` | All | Security password for encryption | `default` |
-| `--visualize`| `-v` | Batch | Display performance charts (SNR/PSNR) | `Flag` (False) |
-| `--save-files`| N/A | Batch | Save generated stego files to disk | `Flag` (False) |
+| `action` | — | All | Operation mode | `encode` / `decode` / `batch` |
+| `--method` | `-m` | All | Algorithm | `lsb` / `phase` / `improved` |
+| `--input` | `-i` | All | Cover WAV file or directory | GUI picker |
+| `--secret` | `-s` | Encode / Batch | Secret file to hide | GUI picker |
+| `-k` | — | Encode / Batch | Number of LSB bits (LSB / Improved only) | `None` (encode), `2` (batch) |
+| `--password` | `-p` | All | Embedding password | `"default"` |
 
-**Usage Examples:**
+### Examples
 
-* **Encoding:**
-    ```bash
-    python main.py encode -m improved -i "cover.wav" -s "secret.png" -p "MyPass123"
-    ```
-* **Decoding:**
-    ```bash
-    python main.py decode -m improved -i "stego.wav" -p "MyPass123"
-    ```
-* **Batch Processing with Visualization:**
-    ```bash
-    python main.py batch -m improved -i "./dataset" -s "Secret Mess" -v --save-files
-    ```
+```bash
+# Encode an image into a WAV file (Improved LSB / M5)
+python main.py encode -m improved -i "inputs/audio.wav" -s "inputs/img.jpg" -p "NgocChien"
 
-## 8. Steganalysis Training Parameters (train.py)
-The `train.py` script manages the coordination of the Steganalysis training pipeline, supporting both Deep Learning and classical Machine Learning models.
+# Decode and recover the secret
+python main.py decode -m improved -i "outputs/encode/stego.wav" -p "NgocChien"
+```
 
-#### A. Dataset Configuration
-| Argument | Description | Default |
+## 7. Usage: Batch Benchmark (run_case_limited.py)
+
+Generates a paired cover/stego dataset at scale. The script is located in `AudioStego/exp/`.
+
+```bash
+python AudioStego/exp/run_case_limited.py \
+    --case_id 5 \
+    --input_dir   "inputs/musdb-18" \
+    --output_base "outputs/dataset" \
+    --secret_dir  "inputs/random-image-coco" \
+    --max_files 750 \
+    --limit 500 \
+    --size 512 \
+    --password "NgocChien"
+```
+
+### Case IDs
+
+| ID | Name | Method |
 | :--- | :--- | :--- |
-| `--cover` | Path to the directory containing Clean/Cover audio files | **Required** |
-| `--stego` | Path to the directory containing Embedded/Stego audio files | **Required** |
-| `--cache_dir` | Storage location for extracted feature files (`.npz`) | `Steganalysis/cache` |
-| `--log_dir` | Directory to save training logs and model checkpoints | `Steganalysis/logs` |
+| 1 | `1_NoRandom` | M1 — Sequential LSB |
+| 2 | `2_Random_Fixed_DefaultSalt` | M2 |
+| 3 | `3_Random_Fixed_ContentSalt` | M3 |
+| 4 | `4_Random_Adaptive_DefaultSalt` | M4 |
+| 5 | `5_Random_Adaptive_ContentSalt` | M5 (proposed) |
+| 7 | `7_PhaseCoding` | Phase Coding |
 
-#### B. Model Architecture
-| Argument | Description | Options / Default |
-| :--- | :--- | :--- |
-| `--algo` | Selection of detection algorithm | `cnn`, `bilstm`, `svm`, `rf`, `lr` |
-| `--depth` | Network depth (Number of Convolutional layers) | `5` |
-| `--filters` | Number of initial filters for the model | `64` |
-| `--use_bilstm` | Enable BiLSTM layer to form a C-RNN architecture | `Flag` (False) |
+## 8. Usage: Steganalysis Training (train.py)
 
-#### C. Training Hyperparameters
-| Argument | Description | Default Value |
-| :--- | :--- | :--- |
-| `--epochs` | Total number of training iterations | `30` (Optimal: `50`) |
-| `--batch_size` | Number of samples per training batch | `32` (Optimal: `64`) |
-| `--lr` | Learning rate for gradient descent | `0.0001` ($10^{-4}$) |
+`train.py` orchestrates independent training of CNN / C-RNN steganalysis detectors.
 
+```bash
+# Train a CNN detector on the M5 stego corpus
+python train.py \
+    --cover "outputs/dataset/5_Random_Adaptive_ContentSalt/cover" \
+    --stego "outputs/dataset/5_Random_Adaptive_ContentSalt/stego" \
+    --algo cnn --depth 5 --filters 64 \
+    --epochs 50 --batch_size 64 --lr 0.0001 --runs 10
+```
 
+### Feature Extraction Details
 
-**Usage Examples:**
+- **Input:** fixed-length clip at native sample rate (length depends on the source corpus; see `Steganalysis/dataset.py`).
+- **Secret payload:** images resized and JPEG-compressed at a fixed quality to align the physical embedding rate with the comparison baseline.
+- **Pre-processing:** 10th-order Butterworth high-pass filter (cutoff 2000 Hz) to expose LSB-induced noise.
+- **Representation:** Mel spectrogram, 128 mel bands × 216 time frames, log-power (dB), single channel.
+- **Split protocol:** GroupShuffleSplit — 70% train / 15% validation / 15% test; test partition fixed at `random_state=42`.
 
-* **Training the Baseline CNN (5 layers):**
-    ```bash
-    python train.py --cover "data/cover" --stego "data/stego" --algo cnn --depth 5 --filters 64
-    ```
-* **Training a C-RNN (CNN + BiLSTM):**
-    ```bash
-    python train.py --cover "data/cover" --stego "data/stego" --algo bilstm --use_bilstm --lr 0.0001
-    ```
+## 9. Usage: Metrics Aggregation (metrics.py)
 
-*note:
-- The password we used: NgocChien
-- The base_seeds = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909]
+Reads all `experiment_results.csv` files produced by `train.py` and computes mean ± standard deviation across runs.
+
+```bash
+python metrics.py \
+    --dir "Steganalysis/logs/Impro_LSB_CNN_image_100kb" \
+    --filter "CNN_"
+```
+
+#### 10. Reproducibility
+The pipeline is designed to be fully reproducible with the following fixed configuration and deposited artifacts:
+
+| Item | Value / Location |
+| ------ | ------ |
+| **Track-ID Split** | Split protocol and reproduction logic provided in corpus_split_protocol.txt |
+| **Password** | Nguy....ien (Author's name) |
+| **10-run seeds** | base_seeds = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909] |
+| **Test split seed** | 42 (fixed via GroupShuffleSplit) |
+| **Train/Val split** | varies per run seed (see Steganalysis\dataset.py) |
+| **Static salt (M2, M4)** | "STATIC_DEFAULT_SALT" |
+| **Content salt (M3, M5)** | SHA-256 of the first 1024 audio samples |
+| **PRNG seed formula** | SHA-256("{password}__{salt}") % 2^32 |
+| **CNN Weights (M5)** | Best models deposited in `Steganalysis\logs\MUSDB_LSB_5_Random_Adaptive_ContentSalt\CNN_D5_F64_LR0.0001_20260611-170236\run_10` |
+| **Phase Coding** | excludes files that fail the physical-payload capacity constraint under block-wise 1D FFT |
+
+Supplementary code and logs for plotting charts and running comparative baseline models (SVM, Random Forest, Logistic Regression) and Notebooks are stored in `google_colab/`.

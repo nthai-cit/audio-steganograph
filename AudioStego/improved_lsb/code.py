@@ -108,7 +108,8 @@ def encode(cover_path, secret_input, output_path, k=None, password=None):
             
             k_calculated = math.ceil(payload_bits_needed / num_slots)
             
-            k = max(1, min(k_calculated, 6))
+            # k = max(1, min(k_calculated, 6))
+            k = min(k_calculated, 6) 
             
             print(f"   Calculated k={k_calculated} -> Clamped k={k}")
 

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-=======
-# Python
->>>>>>> chien
 __pycache__/
 *.py[cod]
 *$py.class
@@ -25,7 +20,6 @@ wheels/
 .installed.cfg
 *.egg
 
-<<<<<<< HEAD
 
 inputs/timit/
 inputs/musdb-18/
@@ -36,22 +30,12 @@ inputs/*/
 
 Steganalysis/cache/
 Steganalysis/Data/
-=======
-# Datasets (large files)
-inputs/*/
-
-# ML artifacts
-Steganalysis/cache/
-Steganalysis/Data/
-Steganalysis/logs/
->>>>>>> chien
 *.npz
 *.h5
 *.keras
 *.pth
 *.checkpoint
 
-<<<<<<< HEAD
 
 outputs/encode/
 outputs/decode/
@@ -69,41 +53,15 @@ exp/logs/
 *.gif
 
 
-=======
-# Outputs
-outputs/*/
-exp/logs/
-
-# Audio / Image data files (scoped to data dirs only)
-inputs/**/*.wav
-inputs/**/*.mp3
-inputs/**/*.flac
-inputs/**/*.png
-inputs/**/*.jpg
-inputs/**/*.jpeg
-inputs/**/*.bmp
-inputs/**/*.gif
-outputs/**/*.wav
-outputs/**/*.png
-outputs/**/*.jpg
-
-# Environments
->>>>>>> chien
 .venv
 venv/
 ENV/
 .env
-<<<<<<< HEAD
-=======
-
-# IDE
->>>>>>> chien
 .vscode/
 .idea/
 *.swp
 *.swo
 
-<<<<<<< HEAD
 .DS_Store
 Thumbs.db
 
@@ -114,12 +72,5 @@ inputs/pascal-voc-2012/**
 Steganalysis/Data/**
 
 *.docx
-=======
-# OS
-.DS_Store
-Thumbs.db
 
-# Misc
-*.docx
-
->>>>>>> chien
+!Steganalysis\logs\MUSDB_LSB_5_Random_Adaptive_ContentSalt\CNN_D5_F64_LR0.0001_20260611-170236\run_10
