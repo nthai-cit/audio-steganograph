@@ -19,7 +19,7 @@
 
 ## 1. Overview
 
-This repository is the official implementation for the paper *Securing Lossless Audio Against AI-Driven Steganalysis*. It provides a complete pipeline for:
+![wf](workflow.svg)
 
 - **Steganography** — embedding secret data (images, text, binary files) into lossless WAV audio using five LSB-based methods (M1–M5) and one frequency-domain baseline (Phase Coding).
 - **Steganalysis** — training CNN / C-RNN detectors to evaluate the statistical detectability of each method across independent runs on MUSDB18-HQ and TIMIT.
