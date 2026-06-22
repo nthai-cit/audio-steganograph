@@ -201,7 +201,7 @@ The pipeline is designed to be fully reproducible with the following fixed confi
 
 | Item | Value / Location |
 | ------ | ------ |
-| **Track-ID Split** | Split protocol and reproduction logic provided in corpus_split_protocol.txt |
+| **Track-ID Split** | Split protocol and reproduction logic provided in [corpus_split_protocol.txt](corpus_split_protocol.txt) |
 | **Password** | Nguy....ien (Author's name) |
 | **10-run seeds** | base_seeds = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909] |
 | **Test split seed** | 42 (fixed via GroupShuffleSplit) |
