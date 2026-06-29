@@ -1,0 +1,53 @@
+=========================================================
+MUSDB18-HQ CORPUS SPLIT PROTOCOL
+=========================================================
+
+As stated in the manuscript and response letter, the steganalysis evaluation was conducted over 10 independent runs to capture true generalization variance. Because the train/validation/test partitions strictly vary across these 10 runs (governed by their respective random seeds), providing a single static track-ID split file is insufficient.
+
+This document details the exact protocol and Python logic required to deterministically reproduce the strict cover-disjoint 70/15/15 partitions for any given run.
+
+1. RANDOM SEEDS
+---------------
+The exact 10-seed array used for the 10 independent runs is:
+SEEDS = [42, 101, 202, 303, 404, 505, 606, 707, 808, 909]
+
+2. DATASET COMPOSITION
+----------------------
+- Total audio files: 1,500 (750 Cover tracks + 750 Stego tracks).
+- Groups: 750 unique Track-IDs. To ensure no data leakage, the Cover and Stego versions of the same track share the same Group/Track-ID.
+- Target Split: 70% Training (~525 groups), 15% Validation (~112 groups), 15% Testing (~113 groups).
+
+3. SPLITTING LOGIC (Python / scikit-learn)
+------------------------------------------
+We utilize `GroupShuffleSplit` from `scikit-learn` to ensure that paired Cover and Stego files are never split across different sets. The following pseudo-code perfectly reproduces the partitioning logic used in our study:
+
+```python
+from sklearn.model_selection import GroupShuffleSplit
+import numpy as np
+
+def get_run_splits(X, y, groups, current_seed):
+    """
+    X: Array of file paths or extracted features (length 1500)
+    y: Array of labels (e.g., 0 for Cover, 1 for Stego)
+    groups: Array of Track-IDs (from 1 to 750, length 1500)
+    current_seed: An integer from the SEEDS array
+    """
+    
+    # Step 1: Split 70% Train / 30% Temporary (Validation + Test)
+    gss_train = GroupShuffleSplit(n_splits=1, train_size=0.70, random_state=current_seed)
+    train_idx, temp_idx = next(gss_train.split(X, y, groups))
+    
+    X_train, y_train, groups_train = X[train_idx], y[train_idx], groups[train_idx]
+    X_temp, y_temp, groups_temp = X[temp_idx], y[temp_idx], groups[temp_idx]
+    
+    # Step 2: Split the 30% Temporary evenly into 15% Validation / 15% Test
+    gss_val_test = GroupShuffleSplit(n_splits=1, train_size=0.50, random_state=current_seed)
+    val_idx, test_idx = next(gss_val_test.split(X_temp, y_temp, groups_temp))
+    
+    X_val, y_val = X_temp[val_idx], y_temp[val_idx]
+    X_test, y_test = X_temp[test_idx], y_temp[test_idx]
+    
+    return X_train, X_val, X_test, y_train, y_val, y_test
+
+# Example usage for Run 1:
+# X_train, X_val, X_test, y_train, y_val, y_test = get_run_splits(X, y, groups, current_seed=42)

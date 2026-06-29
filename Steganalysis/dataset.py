@@ -16,7 +16,6 @@ class StegoDataset:
         else:
             self._scan_files()
 
-    
     def _scan_files(self):
         directories = [(self.cover_dir, 0), (self.stego_dir, 1)]
         print(f"[Dataset] Scanning files...")
@@ -29,7 +28,7 @@ class StegoDataset:
                 continue
             count = 0
             for root, _, filenames in os.walk(folder_path):
-                # QUAN TRỌNG: Phải sorted() để Cover và Stego khớp thứ tự 1-1
+                # sorted() ensures cover and stego files are matched 1-to-1 in order
                 for f in sorted(filenames):
                     if f.lower().endswith(('.wav', '.flac', '.mp3')):
                         self.files.append(os.path.join(root, f))
@@ -54,7 +53,7 @@ class StegoDataset:
                 print(f"[ERROR] Cache load failed: {e}. Rescanning.")
 
         if X is None:
-            if self.cache_path: 
+            if self.cache_path:
                 X, y = self._process_in_chunks()
             else:
                 X, y = self._process_all_memory()
@@ -80,7 +79,7 @@ class StegoDataset:
             start_idx = i * chunk_size
             end_idx = min((i + 1) * chunk_size, total_files)
             part_file = os.path.join(temp_dir, f"part_{i}.npz")
-            
+
             if os.path.exists(part_file):
                 print(f"   [Skip] Part {i+1}/{num_chunks} exists.")
                 try:
@@ -105,7 +104,7 @@ class StegoDataset:
                         y_curr.append(self.labels[idx])
                 except:
                     pass
-            
+
             X_curr = np.array(X_curr)
             y_curr = np.array(y_curr)
             if len(X_curr) > 0:
@@ -114,7 +113,7 @@ class StegoDataset:
                 y_parts.append(y_curr)
 
         if not X_parts:
-             raise ValueError("[ERROR] No data extracted from files.")
+            raise ValueError("[ERROR] No data extracted from files.")
 
         X_final = np.concatenate(X_parts, axis=0)
         y_final = np.concatenate(y_parts, axis=0)
@@ -136,62 +135,53 @@ class StegoDataset:
                 pass
         return np.array(X), np.array(y)
 
-    # def get_train_val_split(self, test_size=0.2):
-    #     X, y = self.load_data()
-    #     if len(X) == 0:
-    #         return np.array([]), np.array([]), np.array([]), np.array([])
-    #     return train_test_split(X, y, test_size=test_size, random_state=42, stratify=y)
-
-
-
     def get_train_val_split(self, test_size=0.15, val_size=0.15, random_state=42):
         X, y = self.load_data()
         if len(X) == 0:
             return [np.array([]) for _ in range(6)]
-        
-        # Tách index của cover (0) và stego (1)
+
+        # Separate indices for cover (0) and stego (1) samples
         cover_idx = np.where(y == 0)[0]
         stego_idx = np.where(y == 1)[0]
-        
-        # Khắc phục lỗi Phase Coding (150 vs 139): Lấy số lượng nhỏ nhất
+
+        # Handle mismatched file counts (e.g. Phase Coding: 150 vs 139) by using the smaller count
         n_pairs = min(len(cover_idx), len(stego_idx))
-        
+
         if n_pairs == 0:
-            raise ValueError("[ERROR] Dataset không có đủ cả cover lẫn stego samples!")
-        
-        # Ghép cặp an toàn, loại bỏ các file bị dư
+            raise ValueError("[ERROR] Dataset must contain both cover and stego samples!")
+
+        # Pair samples safely, discarding extras
         paired_cover = cover_idx[:n_pairs]
         paired_stego = stego_idx[:n_pairs]
-        
+
         valid_indices = np.concatenate([paired_cover, paired_stego])
         X_valid = X[valid_indices]
         y_valid = y[valid_indices]
-        
-        # Tạo Group ID chuẩn xác
+
+        # Assign group IDs so paired cover/stego never split across train/test
         groups = np.concatenate([np.arange(n_pairs), np.arange(n_pairs)])
-        
-        # 1. Tách tập TEST (Cố định, không đổi qua 10 runs)
+
+        # Step 1: Hold out a fixed test set (same across all runs)
         gss_test = GroupShuffleSplit(n_splits=1, test_size=test_size, random_state=42)
         train_val_idx, test_idx = next(gss_test.split(X_valid, y_valid, groups))
-        
+
         X_train_val = X_valid[train_val_idx]
         y_train_val = y_valid[train_val_idx]
         groups_train_val = groups[train_val_idx]
-        
+
         X_test = X_valid[test_idx]
         y_test = y_valid[test_idx]
-        
-        # 2. Tách tập TRAIN và VAL (Xáo trộn theo seed qua từng run)
-        # Tính tỷ lệ val thực tế trên phần dữ liệu còn lại (0.15 / 0.85 ≈ 0.1764)
+
+        # Step 2: Split remaining data into train and validation
+        # Adjust val ratio relative to the remaining data (e.g. 0.15 / 0.85 ≈ 0.1765)
         relative_val_size = val_size / (1.0 - test_size)
         gss_val = GroupShuffleSplit(n_splits=1, test_size=relative_val_size, random_state=random_state)
         train_idx, val_idx = next(gss_val.split(X_train_val, y_train_val, groups_train_val))
-        
+
         X_train = X_train_val[train_idx]
         y_train = y_train_val[train_idx]
-        
+
         X_val = X_train_val[val_idx]
         y_val = y_train_val[val_idx]
-        
+
         return X_train, X_val, X_test, y_train, y_val, y_test
-    

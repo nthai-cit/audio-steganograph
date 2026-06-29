@@ -1,17 +1,34 @@
-import os
-import subprocess
-import glob
-import time
+"""
+run_case_limited.py
+===================
+Dataset generation orchestrator with capacity-aware pairing.
+
+This script processes a directory of audio files (covers) and matches them 
+with image payloads (secrets) to build a steganography dataset. It features 
+a 'capacity-aware' pairing mechanism that assigns the largest possible image 
+payload to an audio cover based on its available embedding capacity, ensuring 
+maximum embedding rates with a near-zero failure rate due to oversize issues.
+"""
+
 import argparse
-import sys
-import numpy as np
+import glob
+import os
 import random
-import soundfile as sf
-import shutil
 import re
+import shutil
+import subprocess
+import sys
+import time
 from datetime import datetime, timedelta, timezone
 
-CASE_CONFIGS = {
+import numpy as np
+import soundfile as sf
+
+# ---------------------------------------------------------------------------
+# Constants & Configuration
+# ---------------------------------------------------------------------------
+
+CASE_CONFIGURATIONS = {
     1: {"name": "1_NoRandom", "flags": ["--no_random"], "desc": "Sequential"},
     2: {"name": "2_Random_Fixed_DefaultSalt", "flags": [], "desc": "Rnd_Fixed"},
     3: {"name": "3_Random_Fixed_ContentSalt", "flags": ["--salt_content"], "desc": "Rnd_Fixed_Content"},
@@ -21,263 +38,321 @@ CASE_CONFIGS = {
     7: {"name": "7_PhaseCoding", "flags": ["--phase"], "desc": "Phase_Coding_FFT"}
 }
 
-ANCHOR_SIZE = 1024   # phải khớp với stego_core.py
-K_MAX = 6            # phải khớp với stego_core.py
-OVERHEAD_BYTES = 10  # ||END|| + buffer
+# Constants aligned with internal core limits inside `stego_core.py`.
+ANCHOR_SIZE = 1024
+K_MAX = 6
+OVERHEAD_BYTES = 10  # Accounts for the end marker '||END||' plus a small buffer.
 
-def get_vn_time():
+PERFECT_PSNR_DB = 100.0
+PERFECT_SNR_DB = 100.0
+FLOAT_PEAK_AMPLITUDE = 1.0
+
+
+# ---------------------------------------------------------------------------
+# Helper Functions
+# ---------------------------------------------------------------------------
+
+def get_vietnam_time() -> datetime:
+    """Return the current time adjusted to the Vietnam timezone (UTC+7)."""
     return datetime.now(timezone.utc) + timedelta(hours=7)
 
-def calculate_metrics(cover_path, stego_path):
+
+def calculate_audio_metrics(cover_path: str, stego_path: str) -> tuple[float, float, float]:
+    """Calculate MSE, PSNR, and SNR between cover and stego audio signals."""
     try:
         if not os.path.exists(cover_path) or not os.path.exists(stego_path):
             return 0.0, 0.0, 0.0
 
-        c_sig, sr = sf.read(cover_path)
-        s_sig, _ = sf.read(stego_path)
+        cover_signal, _ = sf.read(cover_path)
+        stego_signal, _ = sf.read(stego_path)
 
-        c_sig = c_sig.astype(np.float64)
-        s_sig = s_sig.astype(np.float64)
+        cover_signal = cover_signal.astype(np.float64)
+        stego_signal = stego_signal.astype(np.float64)
 
-        if c_sig.ndim == 2 and s_sig.ndim == 1:
-            c_sig = c_sig[:, 0]
-        elif c_sig.ndim == 1 and s_sig.ndim == 2:
-            s_sig = s_sig[:, 0]
+        if cover_signal.ndim == 2 and stego_signal.ndim == 1:
+            cover_signal = cover_signal[:, 0]
+        elif cover_signal.ndim == 1 and stego_signal.ndim == 2:
+            stego_signal = stego_signal[:, 0]
 
-        min_len = min(len(c_sig), len(s_sig))
-        c_sig = c_sig[:min_len]
-        s_sig = s_sig[:min_len]
+        comparable_length = min(len(cover_signal), len(stego_signal))
+        cover_signal = cover_signal[:comparable_length]
+        stego_signal = stego_signal[:comparable_length]
 
-        diff = c_sig - s_sig
-        mse = np.mean(diff ** 2)
+        difference_signal = cover_signal - stego_signal
+        mse = np.mean(difference_signal ** 2)
 
         if mse == 0:
-            return 0.0, 100.0, 100.0
+            return 0.0, PERFECT_PSNR_DB, PERFECT_SNR_DB
 
-        max_val = 1.0
-        psnr = 20 * np.log10(max_val / np.sqrt(mse))
+        psnr = 20 * np.log10(FLOAT_PEAK_AMPLITUDE / np.sqrt(mse))
 
-        signal_power = np.mean(c_sig ** 2)
+        signal_power = np.mean(cover_signal ** 2)
         snr = 10 * np.log10(signal_power / mse)
 
         return mse, psnr, snr
     except Exception:
         return 0.0, 0.0, 0.0
 
-def get_files_recursive(directory, extensions):
-    files = []
+
+def get_files_recursive(directory: str, extensions: list[str]) -> list[str]:
+    """Retrieve a list of all files with matching extensions in the directory tree."""
+    discovered_files = []
     for ext in extensions:
-        files.extend(glob.glob(os.path.join(directory, "**", f"*.{ext}"), recursive=True))
-    return files
+        discovered_files.extend(glob.glob(os.path.join(directory, "**", f"*.{ext}"), recursive=True))
+    return discovered_files
 
-def get_audio_capacity_bytes(audio_path):
-    """Tính capacity tối đa (bytes) của 1 file audio ở k_max, dùng soundfile (đọc nhanh, chỉ metadata)."""
+
+def calculate_maximum_audio_capacity_bytes(audio_filepath: str) -> float:
+    """
+    Calculate the maximum embedding capacity (in bytes) of an audio file at K_MAX.
+    Uses the soundfile library to read metadata quickly without loading samples.
+    """
     try:
-        info = sf.info(audio_path)
-        n_samples = info.frames * info.channels
-        num_slots = max(0, n_samples - ANCHOR_SIZE)
-        max_bits = num_slots * K_MAX
-        return max_bits / 8 - OVERHEAD_BYTES
+        audio_info = sf.info(audio_filepath)
+        total_samples = audio_info.frames * audio_info.channels
+        usable_slots = max(0, total_samples - ANCHOR_SIZE)
+        maximum_bits = usable_slots * K_MAX
+        return (maximum_bits / 8.0) - OVERHEAD_BYTES
     except Exception:
-        return 0
+        return 0.0
 
-def build_capacity_aware_pairs(target_covers, secret_pool, log_fn=print):
+
+def build_capacity_aware_file_pairs(target_covers: list[str], secret_pool: list[str], log_fn=print) -> list[tuple[str, str]]:
     """
-    Với mỗi audio cover, chọn ảnh secret LỚN NHẤT có thể vừa với capacity của nó.
-    -> Tối đa hóa Rate trung bình trong khi đảm bảo 0% fail do capacity.
+    Pair each audio cover with the largest image secret that fits within its capacity.
+    This logic maximizes the average embedding rate while preventing oversize failures.
+
+    Parameters
+    ----------
+    target_covers : list[str]
+        List of paths to cover audio files.
+    secret_pool : list[str]
+        List of paths to available secret images.
+    log_fn : callable
+        Function used to output progress logs.
+
+    Returns
+    -------
+    list[tuple[str, str]]
+        A list of matched (cover_filepath, secret_filepath) pairs.
     """
-    log_fn("[*] Đang tính capacity cho từng audio cover...")
-    cover_capacity = []
-    for c in target_covers:
-        cap = get_audio_capacity_bytes(c)
-        cover_capacity.append((c, cap))
+    log_fn("[*] Calculating capacity for each audio cover...")
+    cover_capacity_list = []
+    for cover_filepath in target_covers:
+        capacity_bytes = calculate_maximum_audio_capacity_bytes(cover_filepath)
+        cover_capacity_list.append((cover_filepath, capacity_bytes))
 
-    log_fn("[*] Đang đo dung lượng từng ảnh secret (size file gốc, dùng làm proxy)...")
-    # Dùng size file gốc làm proxy nhanh; nếu cần chính xác 100% sau JPEG re-encode,
-    # có thể thay bằng prepare_payload() thật (chậm hơn nhưng chính xác hơn).
-    secret_sizes = [(s, os.path.getsize(s)) for s in secret_pool]
-    secret_sizes_sorted = sorted(secret_sizes, key=lambda x: -x[1])  # lớn -> nhỏ
+    log_fn("[*] Measuring size of each secret image...")
+    # Use original file size as a quick proxy. For absolute precision after JPEG 
+    # re-encoding, one could substitute this with genuine `prepare_payload()` calls.
+    secret_size_list = [(secret_file, os.path.getsize(secret_file)) for secret_file in secret_pool]
+    secret_size_list_sorted = sorted(secret_size_list, key=lambda x: -x[1])  # Sort descending by size
 
-    pairs = []
-    unmatched = 0
-    for c_file, capacity in cover_capacity:
-        chosen = None
-        for s_file, s_size in secret_sizes_sorted:
-            if s_size <= capacity:
-                chosen = s_file
+    file_pairs = []
+    unmatched_count = 0
+
+    for cover_filepath, capacity in cover_capacity_list:
+        chosen_secret = None
+        for secret_filepath, secret_size in secret_size_list_sorted:
+            if secret_size <= capacity:
+                chosen_secret = secret_filepath
                 break
-        if chosen is None:
-            unmatched += 1
-            # fallback: dùng ảnh nhỏ nhất, để code tự xử lý/skip nếu vẫn không đủ
-            if secret_sizes_sorted:
-                chosen = secret_sizes_sorted[-1][0]
+        
+        if chosen_secret is None:
+            unmatched_count += 1
+            # Fallback: use the smallest image if no image inherently fits.
+            # The downstream code will handle skipping if it still triggers an oversize error.
+            if secret_size_list_sorted:
+                chosen_secret = secret_size_list_sorted[-1][0]
             else:
                 continue
-        pairs.append((c_file, chosen))
+                
+        file_pairs.append((cover_filepath, chosen_secret))
 
-    log_fn(f"[*] Capacity-aware matching: {len(pairs)} pairs | "
-          f"Unmatched (no image fits, dùng ảnh nhỏ nhất làm fallback): {unmatched}")
-    return pairs
+    log_fn(f"[*] Capacity-aware matching: {len(file_pairs)} pairs | "
+           f"Unmatched (fallback triggered): {unmatched_count}")
+    return file_pairs
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--case_id', type=int, required=True)
-    parser.add_argument('--input_dir', required=True)
-    parser.add_argument('--output_base', required=True)
-    parser.add_argument('--secret_dir', required=True)
+# ---------------------------------------------------------------------------
+# Main Execution Flow
+# ---------------------------------------------------------------------------
 
-    parser.add_argument('--max_files', type=int, default=1000)
-    parser.add_argument('--limit', type=int, default=500)
+def main() -> None:
+    """
+    Configure CLI parsing, prepare directories, orchestrate file matching, 
+    and invoke the subprocess worker to generate the dataset.
+    """
+    parser = argparse.ArgumentParser(description="Dataset generation with capacity-aware pairing.")
+    parser.add_argument('--case_id', type=int, required=True, help="Evaluation case ID.")
+    parser.add_argument('--input_dir', required=True, help="Directory containing cover WAV files.")
+    parser.add_argument('--output_base', required=True, help="Base directory for the generated dataset.")
+    parser.add_argument('--secret_dir', required=True, help="Directory containing secret image payloads.")
 
-    parser.add_argument('--k', type=int, default=1)
-    parser.add_argument('--password', type=str, default="PASS")
-    parser.add_argument('--size', type=int, default=256)
+    parser.add_argument('--max_files', type=int, default=1000, help="Maximum number of cover files to process.")
+    parser.add_argument('--limit', type=int, default=500, help="Maximum number of secret files to load into the pool.")
 
-    # [MỚI] Bật cơ chế chọn ảnh theo capacity (mặc định ON)
+    parser.add_argument('--k', type=int, default=1, help="Number of LSB planes to use.")
+    parser.add_argument('--password', type=str, default="PASS", help="Password for PRNG seed generation.")
+    parser.add_argument('--size', type=int, default=256, help="Target dimension for resizing images.")
+
     parser.add_argument('--capacity_aware', action='store_true', default=True,
-                         help="Chọn ảnh secret lớn nhất vừa với capacity của từng audio cover (mặc định: bật)")
+                        help="Enable capacity-aware image selection (default: ON)")
     parser.add_argument('--no_capacity_aware', dest='capacity_aware', action='store_false',
-                         help="Tắt cơ chế capacity-aware, quay lại random hoàn toàn (hành vi cũ)")
+                        help="Disable capacity-aware mode, revert to purely random pairing")
 
     args = parser.parse_args()
 
-    config = CASE_CONFIGS.get(args.case_id)
-    if not config:
+    case_config = CASE_CONFIGURATIONS.get(args.case_id)
+    if not case_config:
         print(f"Error: Case ID {args.case_id} not found.")
         sys.exit(1)
 
-    print(f"[*] Scanning Cover: {args.input_dir}...")
-    all_covers = get_files_recursive(args.input_dir, ["wav", "WAV"])
-    print(f"[*] Scanning Secret: {args.secret_dir}...")
-    all_secrets = get_files_recursive(args.secret_dir, ["jpg", "JPG", "jpeg", "JPEG"])  # bo .png masks
+    print(f"[*] Scanning Cover Directory: {args.input_dir}...")
+    all_cover_files = get_files_recursive(args.input_dir, ["wav", "WAV"])
+    
+    print(f"[*] Scanning Secret Directory: {args.secret_dir}...")
+    # Ignore .png masks if any exist in the dataset structure by targeting specific extensions.
+    all_secret_files = get_files_recursive(args.secret_dir, ["jpg", "JPG", "jpeg", "JPEG"])
 
-    if not all_covers or not all_secrets:
-        print("Error: Files not found.")
+    if not all_cover_files or not all_secret_files:
+        print("Error: Required files not found.")
         sys.exit(1)
 
-    random.shuffle(all_covers)
-    num_covers = min(len(all_covers), args.max_files)
-    target_covers = all_covers[:num_covers]
+    random.shuffle(all_cover_files)
+    num_target_covers = min(len(all_cover_files), args.max_files)
+    target_cover_list = all_cover_files[:num_target_covers]
 
-    random.shuffle(all_secrets)
-    num_secrets_pool = min(len(all_secrets), args.limit)
-    secret_pool = all_secrets[:num_secrets_pool]
+    random.shuffle(all_secret_files)
+    num_secrets_in_pool = min(len(all_secret_files), args.limit)
+    secret_payload_pool = all_secret_files[:num_secrets_in_pool]
 
     print("-" * 50)
-    print(f"[*] Mode: DATASET GENERATION (VN Time)")
-    print(f"[*] Cover: {num_covers} | Secret Pool: {num_secrets_pool}")
+    print(f"[*] Mode: DATASET GENERATION (Vietnam Time)")
+    print(f"[*] Cover Count: {num_target_covers} | Secret Pool Size: {num_secrets_in_pool}")
     print(f"[*] Image Size Target: {args.size}x{args.size}")
     print(f"[*] Capacity-aware matching: {'ON' if args.capacity_aware else 'OFF (random)'}")
     print("-" * 50)
 
-    timestamp = get_vn_time().strftime("%Y%m%d_%H%M%S")
-    base_dir = os.path.join(args.output_base, f"{config['name']}_{timestamp}")
-    dir_logs = os.path.join(base_dir, "logs")
-    dir_cover = os.path.join(base_dir, "cover")
-    dir_stego = os.path.join(base_dir, "stego")
+    timestamp_string = get_vietnam_time().strftime("%Y%m%d_%H%M%S")
+    dataset_base_dir = os.path.join(args.output_base, f"{case_config['name']}_{timestamp_string}")
+    
+    logs_directory = os.path.join(dataset_base_dir, "logs")
+    covers_output_directory = os.path.join(dataset_base_dir, "cover")
+    stegos_output_directory = os.path.join(dataset_base_dir, "stego")
 
-    os.makedirs(dir_logs, exist_ok=True)
-    os.makedirs(dir_cover, exist_ok=True)
-    os.makedirs(dir_stego, exist_ok=True)
+    os.makedirs(logs_directory, exist_ok=True)
+    os.makedirs(covers_output_directory, exist_ok=True)
+    os.makedirs(stegos_output_directory, exist_ok=True)
 
-    log_file = os.path.join(dir_logs, f"benchmark.csv")
-    with open(log_file, "w", encoding="utf-8") as f:
-        f.write("Timestamp,CoverFile,SecretFile,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),k_used,Info\n")
-    skipped_count = 0
-    success_count = 0
+    log_filepath = os.path.join(logs_directory, "benchmark.csv")
+    with open(log_filepath, "w", encoding="utf-8") as log_file:
+        log_file.write("Timestamp,CoverFile,SecretFile,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),k_used,Info\n")
+    
+    count_skipped = 0
+    count_success = 0
 
-    # [MỚI] Build pairs trước khi chạy loop
+    # Build cover-secret pairs before entering the processing loop.
     if args.capacity_aware:
-        pairs = build_capacity_aware_pairs(target_covers, secret_pool)
+        execution_pairs = build_capacity_aware_file_pairs(target_cover_list, secret_payload_pool)
     else:
-        pairs = [(c, random.choice(secret_pool)) for c in target_covers]
+        execution_pairs = [(cover_file, random.choice(secret_payload_pool)) for cover_file in target_cover_list]
 
-    for i, (c_file, s_file) in enumerate(pairs):
-        rel_path = os.path.relpath(c_file, args.input_dir)
-        final_cover_path = os.path.join(dir_cover, rel_path)
-        final_stego_path = os.path.join(dir_stego, rel_path)
+    for index, (cover_filepath, secret_filepath) in enumerate(execution_pairs):
+        relative_filepath = os.path.relpath(cover_filepath, args.input_dir)
+        final_cover_destination = os.path.join(covers_output_directory, relative_filepath)
+        final_stego_destination = os.path.join(stegos_output_directory, relative_filepath)
 
-        os.makedirs(os.path.dirname(final_cover_path), exist_ok=True)
-        os.makedirs(os.path.dirname(final_stego_path), exist_ok=True)
+        os.makedirs(os.path.dirname(final_cover_destination), exist_ok=True)
+        os.makedirs(os.path.dirname(final_stego_destination), exist_ok=True)
 
-        cmd = [sys.executable, "benchmark_stego.py",
-               "--cover", c_file,
-               "--secret", s_file,
-               "--output", final_stego_path,
-               "--case_name", config['name'],
-               "--k", str(args.k),
-               "--password", args.password,
-               "--size", str(args.size)] + config['flags']
+        worker_command = [
+            sys.executable, "benchmark_stego.py",
+            "--cover", cover_filepath,
+            "--secret", secret_filepath,
+            "--output", final_stego_destination,
+            "--case_name", case_config['name'],
+            "--k", str(args.k),
+            "--password", args.password,
+            "--size", str(args.size)
+        ] + case_config['flags']
 
-        c_name = os.path.basename(c_file)
-        start_t = time.time()
+        cover_filename = os.path.basename(cover_filepath)
+        start_time = time.time()
 
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
-            duration = time.time() - start_t
+            subprocess_result = subprocess.run(worker_command, capture_output=True, text=True, timeout=180)
+            elapsed_time = time.time() - start_time
 
-            if result.returncode == 0:
-                mse, psnr, snr = calculate_metrics(c_file, final_stego_path)
+            if subprocess_result.returncode == 0:
+                mse, psnr, snr = calculate_audio_metrics(cover_filepath, final_stego_destination)
 
-                output_str = result.stdout
-                rate_val = 0.0
-                cpu_val = 0.0
-                ram_val = 0.0
+                worker_stdout = subprocess_result.stdout
+                embedding_rate_kbps = 0.0
+                cpu_percent = 0.0
+                ram_megabytes = 0.0
                 k_used_val = "N/A"
 
-                # [SỬA] Bắt thêm k_used từ benchmark_stego.py
-                match = re.search(r"Rate=([0-9\.]+).*CPU=([0-9\.]+).*RAM=([0-9\.]+).*k_used=([^\s]+)", output_str)
-                if match:
-                    rate_val = float(match.group(1))
-                    cpu_val = float(match.group(2))
-                    ram_val = float(match.group(3))
-                    k_used_val = match.group(4)
+                # Extract k_used and resource values from the benchmark_stego.py stdout.
+                regex_match = re.search(r"Rate=([0-9\.]+).*CPU=([0-9\.]+).*RAM=([0-9\.]+).*k_used=([^\s]+)", worker_stdout)
+                if regex_match:
+                    embedding_rate_kbps = float(regex_match.group(1))
+                    cpu_percent = float(regex_match.group(2))
+                    ram_megabytes = float(regex_match.group(3))
+                    k_used_val = regex_match.group(4)
 
                 if psnr < 1.0:
-                    # [SỬA] Bug cũ: len(c_file) là độ dài path string, không phải audio length.
-                    # Sửa lại debug message cho đúng, dùng duration thực từ soundfile.
+                    # Fix: Use actual audio duration instead of file path string length.
                     try:
-                        real_duration = sf.info(c_file).duration
+                        actual_audio_duration = sf.info(cover_filepath).duration
                     except Exception:
-                        real_duration = -1
-                    print(f"\n[DEBUG] {c_name}: PSNR={psnr:.2f}, MSE={mse:.6f}, "
-                          f"Audio_duration={real_duration:.3f}s, k_used={k_used_val}, "
-                          f"stdout_tail={output_str[-200:] if output_str else '(empty)'}")
-                    skipped_count += 1
-                    print(f"\r[{i+1}/{len(pairs)}] {c_name} -> Skipped (Low PSNR)", end="", flush=True)
-                    if os.path.exists(final_stego_path): os.remove(final_stego_path)
+                        actual_audio_duration = -1.0
+                        
+                    stdout_tail = worker_stdout[-200:] if worker_stdout else "(empty)"
+                    print(f"\n[DEBUG] {cover_filename}: PSNR={psnr:.2f}, MSE={mse:.6f}, "
+                          f"Audio_duration={actual_audio_duration:.3f}s, k_used={k_used_val}, "
+                          f"stdout_tail={stdout_tail}")
+                    
+                    count_skipped += 1
+                    print(f"\r[{index+1}/{len(execution_pairs)}] {cover_filename} -> Skipped (Low PSNR)", end="", flush=True)
+                    if os.path.exists(final_stego_destination): 
+                        os.remove(final_stego_destination)
                     continue
 
-                shutil.copy2(c_file, final_cover_path)
+                shutil.copy2(cover_filepath, final_cover_destination)
 
-                success_count += 1
-                s_name = os.path.basename(s_file)
-                current_time_str = get_vn_time().strftime('%H:%M:%S')
+                count_success += 1
+                secret_filename = os.path.basename(secret_filepath)
+                current_time_str = get_vietnam_time().strftime('%H:%M:%S')
 
-                log_line = f"{current_time_str},{c_name},{s_name},Success,{duration:.4f},{mse:.6f},{psnr:.2f},{snr:.2f},{rate_val:.4f},{cpu_val:.2f},{ram_val:.2f},{k_used_val},{config['desc']}"
+                log_entry = (
+                    f"{current_time_str},{cover_filename},{secret_filename},Success,"
+                    f"{elapsed_time:.4f},{mse:.6f},{psnr:.2f},{snr:.2f},{embedding_rate_kbps:.4f},"
+                    f"{cpu_percent:.2f},{ram_megabytes:.2f},{k_used_val},{case_config['desc']}"
+                )
 
-                print(f"\r[{i+1}/{len(pairs)}] {c_name} -> OK (PSNR:{psnr:.1f}dB | k={k_used_val} | CPU:{cpu_val}% | RAM:{ram_val:.1f}MB)", end="", flush=True)
+                print(f"\r[{index+1}/{len(execution_pairs)}] {cover_filename} -> OK "
+                      f"(PSNR:{psnr:.1f}dB | k={k_used_val} | CPU:{cpu_percent}% | RAM:{ram_megabytes:.1f}MB)", end="", flush=True)
 
-                with open(log_file, "a", encoding="utf-8") as f:
-                    f.write(log_line + "\n")
+                with open(log_filepath, "a", encoding="utf-8") as log_file:
+                    log_file.write(log_entry + "\n")
 
             else:
-                # [SỬA] In luôn stderr để biết lý do thật khi subprocess fail
-                err_tail = (result.stderr or "")[-300:]
-                print(f"\n[DEBUG] {c_name} subprocess FAILED (returncode={result.returncode}). stderr_tail: {err_tail}")
-                print(f"\r[{i+1}/{len(pairs)}] {c_name} -> Skipped (Error)", end="", flush=True)
+                # Print stderr to reveal the actual reason for subprocess failure.
+                stderr_tail = (subprocess_result.stderr or "")[-300:]
+                print(f"\n[DEBUG] {cover_filename} subprocess FAILED (returncode={subprocess_result.returncode}). stderr_tail: {stderr_tail}")
+                print(f"\r[{index+1}/{len(execution_pairs)}] {cover_filename} -> Skipped (Error)", end="", flush=True)
 
         except subprocess.TimeoutExpired:
-            print(f"\r[{i+1}/{len(pairs)}] {c_name} -> Skipped (Timeout)", end="", flush=True)
+            print(f"\r[{index+1}/{len(execution_pairs)}] {cover_filename} -> Skipped (Timeout)", end="", flush=True)
 
-        except Exception as e:
-            print(f"\n[DEBUG] {c_name} -> Crash: {e}")
-            print(f"\r[{i+1}/{len(pairs)}] {c_name} -> Skipped (Crash)", end="", flush=True)
+        except Exception as execution_error:
+            print(f"\n[DEBUG] {cover_filename} -> Crash: {execution_error}")
+            print(f"\r[{index+1}/{len(execution_pairs)}] {cover_filename} -> Skipped (Crash)", end="", flush=True)
 
     print(f"\n[DONE] Finished.")
-    print(f"Structure: {base_dir}/[logs, cover, stego]")
-    print(f"Total: {len(pairs)} | Created: {success_count} | Skipped: {skipped_count}")
+    print(f"Structure: {dataset_base_dir}/[logs, cover, stego]")
+    print(f"Total pairs: {len(execution_pairs)} | Created successfully: {count_success} | Skipped: {count_skipped}")
 
 if __name__ == "__main__":
     main()

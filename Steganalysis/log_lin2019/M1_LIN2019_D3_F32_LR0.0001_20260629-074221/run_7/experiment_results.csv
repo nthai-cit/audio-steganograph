@@ -1,0 +1,2 @@
+Timestamp,Algo,Depth,Filters,BiLSTM,Val_Acc,Val_AUC,Precision,Recall,F1,Total_Time(s),Max_RAM(MB),Model_Path
+2026-06-29 10:54:31,lin2019,N/A,N/A,N/A,0.8319,0.9218,0.7517,0.9912,0.8550,1542.30,4962.34,/content/drive/MyDrive/HK1-20252026/NEW-RUN-STEGO/M1/logs/LIN2019_D3_F32_LR0.0001_20260629-100025/run_2/best_model.keras
