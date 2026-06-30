@@ -16,7 +16,7 @@ def _get_data_bytes(secret_input):
 def _bytes_to_bitstream(data_bytes):
     # Chuyen bytes thanh chuoi bit '010101...'
     binary_data = ''.join(format(byte, '08b') for byte in data_bytes)
-    delimiter_binary = ''.join(format(byte, '08b') for byte in b"||DATA_END||")
+    delimiter_binary = ''.join(format(byte, '08b') for byte in b"||END||")
     return binary_data + delimiter_binary
 
 def _open_file_os(filepath):
@@ -43,7 +43,7 @@ def calculate_metrics(original, stego):
     
     max_val = 32767.0 
     psnr = 20 * np.log10(max_val / rmse)
-    signal_power = np.sum(orig ** 2)
+    signal_power = np.mean(orig ** 2)
     snr = 10 * np.log10(signal_power / mse)
     return mse, rmse, psnr, snr
 
@@ -124,7 +124,7 @@ def decode(stego_path, output_folder="outputs", k=1):
         all_bytes = np.packbits(lsb_bits).tobytes()
         
         # Tim dau hieu ket thuc
-        delimiter = b"||DATA_END||"
+        delimiter = b"||END||"
         end_idx = all_bytes.find(delimiter)
         
         if end_idx == -1:

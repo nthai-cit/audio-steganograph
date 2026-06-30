@@ -1,16 +1,34 @@
-import os
-import subprocess
-import glob
-import time
+"""
+run_case.py
+===========
+Orchestrator script for batch processing audio steganography evaluations.
+
+This script processes a directory of cover audio files, invoking a benchmark 
+worker (`benchmark_stego.py`) as a subprocess for each file. It parses 
+the worker's standard output to collect resource utilisation metrics and 
+calculates the resulting audio quality metrics (MSE, PSNR, SNR).
+Results are aggregated and written to a CSV log.
+"""
+
 import argparse
+import glob
+import os
+import re
+import subprocess
 import sys
-import numpy as np
-import soundfile as sf
-import re  # Thêm thư viện Regex
+import time
 from datetime import datetime
 
-# --- CẤU HÌNH CASE ---
-CASE_CONFIGS = {
+import numpy as np
+import soundfile as sf
+
+# ---------------------------------------------------------------------------
+# Constants & Configuration
+# ---------------------------------------------------------------------------
+
+# Configuration mapping for supported evaluation cases.
+# Defines the descriptive name, CLI flags passed to the worker, and a short label.
+CASE_CONFIGURATIONS = {
     1: {"name": "1_NoRandom", "flags": ["--no_random"], "desc": "Sequential"},
     2: {"name": "2_Random_Fixed_DefaultSalt", "flags": [], "desc": "Rnd_Fixed"},
     3: {"name": "3_Random_Fixed_ContentSalt", "flags": ["--salt_content"], "desc": "Rnd_Fixed_Content"},
@@ -21,59 +39,92 @@ CASE_CONFIGS = {
     8: {"name": "8_Alarood2022_RandLSB", "flags": ["--alarood"], "desc": "Alarood2022_RandLSB"},
 }
 
-def calculate_metrics(cover_path, stego_path):
-    """Tính MSE, PSNR, SNR"""
+PERFECT_PSNR_DB = 100.0
+PERFECT_SNR_DB = 100.0
+FLOAT_PEAK_AMPLITUDE = 1.0
+
+
+# ---------------------------------------------------------------------------
+# Metric Computation
+# ---------------------------------------------------------------------------
+
+def calculate_audio_metrics(cover_path: str, stego_path: str) -> tuple[float, float, float]:
+    """
+    Calculate Mean Squared Error (MSE), Peak Signal-to-Noise Ratio (PSNR), 
+    and Signal-to-Noise Ratio (SNR) between cover and stego audio signals.
+
+    Parameters
+    ----------
+    cover_path : str
+        Path to the unmodified cover WAV file.
+    stego_path : str
+        Path to the stego WAV file produced by the encoder.
+
+    Returns
+    -------
+    tuple[float, float, float]
+        A tuple containing (MSE, PSNR, SNR). Returns (0.0, 0.0, 0.0) on failure.
+    """
     try:
         if not os.path.exists(cover_path) or not os.path.exists(stego_path):
             return 0.0, 0.0, 0.0
 
-        c_sig, sr = sf.read(cover_path)
-        s_sig, _ = sf.read(stego_path)
+        cover_signal, _ = sf.read(cover_path)
+        stego_signal, _ = sf.read(stego_path)
         
-        c_sig = c_sig.astype(np.float64)
-        s_sig = s_sig.astype(np.float64)
+        cover_signal = cover_signal.astype(np.float64)
+        stego_signal = stego_signal.astype(np.float64)
         
-        # Fix lỗi Stereo/Mono
-        if c_sig.ndim == 2 and s_sig.ndim == 1:
-            c_sig = c_sig[:, 0]
-        elif c_sig.ndim == 1 and s_sig.ndim == 2:
-            s_sig = s_sig[:, 0]
+        # Handle Stereo/Mono mismatches by keeping only the first channel.
+        if cover_signal.ndim == 2 and stego_signal.ndim == 1:
+            cover_signal = cover_signal[:, 0]
+        elif cover_signal.ndim == 1 and stego_signal.ndim == 2:
+            stego_signal = stego_signal[:, 0]
 
-        if len(c_sig) == 0 or len(s_sig) == 0:
+        if len(cover_signal) == 0 or len(stego_signal) == 0:
             return 0.0, 0.0, 0.0
 
-        min_len = min(len(c_sig), len(s_sig))
-        c_sig = c_sig[:min_len]
-        s_sig = s_sig[:min_len]
+        comparable_length = min(len(cover_signal), len(stego_signal))
+        cover_signal = cover_signal[:comparable_length]
+        stego_signal = stego_signal[:comparable_length]
         
-        diff = c_sig - s_sig
-        mse = np.mean(diff ** 2)
+        difference_signal = cover_signal - stego_signal
+        mse = np.mean(difference_signal ** 2)
 
         if mse == 0:
-            return 0.0, 100.0, 100.0
+            return 0.0, PERFECT_PSNR_DB, PERFECT_SNR_DB
 
-        max_val = 1.0 
-        psnr = 20 * np.log10(max_val / np.sqrt(mse))
+        psnr = 20 * np.log10(FLOAT_PEAK_AMPLITUDE / np.sqrt(mse))
         
-        signal_power = np.mean(c_sig ** 2)
+        signal_power = np.mean(cover_signal ** 2)
         snr = 10 * np.log10(signal_power / mse)
 
         return mse, psnr, snr
     except Exception:
         return 0.0, 0.0, 0.0
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--case_id', type=int, required=True)
-    parser.add_argument('--input_dir', required=True)
-    parser.add_argument('--output_base', required=True)
-    parser.add_argument('--secret_file', type=str, required=True, help="Path to the secret file")
-    
-    parser.add_argument('--k', type=int, default=1)
-    parser.add_argument('--password', type=str, default="PASS")
 
-    # [MỚI] Thêm cờ --no_save
-    parser.add_argument('--no_save', action='store_true', help="Khong luu file output de tiet kiem dung luong (se xoa ngay sau khi chay)")
+# ---------------------------------------------------------------------------
+# Main Execution Flow
+# ---------------------------------------------------------------------------
+
+def main() -> None:
+    """
+    Parse command-line arguments, establish directories, construct execution 
+    commands for the worker subprocess, and orchestrate the batch processing 
+    of all identified audio files.
+    """
+    parser = argparse.ArgumentParser(description="Batch process audio steganography evaluations.")
+    parser.add_argument('--case_id', type=int, required=True, help="Evaluation case ID mapping to configurations.")
+    parser.add_argument('--input_dir', required=True, help="Directory containing cover WAV files.")
+    parser.add_argument('--output_base', required=True, help="Base directory for outputting stego files.")
+    parser.add_argument('--secret_file', type=str, required=True, help="Path to the secret payload file.")
+    parser.add_argument('--k', type=int, default=1, help="Number of LSB planes (if applicable).")
+    parser.add_argument('--password', type=str, default="PASS", help="Password for PRNG seed generation.")
+
+    # Flag to prevent saving output files to conserve disk space.
+    parser.add_argument('--no_save', action='store_true', 
+                        help="Do not save output files to conserve disk space (deleted immediately after execution).")
     
     args = parser.parse_args()
 
@@ -81,106 +132,122 @@ def main():
         print(f"Error: Secret file '{args.secret_file}' not found.")
         sys.exit(1)
 
-    config = CASE_CONFIGS.get(args.case_id)
-    if not config:
+    case_config = CASE_CONFIGURATIONS.get(args.case_id)
+    if not case_config:
         print(f"Error: Case ID {args.case_id} not found.")
         sys.exit(1)
 
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    timestamp_string = datetime.now().strftime("%Y%m%d_%H%M%S")
     input_folder_name = os.path.basename(os.path.normpath(args.input_dir))
     
-    log_dir = "logs"
-    os.makedirs(log_dir, exist_ok=True)
-    log_file = os.path.join(log_dir, f"benchmark_{input_folder_name}_{config['name']}_{timestamp}.csv")
+    log_directory = "logs"
+    os.makedirs(log_directory, exist_ok=True)
+    log_file_path = os.path.join(log_directory, f"benchmark_{input_folder_name}_{case_config['name']}_{timestamp_string}.csv")
 
-    raw_files = glob.glob(os.path.join(args.input_dir, "**", "*.wav"), recursive=True) + \
-                glob.glob(os.path.join(args.input_dir, "**", "*.WAV"), recursive=True)
-    processed = {}
-    for f in raw_files:
-        base = os.path.splitext(os.path.basename(f))[0]
-        if base not in processed:
-            processed[base] = f
+    # Discover all audio files recursively.
+    raw_file_paths = glob.glob(os.path.join(args.input_dir, "**", "*.wav"), recursive=True) + \
+                     glob.glob(os.path.join(args.input_dir, "**", "*.WAV"), recursive=True)
+    
+    processed_files_map = {}
+    for filepath in raw_file_paths:
+        base_name = os.path.splitext(os.path.basename(filepath))[0]
+        if base_name not in processed_files_map:
+            processed_files_map[base_name] = filepath
             
-    files = sorted(list(processed.values()))
+    sorted_file_paths = sorted(list(processed_files_map.values()))
 
-    case_output_dir = os.path.join(args.output_base, config['name'])
-    os.makedirs(case_output_dir, exist_ok=True)
+    case_output_directory = os.path.join(args.output_base, case_config['name'])
+    os.makedirs(case_output_directory, exist_ok=True)
 
-    # Header log (Bao gồm các chỉ số tài nguyên từ phiên bản trước)
-    with open(log_file, "w", encoding="utf-8") as f:
-        f.write("Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info\n")
+    # Initialise the log file with headers (includes resource metrics from the worker).
+    with open(log_file_path, "w", encoding="utf-8") as log_file:
+        log_file.write("Timestamp,Filename,Status,Time(s),MSE,PSNR,SNR,Rate(kBps),CPU(%),RAM(MB),Info\n")
 
-    print(f"[*] Case: {config['name']} | Input: {input_folder_name}")
+    print(f"[*] Case: {case_config['name']} | Input: {input_folder_name}")
     print(f"[*] Secret: {args.secret_file}")
     print(f"[*] No Save Mode: {'ON' if args.no_save else 'OFF'}")
-    print(f"[*] Found: {len(files)} files")
+    print(f"[*] Found: {len(sorted_file_paths)} files")
 
-    for i, wav_file in enumerate(files):
-        rel_path = os.path.relpath(wav_file, args.input_dir)
-        out_path = os.path.join(case_output_dir, rel_path)
-        os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    for index, cover_filepath in enumerate(sorted_file_paths):
+        relative_path = os.path.relpath(cover_filepath, args.input_dir)
+        output_filepath = os.path.join(case_output_directory, relative_path)
+        os.makedirs(os.path.dirname(output_filepath), exist_ok=True)
         
-        cmd = [sys.executable, "benchmark_stego.py", 
-               "--cover", wav_file, 
-               "--secret", args.secret_file,
-               "--output", out_path, 
-               "--case_name", config['name'], 
-               "--k", str(args.k), 
-               "--password", args.password] + config['flags']
+        command = [
+            sys.executable, "benchmark_stego.py", 
+            "--cover", cover_filepath, 
+            "--secret", args.secret_file,
+            "--output", output_filepath, 
+            "--case_name", case_config['name'], 
+            "--k", str(args.k), 
+            "--password", args.password
+        ] + case_config['flags']
 
-        start_t = time.time()
-        # capture_output=True để bắt log CPU/RAM từ benchmark_stego.py
-        result = subprocess.run(cmd, capture_output=True, text=True)
-        duration = time.time() - start_t
+        start_time = time.time()
+        # Capture stdout to extract CPU/RAM logs emitted by benchmark_stego.py
+        subprocess_result = subprocess.run(command, capture_output=True, text=True)
+        elapsed_duration = time.time() - start_time
         
-        log_line = ""
-        if result.returncode == 0:
-            # Parse các thông số từ output của benchmark_stego.py
-            output_str = result.stdout
-            rate_val, cpu_val, ram_val = 0.0, 0.0, 0.0
+        log_entry = ""
+        if subprocess_result.returncode == 0:
+            # Parse the metrics from the benchmark_stego.py output.
+            worker_output = subprocess_result.stdout
+            embedding_rate_kbps, cpu_percent, ram_megabytes = 0.0, 0.0, 0.0
             
-            match = re.search(r"Rate=([0-9\.]+).*CPU=([0-9\.]+).*RAM=([0-9\.]+)", output_str)
-            if match:
-                rate_val = float(match.group(1))
-                cpu_val = float(match.group(2))
-                ram_val = float(match.group(3))
+            metrics_match = re.search(r"Rate=([0-9\.]+).*CPU=([0-9\.]+).*RAM=([0-9\.]+)", worker_output)
+            if metrics_match:
+                embedding_rate_kbps = float(metrics_match.group(1))
+                cpu_percent = float(metrics_match.group(2))
+                ram_megabytes = float(metrics_match.group(3))
 
-            # Xử lý Logic NO SAVE
+            # Handle the 'NO SAVE' logic to conserve disk space.
             if args.no_save:
-                # Nếu không lưu: Không tính metrics (vì file sẽ bị xóa), gán = 0
+                # Skip metric calculation since the file is not persisted; assign zeroes.
                 mse, psnr, snr = 0, 0, 0
-                # Xóa file ngay lập tức
-                if os.path.exists(out_path):
-                    os.remove(out_path)
-                status_str = "Success(NoSave)"
+                # Delete the stego file immediately.
+                if os.path.exists(output_filepath):
+                    os.remove(output_filepath)
+                status_string = "Success(NoSave)"
             else:
-                # Nếu lưu: Tính metrics bình thường
-                mse, psnr, snr = calculate_metrics(wav_file, out_path)
-                status_str = "Success"
+                # Compute metrics normally if saving is enabled.
+                mse, psnr, snr = calculate_audio_metrics(cover_filepath, output_filepath)
+                status_string = "Success"
 
-            log_line = f"{datetime.now().strftime('%H:%M:%S')},{os.path.basename(wav_file)},{status_str},{duration:.4f},{mse:.6f},{psnr:.2f},{snr:.2f},{rate_val:.4f},{cpu_val:.2f},{ram_val:.2f},{config['desc']}"
+            current_timestamp = datetime.now().strftime('%H:%M:%S')
+            cover_filename = os.path.basename(cover_filepath)
             
-            # In ra màn hình
+            log_entry = (
+                f"{current_timestamp},{cover_filename},{status_string},{elapsed_duration:.4f},"
+                f"{mse:.6f},{psnr:.2f},{snr:.2f},{embedding_rate_kbps:.4f},"
+                f"{cpu_percent:.2f},{ram_megabytes:.2f},{case_config['desc']}"
+            )
+            
+            # Print progress to console.
             metric_display = "NoSave" if args.no_save else f"PSNR:{psnr:.1f}dB"
-            print(f"\r[{i+1}/{len(files)}] {os.path.basename(wav_file)} -> {metric_display} | CPU:{cpu_val}% | RAM:{ram_val:.1f}MB", end="", flush=True)
+            print(f"\r[{index+1}/{len(sorted_file_paths)}] {cover_filename} -> {metric_display} "
+                  f"| CPU:{cpu_percent}% | RAM:{ram_megabytes:.1f}MB", end="", flush=True)
 
         else:
-            err_msg = "Error"
-            log_line = f"{datetime.now().strftime('%H:%M:%S')},{os.path.basename(wav_file)},Failed,0,0,0,0,0,0,0,{err_msg}"
-            print(f"\r[{i+1}/{len(files)}] {os.path.basename(wav_file)} -> FAILED", end="", flush=True)
+            error_message = "Error"
+            current_timestamp = datetime.now().strftime('%H:%M:%S')
+            cover_filename = os.path.basename(cover_filepath)
+            
+            log_entry = (
+                f"{current_timestamp},{cover_filename},Failed,0,0,0,0,0,0,0,{error_message}"
+            )
+            print(f"\r[{index+1}/{len(sorted_file_paths)}] {cover_filename} -> FAILED", end="", flush=True)
         
-        with open(log_file, "a", encoding="utf-8") as f:
-            f.write(log_line + "\n")
+        with open(log_file_path, "a", encoding="utf-8") as log_file:
+            log_file.write(log_entry + "\n")
 
-    # Dọn dẹp thư mục rỗng nếu chạy chế độ no_save
+    # Clean up the output directory if it is empty (applicable in no_save mode).
     if args.no_save:
         try:
-            # Xóa thư mục output base nếu nó rỗng
-            os.rmdir(case_output_dir) 
-        except:
+            os.rmdir(case_output_directory) 
+        except Exception:
             pass 
 
-    print(f"\n[DONE] Hoàn tất. Log tại: {log_file}")
+    print(f"\n[DONE] Finished. Log saved at: {log_file_path}")
 
 if __name__ == "__main__":
     main()

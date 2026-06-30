@@ -17,6 +17,20 @@
 10. [Reproducibility](#10-reproducibility)
 11. [Citation](#11-citation)
 
+
+## Table of Contents
+
+1. [Overview](#1-overview)
+2. [Key Features](#2-key-features)
+3. [Directory Structure](#3-directory-structure)
+4. [Installation](#4-installation)
+5. [Data Preparation](#5-data-preparation)
+6. [Usage: Steganography (main.py)](#6-usage-steganography-mainpy)
+7. [Usage: Batch Benchmark (run_case_limited.py)](#7-usage-batch-benchmark-run_case_limitedpy)
+8. [Usage: Steganalysis Training (train.py)](#8-usage-steganalysis-training-trainpy)
+9. [Usage: Metrics Aggregation (metrics.py)](#9-usage-metrics-aggregation-metricspy)
+10. [Reproducibility](#10-reproducibility)
+
 ## 1. Overview
 
 ![wf](workflow.svg)
