@@ -84,7 +84,8 @@ audio-steganograph/
     └── logs_steganalysis/         # SVM, Random Forest, Logistic Regression pipelines
 ```
 
-> **Note:** `Steganalysis/Data/` and `Steganalysis/logs/` contain large binary artifacts (`.npz` feature caches, `.keras` model checkpoints) generated locally during experimentation. These are excluded from version control via `.gitignore`; see [Section 8](#8-usage-steganalysis-training-trainpy) for how to regenerate them.
+> **Note:** `Steganalysis/Data/` and `Steganalysis/logs/` contain large binary artifacts (`.npz` feature caches, `.keras` model checkpoints) generated locally during experimentation. These are excluded from version control via `.gitignore` (with the sole exception of the pre-trained M5 checkpoint `best_model.keras` provided for review verification); see [Section 8](#8-usage-steganalysis-training-trainpy) for how to regenerate them.
+
 
 ## 4. Installation
 
