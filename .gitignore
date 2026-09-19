@@ -35,6 +35,7 @@ Steganalysis/Data/
 *.keras
 *.pth
 *.checkpoint
+*.pyc
 
 
 outputs/encode/
@@ -73,9 +74,11 @@ Steganalysis/Data/**
 
 *.docx
 
-<<<<<<< HEAD
-!Steganalysis\logs\MUSDB_LSB_5_Random_Adaptive_ContentSalt\CNN_D5_F64_LR0.0001_20260611-170236\run_10
-=======
-Steganalysis\log_lin2019
+Steganalysis\logs\Significance-Tests
+Steganalysis\logs\OLD-CNN
+google_colab\logs_steganalysis\OLD
+AudioStego\__pycache__
+__pycache__
 
->>>>>>> chien
+!Steganalysis\logs\MUSDB_LSB_5_Random_Adaptive_ContentSalt\CNN_D5_F64_LR0.0001_20260611-170236\run_10
+!Steganalysis\logs\MUSDB_LSB_5_Random_Adaptive_ContentSalt\CNN_D5_F64_LR0.0001_20260611-170236\run_10\best_model.keras
